@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Etkileşimli Matematik Görselleştirici"
+  },
+  "common": {
+    "toggleDarkMode": "Karanlık modu aç/kapat",
+    "changeLanguage": "Dili değiştir",
+    "searchPlaceholder": "Modelleri ara...",
+    "noResults": "\"{query}\" ile eşleşen model bulunamadı.",
+    "resultsCount": "{count} sonuç",
+    "favorites": "Favoriler",
+    "selectModel": "Bir model seçin",
+    "reset": "Sıfırla",
+    "addFavorite": "Favorilere ekle",
+    "removeFavorite": "Favorilerden kaldır",
+    "somethingWrongIn": "{label} içinde bir hata oluştu.",
+    "somethingWrong": "Bir hata oluştu.",
+    "tryAgain": "Tekrar dene"
+  },
+  "errorLabels": {
+    "graph": "grafik",
+    "viewer3d": "3B görüntüleyici",
+    "modelPage": "model sayfası"
+  },
+  "panels": {
+    "parameters": "Parametreler",
+    "formulas": "Formüller",
+    "properties": "Hesaplanan Özellikler",
+    "explanation": "Açıklama",
+    "examples": "Gerçek Hayat Örnekleri"
+  },
+  "viewSettings": {
+    "grid": "Izgara",
+    "labels": "Etiketler",
+    "wireframe": "Tel Kafes",
+    "markers": "İşaretler"
+  },
+  "graphLabels": {
+    "center": "merkez",
+    "vertex": "tepe noktası",
+    "focus": "odak",
+    "directrix": "doğrultman",
+    "axis": "eksen",
+    "midline": "orta çizgi",
+    "asymptote": "asimptot",
+    "xIntercept": "x-kesişimi"
+  },
+  "categories": {
+    "functions": {
+      "name": "Temel Fonksiyonlar",
+      "description": "Koordinat düzleminde fonksiyon grafikleri"
+    },
+    "plane-curves": {
+      "name": "Düzlem Eğrileri",
+      "description": "Konik kesitler ve diğer eğriler"
+    },
+    "solids": {
+      "name": "Katı Geometri",
+      "description": "3B katılar: prizmalar, piramitler, dönel cisimler"
+    },
+    "combined": {
+      "name": "Bileşik Katılar",
+      "description": "Temel katılardan oluşturulan bileşik şekiller"
+    }
+  }
+}

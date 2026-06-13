@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Fungsi Berkadar Terus",
+    "description": "Garis lurus melalui asalan yang kecerunannya ditentukan oleh k.",
+    "explanation": "Kadar terus bermaksud y berubah pada kadar tetap dengan x. Graf sentiasa berupa garis lurus melalui asalan; hanya kecerunannya berubah. |k| yang lebih besar menghasilkan garis yang lebih curam; tanda k menukar garis antara pepenjuru naik dan pepenjuru turun.",
+    "examples": [
+      "Jarak melawan masa pada kelajuan tetap (d = vt).",
+      "Jumlah harga melawan kuantiti pada harga seunit yang tetap."
+    ],
+    "parameters": {
+      "k": { "label": "Kecerunan", "explanation": "Mengawal kecerunan dan arah. k>0 menaik, k<0 menurun." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "Melalui asalan (0, 0)." },
+      { "label": "Kecerunan", "description": "Kenaikan dibahagi larian." }
+    ]
+  },
+  "linear": {
+    "name": "Fungsi Linear",
+    "description": "Garis lurus y = kx + b dengan kecerunan dan pintasan yang boleh diubah.",
+    "explanation": "k mengawal kecerunan (kecuraman dan arah) manakala b menggerakkan seluruh garis ke atas atau ke bawah, menentukan titik ia memotong paksi-y. Mengubah b menggelongsorkan garis secara menegak tanpa mengubah kecondongannya.",
+    "examples": [
+      "Tambang teksi = tambang asas + kadar × jarak.",
+      "Penukaran suhu: °F = 1.8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Kecerunan", "explanation": "Kecerunan: kadar perubahan y bagi setiap unit x." },
+      "b": { "label": "Pintasan-y", "explanation": "Titik garis memotong paksi-y." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Pintasan-y" },
+      { "label": "Pintasan-x", "description": "Apabila k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Fungsi Kuadratik",
+    "description": "Parabola y = ax² + bx + c dengan verteks dan paksi simetri.",
+    "explanation": "Tanda a menentukan sama ada parabola terbuka ke atas (a>0) atau ke bawah (a<0); magnitud a mengawal sempit atau lebarnya. Verteks ialah titik pusingan dan paksi simetri ialah garis menegak yang melaluinya. c hanyalah ketinggian titik lengkung memotong paksi-y.",
+    "examples": [
+      "Trajektori bola yang dilontar (gerakan peluru).",
+      "Luas segi empat tepat sebagai fungsi satu sisi dengan perimeter tetap."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Arah pembukaan & kelebaran. a>0 terbuka ke atas, a<0 terbuka ke bawah; |a| yang lebih besar lebih sempit." },
+      "b": { "label": "b", "explanation": "Menggerakkan paksi simetri ke kiri/kanan (bersama a)." },
+      "c": { "label": "c", "explanation": "Pintasan-y (nilai pada x = 0)." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Paksi simetri" },
+      { "label": "Verteks" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Fungsi Berkadar Songsang",
+    "description": "Hiperbola y = k/x dengan paksi-paksi sebagai asimptot.",
+    "explanation": "Apabila x bertambah, hasil darab xy kekal sama dengan k, jadi y mengecil ke arah 0 — lengkung mendekati kedua-dua paksi (asimptotnya) tetapi tidak pernah menyentuhnya. Kedua-dua cabang berada dalam sukuan bertentangan bergantung pada tanda k.",
+    "examples": [
+      "Kelajuan melawan masa perjalanan untuk jarak tetap.",
+      "Tekanan melawan isi padu gas pada suhu tetap (hukum Boyle)."
+    ],
+    "parameters": {
+      "k": { "label": "Pemalar", "explanation": "k>0 meletakkan cabang dalam sukuan I & III; k<0 dalam sukuan II & IV." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "x ≠ 0." },
+      { "label": "Asimptot" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Fungsi Nilai Mutlak",
+    "description": "Graf berbentuk V, y = a|x − h| + k.",
+    "explanation": "Nilai mutlak memaksa semua output berada di atas verteks, menghasilkan V yang simetri. (h, k) ialah penjuru V; a menskalakan lengan V dan, jika negatif, membalikkan V terbalik.",
+    "examples": [
+      "Jarak daripada nilai sasaran.",
+      "Magnitud ralat tanpa mengira tanda."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Kecuraman dan arah V (a<0 menjadikannya terbuka ke bawah)." },
+      "h": { "label": "h", "explanation": "Anjakan mengufuk verteks." },
+      "k": { "label": "k", "explanation": "Anjakan menegak verteks." }
+    },
+    "formulas": [
+      { "label": "Asas" },
+      { "label": "Terubah" },
+      { "label": "Verteks" }
+    ]
+  },
+  "power": {
+    "name": "Fungsi Kuasa",
+    "description": "y = xᵃ — bentuknya bergantung pada eksponen a.",
+    "explanation": "Fungsi kuasa menaikkan x kepada eksponen tetap. Eksponen integer ditakrifkan untuk semua x, tetapi eksponen pecahan memerlukan x ≥ 0 untuk kekal nyata, jadi lengkung hanya muncul di sebelah kanan dalam kes itu. Eksponen genap simetri terhadap paksi-y; eksponen ganjil simetri terhadap asalan.",
+    "examples": [
+      "Luas ∝ sisi² (a = 2).",
+      "Isi padu ∝ sisi³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Eksponen", "explanation": "a=1 garis, a=2 parabola, a=3 kubik, a=0.5 punca kuasa dua, a<0 seperti hiperbola." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Nota", "description": "Asas negatif tidak mempunyai nilai nyata untuk eksponen pecahan." }
+    ]
+  },
+  "exponential": {
+    "name": "Fungsi Eksponen",
+    "description": "y = aˣ — pertumbuhan pantas (a>1) atau pereputan (0<a<1).",
+    "explanation": "Fungsi eksponen mendarabkan dengan asas a bagi setiap langkah dalam x. Apabila a>1 output meningkat mendadak; apabila 0<a<1 ia mereput ke arah asimptot mengufuk y = 0. Semua lengkung melalui (0, 1) kerana a⁰ = 1.",
+    "examples": [
+      "Faedah kompaun.",
+      "Pereputan radioaktif (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Asas", "explanation": "a>1 berkembang; 0<a<1 mereput. Setiap lengkung melalui (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "a > 0, a ≠ 1." },
+      { "label": "Asimptot" },
+      { "label": "Titik tetap" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Fungsi Logaritma",
+    "description": "y = logₐ(x) — songsangan kepada fungsi eksponen.",
+    "explanation": "Logaritma menjawab soalan 'a dikuasakan kepada berapa untuk mendapat x?'. Ia adalah imej cermin bagi y = aˣ merentasi garis y = x, jadi domainnya ialah x > 0 dan ia mempunyai asimptot menegak pada x = 0. Semua lengkung melalui (1, 0).",
+    "examples": [
+      "Skala pH.",
+      "Tahap bunyi desibel.",
+      "Skala gempa bumi Richter."
+    ],
+    "parameters": {
+      "a": { "label": "Asas", "explanation": "a>1 meningkat; 0<a<1 menurun. Setiap lengkung melalui (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asimptot" },
+      { "label": "Songsangan kepada" }
+    ]
+  },
+  "sine": {
+    "name": "Fungsi Sinus",
+    "description": "y = A·sin(Bx + C) + D dengan amplitud, kala dan anjakan.",
+    "explanation": "A meregangkan gelombang secara menegak (amplitud); B memampatkannya secara mengufuk, menetapkan kala T = 2π/|B|; C menggelongsorkannya ke kiri/kanan (anjakan fasa −C/B); D menaikkan atau menurunkan garis tengah.",
+    "examples": [
+      "Gelombang bunyi.",
+      "Arus ulang-alik.",
+      "Air pasang dan jam siang sepanjang tahun."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitud", "explanation": "Separuh daripada ketinggian antara maksimum dan minimum." },
+      "B": { "label": "Frekuensi", "explanation": "B yang lebih besar memampatkan gelombang (kala lebih pendek)." },
+      "C": { "label": "Fasa", "explanation": "Anjakan mengufuk gelombang." },
+      "D": { "label": "Anjakan menegak", "explanation": "Menggerakkan garis tengah ke atas atau ke bawah." }
+    },
+    "formulas": [
+      { "label": "Asas" },
+      { "label": "Terubah" },
+      { "label": "Amplitud" },
+      { "label": "Kala" },
+      { "label": "Anjakan fasa" }
+    ]
+  },
+  "cosine": {
+    "name": "Fungsi Kosinus",
+    "description": "y = A·cos(Bx + C) + D — gelombang sinus yang dianjak satu suku kala.",
+    "explanation": "Kosinus mempunyai bentuk yang sama seperti sinus tetapi bermula pada maksimumnya: cos(x) = sin(x + π/2). Parameter-parameter ini bermaksud perkara yang sama tepat — amplitud A, kala 2π/|B|, anjakan fasa, dan anjakan menegak D.",
+    "examples": [
+      "Kedudukan mengufuk satu titik pada roda yang berputar.",
+      "Kitaran suhu mengikut musim."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitud", "explanation": "Separuh daripada ketinggian antara maksimum dan minimum." },
+      "B": { "label": "Frekuensi", "explanation": "B yang lebih besar memampatkan gelombang (kala lebih pendek)." },
+      "C": { "label": "Fasa", "explanation": "Anjakan mengufuk gelombang." },
+      "D": { "label": "Anjakan menegak", "explanation": "Menggerakkan garis tengah ke atas atau ke bawah." }
+    },
+    "formulas": [
+      { "label": "Asas" },
+      { "label": "Terubah" },
+      { "label": "Amplitud" },
+      { "label": "Kala" }
+    ]
+  },
+  "tangent": {
+    "name": "Fungsi Tangen",
+    "description": "y = A·tan(Bx + C) + D dengan asimptot menegak yang berulang.",
+    "explanation": "Tangen berulang setiap π dan melonjak ke ±∞ pada setiap asimptot, iaitu apabila cos = 0. Graf dilukis sebagai cabang-cabang berasingan — ia tidak pernah bersambung merentasi asimptot. B menetapkan kekerapan kemunculan asimptot.",
+    "examples": [
+      "Kecerunan garis pada sudut tertentu.",
+      "Pemodelan letupan pantas berhampiran had."
+    ],
+    "parameters": {
+      "A": { "label": "Skala menegak", "explanation": "Meregangkan cabang-cabang secara menegak." },
+      "B": { "label": "Frekuensi", "explanation": "Mengawal jarak antara asimptot (kala π/|B|)." },
+      "C": { "label": "Fasa", "explanation": "Anjakan mengufuk." },
+      "D": { "label": "Anjakan menegak", "explanation": "Menggerakkan lengkung ke atas atau ke bawah." }
+    },
+    "formulas": [
+      { "label": "Asas" },
+      { "label": "Terubah" },
+      { "label": "Kala" },
+      { "label": "Asimptot" }
+    ]
+  },
+  "piecewise": {
+    "name": "Fungsi Berkeping",
+    "description": "Peraturan berbeza pada selang berbeza, bercantum pada satu titik putus.",
+    "explanation": "Fungsi berkeping menggunakan formula yang berbeza pada setiap selang domainnya. Di sini keping kiri (x < 0) menggunakan −sx dan keping kanan (x ≥ 0) menggunakan sx. Kedua-dua keping dilukis secara berasingan dan hanya bertemu pada titik putus x = 0.",
+    "examples": [
+      "Tangga cukai.",
+      "Tingkat kos penghantaran mengikut berat.",
+      "Nilai mutlak sebagai dua garis."
+    ],
+    "parameters": {
+      "scale": { "label": "Skala kecerunan", "explanation": "Menskalakan kedua-dua lengan supaya anda dapat melihat keping-keping berubah bersama." }
+    },
+    "formulas": [
+      { "label": "Takrifan", "description": "Dua peraturan linear bertemu pada x = 0." }
+    ]
+  },
+  "circle": {
+    "name": "Bulatan",
+    "description": "Semua titik pada jarak r daripada pusat (h, k).",
+    "explanation": "Bulatan ialah himpunan titik pada jarak tetap r (radius) daripada pusatnya (h, k). Menggerakkan h dan k menggelongsorkan seluruh bulatan; mengubah r membesarkan atau mengecilkannya. Lilitan dan luasnya hanya bergantung pada r.",
+    "examples": [
+      "Roda dan gear.",
+      "Riak air.",
+      "Trek lari bulat."
+    ],
+    "parameters": {
+      "h": { "label": "Pusat-x", "explanation": "Kedudukan mengufuk pusat." },
+      "k": { "label": "Pusat-y", "explanation": "Kedudukan menegak pusat." },
+      "r": { "label": "Radius", "explanation": "Jarak daripada pusat ke tepi." }
+    },
+    "formulas": [
+      { "label": "Bentuk piawai" },
+      { "label": "Berpusat pada asalan" },
+      { "label": "Lilitan" },
+      { "label": "Luas" }
+    ],
+    "properties": [
+      { "label": "Lilitan" },
+      { "label": "Luas" },
+      { "label": "Diameter" }
+    ]
+  },
+  "ellipse": {
+    "name": "Elips",
+    "description": "Bulatan yang diregangkan dengan semi-paksi a dan b.",
+    "explanation": "Elips ialah bulatan yang diskalakan dengan jumlah berbeza sepanjang dua paksi. a dan b ialah semi-paksi major dan semi-paksi minor (mana-mana yang lebih besar adalah 'major'). Apabila a = b elips menjadi bulatan. Luasnya ialah π·a·b.",
+    "examples": [
+      "Orbit planet.",
+      "Dewan berbisik.",
+      "Gear berbentuk elips."
+    ],
+    "parameters": {
+      "a": { "label": "Semi-paksi a", "explanation": "Separuh kelebaran sepanjang paksi-x." },
+      "b": { "label": "Semi-paksi b", "explanation": "Separuh ketinggian sepanjang paksi-y." }
+    },
+    "formulas": [
+      { "label": "Bentuk piawai" },
+      { "label": "Luas" },
+      { "label": "Fokus (a>b)" }
+    ],
+    "properties": [
+      { "label": "Luas" },
+      { "label": "Jarak fokus" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hiperbola",
+    "description": "Dua cabang bertentangan dengan asimptot garis lurus.",
+    "explanation": "Hiperbola mempunyai dua cabang imej cermin yang terbuka ke kiri dan kanan, setiap satu mendekati asimptot y = ±(b/a)x tanpa menyentuhnya. Lengkung kadar songsang ringkas y = k/x juga merupakan hiperbola — hanya diputar supaya paksi-paksi itu sendiri menjadi asimptotnya.",
+    "examples": [
+      "Navigasi jarak jauh (LORAN).",
+      "Trajektori objek yang melepasi graviti.",
+      "Bayang-bayang kon lampu pada dinding."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Menetapkan verteks pada (±a, 0) dan kecerunan asimptot." },
+      "b": { "label": "b", "explanation": "Bersama a menetapkan kecerunan asimptot ±b/a." }
+    },
+    "formulas": [
+      { "label": "Bentuk piawai" },
+      { "label": "Asimptot" },
+      { "label": "Verteks" }
+    ],
+    "properties": [
+      { "label": "Kecerunan asimptot" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabola (Keratan Kon)",
+    "description": "Keratan kon y² = 2px dengan fokus dan garis arah.",
+    "explanation": "Setiap titik pada parabola berjarak sama daripada satu titik tetap (fokus) dan satu garis tetap (garis arah). Untuk y² = 2px, lengkung terbuka ke kanan, fokus berada pada (p/2, 0), dan garis arah ialah garis menegak x = −p/2. p yang lebih besar menghasilkan bukaan yang lebih lebar.",
+    "examples": [
+      "Pinggan satelit dan pemantul lampu hadapan.",
+      "Kabel jambatan gantung.",
+      "Trajektori peluru."
+    ],
+    "parameters": {
+      "p": { "label": "Parameter p", "explanation": "Parameter berkaitan jarak; p>0 terbuka ke kanan." }
+    },
+    "formulas": [
+      { "label": "Bentuk piawai" },
+      { "label": "Fokus" },
+      { "label": "Garis arah" }
+    ],
+    "properties": [
+      { "label": "Fokus-x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Kuboid (Prisma Segi Empat Tepat)",
+    "description": "Kotak dengan panjang, lebar dan tinggi.",
+    "explanation": "Kuboid mempunyai tiga pasang muka segi empat tepat yang serupa. Isi padunya mendarabkan tiga panjang sisi; luas permukaannya menjumlahkan luas keenam-enam muka.",
+    "examples": [
+      "Bata dan kotak.",
+      "Bilik dan bangunan.",
+      "Akuarium."
+    ],
+    "parameters": {
+      "l": { "label": "Panjang", "explanation": "Saiz sepanjang paksi-x." },
+      "w": { "label": "Lebar", "explanation": "Saiz sepanjang paksi-z." },
+      "h": { "label": "Tinggi", "explanation": "Saiz sepanjang paksi-y." }
+    },
+    "formulas": [
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" },
+      { "label": "Pepenjuru ruang" }
+    ],
+    "properties": [
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "cube": {
+    "name": "Kubus",
+    "description": "Kuboid dengan semua sisi sama panjang.",
+    "explanation": "Kubus ialah kuboid yang paling simetri: kesemua 12 sisinya sama panjang dan kesemua 6 mukanya ialah segi empat sama yang kongruen. Menggandakan panjang sisi mendarabkan isi padu dengan 8.",
+    "examples": [
+      "Dadu.",
+      "Kubus Rubik.",
+      "Kiub gula."
+    ],
+    "parameters": {
+      "a": { "label": "Sisi", "explanation": "Panjang setiap sisi." }
+    },
+    "formulas": [
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" },
+      { "label": "Pepenjuru ruang" }
+    ],
+    "properties": [
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "cylinder": {
+    "name": "Silinder",
+    "description": "Dua tapak bulat disambung dengan permukaan melengkung.",
+    "explanation": "Membuka gulung sisi melengkung silinder menghasilkan segi empat tepat berlebar 2πr dan tinggi h, itulah sebabnya luas sisi ialah 2πrh. Menambah kedua-dua hujung bulat memberikan jumlah luas permukaan.",
+    "examples": [
+      "Tin dan paip.",
+      "Gelas minuman.",
+      "Dram penggelek."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius tapak bulat." },
+      "h": { "label": "Tinggi", "explanation": "Jarak antara kedua-dua tapak." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Luas sisi" },
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Luas sisi" },
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Prisma Segi Tiga",
+    "description": "Segi tiga yang disapu sepanjang panjangnya.",
+    "explanation": "Prisma mengekalkan keratan rentas yang sama di sepanjang panjangnya, jadi isi padunya hanyalah luas tapak didarab dengan panjang. Di sini tapaknya ialah segi tiga dengan luas ½·b·hₜ.",
+    "examples": [
+      "Bar Toblerone.",
+      "Kekuda bumbung.",
+      "Prisma kaca optik."
+    ],
+    "parameters": {
+      "b": { "label": "Tapak segi tiga", "explanation": "Panjang tapak keratan rentas segi tiga." },
+      "ht": { "label": "Tinggi segi tiga", "explanation": "Tinggi keratan rentas segi tiga." },
+      "H": { "label": "Panjang prisma", "explanation": "Sejauh mana segi tiga itu disapu." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Prisma Segi Empat",
+    "description": "Tapak segi empat tepat disapu menjadi prisma.",
+    "explanation": "Prisma segi empat mempunyai tapak segi empat tepat (sisi empat). Seperti setiap prisma, isi padunya ialah luas tapak didarab dengan tinggi. Dengan tapak segi empat tepat, ini sama seperti kuboid: B = lw.",
+    "examples": [
+      "Rasuk dan tiang.",
+      "Kotak pembungkusan.",
+      "Tiang bangunan."
+    ],
+    "parameters": {
+      "l": { "label": "Panjang tapak", "explanation": "Panjang tapak segi empat tepat." },
+      "w": { "label": "Lebar tapak", "explanation": "Lebar tapak segi empat tepat." },
+      "H": { "label": "Tinggi prisma", "explanation": "Tinggi prisma." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Prisma Pentagon",
+    "description": "Pentagon biasa disapu menjadi prisma.",
+    "explanation": "Tapaknya ialah pentagon biasa, yang luasnya menggunakan formula umum poligon biasa dengan n = 5. Mendarab dengan tinggi memberikan isi padu prisma.",
+    "examples": [
+      "Pensel dengan keratan rentas pentagon.",
+      "Sesetengah nat dan bolt.",
+      "Tiang seni bina."
+    ],
+    "parameters": {
+      "a": { "label": "Panjang sisi", "explanation": "Panjang sisi pentagon biasa." },
+      "h": { "label": "Tinggi prisma", "explanation": "Tinggi prisma." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Prisma Heksagon",
+    "description": "Heksagon biasa disapu menjadi prisma.",
+    "explanation": "Heksagon biasa terdiri daripada enam segi tiga sama sisi, menghasilkan formula luas tapak yang ringkas (3√3/2)·a². Prisma heksagon menyusun ruang dengan cekap, itulah sebabnya lebah membina sel heksagon.",
+    "examples": [
+      "Pensel.",
+      "Sel sarang lebah.",
+      "Nat dan bolt."
+    ],
+    "parameters": {
+      "a": { "label": "Panjang sisi", "explanation": "Panjang sisi heksagon biasa." },
+      "h": { "label": "Tinggi prisma", "explanation": "Tinggi prisma." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Piramid Segi Tiga",
+    "description": "Tapak segi tiga biasa menirus ke arah puncak.",
+    "explanation": "Isi padu piramid sentiasa satu pertiga daripada prisma dengan tapak dan tinggi yang sama. Di sini tapaknya ialah segi tiga sama sisi dengan luas (√3/4)·a².",
+    "examples": [
+      "Dadu tetrahedron (d4).",
+      "Bentuk molekul (metana).",
+      "Bumbung piramid."
+    ],
+    "parameters": {
+      "a": { "label": "Sisi tapak", "explanation": "Panjang sisi tapak sama sisi." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi serenjang daripada tapak ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Piramid Segi Empat",
+    "description": "Tapak segi empat tepat menirus ke arah puncak.",
+    "explanation": "Ini ialah bentuk piramid 'Mesir' klasik: tapak segi empat tepat yang naik ke satu puncak. Isi padunya ialah satu pertiga daripada kuboid yang sepadan (luas tapak × tinggi).",
+    "examples": [
+      "Piramid Besar Giza.",
+      "Bumbung berbentuk piramid.",
+      "Bentuk khemah."
+    ],
+    "parameters": {
+      "l": { "label": "Panjang tapak", "explanation": "Panjang tapak segi empat tepat." },
+      "w": { "label": "Lebar tapak", "explanation": "Lebar tapak segi empat tepat." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi serenjang daripada tapak ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Piramid Pentagon",
+    "description": "Tapak pentagon biasa menirus ke arah puncak.",
+    "explanation": "Piramid dengan tapak pentagon biasa. Luas tapak menggunakan formula poligon biasa dengan n = 5; isi padunya ialah satu pertiga daripada luas tapak didarab dengan tinggi, seperti setiap piramid.",
+    "examples": [
+      "Menara hiasan.",
+      "Bentuk kristal.",
+      "Variasi dadu permainan."
+    ],
+    "parameters": {
+      "a": { "label": "Panjang sisi", "explanation": "Panjang sisi tapak pentagon biasa." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi serenjang daripada tapak ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Piramid Heksagon",
+    "description": "Tapak heksagon biasa menirus ke arah puncak.",
+    "explanation": "Piramid dengan tapak heksagon biasa. Seperti biasa untuk piramid, V = ⅓·B·h, dengan B ialah luas heksagon (3√3/2)·a².",
+    "examples": [
+      "Hujung pensel.",
+      "Menara dan hiasan puncak.",
+      "Hujung kristal."
+    ],
+    "parameters": {
+      "a": { "label": "Panjang sisi", "explanation": "Panjang sisi tapak heksagon biasa." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi serenjang daripada tapak ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "cone": {
+    "name": "Kon",
+    "description": "Tapak bulat menirus ke satu titik.",
+    "explanation": "Kon ialah piramid dengan tapak bulat, jadi isi padunya juga satu pertiga daripada silinder yang sepadan. Tinggi sisi l (bukan tinggi menegak) yang menentukan luas permukaan sisi melengkung πrl.",
+    "examples": [
+      "Kon ais krim.",
+      "Kon lalu lintas.",
+      "Corong."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius tapak bulat." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi serenjang daripada tapak ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas tapak" },
+      { "label": "Tinggi sisi" },
+      { "label": "Luas sisi" },
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas tapak" },
+      { "label": "Tinggi sisi" },
+      { "label": "Luas sisi" },
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "sphere": {
+    "name": "Sfera",
+    "description": "Semua titik pada jarak r daripada pusat, dalam 3D.",
+    "explanation": "Sfera ialah analog 3D bagi bulatan. Luas permukaannya adalah tepat empat kali ganda luas 'bayang' bulatannya (4πr²), dan isi padunya berkembang mengikut kuasa tiga radius.",
+    "examples": [
+      "Bola dan planet.",
+      "Gelembung.",
+      "Galas bebola."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Jarak daripada pusat ke permukaan." }
+    },
+    "formulas": [
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Frustum Kon",
+    "description": "Kon yang hujungnya dipotong selari dengan tapak.",
+    "explanation": "Frustum ialah baki kon selepas bahagian atasnya dipotong selari dengan tapak. Isi padunya menggabungkan kedua-dua radius dengan sebutan silang Rr. Tinggi sisi menggunakan perbezaan R − r, bukan R + r.",
+    "examples": [
+      "Baldi dan tudung lampu.",
+      "Cawan minuman.",
+      "Menara penyejuk (bahagian bawah)."
+    ],
+    "parameters": {
+      "R": { "label": "Radius bawah", "explanation": "Radius bulatan yang lebih besar (bawah)." },
+      "r": { "label": "Radius atas", "explanation": "Radius bulatan yang lebih kecil (atas)." },
+      "h": { "label": "Tinggi", "explanation": "Jarak menegak antara kedua-dua bulatan." }
+    },
+    "formulas": [
+      { "label": "Tinggi sisi" },
+      { "label": "Luas sisi" },
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ],
+    "properties": [
+      { "label": "Tinggi sisi" },
+      { "label": "Luas sisi" },
+      { "label": "Luas permukaan" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Frustum Piramid",
+    "description": "Piramid poligon biasa yang bahagian atasnya dipotong.",
+    "explanation": "Memotong bahagian atas piramid selari dengan tapaknya menghasilkan frustum dengan dua muka poligon yang serupa. Formula isi padu mengambil purata kedua-dua luas tapak B₁ dan B₂ bersama-sama dengan min geometrinya √(B₁B₂).",
+    "examples": [
+      "Tudung lampu.",
+      "Pasu tanaman.",
+      "Bahagian atas bangunan bertingkat."
+    ],
+    "parameters": {
+      "n": { "label": "Bilangan sisi", "explanation": "Bilangan sisi tapak poligon biasa." },
+      "aBottom": { "label": "Sisi bawah", "explanation": "Panjang sisi poligon yang lebih besar (bawah)." },
+      "aTop": { "label": "Sisi atas", "explanation": "Panjang sisi poligon yang lebih kecil (atas)." },
+      "h": { "label": "Tinggi", "explanation": "Jarak menegak antara kedua-dua tapak." }
+    },
+    "formulas": [
+      { "label": "Isi padu" },
+      { "label": "Tapak" }
+    ],
+    "properties": [
+      { "label": "Luas tapak bawah" },
+      { "label": "Luas tapak atas" },
+      { "label": "Isi padu" }
+    ]
+  },
+  "house": {
+    "name": "Rumah",
+    "description": "Badan kuboid dengan bumbung prisma segi tiga.",
+    "explanation": "Untuk mencari isi padu pejal gabungan, pecahkannya kepada pejal asas, kira setiap satu, kemudian tambahkan. Rumah ialah kuboid (dinding) ditambah prisma segi tiga (bumbung). Tambahkan kedua-dua isi padu untuk jumlahnya; muka sentuhan di mana mereka bertemu adalah dalaman dan bukan sebahagian daripada permukaan luar.",
+    "examples": [
+      "Bentuk rumah dan bangsal ringkas.",
+      "Bangsal ternakan.",
+      "Rumah burung."
+    ],
+    "parameters": {
+      "l": { "label": "Panjang", "explanation": "Lebar rumah (dan rentang bumbung)." },
+      "w": { "label": "Kedalaman", "explanation": "Kedalaman rumah." },
+      "h": { "label": "Tinggi dinding", "explanation": "Tinggi dinding kuboid." },
+      "hr": { "label": "Tinggi bumbung", "explanation": "Tinggi bumbung segi tiga." }
+    },
+    "formulas": [
+      { "label": "Badan (kuboid)" },
+      { "label": "Bumbung (prisma segi tiga)" },
+      { "label": "Jumlah" }
+    ],
+    "properties": [
+      { "label": "Isi padu badan" },
+      { "label": "Isi padu bumbung" },
+      { "label": "Jumlah isi padu" }
+    ]
+  },
+  "pencil": {
+    "name": "Pensel",
+    "description": "Badan silinder dengan hujung kon.",
+    "explanation": "Pensel ialah silinder (badan) dengan kon (hujung yang ditajamkan) yang berkongsi radius yang sama. Jumlah isi padu ialah silinder ditambah kon. Kerana kedua-duanya berkongsi muka sentuhan bulat, tidak ada permukaan luar yang melalui situ.",
+    "examples": [
+      "Pensel dan krayon.",
+      "Roket (badan + kon hidung).",
+      "Sesetengah botol."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius pensel." },
+      "h": { "label": "Panjang badan", "explanation": "Panjang badan silinder." },
+      "ht": { "label": "Panjang hujung", "explanation": "Panjang hujung kon yang ditajamkan." }
+    },
+    "formulas": [
+      { "label": "Badan (silinder)" },
+      { "label": "Hujung (kon)" },
+      { "label": "Jumlah" }
+    ],
+    "properties": [
+      { "label": "Isi padu badan" },
+      { "label": "Isi padu hujung" },
+      { "label": "Jumlah isi padu" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Ais Krim",
+    "description": "Kon yang memegang cedokan sfera.",
+    "explanation": "Ais krim ialah kon (hujung ke bawah) dengan sfera yang berehat di atasnya. Tambahkan isi padu kon dan sfera untuk mendapat jumlahnya. Pada hakikatnya sebahagian cedokan berada di dalam mulut kon, jadi jawapan yang teliti akan menolak pertindihan itu — contoh yang baik tentang bila perlu menolak.",
+    "examples": [
+      "Kon ais krim.",
+      "Hiasan puncak.",
+      "Gasing."
+    ],
+    "parameters": {
+      "r": { "label": "Radius kon", "explanation": "Radius bukaan atas kon." },
+      "h": { "label": "Tinggi kon", "explanation": "Panjang kon (hujung mengarah ke bawah)." },
+      "R": { "label": "Radius cedokan", "explanation": "Radius cedokan sfera." }
+    },
+    "formulas": [
+      { "label": "Kon" },
+      { "label": "Cedokan (sfera)" },
+      { "label": "Jumlah" }
+    ],
+    "properties": [
+      { "label": "Isi padu kon" },
+      { "label": "Isi padu cedokan" },
+      { "label": "Jumlah isi padu" }
+    ]
+  },
+  "water-tower": {
+    "name": "Menara Air",
+    "description": "Silinder bertudung kubah hemisfera.",
+    "explanation": "Menara air ialah silinder dengan hemisfera (separuh sfera) di atasnya, berkongsi radius yang sama. Jumlah isi padu menambahkan silinder dan hemisfera. Hemisfera adalah tepat separuh sfera, jadi isi padunya ialah ⅔πr³.",
+    "examples": [
+      "Menara air dan silo.",
+      "Kubah observatori.",
+      "Tangki penyimpanan."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius silinder dan kubah." },
+      "h": { "label": "Tinggi badan", "explanation": "Tinggi badan silinder." }
+    },
+    "formulas": [
+      { "label": "Badan (silinder)" },
+      { "label": "Kubah (hemisfera)" },
+      { "label": "Jumlah" }
+    ],
+    "properties": [
+      { "label": "Isi padu badan" },
+      { "label": "Isi padu kubah" },
+      { "label": "Jumlah isi padu" }
+    ]
+  },
+  "castle": {
+    "name": "Istana",
+    "description": "Bangunan utama dengan empat menara penjuru dan bumbung kon.",
+    "explanation": "Istana menggabungkan beberapa pejal asas: kubu kuboid, empat menara silinder, dan empat bumbung kon. Strateginya sama seperti sebelum ini — pecahkan kepada bahagian yang diketahui, kira setiap isi padu, kemudian tambahkan semuanya. Secara simetri, keempat-empat menara dan keempat-empat bumbung adalah serupa, jadi kita darab dengan empat.",
+    "examples": [
+      "Istana mainan.",
+      "Pion 'rook' dalam catur.",
+      "Seni bina kubu dan menara."
+    ],
+    "parameters": {
+      "s": { "label": "Saiz kubu", "explanation": "Panjang sisi kubu pusat berbentuk segi empat sama." },
+      "hk": { "label": "Tinggi kubu", "explanation": "Tinggi kubu pusat." },
+      "r": { "label": "Radius menara", "explanation": "Radius setiap menara penjuru." },
+      "ht": { "label": "Tinggi menara", "explanation": "Tinggi setiap menara penjuru." }
+    },
+    "formulas": [
+      { "label": "Kubu (kuboid)" },
+      { "label": "Menara (silinder)" },
+      { "label": "Bumbung (kon)" },
+      { "label": "Jumlah" }
+    ],
+    "properties": [
+      { "label": "Isi padu kubu" },
+      { "label": "Semua menara" },
+      { "label": "Semua bumbung" },
+      { "label": "Jumlah isi padu" }
+    ]
+  }
+}

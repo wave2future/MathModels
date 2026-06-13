@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Doğru Orantı Fonksiyonu",
+    "description": "Eğimi k ile belirlenen, orijinden geçen bir doğru.",
+    "explanation": "Doğru orantı, y'nin x ile sabit bir oranda değiştiği anlamına gelir. Grafik her zaman orijinden geçen bir doğrudur; yalnızca eğimi değişir. |k| büyüdükçe doğru dikleşir; k'nın işareti doğruyu yükselen ve alçalan köşegenler arasında değiştirir.",
+    "examples": [
+      "Sabit hızda mesafe ile zaman ilişkisi (d = vt).",
+      "Sabit birim fiyatta toplam fiyat ile miktar ilişkisi."
+    ],
+    "parameters": {
+      "k": { "label": "Eğim", "explanation": "Dikliği ve yönü belirler. k>0 yükselir, k<0 alçalır." }
+    },
+    "formulas": [
+      { "label": "Fonksiyon", "description": "Orijinden (0, 0) geçer." },
+      { "label": "Eğim", "description": "Düşey değişim bölü yatay değişim." }
+    ]
+  },
+  "linear": {
+    "name": "Doğrusal Fonksiyon",
+    "description": "Ayarlanabilir eğim ve kesişimle y = kx + b doğrusu.",
+    "explanation": "k eğimi (dikliği ve yönü) belirlerken, b doğruyu yukarı veya aşağı kaydırarak y eksenini nerede kestiğini ayarlar. b'yi değiştirmek doğruyu eğimini değiştirmeden düşey olarak kaydırır.",
+    "examples": [
+      "Taksi ücreti = başlangıç ücreti + birim fiyat × mesafe.",
+      "Sıcaklık dönüşümü: °F = 1.8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Eğim", "explanation": "Eğim: y'nin birim x başına ne kadar değiştiği." },
+      "b": { "label": "y-kesişimi", "explanation": "Doğrunun y eksenini kestiği nokta." }
+    },
+    "formulas": [
+      { "label": "Fonksiyon" },
+      { "label": "y-kesişimi" },
+      { "label": "x-kesişimi", "description": "k ≠ 0 olduğunda." }
+    ]
+  },
+  "quadratic": {
+    "name": "İkinci Derece Fonksiyon",
+    "description": "Tepe noktası ve simetri eksenine sahip y = ax² + bx + c parabolü.",
+    "explanation": "a'nın işareti, parabolün yukarı (a>0) mı yoksa aşağı (a<0) mı açıldığını belirler; a'nın büyüklüğü ne kadar dar olduğunu kontrol eder. Tepe noktası, eğrinin dönüş noktasıdır ve simetri ekseni bu noktadan geçen düşey doğrudur. c ise eğrinin y eksenini kestiği yüksekliktir.",
+    "examples": [
+      "Atılan bir topun yolu (eğik atış hareketi).",
+      "Sabit çevre uzunluğunda bir kenara bağlı dikdörtgen alanı."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Açılma yönü ve genişlik. a>0 yukarı açılır, a<0 aşağı açılır; |a| büyüdükçe daralır." },
+      "b": { "label": "b", "explanation": "Simetri eksenini (a ile birlikte) sağa/sola kaydırır." },
+      "c": { "label": "c", "explanation": "y-kesişimi (x = 0'daki değer)." }
+    },
+    "formulas": [
+      { "label": "Fonksiyon" },
+      { "label": "Simetri ekseni" },
+      { "label": "Tepe noktası" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Ters Orantı Fonksiyonu",
+    "description": "Eksenleri asimptot olarak kullanan y = k/x hiperbolü.",
+    "explanation": "x büyüdükçe xy çarpımı k'ya eşit kalır, böylece y sıfıra doğru küçülür — eğri her iki eksene de (asimptotlarına) yaklaşır ama hiçbir zaman dokunmaz. İki kol, k'nın işaretine bağlı olarak karşılıklı bölgelerde yer alır.",
+    "examples": [
+      "Sabit bir mesafe için hız ile yolculuk süresi ilişkisi.",
+      "Sabit sıcaklıkta bir gazın basıncı ile hacmi ilişkisi (Boyle yasası)."
+    ],
+    "parameters": {
+      "k": { "label": "Sabit", "explanation": "k>0 kolları I. ve III. bölgelere yerleştirir; k<0 ise II. ve IV. bölgelere." }
+    },
+    "formulas": [
+      { "label": "Fonksiyon", "description": "x ≠ 0." },
+      { "label": "Asimptotlar" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Mutlak Değer Fonksiyonu",
+    "description": "V şeklinde bir grafik: y = a|x − h| + k.",
+    "explanation": "Mutlak değer, tüm çıktıları tepe noktasının üstünde tutarak simetrik bir V şekli oluşturur. (h, k) V'nin köşe noktasıdır; a kolları ölçeklendirir ve negatifse V'yi ters çevirir.",
+    "examples": [
+      "Bir hedef değerden olan uzaklık.",
+      "İşaretten bağımsız hata büyüklüğü."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "V'nin dikliği ve yönü (a<0 aşağı açılmasını sağlar)." },
+      "h": { "label": "h", "explanation": "Tepe noktasının yatay kayması." },
+      "k": { "label": "k", "explanation": "Tepe noktasının düşey kayması." }
+    },
+    "formulas": [
+      { "label": "Temel" },
+      { "label": "Dönüştürülmüş" },
+      { "label": "Tepe noktası" }
+    ]
+  },
+  "power": {
+    "name": "Kuvvet Fonksiyonu",
+    "description": "y = xᵃ — şekli a üssüne bağlıdır.",
+    "explanation": "Bir kuvvet fonksiyonu x'i sabit bir üsse yükseltir. Tam sayı üsler tüm x değerleri için tanımlıdır, ancak kesirli üsler gerçek kalabilmesi için x ≥ 0 gerektirir, bu yüzden eğri orada sadece sağ tarafta görünür. Çift üsler y eksenine göre simetriktir; tek üsler orijine göre simetriktir.",
+    "examples": [
+      "Alan ∝ kenar² (a = 2).",
+      "Hacim ∝ kenar³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Üs", "explanation": "a=1 doğru, a=2 parabol, a=3 kübik, a=0.5 karekök, a<0 hiperbol benzeri." }
+    },
+    "formulas": [
+      { "label": "Fonksiyon" },
+      { "label": "Not", "description": "Negatif tabanlar kesirli üsler için gerçek bir değere sahip değildir." }
+    ]
+  },
+  "exponential": {
+    "name": "Üstel Fonksiyon",
+    "description": "y = aˣ — hızlı büyüme (a>1) veya azalma (0<a<1).",
+    "explanation": "Üstel fonksiyonlar, x'teki her adım için a tabanıyla çarpılır. a>1 olduğunda çıktı yukarı doğru patlar; 0<a<1 olduğunda y = 0 yatay asimptotuna doğru azalır. a⁰ = 1 olduğundan tümü (0, 1) noktasından geçer.",
+    "examples": [
+      "Bileşik faiz.",
+      "Radyoaktif bozunma (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Taban", "explanation": "a>1 büyür; 0<a<1 azalır. Her eğri (0, 1) noktasından geçer." }
+    },
+    "formulas": [
+      { "label": "Fonksiyon", "description": "a > 0, a ≠ 1." },
+      { "label": "Asimptot" },
+      { "label": "Sabit nokta" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Logaritmik Fonksiyon",
+    "description": "y = logₐ(x) — üstel fonksiyonun tersi.",
+    "explanation": "Logaritma 'a hangi kuvvete yükseltilirse x verir?' sorusunu yanıtlar. y = aˣ'in y = x doğrusuna göre ayna görüntüsüdür, dolayısıyla tanım kümesi x > 0'dır ve x = 0'da düşey bir asimptotu vardır. Tüm eğriler (1, 0) noktasından geçer.",
+    "examples": [
+      "pH ölçeği.",
+      "Desibel ses seviyeleri.",
+      "Richter deprem ölçeği."
+    ],
+    "parameters": {
+      "a": { "label": "Taban", "explanation": "a>1 yükselir; 0<a<1 düşer. Her eğri (1, 0) noktasından geçer." }
+    },
+    "formulas": [
+      { "label": "Fonksiyon", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asimptot" },
+      { "label": "Tersi" }
+    ]
+  },
+  "sine": {
+    "name": "Sinüs Fonksiyonu",
+    "description": "Genlik, periyot ve kaymalarla y = A·sin(Bx + C) + D.",
+    "explanation": "A dalgayı düşey olarak gerer (genlik); B yatay olarak sıkıştırır ve periyodu T = 2π/|B| olarak belirler; C sağa/sola kaydırır (faz kayması −C/B); D orta çizgiyi yukarı veya aşağı taşır.",
+    "examples": [
+      "Ses dalgaları.",
+      "Alternatif akım.",
+      "Bir yıl boyunca gel-git ve gün ışığı süreleri."
+    ],
+    "parameters": {
+      "A": { "label": "Genlik", "explanation": "Maksimum ve minimum arasındaki yüksekliğin yarısı." },
+      "B": { "label": "Frekans", "explanation": "B büyüdükçe dalga sıkışır (periyot kısalır)." },
+      "C": { "label": "Faz", "explanation": "Dalganın yatay kayması." },
+      "D": { "label": "Düşey kayma", "explanation": "Orta çizgiyi yukarı veya aşağı taşır." }
+    },
+    "formulas": [
+      { "label": "Temel" },
+      { "label": "Dönüştürülmüş" },
+      { "label": "Genlik" },
+      { "label": "Periyot" },
+      { "label": "Faz kayması" }
+    ]
+  },
+  "cosine": {
+    "name": "Kosinüs Fonksiyonu",
+    "description": "y = A·cos(Bx + C) + D — çeyrek periyot kaydırılmış bir sinüs dalgası.",
+    "explanation": "Kosinüs, sinüsle aynı şekle sahiptir ancak maksimumdan başlar: cos(x) = sin(x + π/2). Parametreler tam olarak aynı anlama gelir — genlik A, periyot 2π/|B|, faz kayması ve düşey kayma D.",
+    "examples": [
+      "Dönen bir tekerlek üzerindeki bir noktanın yatay konumu.",
+      "Mevsimsel sıcaklık döngüleri."
+    ],
+    "parameters": {
+      "A": { "label": "Genlik", "explanation": "Maksimum ve minimum arasındaki yüksekliğin yarısı." },
+      "B": { "label": "Frekans", "explanation": "B büyüdükçe dalga sıkışır (periyot kısalır)." },
+      "C": { "label": "Faz", "explanation": "Dalganın yatay kayması." },
+      "D": { "label": "Düşey kayma", "explanation": "Orta çizgiyi yukarı veya aşağı taşır." }
+    },
+    "formulas": [
+      { "label": "Temel" },
+      { "label": "Dönüştürülmüş" },
+      { "label": "Genlik" },
+      { "label": "Periyot" }
+    ]
+  },
+  "tangent": {
+    "name": "Tanjant Fonksiyonu",
+    "description": "Tekrarlayan düşey asimptotlara sahip y = A·tan(Bx + C) + D.",
+    "explanation": "Tanjant her π'de tekrarlanır ve cos = 0 olan her asimptotta ±∞'a fırlar. Grafik ayrı kollar halinde çizilir — bir asimptot boyunca hiçbir zaman birleşik değildir. B, asimptotların ne sıklıkla oluştuğunu belirler.",
+    "examples": [
+      "Belirli bir açıda bir doğrunun eğimi.",
+      "Bir limite yakın hızlı patlamaları modelleme."
+    ],
+    "parameters": {
+      "A": { "label": "Düşey ölçek", "explanation": "Kolları düşey olarak gerer." },
+      "B": { "label": "Frekans", "explanation": "Asimptotların aralığını kontrol eder (periyot π/|B|)." },
+      "C": { "label": "Faz", "explanation": "Yatay kayma." },
+      "D": { "label": "Düşey kayma", "explanation": "Eğriyi yukarı veya aşağı taşır." }
+    },
+    "formulas": [
+      { "label": "Temel" },
+      { "label": "Dönüştürülmüş" },
+      { "label": "Periyot" },
+      { "label": "Asimptotlar" }
+    ]
+  },
+  "piecewise": {
+    "name": "Parçalı Fonksiyon",
+    "description": "Bir kırılma noktasında birleşen, farklı aralıklarda farklı kurallar.",
+    "explanation": "Parçalı bir fonksiyon, tanım kümesinin her aralığında farklı bir formül uygular. Burada sol parça (x < 0) −sx kullanır ve sağ parça (x ≥ 0) sx kullanır. İki parça ayrı çizilir ve yalnızca kırılma noktası x = 0'da birleşir.",
+    "examples": [
+      "Vergi dilimleri.",
+      "Ağırlığa göre kargo ücret kademeleri.",
+      "İki doğru olarak mutlak değer."
+    ],
+    "parameters": {
+      "scale": { "label": "Eğim ölçeği", "explanation": "Parçaların birlikte nasıl değiştiğini izlemek için her iki kolu da ölçeklendirir." }
+    },
+    "formulas": [
+      { "label": "Tanım", "description": "x = 0'da birleşen iki doğrusal kural." }
+    ]
+  },
+  "circle": {
+    "name": "Çember",
+    "description": "Bir merkeze (h, k) r mesafesindeki tüm noktalar.",
+    "explanation": "Bir çember, merkezine (h, k) sabit bir r (yarıçap) mesafesindeki noktalar kümesidir. h ve k'yı değiştirmek tüm çemberi kaydırır; r'yi değiştirmek onu büyütür veya küçültür. Çevresi ve alanı yalnızca r'ye bağlıdır.",
+    "examples": [
+      "Tekerlekler ve dişliler.",
+      "Su üzerindeki dalgalanmalar.",
+      "Dairesel koşu pistleri."
+    ],
+    "parameters": {
+      "h": { "label": "Merkez x", "explanation": "Merkezin yatay konumu." },
+      "k": { "label": "Merkez y", "explanation": "Merkezin düşey konumu." },
+      "r": { "label": "Yarıçap", "explanation": "Merkezden kenara olan uzaklık." }
+    },
+    "formulas": [
+      { "label": "Standart form" },
+      { "label": "Orijinde merkezli" },
+      { "label": "Çevre" },
+      { "label": "Alan" }
+    ],
+    "properties": [
+      { "label": "Çevre" },
+      { "label": "Alan" },
+      { "label": "Çap" }
+    ]
+  },
+  "ellipse": {
+    "name": "Elips",
+    "description": "a ve b yarı eksenlerine sahip gerilmiş bir çember.",
+    "explanation": "Bir elips, iki eksen boyunca farklı miktarlarda ölçeklendirilmiş bir çemberdir. a ve b, yarı büyük ve yarı küçük eksenlerdir (hangisi daha büyükse o 'büyük' olandır). a = b olduğunda elips bir çembere dönüşür. Alanı π·a·b'dir.",
+    "examples": [
+      "Gezegen yörüngeleri.",
+      "Fısıltı galerileri.",
+      "Eliptik dişliler."
+    ],
+    "parameters": {
+      "a": { "label": "Yarı eksen a", "explanation": "x ekseni boyunca genişliğin yarısı." },
+      "b": { "label": "Yarı eksen b", "explanation": "y ekseni boyunca yüksekliğin yarısı." }
+    },
+    "formulas": [
+      { "label": "Standart form" },
+      { "label": "Alan" },
+      { "label": "Odak noktaları (a>b)" }
+    ],
+    "properties": [
+      { "label": "Alan" },
+      { "label": "Odak uzaklığı" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hiperbol",
+    "description": "Düz çizgisel asimptotlara sahip iki karşıt kol.",
+    "explanation": "Bir hiperbol, sola ve sağa açılan, her biri y = ±(b/a)x asimptotlarına dokunmadan yaklaşan iki ayna görüntüsü koldan oluşur. Basit ters orantı eğrisi y = k/x de bir hiperboldür — sadece eksenlerin kendisi asimptotları olacak şekilde döndürülmüştür.",
+    "examples": [
+      "Uzun menzilli seyrüsefer (LORAN).",
+      "Yer çekiminden kaçan bir cismin yolu.",
+      "Bir lamba konisinin duvardaki gölgesi."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Tepe noktalarını (±a, 0) konumuna ve asimptot eğimini belirler." },
+      "b": { "label": "b", "explanation": "a ile birlikte ±b/a asimptot eğimini belirler." }
+    },
+    "formulas": [
+      { "label": "Standart form" },
+      { "label": "Asimptotlar" },
+      { "label": "Tepe noktaları" }
+    ],
+    "properties": [
+      { "label": "Asimptot eğimi" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabol (Konik)",
+    "description": "Bir odağı ve doğrultmanı olan y² = 2px koniği.",
+    "explanation": "Bir parabolün her noktası sabit bir noktaya (odak) ve sabit bir doğruya (doğrultman) eşit uzaklıktadır. y² = 2px için eğri sağa açılır, odak (p/2, 0) noktasında bulunur ve doğrultman x = −p/2 düşey doğrusudur. p büyüdükçe açıklık genişler.",
+    "examples": [
+      "Uydu çanakları ve far yansıtıcıları.",
+      "Asma köprü kabloları.",
+      "Mermi yolları."
+    ],
+    "parameters": {
+      "p": { "label": "Parametre p", "explanation": "Uzaklıkla ilişkili parametre; p>0 sağa açılır." }
+    },
+    "formulas": [
+      { "label": "Standart form" },
+      { "label": "Odak" },
+      { "label": "Doğrultman" }
+    ],
+    "properties": [
+      { "label": "Odak x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Dikdörtgenler Prizması",
+    "description": "Uzunluk, genişlik ve yüksekliği olan bir kutu.",
+    "explanation": "Bir dikdörtgenler prizmasının üç çift özdeş dikdörtgen yüzü vardır. Hacmi üç kenar uzunluğunun çarpımıdır; yüzey alanı altı yüzün alanlarının toplamıdır.",
+    "examples": [
+      "Tuğlalar ve kutular.",
+      "Odalar ve binalar.",
+      "Akvaryumlar."
+    ],
+    "parameters": {
+      "l": { "label": "Uzunluk", "explanation": "x ekseni boyunca boyut." },
+      "w": { "label": "Genişlik", "explanation": "z ekseni boyunca boyut." },
+      "h": { "label": "Yükseklik", "explanation": "y ekseni boyunca boyut." }
+    },
+    "formulas": [
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" },
+      { "label": "Uzay köşegeni" }
+    ],
+    "properties": [
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "cube": {
+    "name": "Küp",
+    "description": "Tüm kenarları eşit olan bir dikdörtgenler prizması.",
+    "explanation": "Bir küp, en simetrik dikdörtgenler prizmasıdır: 12 kenarın tümü eşittir ve 6 yüzün tümü eş karelerdir. Kenarı ikiye katlamak hacmi 8 ile çarpar.",
+    "examples": [
+      "Zarlar.",
+      "Rubik küpü.",
+      "Şeker küpleri."
+    ],
+    "parameters": {
+      "a": { "label": "Kenar", "explanation": "Her kenarın uzunluğu." }
+    },
+    "formulas": [
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" },
+      { "label": "Uzay köşegeni" }
+    ],
+    "properties": [
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "cylinder": {
+    "name": "Silindir",
+    "description": "Kavisli bir yüzeyle birleştirilmiş iki dairesel taban.",
+    "explanation": "Bir silindirin kavisli yan yüzünü açmak, genişliği 2πr ve yüksekliği h olan bir dikdörtgen verir, bu yüzden yanal alan 2πrh'dir. İki dairesel ucu eklemek toplam yüzey alanını verir.",
+    "examples": [
+      "Kutular ve borular.",
+      "Su bardakları.",
+      "Silindir merdaneler."
+    ],
+    "parameters": {
+      "r": { "label": "Yarıçap", "explanation": "Dairesel tabanın yarıçapı." },
+      "h": { "label": "Yükseklik", "explanation": "İki taban arasındaki uzaklık." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Yanal alan" },
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Yanal alan" },
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Üçgen Prizma",
+    "description": "Uzunluğu boyunca taranan bir üçgen.",
+    "explanation": "Bir prizma, uzunluğu boyunca aynı kesiti korur, bu nedenle hacmi basitçe taban alanının uzunlukla çarpımıdır. Burada taban, ½·b·hₜ alanına sahip bir üçgendir.",
+    "examples": [
+      "Toblerone çikolata kutuları.",
+      "Çatı kafesleri.",
+      "Optik cam prizmalar."
+    ],
+    "parameters": {
+      "b": { "label": "Üçgen tabanı", "explanation": "Üçgen kesitin taban uzunluğu." },
+      "ht": { "label": "Üçgen yüksekliği", "explanation": "Üçgen kesitin yüksekliği." },
+      "H": { "label": "Prizma uzunluğu", "explanation": "Üçgenin ne kadar taranacağı." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Dörtgen Prizma",
+    "description": "Bir prizmaya taranan dikdörtgen bir taban.",
+    "explanation": "Bir dörtgen prizmanın dikdörtgen (dörtgen) bir tabanı vardır. Her prizma gibi hacmi taban alanının yükseklikle çarpımıdır. Dikdörtgen bir tabanla bu, bir dikdörtgenler prizmasıyla aynıdır: B = lw.",
+    "examples": [
+      "Kirişler ve direkler.",
+      "Ambalaj kutuları.",
+      "Bina kolonları."
+    ],
+    "parameters": {
+      "l": { "label": "Taban uzunluğu", "explanation": "Dikdörtgen tabanın uzunluğu." },
+      "w": { "label": "Taban genişliği", "explanation": "Dikdörtgen tabanın genişliği." },
+      "H": { "label": "Prizma yüksekliği", "explanation": "Prizmanın yüksekliği." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Beşgen Prizma",
+    "description": "Bir prizmaya taranan düzgün bir beşgen.",
+    "explanation": "Taban, alanı n = 5 ile genel düzgün çokgen formülünü kullanan düzgün bir beşgendir. Yükseklikle çarpmak prizmanın hacmini verir.",
+    "examples": [
+      "Beşgen kesitli kalemler.",
+      "Bazı somun ve cıvatalar.",
+      "Mimari kolonlar."
+    ],
+    "parameters": {
+      "a": { "label": "Kenar uzunluğu", "explanation": "Düzgün beşgenin kenar uzunluğu." },
+      "h": { "label": "Prizma yüksekliği", "explanation": "Prizmanın yüksekliği." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Altıgen Prizma",
+    "description": "Bir prizmaya taranan düzgün bir altıgen.",
+    "explanation": "Düzgün bir altıgen altı eşkenar üçgenden oluşur ve bu da düzgün taban alanı formülünü (3√3/2)·a² verir. Altıgen prizmalar uzayı verimli şekilde döşer, bu yüzden arılar altıgen petekler yapar.",
+    "examples": [
+      "Kalemler.",
+      "Petek hücreleri.",
+      "Somun ve cıvatalar."
+    ],
+    "parameters": {
+      "a": { "label": "Kenar uzunluğu", "explanation": "Düzgün altıgenin kenar uzunluğu." },
+      "h": { "label": "Prizma yüksekliği", "explanation": "Prizmanın yüksekliği." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Üçgen Piramit",
+    "description": "Bir tepe noktasına doğru sivrilen düzgün üçgen taban.",
+    "explanation": "Bir piramidin hacmi, aynı taban ve yüksekliğe sahip prizmanın her zaman üçte biridir. Burada taban, (√3/4)·a² alanına sahip bir eşkenar üçgendir.",
+    "examples": [
+      "Dört yüzlü zarlar (d4).",
+      "Moleküler şekiller (metan).",
+      "Piramit çatılar."
+    ],
+    "parameters": {
+      "a": { "label": "Taban kenarı", "explanation": "Eşkenar tabanın kenar uzunluğu." },
+      "h": { "label": "Yükseklik", "explanation": "Tabandan tepeye dik yükseklik." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Dörtgen Piramit",
+    "description": "Bir tepe noktasına doğru sivrilen dikdörtgen taban.",
+    "explanation": "Bu, klasik 'Mısır' piramidi şeklidir: tek bir tepe noktasına yükselen dikdörtgen bir taban. Hacmi, karşılık gelen dikdörtgenler prizmasının (taban alanı × yükseklik) üçte biridir.",
+    "examples": [
+      "Giza'nın Büyük Piramidi.",
+      "Piramit şeklindeki çatılar.",
+      "Çadır şekilleri."
+    ],
+    "parameters": {
+      "l": { "label": "Taban uzunluğu", "explanation": "Dikdörtgen tabanın uzunluğu." },
+      "w": { "label": "Taban genişliği", "explanation": "Dikdörtgen tabanın genişliği." },
+      "h": { "label": "Yükseklik", "explanation": "Tabandan tepeye dik yükseklik." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Beşgen Piramit",
+    "description": "Bir tepe noktasına doğru sivrilen düzgün beşgen taban.",
+    "explanation": "Düzgün bir beşgen tabanlı bir piramit. Taban alanı n = 5 ile düzgün çokgen formülünü kullanır; hacim, her piramitte olduğu gibi taban alanının üçte biri kere yükseklik kadardır.",
+    "examples": [
+      "Dekoratif kuleler.",
+      "Kristal formları.",
+      "Zar türevleri."
+    ],
+    "parameters": {
+      "a": { "label": "Kenar uzunluğu", "explanation": "Düzgün beşgen tabanın kenar uzunluğu." },
+      "h": { "label": "Yükseklik", "explanation": "Tabandan tepeye dik yükseklik." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Altıgen Piramit",
+    "description": "Bir tepe noktasına doğru sivrilen düzgün altıgen taban.",
+    "explanation": "Düzgün altıgen tabanlı bir piramit. Piramitlerde her zaman olduğu gibi, V = ⅓·B·h, burada B altıgen alanı (3√3/2)·a²'dir.",
+    "examples": [
+      "Kalem uçları.",
+      "Kuleler ve süs tepelikleri.",
+      "Kristal sonlanmaları."
+    ],
+    "parameters": {
+      "a": { "label": "Kenar uzunluğu", "explanation": "Düzgün altıgen tabanın kenar uzunluğu." },
+      "h": { "label": "Yükseklik", "explanation": "Tabandan tepeye dik yükseklik." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "cone": {
+    "name": "Koni",
+    "description": "Bir noktaya doğru sivrilen dairesel bir taban.",
+    "explanation": "Bir koni, dairesel tabanlı bir piramittir, dolayısıyla hacmi de karşılık gelen silindirin üçte biridir. Eğik kenar uzunluğu l (dik yükseklik değil), kavisli yanal yüzey alanı πrl'yi belirleyen değerdir.",
+    "examples": [
+      "Dondurma külahları.",
+      "Trafik konileri.",
+      "Hunilar."
+    ],
+    "parameters": {
+      "r": { "label": "Yarıçap", "explanation": "Dairesel tabanın yarıçapı." },
+      "h": { "label": "Yükseklik", "explanation": "Tabandan tepeye dik yükseklik." }
+    },
+    "formulas": [
+      { "label": "Taban alanı" },
+      { "label": "Eğik kenar uzunluğu" },
+      { "label": "Yanal alan" },
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Taban alanı" },
+      { "label": "Eğik kenar uzunluğu" },
+      { "label": "Yanal alan" },
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "sphere": {
+    "name": "Küre",
+    "description": "3B'de bir merkeze r mesafesindeki tüm noktalar.",
+    "explanation": "Bir küre, bir çemberin 3B karşılığıdır. Yüzey alanı, 'gölgesinin' (4πr²) tam olarak dört katıdır ve hacmi yarıçapın küpüyle büyür.",
+    "examples": [
+      "Toplar ve gezegenler.",
+      "Kabarcıklar.",
+      "Bilyalı rulmanlar."
+    ],
+    "parameters": {
+      "r": { "label": "Yarıçap", "explanation": "Merkezden yüzeye olan uzaklık." }
+    },
+    "formulas": [
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Koni Kesiği (Frustum)",
+    "description": "Tepesi tabana paralel olarak kesilmiş bir koni.",
+    "explanation": "Bir koni kesiği, üst kısmı tabana paralel olarak kesildikten sonra koniden kalandır. Hacmi, iki yarıçapı Rr çarpım terimiyle birleştirir. Eğik kenar uzunluğu, R + r değil, R − r farkını kullanır.",
+    "examples": [
+      "Kovalar ve abajurlar.",
+      "Su bardakları.",
+      "Soğutma kuleleri (alt kısmı)."
+    ],
+    "parameters": {
+      "R": { "label": "Alt yarıçap", "explanation": "Büyük (alt) dairenin yarıçapı." },
+      "r": { "label": "Üst yarıçap", "explanation": "Küçük (üst) dairenin yarıçapı." },
+      "h": { "label": "Yükseklik", "explanation": "İki daire arasındaki düşey uzaklık." }
+    },
+    "formulas": [
+      { "label": "Eğik kenar uzunluğu" },
+      { "label": "Yanal alan" },
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ],
+    "properties": [
+      { "label": "Eğik kenar uzunluğu" },
+      { "label": "Yanal alan" },
+      { "label": "Yüzey alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Piramit Kesiği (Frustum)",
+    "description": "Üstü kesilmiş düzgün çokgen tabanlı bir piramit.",
+    "explanation": "Bir piramidin tepesini tabanına paralel olarak kesmek, iki benzer çokgen yüzeye sahip bir kesik bırakır. Hacim formülü, iki taban alanı B₁ ve B₂'yi geometrik ortalamaları √(B₁B₂) ile birlikte ortalar.",
+    "examples": [
+      "Abajurlar.",
+      "Saksılar.",
+      "Kademeli bina üstleri."
+    ],
+    "parameters": {
+      "n": { "label": "Kenar sayısı", "explanation": "Düzgün çokgen tabanın kenar sayısı." },
+      "aBottom": { "label": "Alt kenar", "explanation": "Büyük (alt) çokgenin kenar uzunluğu." },
+      "aTop": { "label": "Üst kenar", "explanation": "Küçük (üst) çokgenin kenar uzunluğu." },
+      "h": { "label": "Yükseklik", "explanation": "İki taban arasındaki düşey uzaklık." }
+    },
+    "formulas": [
+      { "label": "Hacim" },
+      { "label": "Tabanlar" }
+    ],
+    "properties": [
+      { "label": "Alt taban alanı" },
+      { "label": "Üst taban alanı" },
+      { "label": "Hacim" }
+    ]
+  },
+  "house": {
+    "name": "Ev",
+    "description": "Üçgen prizma çatılı bir dikdörtgenler prizması gövde.",
+    "explanation": "Bileşik bir katının hacmini bulmak için, onu temel katılara ayırın, her birini hesaplayın, sonra toplayın. Bir ev, bir dikdörtgenler prizması (duvarlar) ile bir üçgen prizmanın (çatı) birleşimidir. Toplam için iki hacmi toplayın; birleştikleri temas yüzeyi içseldir ve dış yüzeyin bir parçası değildir.",
+    "examples": [
+      "Basit ev ve baraka şekilleri.",
+      "Ahırlar.",
+      "Kuş evleri."
+    ],
+    "parameters": {
+      "l": { "label": "Uzunluk", "explanation": "Evin genişliği (ve çatı açıklığı)." },
+      "w": { "label": "Derinlik", "explanation": "Evin derinliği." },
+      "h": { "label": "Duvar yüksekliği", "explanation": "Dikdörtgenler prizması duvarların yüksekliği." },
+      "hr": { "label": "Çatı yüksekliği", "explanation": "Üçgen çatının yüksekliği." }
+    },
+    "formulas": [
+      { "label": "Gövde (dikdörtgenler prizması)" },
+      { "label": "Çatı (üçgen prizma)" },
+      { "label": "Toplam" }
+    ],
+    "properties": [
+      { "label": "Gövde hacmi" },
+      { "label": "Çatı hacmi" },
+      { "label": "Toplam hacim" }
+    ]
+  },
+  "pencil": {
+    "name": "Kalem",
+    "description": "Üstünde koni uçlu bir silindir gövde.",
+    "explanation": "Bir kalem, aynı yarıçapı paylaşan bir silindir (gövde) ile bir koniden (sivriltilmiş uç) oluşur. Toplam hacim, silindir ile koninin toplamıdır. Her ikisi de dairesel temas yüzeyini paylaştığından, hiçbir dış yüzey ondan geçmez.",
+    "examples": [
+      "Kalemler ve pastel boyalar.",
+      "Roketler (gövde + burun konisi).",
+      "Bazı şişeler."
+    ],
+    "parameters": {
+      "r": { "label": "Yarıçap", "explanation": "Kalemin yarıçapı." },
+      "h": { "label": "Gövde uzunluğu", "explanation": "Silindirik gövdenin uzunluğu." },
+      "ht": { "label": "Uç uzunluğu", "explanation": "Sivriltilmiş koni ucun uzunluğu." }
+    },
+    "formulas": [
+      { "label": "Gövde (silindir)" },
+      { "label": "Uç (koni)" },
+      { "label": "Toplam" }
+    ],
+    "properties": [
+      { "label": "Gövde hacmi" },
+      { "label": "Uç hacmi" },
+      { "label": "Toplam hacim" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Dondurma",
+    "description": "Küresel bir top tutan bir koni.",
+    "explanation": "Bir dondurma, üzerinde bir küre oturan (sivri ucu aşağıda) bir konidir. Toplam için koni ve küre hacimlerini toplayın. Gerçekte topun bir kısmı koninin ağzının içinde yer alır, bu yüzden dikkatli bir cevap bu örtüşmeyi çıkarmalıdır — çıkarma yapmanın ne zaman gerektiğine iyi bir örnek.",
+    "examples": [
+      "Dondurma külahları.",
+      "Dekoratif tepelikler.",
+      "Topaçlar."
+    ],
+    "parameters": {
+      "r": { "label": "Koni yarıçapı", "explanation": "Koninin açık üst kısmının yarıçapı." },
+      "h": { "label": "Koni yüksekliği", "explanation": "Koninin uzunluğu (uç aşağı bakar)." },
+      "R": { "label": "Top yarıçapı", "explanation": "Küresel topun yarıçapı." }
+    },
+    "formulas": [
+      { "label": "Koni" },
+      { "label": "Top (küre)" },
+      { "label": "Toplam" }
+    ],
+    "properties": [
+      { "label": "Koni hacmi" },
+      { "label": "Top hacmi" },
+      { "label": "Toplam hacim" }
+    ]
+  },
+  "water-tower": {
+    "name": "Su Kulesi",
+    "description": "Yarım küre kubbeli bir silindir.",
+    "explanation": "Bir su kulesi, aynı yarıçapı paylaşan üzerinde bir yarım küre (kürenin yarısı) olan bir silindirdir. Toplam hacim, silindir ile yarım küreyi toplar. Bir yarım küre, tam olarak bir kürenin yarısıdır, dolayısıyla hacmi ⅔πr³'tür.",
+    "examples": [
+      "Su kuleleri ve silolar.",
+      "Gözlemevi kubbeleri.",
+      "Depolama tankları."
+    ],
+    "parameters": {
+      "r": { "label": "Yarıçap", "explanation": "Silindirin ve kubbenin yarıçapı." },
+      "h": { "label": "Gövde yüksekliği", "explanation": "Silindirik gövdenin yüksekliği." }
+    },
+    "formulas": [
+      { "label": "Gövde (silindir)" },
+      { "label": "Kubbe (yarım küre)" },
+      { "label": "Toplam" }
+    ],
+    "properties": [
+      { "label": "Gövde hacmi" },
+      { "label": "Kubbe hacmi" },
+      { "label": "Toplam hacim" }
+    ]
+  },
+  "castle": {
+    "name": "Kale",
+    "description": "Dört köşe kulesi ve konik çatıları olan merkezi bir iç kale.",
+    "explanation": "Bir kale, birkaç temel katıyı birleştirir: bir iç kale (dikdörtgenler prizması), dört silindirik kule ve dört konik çatı. Strateji her zamanki gibidir — bilinen parçalara ayırın, her hacmi hesaplayın, sonra hepsini toplayın. Simetri sayesinde dört kule ve dört çatı birbirinin aynısıdır, dolayısıyla dört ile çarpıyoruz.",
+    "examples": [
+      "Oyuncak kaleler.",
+      "Satranç kaleleri.",
+      "Kale ve kule mimarisi."
+    ],
+    "parameters": {
+      "s": { "label": "İç kale boyutu", "explanation": "Kare iç kalenin kenar uzunluğu." },
+      "hk": { "label": "İç kale yüksekliği", "explanation": "Merkezi iç kalenin yüksekliği." },
+      "r": { "label": "Kule yarıçapı", "explanation": "Her köşe kulesinin yarıçapı." },
+      "ht": { "label": "Kule yüksekliği", "explanation": "Her köşe kulesinin yüksekliği." }
+    },
+    "formulas": [
+      { "label": "İç kale (dikdörtgenler prizması)" },
+      { "label": "Kule (silindir)" },
+      { "label": "Çatı (koni)" },
+      { "label": "Toplam" }
+    ],
+    "properties": [
+      { "label": "İç kale hacmi" },
+      { "label": "Tüm kuleler" },
+      { "label": "Tüm çatılar" },
+      { "label": "Toplam hacim" }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Kionyeshaji cha Hisabati Shirikishi"
+  },
+  "common": {
+    "toggleDarkMode": "Geuza hali ya giza",
+    "changeLanguage": "Badilisha lugha",
+    "searchPlaceholder": "Tafuta miundo...",
+    "noResults": "Hakuna mfano unaolingana na \"{query}\".",
+    "resultsCount": "matokeo {count}",
+    "favorites": "Vipendwa",
+    "selectModel": "Chagua mfano",
+    "reset": "Weka upya",
+    "addFavorite": "Ongeza kwenye vipendwa",
+    "removeFavorite": "Ondoa kwenye vipendwa",
+    "somethingWrongIn": "Hitilafu imetokea kwenye {label}.",
+    "somethingWrong": "Hitilafu imetokea.",
+    "tryAgain": "Jaribu tena"
+  },
+  "errorLabels": {
+    "graph": "grafu",
+    "viewer3d": "kionyeshaji cha 3D",
+    "modelPage": "ukurasa wa mfano"
+  },
+  "panels": {
+    "parameters": "Vigezo",
+    "formulas": "Mafomula",
+    "properties": "Sifa Zilizokokotolewa",
+    "explanation": "Maelezo",
+    "examples": "Mifano ya Maisha Halisi"
+  },
+  "viewSettings": {
+    "grid": "Gridi",
+    "labels": "Lebo",
+    "wireframe": "Mfumo wa Waya",
+    "markers": "Alama"
+  },
+  "graphLabels": {
+    "center": "kitovu",
+    "vertex": "kipeo",
+    "focus": "fokasi",
+    "directrix": "mstari elekezi",
+    "axis": "mhimili",
+    "midline": "mstari wa kati",
+    "asymptote": "asimptoti",
+    "xIntercept": "kipasua-x"
+  },
+  "categories": {
+    "functions": {
+      "name": "Vitendaji vya Kawaida",
+      "description": "Grafu za vitendaji kwenye ndege ya kuratibu"
+    },
+    "plane-curves": {
+      "name": "Mikondo ya Ndege",
+      "description": "Sehemu za koni na mikondo mingine"
+    },
+    "solids": {
+      "name": "Jiometri ya Yabisi",
+      "description": "Yabisi za 3D: prisma, piramidi, yabisi za mviringo"
+    },
+    "combined": {
+      "name": "Yabisi Zilizounganishwa",
+      "description": "Maumbo changamano yaliyojengwa kutoka kwa yabisi za msingi"
+    }
+  }
+}

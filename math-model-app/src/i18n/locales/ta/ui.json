@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "ஊடாடும் கணித காட்சிப்படுத்தி"
+  },
+  "common": {
+    "toggleDarkMode": "இருண்ட பயன்முறையை மாற்று",
+    "changeLanguage": "மொழியை மாற்று",
+    "searchPlaceholder": "மாதிரிகளைத் தேடு...",
+    "noResults": "\"{query}\" உடன் பொருந்தும் மாதிரிகள் இல்லை.",
+    "resultsCount": "{count} முடிவுகள்",
+    "favorites": "பிடித்தவை",
+    "selectModel": "ஒரு மாதிரியைத் தேர்ந்தெடு",
+    "reset": "மீட்டமை",
+    "addFavorite": "பிடித்தவைகளில் சேர்",
+    "removeFavorite": "பிடித்தவைகளில் இருந்து அகற்று",
+    "somethingWrongIn": "{label} இல் ஏதோ தவறு நடந்தது.",
+    "somethingWrong": "ஏதோ தவறு நடந்தது.",
+    "tryAgain": "மீண்டும் முயற்சி செய்"
+  },
+  "errorLabels": {
+    "graph": "வரைபடம்",
+    "viewer3d": "3D காட்சிப் பெட்டி",
+    "modelPage": "மாதிரி பக்கம்"
+  },
+  "panels": {
+    "parameters": "அளவுருக்கள்",
+    "formulas": "வாய்பாடுகள்",
+    "properties": "கணக்கிடப்பட்ட பண்புகள்",
+    "explanation": "விளக்கம்",
+    "examples": "நிஜ வாழ்க்கை எடுத்துக்காட்டுகள்"
+  },
+  "viewSettings": {
+    "grid": "கட்டம்",
+    "labels": "சிட்டைகள்",
+    "wireframe": "வைர் ஃபிரேம்",
+    "markers": "குறிப்பான்கள்"
+  },
+  "graphLabels": {
+    "center": "மையம்",
+    "vertex": "முனை",
+    "focus": "குவியம்",
+    "directrix": "நேர்க்கோடு",
+    "axis": "அச்சு",
+    "midline": "நடுக்கோடு",
+    "asymptote": "சிறிதுபடு கோடு",
+    "xIntercept": "x-வெட்டுப்புள்ளி"
+  },
+  "categories": {
+    "functions": {
+      "name": "பொதுவான சார்புகள்",
+      "description": "ஆயத்தொலை தளத்தில் சார்பு வரைபடங்கள்"
+    },
+    "plane-curves": {
+      "name": "தள வளைவுகள்",
+      "description": "கூம்பு வெட்டுகள் மற்றும் பிற வளைவுகள்"
+    },
+    "solids": {
+      "name": "கன வடிவியல்",
+      "description": "3D கனவுருக்கள்: அணிகோணங்கள், கூம்புருக்கள், வட்ட வடிவ கனவுருக்கள்"
+    },
+    "combined": {
+      "name": "இணைந்த கனவுருக்கள்",
+      "description": "அடிப்படை கனவுருக்களிலிருந்து கட்டமைக்கப்பட்ட கூட்டு வடிவங்கள்"
+    }
+  }
+}

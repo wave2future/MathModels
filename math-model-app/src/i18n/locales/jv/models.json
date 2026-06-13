@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Fungsi Proporsional Langsung",
+    "description": "Garis lurus liwat titik asal kang kemiringane diatur dening k.",
+    "explanation": "Proporsi langsung tegese y owah kanthi laju tetep tumrap x. Grafike tansah dadi garis liwat titik asal; mung kemiringane sing owah. Yen |k| luwih gedhe, garise luwih jegreng; tandha k ngubah garis antarane diagonal munggah lan mudhun.",
+    "examples": [
+      "Jarak lawan wektu kanthi laju tetep (d = vt).",
+      "Total rega lawan jumlah barang kanthi rega saben unit tetep."
+    ],
+    "parameters": {
+      "k": { "label": "Kemiringan", "explanation": "Ngatur jegreng lan arahe garis. k>0 munggah, k<0 mudhun." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "Liwat titik asal (0, 0)." },
+      { "label": "Kemiringan", "description": "Munggah dibagi mlaku." }
+    ]
+  },
+  "linear": {
+    "name": "Fungsi Linear",
+    "description": "Garis lurus y = kx + b kang kemiringan lan potongane bisa diatur.",
+    "explanation": "k ngatur kemiringan (jegreng lan arah), dene b ngalih kabeh garis munggah utawa mudhun, nemtokake ngendi garis nyilang sumbu-y. Ngowahi b nggeser garis kanthi tegak tanpa ngowahi miringe.",
+    "examples": [
+      "Ongkos taksi = ongkos dhasar + tarif × jarak.",
+      "Konversi suhu: °F = 1.8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Kemiringan", "explanation": "Kemiringan: sepira cepete y owah saben unit x." },
+      "b": { "label": "Potongan-y", "explanation": "Ngendi garis nyilang sumbu-y." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Potongan-y" },
+      { "label": "Potongan-x", "description": "Yen k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Fungsi Kuadrat",
+    "description": "Parabola y = ax² + bx + c kanthi puncak lan sumbu simetri.",
+    "explanation": "Tandha a nemtokake parabola madhep munggah (a>0) utawa mudhun (a<0); gedhene a ngatur sepira ciute. Puncak yaiku titik pamblokan, lan sumbu simetri yaiku garis tegak kang liwat titik kasebut. c yaiku dhuwure titik nyilang sumbu-y.",
+    "examples": [
+      "Lintasan bal kang dibanting (gerak peluru).",
+      "Jembar persegi dawa minangka fungsi saka salah sawijining sisi kanthi keliling tetep."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Arah madhep & ciute. a>0 madhep munggah, a<0 madhep mudhun; |a| luwih gedhe luwih ciut." },
+      "b": { "label": "b", "explanation": "Nggeser sumbu simetri ngiwa/nengen (bareng karo a)." },
+      "c": { "label": "c", "explanation": "Potongan-y (nilai nalika x = 0)." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Sumbu simetri" },
+      { "label": "Puncak" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Fungsi Proporsional Sungsang",
+    "description": "Hiperbola y = k/x kanthi sumbu-sumbu dadi asimtot.",
+    "explanation": "Saben x mundhak, hasil kali xy tetep padha karo k, mula y suda tumuju 0 — kurva ndhempel ing loro sumbu (asimtote) nanging ora tau nyenggol. Loro cabang dumunung ing kuadran kang beda gumantung tandha k.",
+    "examples": [
+      "Kecepatan lawan wektu lelungan kanggo jarak tetep.",
+      "Tekanan lawan volume gas ing suhu tetep (hukum Boyle)."
+    ],
+    "parameters": {
+      "k": { "label": "Konstanta", "explanation": "k>0 nyelehake cabang ing kuadran I & III; k<0 ing II & IV." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "x ≠ 0." },
+      { "label": "Asimtot" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Fungsi Nilai Absolut",
+    "description": "Grafik wangun V, y = a|x − h| + k.",
+    "explanation": "Nilai absolut njalari kabeh hasil dadi positif ing dhuwur puncak, nggawe wangun V kang simetris. (h, k) yaiku pojok V; a ngatur lengen V lan, yen negatif, mbalikke V sungsang.",
+    "examples": [
+      "Jarak saka nilai target.",
+      "Gedhene kesalahan tanpa mikirake tandhane."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Jegreng lan arahe V (a<0 njalari madhep mudhun)." },
+      "h": { "label": "h", "explanation": "Geseran horizontal puncak." },
+      "k": { "label": "k", "explanation": "Geseran vertikal puncak." }
+    },
+    "formulas": [
+      { "label": "Dhasar" },
+      { "label": "Diowahi" },
+      { "label": "Puncak" }
+    ]
+  },
+  "power": {
+    "name": "Fungsi Pangkat",
+    "description": "y = xᵃ — wangune gumantung saka pangkat a.",
+    "explanation": "Fungsi pangkat ngangkat x menyang pangkat tetep. Pangkat integer ditetepake kanggo kabeh x, nanging pangkat pecahan mbutuhake x ≥ 0 supaya tetep dadi nilai nyata, mula kurva mung katon ing sisih tengen kana. Pangkat genap simetris tumrap sumbu-y; pangkat ganjil simetris tumrap titik asal.",
+    "examples": [
+      "Jembar ∝ sisi² (a = 2).",
+      "Volume ∝ sisi³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Pangkat", "explanation": "a=1 garis, a=2 parabola, a=3 kubik, a=0.5 oyod kuadrat, a<0 kaya hiperbola." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Cathetan", "description": "Basis negatif ora duwe nilai nyata kanggo pangkat pecahan." }
+    ]
+  },
+  "exponential": {
+    "name": "Fungsi Eksponensial",
+    "description": "y = aˣ — tuwuh cepet (a>1) utawa suda (0<a<1).",
+    "explanation": "Fungsi eksponensial dikalèkake karo basis a saben langkah ing x. Yen a>1 hasile mumbul munggah; yen 0<a<1 suda tumuju asimtot horizontal y = 0. Kabeh liwat titik (0, 1) amarga a⁰ = 1.",
+    "examples": [
+      "Bunga majemuk.",
+      "Pembusukan radioaktif (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Basis", "explanation": "a>1 tuwuh; 0<a<1 suda. Saben kurva liwat (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "a > 0, a ≠ 1." },
+      { "label": "Asimtot" },
+      { "label": "Titik jangkar" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Fungsi Logaritma",
+    "description": "y = logₐ(x) — kosokbalène fungsi eksponensial.",
+    "explanation": "Logaritma njawab pitakon 'a kudu dipangkatake pira supaya dadi x?'. Iki minangka pantulan saka y = aˣ liwat garis y = x, mula domaine x > 0 lan duwe asimtot vertikal ing x = 0. Kabeh kurva liwat (1, 0).",
+    "examples": [
+      "Skala pH.",
+      "Level swara desibel.",
+      "Skala lindhu Richter."
+    ],
+    "parameters": {
+      "a": { "label": "Basis", "explanation": "a>1 munggah; 0<a<1 mudhun. Saben kurva liwat (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asimtot" },
+      { "label": "Kosokbalèn saka" }
+    ]
+  },
+  "sine": {
+    "name": "Fungsi Sinus",
+    "description": "y = A·sin(Bx + C) + D kanthi amplitudo, periode, lan geseran.",
+    "explanation": "A nggandakke gelombang kanthi vertikal (amplitudo); B mripit gelombang kanthi horizontal, nemtokake periode T = 2π/|B|; C nggeser gelombang ngiwa/nengen (geseran fase −C/B); D nggawa garis tengah munggah utawa mudhun.",
+    "examples": [
+      "Gelombang swara.",
+      "Listrik gantian (AC).",
+      "Pasang surut lan jam padhang sajroning setaun."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitudo", "explanation": "Separo dhuwur antarane maksimum lan minimum." },
+      "B": { "label": "Frekuensi", "explanation": "B luwih gedhe mripit gelombang (periode luwih cendhek)." },
+      "C": { "label": "Fase", "explanation": "Geseran horizontal gelombang." },
+      "D": { "label": "Geseran vertikal", "explanation": "Ngalih garis tengah munggah utawa mudhun." }
+    },
+    "formulas": [
+      { "label": "Dhasar" },
+      { "label": "Diowahi" },
+      { "label": "Amplitudo" },
+      { "label": "Periode" },
+      { "label": "Geseran fase" }
+    ]
+  },
+  "cosine": {
+    "name": "Fungsi Kosinus",
+    "description": "y = A·cos(Bx + C) + D — gelombang sinus kang digeser seprapat periode.",
+    "explanation": "Kosinus duwe wangun padha karo sinus nanging diwiwiti saka maksimum: cos(x) = sin(x + π/2). Parameter-parameter padha persis tegese — amplitudo A, periode 2π/|B|, geseran fase, lan geseran vertikal D.",
+    "examples": [
+      "Posisi horizontal titik ing rodha kang mlebu.",
+      "Siklus suhu musiman."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitudo", "explanation": "Separo dhuwur antarane maksimum lan minimum." },
+      "B": { "label": "Frekuensi", "explanation": "B luwih gedhe mripit gelombang (periode luwih cendhek)." },
+      "C": { "label": "Fase", "explanation": "Geseran horizontal gelombang." },
+      "D": { "label": "Geseran vertikal", "explanation": "Ngalih garis tengah munggah utawa mudhun." }
+    },
+    "formulas": [
+      { "label": "Dhasar" },
+      { "label": "Diowahi" },
+      { "label": "Amplitudo" },
+      { "label": "Periode" }
+    ]
+  },
+  "tangent": {
+    "name": "Fungsi Tangen",
+    "description": "y = A·tan(Bx + C) + D kanthi asimtot vertikal kang bola-bali.",
+    "explanation": "Tangen bola-bali saben π lan mumbul tumuju ±∞ ing saben asimtot, ngendi cos = 0. Grafike digambar dadi cabang-cabang kang pisah — ora tau gathuk liwat asimtot. B nemtokake sepira kerepe asimtot kedadeyan.",
+    "examples": [
+      "Kemiringan garis ing sawijining sudut.",
+      "Model kanggo mbledosan cepet cedhak limit."
+    ],
+    "parameters": {
+      "A": { "label": "Skala vertikal", "explanation": "Nggandakke cabang-cabang kanthi vertikal." },
+      "B": { "label": "Frekuensi", "explanation": "Ngatur jarak antarane asimtot (periode π/|B|)." },
+      "C": { "label": "Fase", "explanation": "Geseran horizontal." },
+      "D": { "label": "Geseran vertikal", "explanation": "Ngalih kurva munggah utawa mudhun." }
+    },
+    "formulas": [
+      { "label": "Dhasar" },
+      { "label": "Diowahi" },
+      { "label": "Periode" },
+      { "label": "Asimtot" }
+    ]
+  },
+  "piecewise": {
+    "name": "Fungsi Cuwilan",
+    "description": "Aturan kang beda ing interval kang beda, gathuk ing titik pamotong.",
+    "explanation": "Fungsi cuwilan nggunakake rumus kang beda ing saben interval domaine. Ing kene cuwilan kiwa (x < 0) nggunakake −sx lan cuwilan tengen (x ≥ 0) nggunakake sx. Loro cuwilan digambar pisah lan mung gathuk ing titik pamotong x = 0.",
+    "examples": [
+      "Tingkatan pajak.",
+      "Tingkatan ongkos kirim adhedhasar bobot.",
+      "Nilai absolut minangka rong garis."
+    ],
+    "parameters": {
+      "scale": { "label": "Skala kemiringan", "explanation": "Nggandakke loro lengen supaya bisa diawasi owahane bareng-bareng." }
+    },
+    "formulas": [
+      { "label": "Definisi", "description": "Rong aturan linear kang gathuk ing x = 0." }
+    ]
+  },
+  "circle": {
+    "name": "Bunder",
+    "description": "Kabeh titik kang jarake r saka pusat (h, k).",
+    "explanation": "Bunder yaiku himpunan titik kang jarake tetep r (radius) saka pusate (h, k). Ngowahi h lan k nggeser kabeh bunder; ngowahi r ndadekake bunder mundhak utawa suda. Kelilinge lan jembare mung gumantung saka r.",
+    "examples": [
+      "Rodha lan gear.",
+      "Ombak ing banyu.",
+      "Lintasan lari bunder."
+    ],
+    "parameters": {
+      "h": { "label": "Pusat x", "explanation": "Posisi horizontal pusat." },
+      "k": { "label": "Pusat y", "explanation": "Posisi vertikal pusat." },
+      "r": { "label": "Radius", "explanation": "Jarak saka pusat menyang pinggir." }
+    },
+    "formulas": [
+      { "label": "Wangun standar" },
+      { "label": "Pusat ing titik asal" },
+      { "label": "Keliling" },
+      { "label": "Jembar" }
+    ],
+    "properties": [
+      { "label": "Keliling" },
+      { "label": "Jembar" },
+      { "label": "Diameter" }
+    ]
+  },
+  "ellipse": {
+    "name": "Elips",
+    "description": "Bunder kang diuler kanthi sumbu-separo a lan b.",
+    "explanation": "Elips yaiku bunder kang diuler kanthi jumlah kang beda ing rong sumbu. a lan b yaiku sumbu-utama-separo lan sumbu-cilik-separo (sing luwih gedhe diarani 'utama'). Yen a = b, elips dadi bunder. Jembare yaiku π·a·b.",
+    "examples": [
+      "Orbit planet.",
+      "Galeri gumremeng (whispering gallery).",
+      "Gear elips."
+    ],
+    "parameters": {
+      "a": { "label": "Sumbu-separo a", "explanation": "Separo ambane ing sumbu-x." },
+      "b": { "label": "Sumbu-separo b", "explanation": "Separo dhuwure ing sumbu-y." }
+    },
+    "formulas": [
+      { "label": "Wangun standar" },
+      { "label": "Jembar" },
+      { "label": "Fokus (a>b)" }
+    ],
+    "properties": [
+      { "label": "Jembar" },
+      { "label": "Jarak fokus" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hiperbola",
+    "description": "Rong cabang kang madhep beda kanthi asimtot garis lurus.",
+    "explanation": "Hiperbola duwe rong cabang kaya pantulan kang madhep ngiwa lan nengen, saben-saben nyedhaki asimtot y = ±(b/a)x tanpa nyenggol. Kurva proporsional-sungsang prasaja y = k/x uga hiperbola — mung diputer supaya sumbu-sumbune dhewe dadi asimtote.",
+    "examples": [
+      "Navigasi jarak adoh (LORAN).",
+      "Lintasan obyek kang ucul saka gravitasi.",
+      "Ayang-ayang kerucut lampu ing tembok."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Nemtokake puncak ing (±a, 0) lan kemiringan asimtot." },
+      "b": { "label": "b", "explanation": "Bareng karo a nemtokake kemiringan asimtot ±b/a." }
+    },
+    "formulas": [
+      { "label": "Wangun standar" },
+      { "label": "Asimtot" },
+      { "label": "Puncak" }
+    ],
+    "properties": [
+      { "label": "Kemiringan asimtot" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabola (Kerucut)",
+    "description": "Tatanan kerucut y² = 2px kanthi fokus lan garis arah.",
+    "explanation": "Saben titik ing parabola jarake padha saka titik tetep (fokus) lan garis tetep (garis arah). Kanggo y² = 2px, kurva madhep nengen, fokus dumunung ing (p/2, 0), lan garis arah yaiku garis vertikal x = −p/2. p kang luwih gedhe ndadekake bukan luwih amba.",
+    "examples": [
+      "Antena parabola lan reflektor lampu mobil.",
+      "Kabel jembatan gantung.",
+      "Lintasan peluru."
+    ],
+    "parameters": {
+      "p": { "label": "Parameter p", "explanation": "Parameter sing ana hubungane karo jarak; p>0 madhep nengen." }
+    },
+    "formulas": [
+      { "label": "Wangun standar" },
+      { "label": "Fokus" },
+      { "label": "Garis arah" }
+    ],
+    "properties": [
+      { "label": "Fokus x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Balok (Prisma Persegi Dawa)",
+    "description": "Kothak kanthi dawa, amba, lan dhuwur.",
+    "explanation": "Balok duwe telung pasang sisi persegi dawa kang padha. Volumene ngalikake telung dawa pinggire; jembar permukaane ngitung jumlah jembar kabeh enem sisi.",
+    "examples": [
+      "Bata lan kothak.",
+      "Kamar lan bangunan.",
+      "Akuarium."
+    ],
+    "parameters": {
+      "l": { "label": "Dawa", "explanation": "Ukuran ing sumbu-x." },
+      "w": { "label": "Amba", "explanation": "Ukuran ing sumbu-z." },
+      "h": { "label": "Dhuwur", "explanation": "Ukuran ing sumbu-y." }
+    },
+    "formulas": [
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" },
+      { "label": "Diagonal ruang" }
+    ],
+    "properties": [
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "cube": {
+    "name": "Kubus",
+    "description": "Balok kanthi kabeh pinggir padha.",
+    "explanation": "Kubus yaiku balok kang paling simetris: kabeh 12 pinggir padha lan kabeh 6 sisi dadi persegi kang sebangun. Yen pinggir digandakke dadi 2x, volumene dadi 8x.",
+    "examples": [
+      "Dadu.",
+      "Rubik's cube.",
+      "Gula dadu."
+    ],
+    "parameters": {
+      "a": { "label": "Pinggir", "explanation": "Dawane saben pinggir." }
+    },
+    "formulas": [
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" },
+      { "label": "Diagonal ruang" }
+    ],
+    "properties": [
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "cylinder": {
+    "name": "Tabung",
+    "description": "Rong dhasar bunder kang digathukake karo permukaan lengkung.",
+    "explanation": "Yen sisi lengkung tabung dibukak, dadi persegi dawa kanthi amba 2πr lan dhuwur h, mula jembar lateral yaiku 2πrh. Tambah loro pucuk bunder kanggo entuk jembar permukaan total.",
+    "examples": [
+      "Kaleng lan pipa.",
+      "Gelas ngombe.",
+      "Drum gulung."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius dhasar bunder." },
+      "h": { "label": "Dhuwur", "explanation": "Jarak antarane rong dhasar." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Jembar lateral" },
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Jembar lateral" },
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Prisma Segitelu",
+    "description": "Segitelu kang diuler manut dawane.",
+    "explanation": "Prisma nduwe wangun cross-section kang padha sajrone dawane, mula volumene yaiku jembar dhasar dikalèkake dawa. Ing kene dhasare yaiku segitelu kanthi jembar ½·b·hₜ.",
+    "examples": [
+      "Coklat Toblerone.",
+      "Rangka payon.",
+      "Prisma kaca optik."
+    ],
+    "parameters": {
+      "b": { "label": "Dhasar segitelu", "explanation": "Dawa dhasar saka cross-section segitelu." },
+      "ht": { "label": "Dhuwur segitelu", "explanation": "Dhuwur saka cross-section segitelu." },
+      "H": { "label": "Dawa prisma", "explanation": "Sepira dawane segitelu diuler." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Prisma Segiparapat",
+    "description": "Dhasar persegi dawa kang diuler dadi prisma.",
+    "explanation": "Prisma segiparapat duwe dhasar persegi dawa (segiparapat). Kaya saben prisma, volumene yaiku jembar dhasar dikalèkake dhuwur. Kanthi dhasar persegi dawa, iki padha karo balok: B = lw.",
+    "examples": [
+      "Balok lan tugel.",
+      "Kothak kemasan.",
+      "Tugel bangunan."
+    ],
+    "parameters": {
+      "l": { "label": "Dawa dhasar", "explanation": "Dawa saka dhasar persegi dawa." },
+      "w": { "label": "Amba dhasar", "explanation": "Amba saka dhasar persegi dawa." },
+      "H": { "label": "Dhuwur prisma", "explanation": "Dhuwur saka prisma." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Prisma Segilima",
+    "description": "Segilima beraturan kang diuler dadi prisma.",
+    "explanation": "Dhasare yaiku segilima beraturan, kang jembare nggunakake rumus umum poligon beraturan kanthi n = 5. Dikalèkake karo dhuwur kanggo entuk volume prisma.",
+    "examples": [
+      "Pensil kanthi cross-section segilima.",
+      "Sawetara mur lan baut.",
+      "Tugel arsitektur."
+    ],
+    "parameters": {
+      "a": { "label": "Dawa sisi", "explanation": "Dawa sisi saka segilima beraturan." },
+      "h": { "label": "Dhuwur prisma", "explanation": "Dhuwur saka prisma." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Prisma Segienem",
+    "description": "Segienem beraturan kang diuler dadi prisma.",
+    "explanation": "Segienem beraturan yaiku enem segitelu sami sisi, kang ngasilake rumus jembar dhasar kang rapi (3√3/2)·a². Prisma segienem nutupi papan kanthi efisien, mula lebah nggawe sel segienem.",
+    "examples": [
+      "Pensil.",
+      "Sel sarang madu.",
+      "Mur lan baut."
+    ],
+    "parameters": {
+      "a": { "label": "Dawa sisi", "explanation": "Dawa sisi saka segienem beraturan." },
+      "h": { "label": "Dhuwur prisma", "explanation": "Dhuwur saka prisma." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Piramida Segitelu",
+    "description": "Dhasar segitelu beraturan kang nyusut tumuju puncak.",
+    "explanation": "Volume piramida tansah sepertelu saka prisma kanthi dhasar lan dhuwur kang padha. Ing kene dhasare yaiku segitelu sami sisi kanthi jembar (√3/4)·a².",
+    "examples": [
+      "Dadu tetrahedral (d4).",
+      "Wangun molekul (metana).",
+      "Payon piramida."
+    ],
+    "parameters": {
+      "a": { "label": "Sisi dhasar", "explanation": "Dawa sisi saka dhasar sami sisi." },
+      "h": { "label": "Dhuwur", "explanation": "Dhuwur tegak lurus saka dhasar menyang puncak." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Piramida Segiparapat",
+    "description": "Dhasar persegi dawa kang nyusut tumuju puncak.",
+    "explanation": "Iki wangun piramida 'Mesir' klasik: dhasar persegi dawa kang munggah dadi siji puncak. Volumene yaiku sepertelu saka balok kang padha (jembar dhasar × dhuwur).",
+    "examples": [
+      "Piramida Agung Giza.",
+      "Payon wangun piramida.",
+      "Wangun tenda."
+    ],
+    "parameters": {
+      "l": { "label": "Dawa dhasar", "explanation": "Dawa saka dhasar persegi dawa." },
+      "w": { "label": "Amba dhasar", "explanation": "Amba saka dhasar persegi dawa." },
+      "h": { "label": "Dhuwur", "explanation": "Dhuwur tegak lurus saka dhasar menyang puncak." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Piramida Segilima",
+    "description": "Dhasar segilima beraturan kang nyusut tumuju puncak.",
+    "explanation": "Piramida ing dhasar segilima beraturan. Jembar dhasar nggunakake rumus poligon beraturan kanthi n = 5; volumene yaiku sepertelu saka jembar dhasar dikalèkake dhuwur, kaya saben piramida.",
+    "examples": [
+      "Menara hiasan.",
+      "Wangun kristal.",
+      "Variasi dadu game."
+    ],
+    "parameters": {
+      "a": { "label": "Dawa sisi", "explanation": "Dawa sisi saka dhasar segilima beraturan." },
+      "h": { "label": "Dhuwur", "explanation": "Dhuwur tegak lurus saka dhasar menyang puncak." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Piramida Segienem",
+    "description": "Dhasar segienem beraturan kang nyusut tumuju puncak.",
+    "explanation": "Piramida ing dhasar segienem beraturan. Kaya biasane kanggo piramida, V = ⅓·B·h, kanthi B yaiku jembar segienem (3√3/2)·a².",
+    "examples": [
+      "Pucuk pensil.",
+      "Menara lan finial.",
+      "Pucuk kristal."
+    ],
+    "parameters": {
+      "a": { "label": "Dawa sisi", "explanation": "Dawa sisi saka dhasar segienem beraturan." },
+      "h": { "label": "Dhuwur", "explanation": "Dhuwur tegak lurus saka dhasar menyang puncak." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Volume" }
+    ]
+  },
+  "cone": {
+    "name": "Kerucut",
+    "description": "Dhasar bunder kang nyusut tumuju siji titik.",
+    "explanation": "Kerucut yaiku piramida kanthi dhasar bunder, mula volumene uga sepertelu saka tabung kang padha. Dhuwur miring l (ora dhuwur tegak) yaiku sing nemtokake jembar permukaan lateral lengkung πrl.",
+    "examples": [
+      "Es krim cone.",
+      "Kerucut lalu lintas.",
+      "Corong."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius dhasar bunder." },
+      "h": { "label": "Dhuwur", "explanation": "Dhuwur tegak lurus saka dhasar menyang puncak." }
+    },
+    "formulas": [
+      { "label": "Jembar dhasar" },
+      { "label": "Dhuwur miring" },
+      { "label": "Jembar lateral" },
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar" },
+      { "label": "Dhuwur miring" },
+      { "label": "Jembar lateral" },
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "sphere": {
+    "name": "Bal (Bola)",
+    "description": "Kabeh titik kang jarake r saka pusat, ing 3D.",
+    "explanation": "Bal yaiku padha karo bunder ananging ing 3D. Jembar permukaane persis patang kaline jembar 'ayang-ayange' kang bunder (4πr²), lan volumene mundhak manut pangkat telu saka radius.",
+    "examples": [
+      "Bal lan planet.",
+      "Gelembung.",
+      "Bal bearing."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Jarak saka pusat menyang permukaan." }
+    },
+    "formulas": [
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Frustum Kerucut",
+    "description": "Kerucut kang pucuke dikethok manut dhasar.",
+    "explanation": "Frustum yaiku sisa kerucut sawise pucuke dikethok manut dhasar. Volumene nggabung loro radius kanthi suku Rr. Dhuwur miring nggunakake selisih R − r, dudu R + r.",
+    "examples": [
+      "Ember lan tudung lampu.",
+      "Gelas ngombe.",
+      "Menara pendhingin (bagean ngisor)."
+    ],
+    "parameters": {
+      "R": { "label": "Radius ngisor", "explanation": "Radius saka bunder kang luwih gedhe (ngisor)." },
+      "r": { "label": "Radius nduwur", "explanation": "Radius saka bunder kang luwih cilik (nduwur)." },
+      "h": { "label": "Dhuwur", "explanation": "Jarak tegak antarane rong bunder." }
+    },
+    "formulas": [
+      { "label": "Dhuwur miring" },
+      { "label": "Jembar lateral" },
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Dhuwur miring" },
+      { "label": "Jembar lateral" },
+      { "label": "Jembar permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Frustum Piramida",
+    "description": "Piramida poligon beraturan kang pucuke dikethok.",
+    "explanation": "Ngethok pucuk piramida manut dhasare ngasilake frustum kanthi rong sisi poligon kang sebangun. Rumus volume njupuk rata-rata loro jembar dhasar B₁ lan B₂ bareng karo rata-rata geometrike √(B₁B₂).",
+    "examples": [
+      "Tudung lampu.",
+      "Pot tanduran.",
+      "Pucuk bangunan bertingkat."
+    ],
+    "parameters": {
+      "n": { "label": "Jumlah sisi", "explanation": "Jumlah sisi saka dhasar poligon beraturan." },
+      "aBottom": { "label": "Sisi ngisor", "explanation": "Dawa sisi saka poligon kang luwih gedhe (ngisor)." },
+      "aTop": { "label": "Sisi nduwur", "explanation": "Dawa sisi saka poligon kang luwih cilik (nduwur)." },
+      "h": { "label": "Dhuwur", "explanation": "Jarak tegak antarane rong dhasar." }
+    },
+    "formulas": [
+      { "label": "Volume" },
+      { "label": "Dhasar-dhasar" }
+    ],
+    "properties": [
+      { "label": "Jembar dhasar ngisor" },
+      { "label": "Jembar dhasar nduwur" },
+      { "label": "Volume" }
+    ]
+  },
+  "house": {
+    "name": "Omah",
+    "description": "Wangun balok kanthi payon prisma segitelu.",
+    "explanation": "Kanggo nemokake volume bangun gabungan, pecah dadi bangun-bangun dhasar, etung saben-saben, banjur tambahake. Omah yaiku balok (tembok) ditambah prisma segitelu (payon). Tambahake loro volume kanggo total; sisi panggonan gathuk kasebut ana ing njero lan dudu bagean saka permukaan njaba.",
+    "examples": [
+      "Wangun omah lan gudang prasaja.",
+      "Kandang.",
+      "Omah manuk."
+    ],
+    "parameters": {
+      "l": { "label": "Dawa", "explanation": "Amba omah (lan jangkah payon)." },
+      "w": { "label": "Jero", "explanation": "Jero omah." },
+      "h": { "label": "Dhuwur tembok", "explanation": "Dhuwur tembok balok." },
+      "hr": { "label": "Dhuwur payon", "explanation": "Dhuwur payon segitelu." }
+    },
+    "formulas": [
+      { "label": "Badan (balok)" },
+      { "label": "Payon (prisma segitelu)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume badan" },
+      { "label": "Volume payon" },
+      { "label": "Volume total" }
+    ]
+  },
+  "pencil": {
+    "name": "Pensil",
+    "description": "Wangun tabung kanthi pucuk kerucut.",
+    "explanation": "Pensil yaiku tabung (badan) kanthi kerucut (pucuk kang diserut) kang nduwe radius padha. Volume totale yaiku tabung ditambah kerucut. Amarga loro-lorone nduwe sisi panggonan gathuk bunder kang padha, ora ana permukaan njaba sing nglewati kono.",
+    "examples": [
+      "Pensil lan krayon.",
+      "Roket (badan + pucuk hidung).",
+      "Sawetara botol."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius pensil." },
+      "h": { "label": "Dawa badan", "explanation": "Dawa saka badan tabung." },
+      "ht": { "label": "Dawa pucuk", "explanation": "Dawa saka pucuk kerucut kang diserut." }
+    },
+    "formulas": [
+      { "label": "Badan (tabung)" },
+      { "label": "Pucuk (kerucut)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume badan" },
+      { "label": "Volume pucuk" },
+      { "label": "Volume total" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Es Krim",
+    "description": "Kerucut sing nyangga bunderan es krim.",
+    "explanation": "Es krim yaiku kerucut (pucuk ngisor) kanthi bal kang lèrèn ing dhuwure. Tambahake volume kerucut lan bal kanggo total. Ing nyatane, sebagean bunderan es krim mlebu ing cangkem kerucut, mula jawaban kang luwih tliti kudu ngurangi tumpang tindih kasebut — tuladha apik kapan kudu ngurangi.",
+    "examples": [
+      "Es krim cone.",
+      "Hiasan finial.",
+      "Gasing."
+    ],
+    "parameters": {
+      "r": { "label": "Radius kerucut", "explanation": "Radius saka pucuk kerucut kang mbukak." },
+      "h": { "label": "Dhuwur kerucut", "explanation": "Dawa saka kerucut (pucuk madhep ngisor)." },
+      "R": { "label": "Radius bunderan", "explanation": "Radius saka bunderan es krim." }
+    },
+    "formulas": [
+      { "label": "Kerucut" },
+      { "label": "Bunderan (bal)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume kerucut" },
+      { "label": "Volume bunderan" },
+      { "label": "Volume total" }
+    ]
+  },
+  "water-tower": {
+    "name": "Menara Banyu",
+    "description": "Tabung kang ditutupi kubah separo-bal.",
+    "explanation": "Menara banyu yaiku tabung kanthi separo-bal (hemisfer) ing dhuwure, kang nduwe radius padha. Volume totale nambahake tabung lan hemisfer. Hemisfer yaiku persis separo bal, mula volumene yaiku ⅔πr³.",
+    "examples": [
+      "Menara banyu lan silo.",
+      "Kubah observatorium.",
+      "Tangki panyimpenan."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius saka tabung lan kubah." },
+      "h": { "label": "Dhuwur badan", "explanation": "Dhuwur saka badan tabung." }
+    },
+    "formulas": [
+      { "label": "Badan (tabung)" },
+      { "label": "Kubah (hemisfer)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume badan" },
+      { "label": "Volume kubah" },
+      { "label": "Volume total" }
+    ]
+  },
+  "castle": {
+    "name": "Kastil",
+    "description": "Menara tengah kanthi papat menara pojok lan payon kerucut.",
+    "explanation": "Kastil nggabungake sawetara bangun dhasar: balok kanggo menara tengah, papat tabung kanggo menara, lan papat kerucut kanggo payon. Strategine padha kaya biasa — pecah dadi bagean-bagean kang wis dingerteni, etung saben volume, banjur tambahake kabeh. Kanthi simetri, papat menara lan papat payon padha, mula dikalèkake papat.",
+    "examples": [
+      "Kastil dolanan.",
+      "Benteng catur (rook).",
+      "Arsitektur benteng lan menara."
+    ],
+    "parameters": {
+      "s": { "label": "Ukuran menara tengah", "explanation": "Dawa sisi saka menara tengah kang dhasar bujur sangkar." },
+      "hk": { "label": "Dhuwur menara tengah", "explanation": "Dhuwur saka menara tengah." },
+      "r": { "label": "Radius menara pojok", "explanation": "Radius saka saben menara pojok." },
+      "ht": { "label": "Dhuwur menara pojok", "explanation": "Dhuwur saka saben menara pojok." }
+    },
+    "formulas": [
+      { "label": "Menara tengah (balok)" },
+      { "label": "Menara pojok (tabung)" },
+      { "label": "Payon (kerucut)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume menara tengah" },
+      { "label": "Kabeh menara pojok" },
+      { "label": "Kabeh payon" },
+      { "label": "Volume total" }
+    ]
+  }
+}

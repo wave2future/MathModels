@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Kitendaji cha Mlinganyo wa Moja kwa Moja",
+    "description": "Mstari ulionyooka unaopita katika asili ambao ukali wake umewekwa na k.",
+    "explanation": "Mlinganyo wa moja kwa moja unamaanisha y inabadilika kwa kasi isiyobadilika kadiri x inavyobadilika. Grafu huwa daima ni mstari unaopita katika asili; ni mteremko wake tu unaobadilika. |k| kubwa zaidi inamaanisha mstari mkali zaidi; ishara ya k hubadilisha mstari kati ya diagonal inayopanda na inayoshuka.",
+    "examples": [
+      "Umbali ikilinganishwa na muda kwa kasi isiyobadilika (d = vt).",
+      "Bei ya jumla ikilinganishwa na idadi kwa bei isiyobadilika ya kipimo kimoja."
+    ],
+    "parameters": {
+      "k": { "label": "Mteremko", "explanation": "Hudhibiti ukali na mwelekeo. k>0 hupanda, k<0 hushuka." }
+    },
+    "formulas": [
+      { "label": "Kitendaji", "description": "Hupita katika asili (0, 0)." },
+      { "label": "Mteremko", "description": "Kupanda kugawanywa na kutembea." }
+    ]
+  },
+  "linear": {
+    "name": "Kitendaji cha Mstari",
+    "description": "Mstari ulionyooka y = kx + b na mteremko na kipasua kinachoweza kubadilishwa.",
+    "explanation": "k inadhibiti mteremko (ukali na mwelekeo) wakati b inahamisha mstari mzima juu au chini, ikiweka mahali unapokata mhimili wa y. Kubadilisha b husogeza mstari kiwima bila kubadilisha mwinamo wake.",
+    "examples": [
+      "Nauli ya teksi = nauli ya msingi + kiwango × umbali.",
+      "Ubadilishaji wa joto: °F = 1.8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Mteremko", "explanation": "Mteremko: jinsi y inabadilika kwa kasi gani kwa kila kipimo cha x." },
+      "b": { "label": "Kipasua-y", "explanation": "Mahali mstari unapokata mhimili wa y." }
+    },
+    "formulas": [
+      { "label": "Kitendaji" },
+      { "label": "Kipasua-y" },
+      { "label": "Kipasua-x", "description": "Wakati k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Kitendaji cha Kwadrati",
+    "description": "Parabola y = ax² + bx + c na kipeo na mhimili wa ulinganifu.",
+    "explanation": "Ishara ya a huamua iwapo parabola inafunguka juu (a>0) au chini (a<0); ukubwa wa a hudhibiti jinsi inavyokuwa nyembamba. Kipeo ni sehemu ya kugeuka na mhimili wa ulinganifu ni mstari wa wima unaopita katika sehemu hiyo. c ni tu urefu ambapo mkondo unakata mhimili wa y.",
+    "examples": [
+      "Njia ya mpira unaorushwa (mwendo wa kupiga risasi).",
+      "Eneo la mstatili kama kitendaji cha upande mmoja kwa mzingo usiobadilika."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Mwelekeo wa kufunguka na upana. a>0 hufunguka juu, a<0 hufunguka chini; |a| kubwa zaidi ni nyembamba zaidi." },
+      "b": { "label": "b", "explanation": "Husogeza mhimili wa ulinganifu kushoto/kulia (pamoja na a)." },
+      "c": { "label": "c", "explanation": "Kipasua-y (thamani wakati x = 0)." }
+    },
+    "formulas": [
+      { "label": "Kitendaji" },
+      { "label": "Mhimili wa ulinganifu" },
+      { "label": "Kipeo" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Kitendaji cha Mlinganyo wa Kinyume",
+    "description": "Hiperbola y = k/x na mihimili kama asimptoti.",
+    "explanation": "x inapokua bidhaa xy hubaki sawa na k, hivyo y inapungua kuelekea 0 — mkondo unakaribia mihimili yote miwili (asimptoti zake) bila kuigusa kamwe. Matawi mawili huwa katika robo zinazopingana kulingana na ishara ya k.",
+    "examples": [
+      "Kasi ikilinganishwa na muda wa safari kwa umbali usiobadilika.",
+      "Shinikizo ikilinganishwa na ujazo wa gesi kwa joto lisilobadilika (sheria ya Boyle)."
+    ],
+    "parameters": {
+      "k": { "label": "Kigezo kisichobadilika", "explanation": "k>0 huweka matawi katika robo I na III; k<0 katika II na IV." }
+    },
+    "formulas": [
+      { "label": "Kitendaji", "description": "x ≠ 0." },
+      { "label": "Asimptoti" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Kitendaji cha Thamani Kamili",
+    "description": "Grafu yenye umbo la V, y = a|x − h| + k.",
+    "explanation": "Thamani kamili inalazimisha matokeo yote kuwa juu ya kipeo, ikitoa V ya ulinganifu. (h, k) ni kona ya V; a hupanua mikono na, ikiwa hasi, hupindua V chini.",
+    "examples": [
+      "Umbali kutoka thamani lengwa.",
+      "Ukubwa wa hitilafu bila kujali ishara."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Ukali na mwelekeo wa V (a<0 huifanya ifunguke chini)." },
+      "h": { "label": "h", "explanation": "Mhamisho wa mlalo wa kipeo." },
+      "k": { "label": "k", "explanation": "Mhamisho wa wima wa kipeo." }
+    },
+    "formulas": [
+      { "label": "Msingi" },
+      { "label": "Iliyobadilishwa" },
+      { "label": "Kipeo" }
+    ]
+  },
+  "power": {
+    "name": "Kitendaji cha Nguvu",
+    "description": "y = xᵃ — umbo lake hutegemea kipeo a.",
+    "explanation": "Kitendaji cha nguvu hupandisha x kwa kipeo kisichobadilika. Vipeo vya nambari kamili vinafafanuliwa kwa x zote, lakini vipeo vya sehemu vinahitaji x ≥ 0 ili kubaki halisi, hivyo mkondo huonekana upande wa kulia tu hapo. Vipeo vya namba sawa ni ulinganifu kuhusiana na mhimili wa y; vipeo vya namba isiyo sawa ni ulinganifu kuhusiana na asili.",
+    "examples": [
+      "Eneo ∝ upande² (a = 2).",
+      "Ujazo ∝ upande³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Kipeo", "explanation": "a=1 mstari, a=2 parabola, a=3 kubiki, a=0.5 mzizi wa pili, a<0 inayofanana na hiperbola." }
+    },
+    "formulas": [
+      { "label": "Kitendaji" },
+      { "label": "Kumbuka", "description": "Misingi hasi haina thamani halisi kwa vipeo vya sehemu." }
+    ]
+  },
+  "exponential": {
+    "name": "Kitendaji cha Kielelezi",
+    "description": "y = aˣ — ukuaji wa kasi (a>1) au uozo (0<a<1).",
+    "explanation": "Vitendaji vya kielelezi vinazidisha kwa msingi a kwa kila hatua katika x. Wakati a>1 matokeo hupaa juu kwa kasi; wakati 0<a<1 hupungua kuelekea asimptoti ya mlalo y = 0. Vyote hupita katika (0, 1) kwa sababu a⁰ = 1.",
+    "examples": [
+      "Riba ya mkusanyiko.",
+      "Uozo wa mionzi (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Msingi", "explanation": "a>1 hukua; 0<a<1 hupungua. Mkondo wowote hupita katika (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Kitendaji", "description": "a > 0, a ≠ 1." },
+      { "label": "Asimptoti" },
+      { "label": "Sehemu ya kuanzia" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Kitendaji cha Logarithimu",
+    "description": "y = logₐ(x) — kinyume cha kitendaji cha kielelezi.",
+    "explanation": "Logarithimu hujibu swali 'a ipandishwe kwa nguvu gani ili kupata x?'. Ni picha ya kioo ya y = aˣ kuvuka mstari y = x, hivyo eneo lake ni x > 0 na ina asimptoti ya wima katika x = 0. Mikondo yote hupita katika (1, 0).",
+    "examples": [
+      "Kipimo cha pH.",
+      "Viwango vya sauti vya desibeli.",
+      "Kipimo cha mitetemeko cha Richter."
+    ],
+    "parameters": {
+      "a": { "label": "Msingi", "explanation": "a>1 hupanda; 0<a<1 hushuka. Mkondo wowote hupita katika (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Kitendaji", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asimptoti" },
+      { "label": "Kinyume cha" }
+    ]
+  },
+  "sine": {
+    "name": "Kitendaji cha Sine",
+    "description": "y = A·sin(Bx + C) + D na ukubwa wa wimbi, kipindi na mihamisho.",
+    "explanation": "A hupanua wimbi kiwima (ukubwa wa wimbi); B hubana wimbi kimlalo, ikiweka kipindi T = 2π/|B|; C husogeza wimbi kushoto/kulia (mhamisho wa awamu −C/B); D huinua au kushusha mstari wa kati.",
+    "examples": [
+      "Mawimbi ya sauti.",
+      "Mkondo wa umeme unaopishana.",
+      "Mawimbi ya bahari na masaa ya mchana katika mwaka."
+    ],
+    "parameters": {
+      "A": { "label": "Ukubwa wa wimbi", "explanation": "Nusu ya urefu kati ya kiwango cha juu na cha chini." },
+      "B": { "label": "Marudio", "explanation": "B kubwa zaidi inabana wimbi (kipindi kifupi zaidi)." },
+      "C": { "label": "Awamu", "explanation": "Mhamisho wa mlalo wa wimbi." },
+      "D": { "label": "Mhamisho wa wima", "explanation": "Husogeza mstari wa kati juu au chini." }
+    },
+    "formulas": [
+      { "label": "Msingi" },
+      { "label": "Iliyobadilishwa" },
+      { "label": "Ukubwa wa wimbi" },
+      { "label": "Kipindi" },
+      { "label": "Mhamisho wa awamu" }
+    ]
+  },
+  "cosine": {
+    "name": "Kitendaji cha Cosine",
+    "description": "y = A·cos(Bx + C) + D — wimbi la sine lililohamishwa kwa robo ya kipindi.",
+    "explanation": "Cosine ina umbo sawa na sine lakini huanzia kiwango chake cha juu: cos(x) = sin(x + π/2). Vigezo vina maana sawa kabisa — ukubwa wa wimbi A, kipindi 2π/|B|, mhamisho wa awamu, na mhamisho wa wima D.",
+    "examples": [
+      "Nafasi ya mlalo ya kidoti kwenye gurudumu linalozunguka.",
+      "Mizunguko ya joto ya majira."
+    ],
+    "parameters": {
+      "A": { "label": "Ukubwa wa wimbi", "explanation": "Nusu ya urefu kati ya kiwango cha juu na cha chini." },
+      "B": { "label": "Marudio", "explanation": "B kubwa zaidi inabana wimbi (kipindi kifupi zaidi)." },
+      "C": { "label": "Awamu", "explanation": "Mhamisho wa mlalo wa wimbi." },
+      "D": { "label": "Mhamisho wa wima", "explanation": "Husogeza mstari wa kati juu au chini." }
+    },
+    "formulas": [
+      { "label": "Msingi" },
+      { "label": "Iliyobadilishwa" },
+      { "label": "Ukubwa wa wimbi" },
+      { "label": "Kipindi" }
+    ]
+  },
+  "tangent": {
+    "name": "Kitendaji cha Tangent",
+    "description": "y = A·tan(Bx + C) + D na asimptoti za wima zinazojirudia.",
+    "explanation": "Tangent inajirudia kila π na hupaa kuelekea ±∞ katika kila asimptoti, ambapo cos = 0. Grafu huchorwa kama matawi tofauti — haiunganishwi kamwe kuvuka asimptoti. B huweka mara ngapi asimptoti zinatokea.",
+    "examples": [
+      "Mteremko wa mstari katika pembe fulani.",
+      "Kuonyesha milipuko ya kasi karibu na kikomo."
+    ],
+    "parameters": {
+      "A": { "label": "Kipimo cha wima", "explanation": "Hupanua matawi kiwima." },
+      "B": { "label": "Marudio", "explanation": "Hudhibiti nafasi kati ya asimptoti (kipindi π/|B|)." },
+      "C": { "label": "Awamu", "explanation": "Mhamisho wa mlalo." },
+      "D": { "label": "Mhamisho wa wima", "explanation": "Husogeza mkondo juu au chini." }
+    },
+    "formulas": [
+      { "label": "Msingi" },
+      { "label": "Iliyobadilishwa" },
+      { "label": "Kipindi" },
+      { "label": "Asimptoti" }
+    ]
+  },
+  "piecewise": {
+    "name": "Kitendaji cha Vipande",
+    "description": "Kanuni tofauti katika vipindi tofauti, vinavyokutana katika sehemu ya mvunjiko.",
+    "explanation": "Kitendaji cha vipande hutumia fomula tofauti katika kila kipindi cha eneo lake. Hapa kipande cha kushoto (x < 0) kinatumia −sx na kipande cha kulia (x ≥ 0) kinatumia sx. Vipande viwili huchorwa kando na hukutana tu katika sehemu ya mvunjiko x = 0.",
+    "examples": [
+      "Madaraja ya kodi.",
+      "Viwango vya gharama ya usafirishaji kulingana na uzito.",
+      "Thamani kamili kama mistari miwili."
+    ],
+    "parameters": {
+      "scale": { "label": "Kipimo cha mteremko", "explanation": "Hupima mikono yote miwili ili uweze kuona vipande vikibadilika pamoja." }
+    },
+    "formulas": [
+      { "label": "Ufafanuzi", "description": "Kanuni mbili za mstari zinazokutana katika x = 0." }
+    ]
+  },
+  "circle": {
+    "name": "Mduara",
+    "description": "Vidoti vyote katika umbali r kutoka kitovu (h, k).",
+    "explanation": "Mduara ni mkusanyiko wa vidoti vyenye umbali usiobadilika r (radiasi) kutoka kitovu chake (h, k). Kubadilisha h na k husogeza mduara mzima; kubadilisha r huukuza au kuupunguza. Mzingo na eneo lake hutegemea r tu.",
+    "examples": [
+      "Magurudumu na gia.",
+      "Mawimbi madogo juu ya maji.",
+      "Njia za mbio za mviringo."
+    ],
+    "parameters": {
+      "h": { "label": "Kitovu x", "explanation": "Nafasi ya mlalo ya kitovu." },
+      "k": { "label": "Kitovu y", "explanation": "Nafasi ya wima ya kitovu." },
+      "r": { "label": "Radiasi", "explanation": "Umbali kutoka kitovu hadi ukingo." }
+    },
+    "formulas": [
+      { "label": "Mfumo wa kawaida" },
+      { "label": "Kilichowekwa katikati ya asili" },
+      { "label": "Mzingo" },
+      { "label": "Eneo" }
+    ],
+    "properties": [
+      { "label": "Mzingo" },
+      { "label": "Eneo" },
+      { "label": "Kipenyo" }
+    ]
+  },
+  "ellipse": {
+    "name": "Elipsi",
+    "description": "Mduara uliopanuliwa na nusu-mihimili a na b.",
+    "explanation": "Elipsi ni mduara uliopimwa kwa viwango tofauti kwenye mihimili miwili. a na b ni nusu-mhimili mkuu na nusu-mhimili mdogo (ambao ni mkubwa zaidi ndio 'mkuu'). Wakati a = b elipsi inakuwa mduara. Eneo lake ni π·a·b.",
+    "examples": [
+      "Mizunguko ya sayari.",
+      "Vyumba vya manong'ono.",
+      "Gia za elipsi."
+    ],
+    "parameters": {
+      "a": { "label": "Nusu-mhimili a", "explanation": "Nusu ya upana kwenye mhimili wa x." },
+      "b": { "label": "Nusu-mhimili b", "explanation": "Nusu ya urefu kwenye mhimili wa y." }
+    },
+    "formulas": [
+      { "label": "Mfumo wa kawaida" },
+      { "label": "Eneo" },
+      { "label": "Fokasi (a>b)" }
+    ],
+    "properties": [
+      { "label": "Eneo" },
+      { "label": "Umbali wa fokasi" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hiperbola",
+    "description": "Matawi mawili yanayopingana na asimptoti za mstari ulionyooka.",
+    "explanation": "Hiperbola ina matawi mawili yanayofanana kama kioo yanayofunguka kushoto na kulia, kila moja likikaribia asimptoti y = ±(b/a)x bila kuzigusa. Mkondo rahisi wa mlinganyo wa kinyume y = k/x pia ni hiperbola — uliozungushwa tu hivyo mihimili yenyewe inakuwa asimptoti zake.",
+    "examples": [
+      "Urambazaji wa masafa marefu (LORAN).",
+      "Njia ya kitu kinachokimbia uvutano.",
+      "Kivuli cha koni ya taa ukutani."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Huweka vipeo katika (±a, 0) na mteremko wa asimptoti." },
+      "b": { "label": "b", "explanation": "Pamoja na a huweka mteremko wa asimptoti ±b/a." }
+    },
+    "formulas": [
+      { "label": "Mfumo wa kawaida" },
+      { "label": "Asimptoti" },
+      { "label": "Vipeo" }
+    ],
+    "properties": [
+      { "label": "Mteremko wa asimptoti" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabola (Koni)",
+    "description": "Koni y² = 2px na fokasi na mstari elekezi.",
+    "explanation": "Kila kidoti kwenye parabola kina umbali sawa kutoka kidoti kisichobadilika (fokasi) na mstari usiobadilika (mstari elekezi). Kwa y² = 2px mkondo unafunguka kulia, fokasi iko katika (p/2, 0), na mstari elekezi ni mstari wa wima x = −p/2. p kubwa zaidi hufanya ufunguzi mpana zaidi.",
+    "examples": [
+      "Sahani za setilaiti na vioo vya taa za gari.",
+      "Kebo za daraja la kusimama.",
+      "Njia za vitu vinavyorushwa."
+    ],
+    "parameters": {
+      "p": { "label": "Kigezo p", "explanation": "Kigezo kinachohusiana na umbali; p>0 hufunguka kulia." }
+    },
+    "formulas": [
+      { "label": "Mfumo wa kawaida" },
+      { "label": "Fokasi" },
+      { "label": "Mstari elekezi" }
+    ],
+    "properties": [
+      { "label": "Fokasi x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Kiboksi (Prisma ya Mstatili)",
+    "description": "Kisanduku chenye urefu, upana na kimo.",
+    "explanation": "Kiboksi kina jozi tatu za nyuso za mstatili zinazofanana. Ujazo wake huzidisha urefu wa pembe tatu; eneo lake la nje hujumlisha maeneo ya nyuso zote sita.",
+    "examples": [
+      "Matofali na masanduku.",
+      "Vyumba na majengo.",
+      "Mabwawa ya samaki (akwaria)."
+    ],
+    "parameters": {
+      "l": { "label": "Urefu", "explanation": "Kipimo kwenye mhimili wa x." },
+      "w": { "label": "Upana", "explanation": "Kipimo kwenye mhimili wa z." },
+      "h": { "label": "Kimo", "explanation": "Kipimo kwenye mhimili wa y." }
+    },
+    "formulas": [
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" },
+      { "label": "Mlalo wa nafasi" }
+    ],
+    "properties": [
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "cube": {
+    "name": "Kiini cha Mchemraba",
+    "description": "Kiboksi chenye pembe zote sawa.",
+    "explanation": "Mchemraba ni kiboksi chenye ulinganifu zaidi: pembe zote 12 ni sawa na nyuso zote 6 ni mraba unaofanana. Kuongeza maradufu pembe huzidisha ujazo kwa mara 8.",
+    "examples": [
+      "Kete za mchezo.",
+      "Mchemraba wa Rubik.",
+      "Vipande vya sukari."
+    ],
+    "parameters": {
+      "a": { "label": "Pembe", "explanation": "Urefu wa kila pembe." }
+    },
+    "formulas": [
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" },
+      { "label": "Mlalo wa nafasi" }
+    ],
+    "properties": [
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "cylinder": {
+    "name": "Silinda",
+    "description": "Misingi miwili ya mviringo iliyounganishwa na uso uliopinda.",
+    "explanation": "Kufungua upande uliopinda wa silinda hutoa mstatili wenye upana 2πr na kimo h, ndiyo sababu eneo la pembeni ni 2πrh. Kuongeza ncha mbili za mviringo hutoa eneo la nje la jumla.",
+    "examples": [
+      "Makopo na mabomba.",
+      "Glasi za kunywea.",
+      "Ngoma za kuzungusha."
+    ],
+    "parameters": {
+      "r": { "label": "Radiasi", "explanation": "Radiasi ya msingi wa mviringo." },
+      "h": { "label": "Kimo", "explanation": "Umbali kati ya misingi miwili." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Eneo la pembeni" },
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Eneo la pembeni" },
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Prisma ya Pembetatu",
+    "description": "Pembetatu iliyosogezwa kwa urefu wake.",
+    "explanation": "Prisma huwa na mkato sawa katika urefu wake wote, hivyo ujazo wake ni eneo la msingi tu likizidishwa na urefu. Hapa msingi ni pembetatu yenye eneo ½·b·hₜ.",
+    "examples": [
+      "Pipi za Toblerone.",
+      "Mihimili ya paa.",
+      "Prisma za vioo vya macho."
+    ],
+    "parameters": {
+      "b": { "label": "Msingi wa pembetatu", "explanation": "Urefu wa msingi wa mkato wa pembetatu." },
+      "ht": { "label": "Kimo cha pembetatu", "explanation": "Kimo cha mkato wa pembetatu." },
+      "H": { "label": "Urefu wa prisma", "explanation": "Umbali pembetatu inavyosogezwa." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Prisma ya Pembenne",
+    "description": "Msingi wa mstatili uliosogezwa kuwa prisma.",
+    "explanation": "Prisma ya pembenne ina msingi wa mstatili (pembenne). Kama kila prisma ujazo wake ni eneo la msingi likizidishwa na kimo. Kwa msingi wa mstatili hii ni sawa na kiboksi: B = lw.",
+    "examples": [
+      "Mihimili na nguzo.",
+      "Masanduku ya ufungashaji.",
+      "Nguzo za majengo."
+    ],
+    "parameters": {
+      "l": { "label": "Urefu wa msingi", "explanation": "Urefu wa msingi wa mstatili." },
+      "w": { "label": "Upana wa msingi", "explanation": "Upana wa msingi wa mstatili." },
+      "H": { "label": "Kimo cha prisma", "explanation": "Kimo cha prisma." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Prisma ya Pembetano",
+    "description": "Pembetano ya kawaida iliyosogezwa kuwa prisma.",
+    "explanation": "Msingi ni pembetano ya kawaida, ambayo eneo lake hutumia fomula ya jumla ya poligoni ya kawaida na n = 5. Kuzidisha kwa kimo hutoa ujazo wa prisma.",
+    "examples": [
+      "Penseli zenye mkato wa pembetano.",
+      "Baadhi ya nati na boliti.",
+      "Nguzo za usanifu."
+    ],
+    "parameters": {
+      "a": { "label": "Urefu wa upande", "explanation": "Urefu wa upande wa pembetano ya kawaida." },
+      "h": { "label": "Kimo cha prisma", "explanation": "Kimo cha prisma." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Prisma ya Pembesita",
+    "description": "Pembesita ya kawaida iliyosogezwa kuwa prisma.",
+    "explanation": "Pembesita ya kawaida ni pembetatu sita za pembe sawa, ikitoa fomula nadhifu ya eneo la msingi (3√3/2)·a². Prisma za pembesita hupanga nafasi kwa ufanisi, ndiyo sababu nyuki hujenga seli za pembesita.",
+    "examples": [
+      "Penseli.",
+      "Seli za asali.",
+      "Nati na boliti."
+    ],
+    "parameters": {
+      "a": { "label": "Urefu wa upande", "explanation": "Urefu wa upande wa pembesita ya kawaida." },
+      "h": { "label": "Kimo cha prisma", "explanation": "Kimo cha prisma." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Piramidi ya Pembetatu",
+    "description": "Msingi wa pembetatu ya kawaida unaopungua hadi kileleni.",
+    "explanation": "Ujazo wa piramidi huwa daima theluthi moja ya prisma yenye msingi na kimo sawa. Hapa msingi ni pembetatu yenye pande sawa na eneo (√3/4)·a².",
+    "examples": [
+      "Kete za tetrahedroni (d4).",
+      "Maumbo ya molekuli (methani).",
+      "Paa za piramidi."
+    ],
+    "parameters": {
+      "a": { "label": "Upande wa msingi", "explanation": "Urefu wa upande wa msingi wenye pande sawa." },
+      "h": { "label": "Kimo", "explanation": "Kimo cha pembe-tisini kutoka msingi hadi kileleni." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Piramidi ya Pembenne",
+    "description": "Msingi wa mstatili unaopungua hadi kileleni.",
+    "explanation": "Hii ni umbo la kawaida la piramidi 'la Misri': msingi wa mstatili unaopanda hadi kilele kimoja. Ujazo wake ni theluthi moja ya kiboksi kinacholingana (eneo la msingi × kimo).",
+    "examples": [
+      "Piramidi Kuu ya Giza.",
+      "Paa za umbo la piramidi.",
+      "Maumbo ya hema."
+    ],
+    "parameters": {
+      "l": { "label": "Urefu wa msingi", "explanation": "Urefu wa msingi wa mstatili." },
+      "w": { "label": "Upana wa msingi", "explanation": "Upana wa msingi wa mstatili." },
+      "h": { "label": "Kimo", "explanation": "Kimo cha pembe-tisini kutoka msingi hadi kileleni." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Piramidi ya Pembetano",
+    "description": "Msingi wa pembetano ya kawaida unaopungua hadi kileleni.",
+    "explanation": "Piramidi yenye msingi wa pembetano ya kawaida. Eneo la msingi hutumia fomula ya poligoni ya kawaida na n = 5; ujazo ni theluthi moja ya eneo la msingi likizidishwa na kimo, kama kila piramidi.",
+    "examples": [
+      "Minara ya mapambo.",
+      "Maumbo ya kristali.",
+      "Aina nyingine za kete za mchezo."
+    ],
+    "parameters": {
+      "a": { "label": "Urefu wa upande", "explanation": "Urefu wa upande wa msingi wa pembetano ya kawaida." },
+      "h": { "label": "Kimo", "explanation": "Kimo cha pembe-tisini kutoka msingi hadi kileleni." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Piramidi ya Pembesita",
+    "description": "Msingi wa pembesita ya kawaida unaopungua hadi kileleni.",
+    "explanation": "Piramidi yenye msingi wa pembesita ya kawaida. Kama kawaida kwa piramidi, V = ⅓·B·h, ambapo B ni eneo la pembesita (3√3/2)·a².",
+    "examples": [
+      "Ncha za penseli.",
+      "Minara na vilele vya mapambo.",
+      "Ncha za kristali."
+    ],
+    "parameters": {
+      "a": { "label": "Urefu wa upande", "explanation": "Urefu wa upande wa msingi wa pembesita ya kawaida." },
+      "h": { "label": "Kimo", "explanation": "Kimo cha pembe-tisini kutoka msingi hadi kileleni." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "cone": {
+    "name": "Koni",
+    "description": "Msingi wa mviringo unaopungua hadi kidoti.",
+    "explanation": "Koni ni piramidi yenye msingi wa mviringo, hivyo ujazo wake pia ni theluthi moja ya silinda inayolingana. Kimo cha mteremko l (sio kimo cha wima) ndicho kinachoamua eneo la pembeni lililopinda πrl.",
+    "examples": [
+      "Koni za aiskrimu.",
+      "Koni za barabarani.",
+      "Funeli."
+    ],
+    "parameters": {
+      "r": { "label": "Radiasi", "explanation": "Radiasi ya msingi wa mviringo." },
+      "h": { "label": "Kimo", "explanation": "Kimo cha pembe-tisini kutoka msingi hadi kileleni." }
+    },
+    "formulas": [
+      { "label": "Eneo la msingi" },
+      { "label": "Kimo cha mteremko" },
+      { "label": "Eneo la pembeni" },
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi" },
+      { "label": "Kimo cha mteremko" },
+      { "label": "Eneo la pembeni" },
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "sphere": {
+    "name": "Tufe",
+    "description": "Vidoti vyote katika umbali r kutoka kitovu, katika 3D.",
+    "explanation": "Tufe ni sawa na mduara katika 3D. Eneo lake la nje ni mara nne ya eneo la 'kivuli' chake cha mduara (4πr²), na ujazo wake hukua kwa kubiki ya radiasi.",
+    "examples": [
+      "Mipira na sayari.",
+      "Mapovu.",
+      "Mipira ya beringi."
+    ],
+    "parameters": {
+      "r": { "label": "Radiasi", "explanation": "Umbali kutoka kitovu hadi uso." }
+    },
+    "formulas": [
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Kipande cha Koni",
+    "description": "Koni iliyokatwa kileleni kwa usawa na msingi.",
+    "explanation": "Kipande ni kile kinachobaki cha koni baada ya kukatwa juu kwa usawa na msingi. Ujazo wake huunganisha radiasi mbili kwa neno la mtambukano Rr. Kimo cha mteremko hutumia tofauti R − r, sio R + r.",
+    "examples": [
+      "Madebe na vifuniko vya taa.",
+      "Vikombe vya kunywea.",
+      "Minara ya kupoza (sehemu ya chini)."
+    ],
+    "parameters": {
+      "R": { "label": "Radiasi ya chini", "explanation": "Radiasi ya mduara mkubwa (wa chini)." },
+      "r": { "label": "Radiasi ya juu", "explanation": "Radiasi ya mduara mdogo (wa juu)." },
+      "h": { "label": "Kimo", "explanation": "Umbali wa wima kati ya miduara miwili." }
+    },
+    "formulas": [
+      { "label": "Kimo cha mteremko" },
+      { "label": "Eneo la pembeni" },
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ],
+    "properties": [
+      { "label": "Kimo cha mteremko" },
+      { "label": "Eneo la pembeni" },
+      { "label": "Eneo la nje" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Kipande cha Piramidi",
+    "description": "Piramidi ya poligoni ya kawaida iliyokatwa juu.",
+    "explanation": "Kukata juu ya piramidi kwa usawa na msingi wake hubakisha kipande chenye nyuso mbili za poligoni zinazofanana. Fomula ya ujazo huchanganya maeneo mawili ya msingi B₁ na B₂ pamoja na wastani wake wa kijiometri √(B₁B₂).",
+    "examples": [
+      "Vifuniko vya taa.",
+      "Vyungu vya mimea.",
+      "Sehemu za juu za majengo yenye ngazi."
+    ],
+    "parameters": {
+      "n": { "label": "Idadi ya pande", "explanation": "Idadi ya pande za poligoni ya kawaida ya msingi." },
+      "aBottom": { "label": "Upande wa chini", "explanation": "Urefu wa upande wa poligoni kubwa (ya chini)." },
+      "aTop": { "label": "Upande wa juu", "explanation": "Urefu wa upande wa poligoni ndogo (ya juu)." },
+      "h": { "label": "Kimo", "explanation": "Umbali wa wima kati ya misingi miwili." }
+    },
+    "formulas": [
+      { "label": "Ujazo" },
+      { "label": "Misingi" }
+    ],
+    "properties": [
+      { "label": "Eneo la msingi wa chini" },
+      { "label": "Eneo la msingi wa juu" },
+      { "label": "Ujazo" }
+    ]
+  },
+  "house": {
+    "name": "Nyumba",
+    "description": "Mwili wa kiboksi na paa la prisma ya pembetatu.",
+    "explanation": "Kutafuta ujazo wa kiumbo changamano, kigawanye katika yabisi za msingi, kokotoa kila moja, kisha jumlisha. Nyumba ni kiboksi (kuta) pamoja na prisma ya pembetatu (paa). Jumlisha ujazo mbili kwa jumla; uso unaogusana mahali yanapokutana ni wa ndani na sio sehemu ya eneo la nje.",
+    "examples": [
+      "Maumbo rahisi ya nyumba na banda.",
+      "Ghala za mifugo.",
+      "Vibanda vya ndege."
+    ],
+    "parameters": {
+      "l": { "label": "Urefu", "explanation": "Upana wa nyumba (na mtambaa wa paa)." },
+      "w": { "label": "Kina", "explanation": "Kina cha nyumba." },
+      "h": { "label": "Kimo cha kuta", "explanation": "Kimo cha kuta za kiboksi." },
+      "hr": { "label": "Kimo cha paa", "explanation": "Kimo cha paa la pembetatu." }
+    },
+    "formulas": [
+      { "label": "Mwili (kiboksi)" },
+      { "label": "Paa (prisma ya pembetatu)" },
+      { "label": "Jumla" }
+    ],
+    "properties": [
+      { "label": "Ujazo wa mwili" },
+      { "label": "Ujazo wa paa" },
+      { "label": "Ujazo wa jumla" }
+    ]
+  },
+  "pencil": {
+    "name": "Penseli",
+    "description": "Mwili wa silinda ulio na ncha ya koni juu.",
+    "explanation": "Penseli ni silinda (mwili) yenye koni (ncha iliyochongwa) inayoshiriki radiasi sawa. Ujazo wa jumla ni silinda pamoja na koni. Kwa kuwa zote mbili zinashiriki uso wa mviringo wa kuguswa, hakuna eneo la nje linalopita humo.",
+    "examples": [
+      "Penseli na crayoni.",
+      "Roketi (mwili + koni ya pua).",
+      "Baadhi ya chupa."
+    ],
+    "parameters": {
+      "r": { "label": "Radiasi", "explanation": "Radiasi ya penseli." },
+      "h": { "label": "Urefu wa mwili", "explanation": "Urefu wa mwili wa silinda." },
+      "ht": { "label": "Urefu wa ncha", "explanation": "Urefu wa ncha ya koni iliyochongwa." }
+    },
+    "formulas": [
+      { "label": "Mwili (silinda)" },
+      { "label": "Ncha (koni)" },
+      { "label": "Jumla" }
+    ],
+    "properties": [
+      { "label": "Ujazo wa mwili" },
+      { "label": "Ujazo wa ncha" },
+      { "label": "Ujazo wa jumla" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Aiskrimu",
+    "description": "Koni inayoshikilia mpira wa aiskrimu.",
+    "explanation": "Aiskrimu ni koni (ncha chini) yenye tufe iliyowekwa juu. Jumlisha ujazo wa koni na tufe kwa jumla. Kwa uhalisia sehemu ya mpira huwa ndani ya mdomo wa koni, hivyo jibu sahihi zaidi lingepunguza mtambukano huo — mfano mzuri wa wakati wa kupunguza.",
+    "examples": [
+      "Koni za aiskrimu.",
+      "Vilele vya mapambo.",
+      "Vinyago vinavyozunguka."
+    ],
+    "parameters": {
+      "r": { "label": "Radiasi ya koni", "explanation": "Radiasi ya mdomo wa koni." },
+      "h": { "label": "Kimo cha koni", "explanation": "Urefu wa koni (ncha inaelekea chini)." },
+      "R": { "label": "Radiasi ya mpira", "explanation": "Radiasi ya mpira wa aiskrimu." }
+    },
+    "formulas": [
+      { "label": "Koni" },
+      { "label": "Mpira (tufe)" },
+      { "label": "Jumla" }
+    ],
+    "properties": [
+      { "label": "Ujazo wa koni" },
+      { "label": "Ujazo wa mpira" },
+      { "label": "Ujazo wa jumla" }
+    ]
+  },
+  "water-tower": {
+    "name": "Mnara wa Maji",
+    "description": "Silinda iliyofunikwa na kuba la nusu-tufe.",
+    "explanation": "Mnara wa maji ni silinda yenye nusu-tufe (nusu ya tufe) juu, ikishiriki radiasi sawa. Ujazo wa jumla hujumlisha silinda na nusu-tufe. Nusu-tufe ni nusu kamili ya tufe, hivyo ujazo wake ni ⅔πr³.",
+    "examples": [
+      "Minara ya maji na maghala.",
+      "Kuba za uchunguzi wa nyota.",
+      "Matanki ya kuhifadhi."
+    ],
+    "parameters": {
+      "r": { "label": "Radiasi", "explanation": "Radiasi ya silinda na kuba." },
+      "h": { "label": "Kimo cha mwili", "explanation": "Kimo cha mwili wa silinda." }
+    },
+    "formulas": [
+      { "label": "Mwili (silinda)" },
+      { "label": "Kuba (nusu-tufe)" },
+      { "label": "Jumla" }
+    ],
+    "properties": [
+      { "label": "Ujazo wa mwili" },
+      { "label": "Ujazo wa kuba" },
+      { "label": "Ujazo wa jumla" }
+    ]
+  },
+  "castle": {
+    "name": "Ngome",
+    "description": "Ngome kuu yenye minara minne ya pembeni na paa za koni.",
+    "explanation": "Ngome huunganisha yabisi kadhaa za msingi: ngome kuu ya kiboksi, minara minne ya silinda, na paa nne za koni. Mkakati ni sawa na kawaida — kigawanye katika vipande vinavyojulikana, kokotoa ujazo wa kila kimoja, kisha jumlisha vyote. Kwa ulinganifu minara minne na paa nne zinafanana, hivyo tunazidisha kwa nne.",
+    "examples": [
+      "Ngome za vinyago.",
+      "Minara ya chess (rook).",
+      "Usanifu wa ngome na minara."
+    ],
+    "parameters": {
+      "s": { "label": "Ukubwa wa ngome kuu", "explanation": "Urefu wa upande wa ngome kuu ya mraba." },
+      "hk": { "label": "Kimo cha ngome kuu", "explanation": "Kimo cha ngome kuu." },
+      "r": { "label": "Radiasi ya mnara", "explanation": "Radiasi ya kila mnara wa pembeni." },
+      "ht": { "label": "Kimo cha mnara", "explanation": "Kimo cha kila mnara wa pembeni." }
+    },
+    "formulas": [
+      { "label": "Ngome kuu (kiboksi)" },
+      { "label": "Mnara (silinda)" },
+      { "label": "Paa (koni)" },
+      { "label": "Jumla" }
+    ],
+    "properties": [
+      { "label": "Ujazo wa ngome kuu" },
+      { "label": "Minara yote" },
+      { "label": "Paa zote" },
+      { "label": "Ujazo wa jumla" }
+    ]
+  }
+}

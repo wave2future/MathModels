@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "نمایشگر تعاملی ریاضی"
+  },
+  "common": {
+    "toggleDarkMode": "تغییر حالت تاریک",
+    "changeLanguage": "تغییر زبان",
+    "searchPlaceholder": "جستجوی مدل‌ها...",
+    "noResults": "هیچ مدلی با «{query}» مطابقت ندارد.",
+    "resultsCount": "{count} نتیجه",
+    "favorites": "موردپسندها",
+    "selectModel": "یک مدل را انتخاب کنید",
+    "reset": "بازنشانی",
+    "addFavorite": "افزودن به موردپسندها",
+    "removeFavorite": "حذف از موردپسندها",
+    "somethingWrongIn": "خطایی در {label} رخ داد.",
+    "somethingWrong": "خطایی رخ داد.",
+    "tryAgain": "تلاش دوباره"
+  },
+  "errorLabels": {
+    "graph": "نمودار",
+    "viewer3d": "نمایشگر سه‌بعدی",
+    "modelPage": "صفحه مدل"
+  },
+  "panels": {
+    "parameters": "پارامترها",
+    "formulas": "فرمول‌ها",
+    "properties": "ویژگی‌های محاسبه‌شده",
+    "explanation": "توضیح",
+    "examples": "مثال‌های واقعی"
+  },
+  "viewSettings": {
+    "grid": "شبکه",
+    "labels": "برچسب‌ها",
+    "wireframe": "خط‌نما",
+    "markers": "نشانگرها"
+  },
+  "graphLabels": {
+    "center": "مرکز",
+    "vertex": "راس",
+    "focus": "کانون",
+    "directrix": "خط هادی",
+    "axis": "محور",
+    "midline": "خط میانی",
+    "asymptote": "خط مقارب",
+    "xIntercept": "تقاطع با x"
+  },
+  "categories": {
+    "functions": {
+      "name": "توابع پایه",
+      "description": "نمودار توابع در صفحه مختصات"
+    },
+    "plane-curves": {
+      "name": "منحنی‌های مسطح",
+      "description": "مقاطع مخروطی و سایر منحنی‌ها"
+    },
+    "solids": {
+      "name": "هندسه فضایی",
+      "description": "اجسام سه‌بعدی: منشورها، هرم‌ها، اجسام دوار"
+    },
+    "combined": {
+      "name": "اجسام ترکیبی",
+      "description": "شکل‌های مرکب ساخته‌شده از اجسام پایه"
+    }
+  }
+}

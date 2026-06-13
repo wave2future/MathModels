@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "ਇੰਟਰਐਕਟਿਵ ਮੈਥ ਵਿਜ਼ੂਅਲਾਈਜ਼ਰ"
+  },
+  "common": {
+    "toggleDarkMode": "ਡਾਰਕ ਮੋਡ ਬਦਲੋ",
+    "changeLanguage": "ਭਾਸ਼ਾ ਬਦਲੋ",
+    "searchPlaceholder": "ਮਾਡਲ ਖੋਜੋ...",
+    "noResults": "\"{query}\" ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਕੋਈ ਮਾਡਲ ਨਹੀਂ ਹੈ।",
+    "resultsCount": "{count} ਨਤੀਜੇ",
+    "favorites": "ਮਨਪਸੰਦ",
+    "selectModel": "ਇੱਕ ਮਾਡਲ ਚੁਣੋ",
+    "reset": "ਰੀਸੈੱਟ",
+    "addFavorite": "ਮਨਪਸੰਦ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
+    "removeFavorite": "ਮਨਪਸੰਦ ਵਿੱਚੋਂ ਹਟਾਓ",
+    "somethingWrongIn": "{label} ਵਿੱਚ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।",
+    "somethingWrong": "ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।",
+    "tryAgain": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
+  },
+  "errorLabels": {
+    "graph": "ਗ੍ਰਾਫ",
+    "viewer3d": "3D ਦਰਸ਼ਕ",
+    "modelPage": "ਮਾਡਲ ਪੰਨਾ"
+  },
+  "panels": {
+    "parameters": "ਪੈਰਾਮੀਟਰ",
+    "formulas": "ਫਾਰਮੂਲੇ",
+    "properties": "ਗਣਨਾ ਕੀਤੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ",
+    "explanation": "ਵਿਆਖਿਆ",
+    "examples": "ਅਸਲ-ਜੀਵਨ ਉਦਾਹਰਣਾਂ"
+  },
+  "viewSettings": {
+    "grid": "ਗਰਿੱਡ",
+    "labels": "ਲੇਬਲ",
+    "wireframe": "ਵਾਇਰਫ੍ਰੇਮ",
+    "markers": "ਮਾਰਕਰ"
+  },
+  "graphLabels": {
+    "center": "ਕੇਂਦਰ",
+    "vertex": "ਸਿਖਰ",
+    "focus": "ਫੋਕਸ",
+    "directrix": "ਡਾਇਰੈਕਟ੍ਰਿਕਸ",
+    "axis": "ਧੁਰਾ",
+    "midline": "ਮੱਧ ਰੇਖਾ",
+    "asymptote": "ਅਨੁਕੂਲ ਰੇਖਾ",
+    "xIntercept": "x-ਇੰਟਰਸੈਪਟ"
+  },
+  "categories": {
+    "functions": {
+      "name": "ਸਾਂਝੇ ਫਲਨ",
+      "description": "ਨਿਰਦੇਸ਼ਾਂਕ ਸਮਤਲ ਵਿੱਚ ਫਲਨਾਂ ਦੇ ਗ੍ਰਾਫ"
+    },
+    "plane-curves": {
+      "name": "ਸਮਤਲ ਵਕਰ",
+      "description": "ਕੋਨਿਕ ਸੈਕਸ਼ਨ ਅਤੇ ਹੋਰ ਵਕਰ"
+    },
+    "solids": {
+      "name": "ਠੋਸ ਜਿਓਮੈਟਰੀ",
+      "description": "3D ਠੋਸ ਆਕਾਰ: ਪ੍ਰਿਜ਼ਮ, ਪਿਰਾਮਿਡ, ਗੋਲ ਠੋਸ"
+    },
+    "combined": {
+      "name": "ਸੰਯੁਕਤ ਠੋਸ ਆਕਾਰ",
+      "description": "ਮੂਲ ਠੋਸ ਆਕਾਰਾਂ ਤੋਂ ਬਣੇ ਮਿਸ਼ਰਿਤ ਆਕਾਰ"
+    }
+  }
+}

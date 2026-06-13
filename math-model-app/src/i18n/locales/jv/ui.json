@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Visualisator Matématika Interaktif"
+  },
+  "common": {
+    "toggleDarkMode": "Ganti mode peteng",
+    "changeLanguage": "Ganti basa",
+    "searchPlaceholder": "Goleki model...",
+    "noResults": "Ora ana model sing cocog karo \"{query}\".",
+    "resultsCount": "{count} hasil",
+    "favorites": "Favorit",
+    "selectModel": "Pilih model",
+    "reset": "Reset",
+    "addFavorite": "Tambah menyang favorit",
+    "removeFavorite": "Busak saka favorit",
+    "somethingWrongIn": "Ana kesalahan ing {label}.",
+    "somethingWrong": "Ana kesalahan.",
+    "tryAgain": "Coba maneh"
+  },
+  "errorLabels": {
+    "graph": "grafik",
+    "viewer3d": "panonton 3D",
+    "modelPage": "kaca model"
+  },
+  "panels": {
+    "parameters": "Parameter",
+    "formulas": "Rumus",
+    "properties": "Properti Kang Diitung",
+    "explanation": "Katrangan",
+    "examples": "Tuladha Nyata"
+  },
+  "viewSettings": {
+    "grid": "Grid",
+    "labels": "Label",
+    "wireframe": "Kerangka kawat",
+    "markers": "Tandha"
+  },
+  "graphLabels": {
+    "center": "pusat",
+    "vertex": "puncak",
+    "focus": "fokus",
+    "directrix": "garis arah",
+    "axis": "sumbu",
+    "midline": "garis tengah",
+    "asymptote": "asimtot",
+    "xIntercept": "potongan-x"
+  },
+  "categories": {
+    "functions": {
+      "name": "Fungsi Umum",
+      "description": "Grafik fungsi ing bidang koordinat"
+    },
+    "plane-curves": {
+      "name": "Kurva Bidang",
+      "description": "Tatanan kerucut lan kurva liyane"
+    },
+    "solids": {
+      "name": "Geometri Bangun Ruang",
+      "description": "Bangun ruang 3D: prisma, piramida, bangun bunder"
+    },
+    "combined": {
+      "name": "Bangun Ruang Gabungan",
+      "description": "Wangun gabungan kang digawe saka bangun ruang dhasar"
+    }
+  }
+}
