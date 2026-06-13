@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
-import { categories, modelsByCategory, searchModels, getModelById } from "@/models";
+import { categories } from "@/models";
+import { useLanguage, useT } from "@/i18n/LanguageContext";
+import { searchLocalizedModels, localizedModelsByCategory, getLocalizedModelById } from "@/i18n/search";
 
 interface Props {
   selectedId: string;
@@ -10,8 +12,10 @@ interface Props {
 export function MobileModelSelector({ selectedId, onSelect }: Props) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const current = getModelById(selectedId);
-  const results = useMemo(() => searchModels(query), [query]);
+  const { language } = useLanguage();
+  const { t } = useT();
+  const current = getLocalizedModelById(selectedId, language);
+  const results = useMemo(() => searchLocalizedModels(query, language), [query, language]);
   const searching = query.trim().length > 0;
 
   const pick = (id: string) => {
@@ -29,10 +33,10 @@ export function MobileModelSelector({ selectedId, onSelect }: Props) {
       >
         <span className="min-w-0">
           <span className="block truncate text-sm font-semibold text-slate-900 dark:text-white">
-            {current?.name ?? "Select a model"}
+            {current?.name ?? t("common.selectModel")}
           </span>
           <span className="block truncate text-xs text-slate-400">
-            {categories.find((c) => c.id === current?.category)?.name}
+            {current && t(`categories.${current.category}.name`)}
           </span>
         </span>
         <svg
@@ -57,7 +61,7 @@ export function MobileModelSelector({ selectedId, onSelect }: Props) {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search models..."
+                placeholder={t("common.searchPlaceholder")}
                 className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-blue-500 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100"
               />
             </div>
@@ -79,9 +83,9 @@ export function MobileModelSelector({ selectedId, onSelect }: Props) {
                 : categories.map((cat) => (
                     <div key={cat.id} className="mb-2">
                       <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                        {cat.name}
+                        {t(`categories.${cat.id}.name`)}
                       </p>
-                      {modelsByCategory(cat.id).map((m) => (
+                      {localizedModelsByCategory(cat.id, language).map((m) => (
                         <button
                           key={m.id}
                           onClick={() => pick(m.id)}
@@ -97,7 +101,7 @@ export function MobileModelSelector({ selectedId, onSelect }: Props) {
                     </div>
                   ))}
               {searching && results.length === 0 && (
-                <p className="px-2 py-4 text-sm text-slate-400">No models match "{query}".</p>
+                <p className="px-2 py-4 text-sm text-slate-400">{t("common.noResults", { query })}</p>
               )}
             </div>
           </div>

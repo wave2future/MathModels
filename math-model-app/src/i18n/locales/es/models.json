@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Función de proporcionalidad directa",
+    "description": "Una línea recta que pasa por el origen cuya inclinación depende de k.",
+    "explanation": "La proporcionalidad directa significa que y cambia a una tasa constante con respecto a x. La gráfica siempre es una línea que pasa por el origen; solo cambia su pendiente. Un |k| mayor produce una línea más inclinada; el signo de k cambia la línea entre las diagonales ascendente y descendente.",
+    "examples": [
+      "Distancia vs tiempo a velocidad constante (d = vt).",
+      "Precio total vs cantidad a un precio unitario fijo."
+    ],
+    "parameters": {
+      "k": { "label": "Pendiente", "explanation": "Controla la inclinación y dirección. k>0 sube, k<0 baja." }
+    },
+    "formulas": [
+      { "label": "Función", "description": "Pasa por el origen (0, 0)." },
+      { "label": "Pendiente", "description": "Elevación sobre avance." }
+    ]
+  },
+  "linear": {
+    "name": "Función lineal",
+    "description": "Una línea recta y = kx + b con pendiente e intersección ajustables.",
+    "explanation": "k controla la pendiente (inclinación y dirección), mientras que b desplaza toda la línea hacia arriba o abajo, fijando dónde cruza el eje y. Cambiar b desliza la línea verticalmente sin cambiar su inclinación.",
+    "examples": [
+      "Tarifa de taxi = tarifa base + tarifa × distancia.",
+      "Conversión de temperatura: °F = 1.8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Pendiente", "explanation": "La pendiente: cuánto cambia y por cada unidad de x." },
+      "b": { "label": "Intersección con y", "explanation": "Dónde la línea cruza el eje y." }
+    },
+    "formulas": [
+      { "label": "Función" },
+      { "label": "Intersección con y" },
+      { "label": "Intersección con x", "description": "Cuando k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Función cuadrática",
+    "description": "Una parábola y = ax² + bx + c con vértice y eje de simetría.",
+    "explanation": "El signo de a determina si la parábola se abre hacia arriba (a>0) o hacia abajo (a<0); la magnitud de a controla cuán estrecha es. El vértice es el punto de inflexión y el eje de simetría es la línea vertical que pasa por él. c es simplemente la altura donde la curva cruza el eje y.",
+    "examples": [
+      "Trayectoria de una pelota lanzada (movimiento de proyectil).",
+      "Área de un rectángulo en función de un lado con perímetro fijo."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Dirección de apertura y anchura. a>0 abre hacia arriba, a<0 abre hacia abajo; un |a| mayor es más estrecho." },
+      "b": { "label": "b", "explanation": "Desplaza el eje de simetría a la izquierda/derecha (junto con a)." },
+      "c": { "label": "c", "explanation": "La intersección con el eje y (valor en x = 0)." }
+    },
+    "formulas": [
+      { "label": "Función" },
+      { "label": "Eje de simetría" },
+      { "label": "Vértice" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Función de proporcionalidad inversa",
+    "description": "Una hipérbola y = k/x con los ejes como asíntotas.",
+    "explanation": "A medida que x crece, el producto xy se mantiene igual a k, por lo que y se reduce hacia 0; la curva se acerca a ambos ejes (sus asíntotas) pero nunca los toca. Las dos ramas se ubican en cuadrantes opuestos según el signo de k.",
+    "examples": [
+      "Velocidad vs tiempo de viaje para una distancia fija.",
+      "Presión vs volumen de un gas a temperatura constante (ley de Boyle)."
+    ],
+    "parameters": {
+      "k": { "label": "Constante", "explanation": "k>0 coloca las ramas en los cuadrantes I y III; k<0 en II y IV." }
+    },
+    "formulas": [
+      { "label": "Función", "description": "x ≠ 0." },
+      { "label": "Asíntotas" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Función de valor absoluto",
+    "description": "Una gráfica en forma de V, y = a|x − h| + k.",
+    "explanation": "El valor absoluto fuerza a que todas las salidas estén por encima del vértice, produciendo una V simétrica. (h, k) es el vértice de la V; a escala los brazos y, si es negativo, invierte la V.",
+    "examples": [
+      "Distancia respecto a un valor objetivo.",
+      "Magnitud del error sin importar el signo."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Inclinación y dirección de la V (a<0 hace que se abra hacia abajo)." },
+      "h": { "label": "h", "explanation": "Desplazamiento horizontal del vértice." },
+      "k": { "label": "k", "explanation": "Desplazamiento vertical del vértice." }
+    },
+    "formulas": [
+      { "label": "Básica" },
+      { "label": "Transformada" },
+      { "label": "Vértice" }
+    ]
+  },
+  "power": {
+    "name": "Función potencia",
+    "description": "y = xᵃ — su forma depende del exponente a.",
+    "explanation": "Una función potencia eleva x a un exponente fijo. Los exponentes enteros están definidos para todo x, pero los exponentes fraccionarios requieren x ≥ 0 para mantenerse reales, por lo que la curva solo aparece en el lado derecho en ese caso. Los exponentes pares son simétricos respecto al eje y; los exponentes impares son simétricos respecto al origen.",
+    "examples": [
+      "Área ∝ lado² (a = 2).",
+      "Volumen ∝ lado³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Exponente", "explanation": "a=1 línea, a=2 parábola, a=3 cúbica, a=0.5 raíz cuadrada, a<0 similar a hipérbola." }
+    },
+    "formulas": [
+      { "label": "Función" },
+      { "label": "Nota", "description": "Las bases negativas no tienen valor real para exponentes fraccionarios." }
+    ]
+  },
+  "exponential": {
+    "name": "Función exponencial",
+    "description": "y = aˣ — crecimiento rápido (a>1) o decaimiento (0<a<1).",
+    "explanation": "Las funciones exponenciales multiplican por la base a en cada paso de x. Cuando a>1, la salida crece explosivamente; cuando 0<a<1, decae hacia la asíntota horizontal y = 0. Todas pasan por (0, 1) porque a⁰ = 1.",
+    "examples": [
+      "Interés compuesto.",
+      "Desintegración radioactiva (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Base", "explanation": "a>1 crece; 0<a<1 decae. Cada curva pasa por (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Función", "description": "a > 0, a ≠ 1." },
+      { "label": "Asíntota" },
+      { "label": "Punto de referencia" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Función logarítmica",
+    "description": "y = logₐ(x) — la inversa de la función exponencial.",
+    "explanation": "El logaritmo responde a '¿a qué potencia hay que elevar a para obtener x?'. Es la imagen especular de y = aˣ respecto a la línea y = x, por lo que su dominio es x > 0 y tiene una asíntota vertical en x = 0. Todas las curvas pasan por (1, 0).",
+    "examples": [
+      "Escala de pH.",
+      "Niveles de sonido en decibelios.",
+      "Escala de Richter para terremotos."
+    ],
+    "parameters": {
+      "a": { "label": "Base", "explanation": "a>1 sube; 0<a<1 baja. Cada curva pasa por (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Función", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asíntota" },
+      { "label": "Inversa de" }
+    ]
+  },
+  "sine": {
+    "name": "Función seno",
+    "description": "y = A·sen(Bx + C) + D con amplitud, periodo y desplazamientos.",
+    "explanation": "A estira la onda verticalmente (amplitud); B la comprime horizontalmente, fijando el periodo T = 2π/|B|; C la desliza a la izquierda/derecha (desplazamiento de fase −C/B); D eleva o baja la línea media.",
+    "examples": [
+      "Ondas sonoras.",
+      "Corriente alterna.",
+      "Mareas y horas de luz solar durante el año."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitud", "explanation": "La mitad de la altura entre el máximo y el mínimo." },
+      "B": { "label": "Frecuencia", "explanation": "Un B mayor comprime la onda (periodo más corto)." },
+      "C": { "label": "Fase", "explanation": "Desplazamiento horizontal de la onda." },
+      "D": { "label": "Desplazamiento vertical", "explanation": "Mueve la línea media hacia arriba o abajo." }
+    },
+    "formulas": [
+      { "label": "Básica" },
+      { "label": "Transformada" },
+      { "label": "Amplitud" },
+      { "label": "Periodo" },
+      { "label": "Desplazamiento de fase" }
+    ]
+  },
+  "cosine": {
+    "name": "Función coseno",
+    "description": "y = A·cos(Bx + C) + D — una onda seno desplazada un cuarto de periodo.",
+    "explanation": "El coseno tiene la misma forma que el seno, pero comienza en su máximo: cos(x) = sen(x + π/2). Los parámetros significan exactamente lo mismo: amplitud A, periodo 2π/|B|, desplazamiento de fase y desplazamiento vertical D.",
+    "examples": [
+      "Posición horizontal de un punto en una rueda giratoria.",
+      "Ciclos de temperatura estacionales."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitud", "explanation": "La mitad de la altura entre el máximo y el mínimo." },
+      "B": { "label": "Frecuencia", "explanation": "Un B mayor comprime la onda (periodo más corto)." },
+      "C": { "label": "Fase", "explanation": "Desplazamiento horizontal de la onda." },
+      "D": { "label": "Desplazamiento vertical", "explanation": "Mueve la línea media hacia arriba o abajo." }
+    },
+    "formulas": [
+      { "label": "Básica" },
+      { "label": "Transformada" },
+      { "label": "Amplitud" },
+      { "label": "Periodo" }
+    ]
+  },
+  "tangent": {
+    "name": "Función tangente",
+    "description": "y = A·tan(Bx + C) + D con asíntotas verticales repetitivas.",
+    "explanation": "La tangente se repite cada π y se dispara hacia ±∞ en cada asíntota, donde cos = 0. La gráfica se dibuja como ramas separadas; nunca está conectada a través de una asíntota. B determina con qué frecuencia ocurren las asíntotas.",
+    "examples": [
+      "Pendiente de una línea en un ángulo dado.",
+      "Modelado de crecimientos rápidos cerca de un límite."
+    ],
+    "parameters": {
+      "A": { "label": "Escala vertical", "explanation": "Estira las ramas verticalmente." },
+      "B": { "label": "Frecuencia", "explanation": "Controla el espaciado de las asíntotas (periodo π/|B|)." },
+      "C": { "label": "Fase", "explanation": "Desplazamiento horizontal." },
+      "D": { "label": "Desplazamiento vertical", "explanation": "Mueve la curva hacia arriba o abajo." }
+    },
+    "formulas": [
+      { "label": "Básica" },
+      { "label": "Transformada" },
+      { "label": "Periodo" },
+      { "label": "Asíntotas" }
+    ]
+  },
+  "piecewise": {
+    "name": "Función a trozos",
+    "description": "Reglas distintas en distintos intervalos, unidas en un punto de quiebre.",
+    "explanation": "Una función a trozos aplica una fórmula diferente en cada intervalo de su dominio. Aquí, la pieza izquierda (x < 0) usa −sx y la pieza derecha (x ≥ 0) usa sx. Las dos piezas se dibujan por separado y solo se encuentran en el punto de quiebre x = 0.",
+    "examples": [
+      "Tramos de impuestos.",
+      "Niveles de costo de envío por peso.",
+      "Valor absoluto como dos líneas."
+    ],
+    "parameters": {
+      "scale": { "label": "Escala de pendiente", "explanation": "Escala ambos brazos para que puedas ver cómo cambian las piezas juntas." }
+    },
+    "formulas": [
+      { "label": "Definición", "description": "Dos reglas lineales que se encuentran en x = 0." }
+    ]
+  },
+  "circle": {
+    "name": "Círculo",
+    "description": "Todos los puntos a distancia r de un centro (h, k).",
+    "explanation": "Un círculo es el conjunto de puntos a una distancia fija r (el radio) de su centro (h, k). Mover h y k desliza todo el círculo; cambiar r lo agranda o lo reduce. Su circunferencia y área dependen solo de r.",
+    "examples": [
+      "Ruedas y engranajes.",
+      "Ondas en el agua.",
+      "Pistas de atletismo circulares."
+    ],
+    "parameters": {
+      "h": { "label": "Centro x", "explanation": "Posición horizontal del centro." },
+      "k": { "label": "Centro y", "explanation": "Posición vertical del centro." },
+      "r": { "label": "Radio", "explanation": "Distancia del centro al borde." }
+    },
+    "formulas": [
+      { "label": "Forma estándar" },
+      { "label": "Centrado en el origen" },
+      { "label": "Circunferencia" },
+      { "label": "Área" }
+    ],
+    "properties": [
+      { "label": "Circunferencia" },
+      { "label": "Área" },
+      { "label": "Diámetro" }
+    ]
+  },
+  "ellipse": {
+    "name": "Elipse",
+    "description": "Un círculo estirado con semiejes a y b.",
+    "explanation": "Una elipse es un círculo escalado por cantidades diferentes a lo largo de los dos ejes. a y b son los semiejes mayor y menor (el que sea más grande es el 'mayor'). Cuando a = b, la elipse se convierte en un círculo. Su área es π·a·b.",
+    "examples": [
+      "Órbitas planetarias.",
+      "Galerías de los susurros.",
+      "Engranajes elípticos."
+    ],
+    "parameters": {
+      "a": { "label": "Semieje a", "explanation": "La mitad del ancho a lo largo del eje x." },
+      "b": { "label": "Semieje b", "explanation": "La mitad de la altura a lo largo del eje y." }
+    },
+    "formulas": [
+      { "label": "Forma estándar" },
+      { "label": "Área" },
+      { "label": "Focos (a>b)" }
+    ],
+    "properties": [
+      { "label": "Área" },
+      { "label": "Distancia focal" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hipérbola",
+    "description": "Dos ramas opuestas con asíntotas de línea recta.",
+    "explanation": "Una hipérbola tiene dos ramas en imagen especular que se abren a la izquierda y a la derecha, cada una acercándose a las asíntotas y = ±(b/a)x sin tocarlas. La curva simple de proporcionalidad inversa y = k/x también es una hipérbola, solo que rotada de modo que los propios ejes son sus asíntotas.",
+    "examples": [
+      "Navegación de largo alcance (LORAN).",
+      "La trayectoria de un objeto que escapa de la gravedad.",
+      "Sombra de un cono de lámpara sobre una pared."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Fija los vértices en (±a, 0) y la pendiente de la asíntota." },
+      "b": { "label": "b", "explanation": "Junto con a, fija la pendiente de la asíntota ±b/a." }
+    },
+    "formulas": [
+      { "label": "Forma estándar" },
+      { "label": "Asíntotas" },
+      { "label": "Vértices" }
+    ],
+    "properties": [
+      { "label": "Pendiente de la asíntota" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parábola (cónica)",
+    "description": "La cónica y² = 2px con un foco y una directriz.",
+    "explanation": "Todo punto de una parábola está a la misma distancia de un punto fijo (el foco) y de una línea fija (la directriz). Para y² = 2px, la curva se abre hacia la derecha, el foco se ubica en (p/2, 0) y la directriz es la línea vertical x = −p/2. Un p mayor produce una abertura más amplia.",
+    "examples": [
+      "Antenas parabólicas y reflectores de faros.",
+      "Cables de puentes colgantes.",
+      "Trayectorias de proyectiles."
+    ],
+    "parameters": {
+      "p": { "label": "Parámetro p", "explanation": "Parámetro relacionado con la distancia; p>0 abre hacia la derecha." }
+    },
+    "formulas": [
+      { "label": "Forma estándar" },
+      { "label": "Foco" },
+      { "label": "Directriz" }
+    ],
+    "properties": [
+      { "label": "Foco x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Cuboide (prisma rectangular)",
+    "description": "Una caja con longitud, anchura y altura.",
+    "explanation": "Un cuboide tiene tres pares de caras rectangulares idénticas. Su volumen es el producto de las tres longitudes de las aristas; su área de superficie es la suma de las áreas de las seis caras.",
+    "examples": [
+      "Ladrillos y cajas.",
+      "Habitaciones y edificios.",
+      "Acuarios."
+    ],
+    "parameters": {
+      "l": { "label": "Longitud", "explanation": "Tamaño a lo largo del eje x." },
+      "w": { "label": "Anchura", "explanation": "Tamaño a lo largo del eje z." },
+      "h": { "label": "Altura", "explanation": "Tamaño a lo largo del eje y." }
+    },
+    "formulas": [
+      { "label": "Área de superficie" },
+      { "label": "Volumen" },
+      { "label": "Diagonal espacial" }
+    ],
+    "properties": [
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ]
+  },
+  "cube": {
+    "name": "Cubo",
+    "description": "Un cuboide con todas las aristas iguales.",
+    "explanation": "Un cubo es el cuboide más simétrico: las 12 aristas son iguales y las 6 caras son cuadrados congruentes. Duplicar la arista multiplica el volumen por 8.",
+    "examples": [
+      "Dados.",
+      "Cubo de Rubik.",
+      "Terrones de azúcar."
+    ],
+    "parameters": {
+      "a": { "label": "Arista", "explanation": "Longitud de cada arista." }
+    },
+    "formulas": [
+      { "label": "Área de superficie" },
+      { "label": "Volumen" },
+      { "label": "Diagonal espacial" }
+    ],
+    "properties": [
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ]
+  },
+  "cylinder": {
+    "name": "Cilindro",
+    "description": "Dos bases circulares unidas por una superficie curva.",
+    "explanation": "Al desenrollar la cara curva de un cilindro se obtiene un rectángulo de ancho 2πr y altura h, por lo que el área lateral es 2πrh. Sumando las dos bases circulares se obtiene el área de superficie total.",
+    "examples": [
+      "Latas y tuberías.",
+      "Vasos para beber.",
+      "Tambores rodillos."
+    ],
+    "parameters": {
+      "r": { "label": "Radio", "explanation": "Radio de la base circular." },
+      "h": { "label": "Altura", "explanation": "Distancia entre las dos bases." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Área lateral" },
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Área lateral" },
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Prisma triangular",
+    "description": "Un triángulo extruido a lo largo de su longitud.",
+    "explanation": "Un prisma mantiene la misma sección transversal en toda su longitud, por lo que su volumen es simplemente el área de la base multiplicada por la longitud. Aquí la base es un triángulo de área ½·b·hₜ.",
+    "examples": [
+      "Barras de Toblerone.",
+      "Cerchas de techo.",
+      "Prismas de vidrio óptico."
+    ],
+    "parameters": {
+      "b": { "label": "Base del triángulo", "explanation": "Longitud de la base de la sección triangular." },
+      "ht": { "label": "Altura del triángulo", "explanation": "Altura de la sección triangular." },
+      "H": { "label": "Longitud del prisma", "explanation": "Hasta dónde se extruye el triángulo." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Prisma cuadrangular",
+    "description": "Una base rectangular extruida en un prisma.",
+    "explanation": "Un prisma cuadrangular tiene una base rectangular (cuadrilátera). Como todo prisma, su volumen es el área de la base multiplicada por la altura. Con una base rectangular, esto es lo mismo que un cuboide: B = lw.",
+    "examples": [
+      "Vigas y postes.",
+      "Cajas de embalaje.",
+      "Columnas de edificios."
+    ],
+    "parameters": {
+      "l": { "label": "Longitud de la base", "explanation": "Longitud de la base rectangular." },
+      "w": { "label": "Anchura de la base", "explanation": "Anchura de la base rectangular." },
+      "H": { "label": "Altura del prisma", "explanation": "Altura del prisma." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Prisma pentagonal",
+    "description": "Un pentágono regular extruido en un prisma.",
+    "explanation": "La base es un pentágono regular, cuya área usa la fórmula general del polígono regular con n = 5. Multiplicar por la altura da el volumen del prisma.",
+    "examples": [
+      "Lápices con sección transversal pentagonal.",
+      "Algunas tuercas y tornillos.",
+      "Columnas arquitectónicas."
+    ],
+    "parameters": {
+      "a": { "label": "Longitud del lado", "explanation": "Longitud del lado del pentágono regular." },
+      "h": { "label": "Altura del prisma", "explanation": "Altura del prisma." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Prisma hexagonal",
+    "description": "Un hexágono regular extruido en un prisma.",
+    "explanation": "Un hexágono regular son seis triángulos equiláteros, lo que da la sencilla fórmula de área de la base (3√3/2)·a². Los prismas hexagonales rellenan el espacio de forma eficiente, por lo que las abejas construyen celdas hexagonales.",
+    "examples": [
+      "Lápices.",
+      "Celdas de un panal.",
+      "Tuercas y tornillos."
+    ],
+    "parameters": {
+      "a": { "label": "Longitud del lado", "explanation": "Longitud del lado del hexágono regular." },
+      "h": { "label": "Altura del prisma", "explanation": "Altura del prisma." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Pirámide triangular",
+    "description": "Una base triangular regular que se estrecha hasta un vértice.",
+    "explanation": "El volumen de una pirámide siempre es un tercio del prisma con la misma base y altura. Aquí la base es un triángulo equilátero de área (√3/4)·a².",
+    "examples": [
+      "Dados tetraédricos (d4).",
+      "Formas moleculares (metano).",
+      "Techos a cuatro aguas en forma de pirámide."
+    ],
+    "parameters": {
+      "a": { "label": "Lado de la base", "explanation": "Longitud del lado de la base equilátera." },
+      "h": { "label": "Altura", "explanation": "Altura perpendicular desde la base hasta el vértice." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Pirámide cuadrangular",
+    "description": "Una base rectangular que se estrecha hasta un vértice.",
+    "explanation": "Esta es la clásica forma de pirámide 'egipcia': una base rectangular que se eleva hasta un único vértice. Su volumen es un tercio del cuboide equivalente (área de la base × altura).",
+    "examples": [
+      "La Gran Pirámide de Guiza.",
+      "Techos en forma de pirámide.",
+      "Formas de tiendas de campaña."
+    ],
+    "parameters": {
+      "l": { "label": "Longitud de la base", "explanation": "Longitud de la base rectangular." },
+      "w": { "label": "Anchura de la base", "explanation": "Anchura de la base rectangular." },
+      "h": { "label": "Altura", "explanation": "Altura perpendicular desde la base hasta el vértice." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Pirámide pentagonal",
+    "description": "Una base de pentágono regular que se estrecha hasta un vértice.",
+    "explanation": "Una pirámide sobre un pentágono regular. El área de la base usa la fórmula del polígono regular con n = 5; el volumen es un tercio del área de la base multiplicada por la altura, como toda pirámide.",
+    "examples": [
+      "Agujas decorativas.",
+      "Formas de cristales.",
+      "Variantes de dados de juego."
+    ],
+    "parameters": {
+      "a": { "label": "Longitud del lado", "explanation": "Longitud del lado de la base pentagonal regular." },
+      "h": { "label": "Altura", "explanation": "Altura perpendicular desde la base hasta el vértice." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Pirámide hexagonal",
+    "description": "Una base de hexágono regular que se estrecha hasta un vértice.",
+    "explanation": "Una pirámide sobre una base hexagonal regular. Como siempre en las pirámides, V = ⅓·B·h, donde B es el área del hexágono (3√3/2)·a².",
+    "examples": [
+      "Puntas de lápices.",
+      "Agujas y remates decorativos.",
+      "Terminaciones de cristales."
+    ],
+    "parameters": {
+      "a": { "label": "Longitud del lado", "explanation": "Longitud del lado de la base hexagonal regular." },
+      "h": { "label": "Altura", "explanation": "Altura perpendicular desde la base hasta el vértice." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Volumen" }
+    ]
+  },
+  "cone": {
+    "name": "Cono",
+    "description": "Una base circular que se estrecha hasta un punto.",
+    "explanation": "Un cono es una pirámide con base circular, por lo que su volumen también es un tercio del cilindro equivalente. La altura inclinada l (no la altura vertical) es lo que determina el área lateral curva πrl.",
+    "examples": [
+      "Conos de helado.",
+      "Conos de tráfico.",
+      "Embudos."
+    ],
+    "parameters": {
+      "r": { "label": "Radio", "explanation": "Radio de la base circular." },
+      "h": { "label": "Altura", "explanation": "Altura perpendicular desde la base hasta el vértice." }
+    },
+    "formulas": [
+      { "label": "Área de la base" },
+      { "label": "Altura inclinada" },
+      { "label": "Área lateral" },
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de la base" },
+      { "label": "Altura inclinada" },
+      { "label": "Área lateral" },
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ]
+  },
+  "sphere": {
+    "name": "Esfera",
+    "description": "Todos los puntos a distancia r de un centro, en 3D.",
+    "explanation": "Una esfera es el análogo en 3D de un círculo. Su área de superficie es exactamente cuatro veces el área de su 'sombra' circular (4πr²), y su volumen crece con el cubo del radio.",
+    "examples": [
+      "Pelotas y planetas.",
+      "Burbujas.",
+      "Rodamientos de bolas."
+    ],
+    "parameters": {
+      "r": { "label": "Radio", "explanation": "Distancia del centro a la superficie." }
+    },
+    "formulas": [
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Tronco de cono",
+    "description": "Un cono con la punta cortada en paralelo a la base.",
+    "explanation": "Un tronco de cono es lo que queda de un cono después de cortar la parte superior en paralelo a la base. Su volumen combina los dos radios con el término cruzado Rr. La altura inclinada usa la diferencia R − r, no R + r.",
+    "examples": [
+      "Cubos y pantallas de lámparas.",
+      "Vasos para beber.",
+      "Torres de refrigeración (parte inferior)."
+    ],
+    "parameters": {
+      "R": { "label": "Radio inferior", "explanation": "Radio del círculo más grande (inferior)." },
+      "r": { "label": "Radio superior", "explanation": "Radio del círculo más pequeño (superior)." },
+      "h": { "label": "Altura", "explanation": "Distancia vertical entre los dos círculos." }
+    },
+    "formulas": [
+      { "label": "Altura inclinada" },
+      { "label": "Área lateral" },
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Altura inclinada" },
+      { "label": "Área lateral" },
+      { "label": "Área de superficie" },
+      { "label": "Volumen" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Tronco de pirámide",
+    "description": "Una pirámide poligonal regular con la parte superior cortada.",
+    "explanation": "Cortar la parte superior de una pirámide en paralelo a su base deja un tronco con dos caras poligonales similares. La fórmula del volumen promedia las dos áreas de base B₁ y B₂ junto con su media geométrica √(B₁B₂).",
+    "examples": [
+      "Pantallas de lámparas.",
+      "Macetas para plantas.",
+      "Cimas escalonadas de edificios."
+    ],
+    "parameters": {
+      "n": { "label": "Número de lados", "explanation": "Número de lados del polígono regular de la base." },
+      "aBottom": { "label": "Lado inferior", "explanation": "Longitud del lado del polígono más grande (inferior)." },
+      "aTop": { "label": "Lado superior", "explanation": "Longitud del lado del polígono más pequeño (superior)." },
+      "h": { "label": "Altura", "explanation": "Distancia vertical entre las dos bases." }
+    },
+    "formulas": [
+      { "label": "Volumen" },
+      { "label": "Bases" }
+    ],
+    "properties": [
+      { "label": "Área de la base inferior" },
+      { "label": "Área de la base superior" },
+      { "label": "Volumen" }
+    ]
+  },
+  "house": {
+    "name": "Casa",
+    "description": "Un cuerpo de cuboide con un techo de prisma triangular.",
+    "explanation": "Para encontrar el volumen de un sólido combinado, divídelo en sólidos básicos, calcula cada uno y luego suma. Una casa es un cuboide (las paredes) más un prisma triangular (el techo). Suma los dos volúmenes para obtener el total; la cara de contacto donde se unen es interna y no forma parte de la superficie exterior.",
+    "examples": [
+      "Formas simples de casas y cobertizos.",
+      "Graneros.",
+      "Casas para pájaros."
+    ],
+    "parameters": {
+      "l": { "label": "Longitud", "explanation": "Anchura de la casa (y envergadura del techo)." },
+      "w": { "label": "Profundidad", "explanation": "Profundidad de la casa." },
+      "h": { "label": "Altura de la pared", "explanation": "Altura de las paredes del cuboide." },
+      "hr": { "label": "Altura del techo", "explanation": "Altura del techo triangular." }
+    },
+    "formulas": [
+      { "label": "Cuerpo (cuboide)" },
+      { "label": "Techo (prisma triangular)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volumen del cuerpo" },
+      { "label": "Volumen del techo" },
+      { "label": "Volumen total" }
+    ]
+  },
+  "pencil": {
+    "name": "Lápiz",
+    "description": "Un cuerpo cilíndrico coronado por una punta cónica.",
+    "explanation": "Un lápiz es un cilindro (el cuerpo) con un cono (la punta afilada) que comparte el mismo radio. El volumen total es el cilindro más el cono. Como ambos comparten la misma cara circular de contacto, ninguna superficie exterior pasa por ella.",
+    "examples": [
+      "Lápices y crayones.",
+      "Cohetes (cuerpo + cono de nariz).",
+      "Algunas botellas."
+    ],
+    "parameters": {
+      "r": { "label": "Radio", "explanation": "Radio del lápiz." },
+      "h": { "label": "Longitud del cuerpo", "explanation": "Longitud del cuerpo cilíndrico." },
+      "ht": { "label": "Longitud de la punta", "explanation": "Longitud de la punta cónica afilada." }
+    },
+    "formulas": [
+      { "label": "Cuerpo (cilindro)" },
+      { "label": "Punta (cono)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volumen del cuerpo" },
+      { "label": "Volumen de la punta" },
+      { "label": "Volumen total" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Helado",
+    "description": "Un cono que sostiene una bola esférica.",
+    "explanation": "Un helado es un cono (con la punta hacia abajo) con una esfera apoyada encima. Suma los volúmenes del cono y la esfera para obtener el total. En realidad, parte de la bola se sitúa dentro de la abertura del cono, por lo que una respuesta más precisa restaría ese solapamiento, un buen ejemplo de cuándo restar.",
+    "examples": [
+      "Conos de helado.",
+      "Remates decorativos.",
+      "Trompos giratorios."
+    ],
+    "parameters": {
+      "r": { "label": "Radio del cono", "explanation": "Radio de la abertura superior del cono." },
+      "h": { "label": "Altura del cono", "explanation": "Longitud del cono (la punta apunta hacia abajo)." },
+      "R": { "label": "Radio de la bola", "explanation": "Radio de la bola esférica." }
+    },
+    "formulas": [
+      { "label": "Cono" },
+      { "label": "Bola (esfera)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volumen del cono" },
+      { "label": "Volumen de la bola" },
+      { "label": "Volumen total" }
+    ]
+  },
+  "water-tower": {
+    "name": "Torre de agua",
+    "description": "Un cilindro rematado con una cúpula hemisférica.",
+    "explanation": "Una torre de agua es un cilindro con un hemisferio (media esfera) encima, compartiendo el mismo radio. El volumen total suma el cilindro y el hemisferio. Un hemisferio es exactamente la mitad de una esfera, por lo que su volumen es ⅔πr³.",
+    "examples": [
+      "Torres de agua y silos.",
+      "Cúpulas de observatorios.",
+      "Tanques de almacenamiento."
+    ],
+    "parameters": {
+      "r": { "label": "Radio", "explanation": "Radio del cilindro y de la cúpula." },
+      "h": { "label": "Altura del cuerpo", "explanation": "Altura del cuerpo cilíndrico." }
+    },
+    "formulas": [
+      { "label": "Cuerpo (cilindro)" },
+      { "label": "Cúpula (hemisferio)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volumen del cuerpo" },
+      { "label": "Volumen de la cúpula" },
+      { "label": "Volumen total" }
+    ]
+  },
+  "castle": {
+    "name": "Castillo",
+    "description": "Una torre central con cuatro torres en las esquinas y techos cónicos.",
+    "explanation": "Un castillo combina varios sólidos básicos: una torre principal en forma de cuboide, cuatro torres cilíndricas y cuatro techos cónicos. La estrategia es la misma de siempre: dividirlo en piezas conocidas, calcular cada volumen y luego sumarlas todas. Por simetría, las cuatro torres y los cuatro techos son idénticos, así que multiplicamos por cuatro.",
+    "examples": [
+      "Castillos de juguete.",
+      "Torres de ajedrez.",
+      "Arquitectura de fortalezas y torres."
+    ],
+    "parameters": {
+      "s": { "label": "Tamaño de la torre principal", "explanation": "Longitud del lado de la torre principal cuadrada." },
+      "hk": { "label": "Altura de la torre principal", "explanation": "Altura de la torre principal." },
+      "r": { "label": "Radio de la torre", "explanation": "Radio de cada torre en las esquinas." },
+      "ht": { "label": "Altura de la torre", "explanation": "Altura de cada torre en las esquinas." }
+    },
+    "formulas": [
+      { "label": "Torre principal (cuboide)" },
+      { "label": "Torre (cilindro)" },
+      { "label": "Techo (cono)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volumen de la torre principal" },
+      { "label": "Todas las torres" },
+      { "label": "Todos los techos" },
+      { "label": "Volumen total" }
+    ]
+  }
+}

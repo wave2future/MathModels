@@ -1,6 +1,7 @@
 import type { MathModel, ParamValues } from "@/types/model";
 import { Katex } from "@/components/common/Katex";
 import { formatWithUnit } from "@/utils/numberFormat";
+import { useT } from "@/i18n/LanguageContext";
 
 interface Props {
   model: MathModel;
@@ -9,11 +10,12 @@ interface Props {
 
 /** Live computed properties (area, surface area, volume, ...) for the model. */
 export function PropertiesPanel({ model, values }: Props) {
+  const { t } = useT();
   if (!model.properties || model.properties.length === 0) return null;
   return (
     <section>
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-        Calculated Properties
+        {t("panels.properties")}
       </h2>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {model.properties.map((prop, i) => {

@@ -44,18 +44,3 @@ export function getModelById(id: string): MathModel | undefined {
 export function modelsByCategory(categoryId: string): MathModel[] {
   return allModels.filter((m) => m.category === categoryId);
 }
-
-/** Case-insensitive search over name, Chinese name, description and id. */
-export function searchModels(query: string): MathModel[] {
-  const q = query.trim().toLowerCase();
-  if (!q) return allModels;
-  return allModels.filter((m) => {
-    return (
-      m.name.toLowerCase().includes(q) ||
-      m.id.toLowerCase().includes(q) ||
-      (m.chineseName ?? "").toLowerCase().includes(q) ||
-      m.description.toLowerCase().includes(q) ||
-      m.category.toLowerCase().includes(q)
-    );
-  });
-}

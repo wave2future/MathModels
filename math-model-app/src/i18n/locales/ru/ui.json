@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Интерактивный визуализатор математики"
+  },
+  "common": {
+    "toggleDarkMode": "Переключить тёмную тему",
+    "changeLanguage": "Изменить язык",
+    "searchPlaceholder": "Поиск моделей...",
+    "noResults": "Нет моделей, соответствующих \"{query}\".",
+    "resultsCount": "{count} результатов",
+    "favorites": "Избранное",
+    "selectModel": "Выберите модель",
+    "reset": "Сбросить",
+    "addFavorite": "Добавить в избранное",
+    "removeFavorite": "Удалить из избранного",
+    "somethingWrongIn": "Произошла ошибка в разделе {label}.",
+    "somethingWrong": "Произошла ошибка.",
+    "tryAgain": "Повторить попытку"
+  },
+  "errorLabels": {
+    "graph": "график",
+    "viewer3d": "3D-просмотрщик",
+    "modelPage": "страница модели"
+  },
+  "panels": {
+    "parameters": "Параметры",
+    "formulas": "Формулы",
+    "properties": "Вычисляемые величины",
+    "explanation": "Объяснение",
+    "examples": "Примеры из жизни"
+  },
+  "viewSettings": {
+    "grid": "Сетка",
+    "labels": "Подписи",
+    "wireframe": "Каркас",
+    "markers": "Маркеры"
+  },
+  "graphLabels": {
+    "center": "центр",
+    "vertex": "вершина",
+    "focus": "фокус",
+    "directrix": "директриса",
+    "axis": "ось",
+    "midline": "средняя линия",
+    "asymptote": "асимптота",
+    "xIntercept": "пересечение с x"
+  },
+  "categories": {
+    "functions": {
+      "name": "Основные функции",
+      "description": "Графики функций на координатной плоскости"
+    },
+    "plane-curves": {
+      "name": "Плоские кривые",
+      "description": "Конические сечения и другие кривые"
+    },
+    "solids": {
+      "name": "Геометрия тел",
+      "description": "3D-тела: призмы, пирамиды, тела вращения"
+    },
+    "combined": {
+      "name": "Составные тела",
+      "description": "Составные фигуры, образованные из базовых тел"
+    }
+  }
+}

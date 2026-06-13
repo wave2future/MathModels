@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "正比例函数",
+    "description": "一条经过原点的直线，其陡度由 k 决定。",
+    "explanation": "正比例关系意味着 y 随 x 以恒定的比率变化。图像始终是一条经过原点的直线，只有它的斜率会改变。|k| 越大，直线越陡；k 的正负决定了直线位于上升对角线还是下降对角线。",
+    "examples": [
+      "匀速运动中路程与时间的关系（d = vt）。",
+      "单价固定时总价与数量的关系。"
+    ],
+    "parameters": {
+      "k": { "label": "斜率", "explanation": "控制陡度和方向。k>0 上升，k<0 下降。" }
+    },
+    "formulas": [
+      { "label": "函数", "description": "经过原点 (0, 0)。" },
+      { "label": "斜率", "description": "纵向变化量与横向变化量之比。" }
+    ]
+  },
+  "linear": {
+    "name": "一次函数",
+    "description": "一条具有可调斜率和截距的直线 y = kx + b。",
+    "explanation": "k 控制斜率（陡度和方向），而 b 使整条直线上下平移，决定它与 y 轴的交点位置。改变 b 会使直线竖直滑动而不改变其倾斜程度。",
+    "examples": [
+      "出租车费 = 起步价 + 单价 × 距离。",
+      "温度换算：°F = 1.8·°C + 32。"
+    ],
+    "parameters": {
+      "k": { "label": "斜率", "explanation": "斜率：y 随 x 每变化一个单位的变化速度。" },
+      "b": { "label": "y 轴截距", "explanation": "直线与 y 轴的交点位置。" }
+    },
+    "formulas": [
+      { "label": "函数" },
+      { "label": "y 轴截距" },
+      { "label": "x 轴截距", "description": "当 k ≠ 0 时。" }
+    ]
+  },
+  "quadratic": {
+    "name": "二次函数",
+    "description": "一条具有顶点和对称轴的抛物线 y = ax² + bx + c。",
+    "explanation": "a 的符号决定抛物线是向上开口（a>0）还是向下开口（a<0）；a 的大小决定开口的宽窄。顶点是曲线的转折点，对称轴是经过顶点的竖直直线。c 就是曲线与 y 轴交点的高度。",
+    "examples": [
+      "抛出物体的运动轨迹（抛体运动）。",
+      "周长固定时矩形面积与一边长度的关系。"
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "开口方向与宽窄。a>0 向上开口，a<0 向下开口；|a| 越大开口越窄。" },
+      "b": { "label": "b", "explanation": "与 a 一起决定对称轴向左或向右移动。" },
+      "c": { "label": "c", "explanation": "y 轴截距（x = 0 时的值）。" }
+    },
+    "formulas": [
+      { "label": "函数" },
+      { "label": "对称轴" },
+      { "label": "顶点" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "反比例函数",
+    "description": "一条以坐标轴为渐近线的双曲线 y = k/x。",
+    "explanation": "随着 x 增大，乘积 xy 始终等于 k，因此 y 趋向于 0——曲线贴近两条坐标轴（其渐近线）但永不相交。两条分支位于哪一对象限取决于 k 的符号。",
+    "examples": [
+      "固定距离下速度与行驶时间的关系。",
+      "恒温下气体的压强与体积关系（玻意耳定律）。"
+    ],
+    "parameters": {
+      "k": { "label": "常数", "explanation": "k>0 时两条分支位于第一、三象限；k<0 时位于第二、四象限。" }
+    },
+    "formulas": [
+      { "label": "函数", "description": "x ≠ 0。" },
+      { "label": "渐近线" }
+    ]
+  },
+  "absolute-value": {
+    "name": "绝对值函数",
+    "description": "一个 V 形图像 y = a|x − h| + k。",
+    "explanation": "绝对值使所有输出值都不低于顶点，形成一个对称的 V 形。(h, k) 是 V 形的拐点；a 缩放两条边，若为负数则使 V 形上下翻转。",
+    "examples": [
+      "与目标值之间的距离。",
+      "不考虑符号的误差大小。"
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "V 形的陡度与方向（a<0 时开口向下）。" },
+      "h": { "label": "h", "explanation": "顶点的水平偏移。" },
+      "k": { "label": "k", "explanation": "顶点的竖直偏移。" }
+    },
+    "formulas": [
+      { "label": "基本形式" },
+      { "label": "变换形式" },
+      { "label": "顶点" }
+    ]
+  },
+  "power": {
+    "name": "幂函数",
+    "description": "y = xᵃ——其形状取决于指数 a。",
+    "explanation": "幂函数将 x 进行固定指数的幂运算。整数指数对所有 x 都有定义，但分数指数需要 x ≥ 0 才能保持为实数，因此曲线在这种情况下只出现在右侧。偶数指数关于 y 轴对称；奇数指数关于原点对称。",
+    "examples": [
+      "面积 ∝ 边长²（a = 2）。",
+      "体积 ∝ 边长³（a = 3）。"
+    ],
+    "parameters": {
+      "a": { "label": "指数", "explanation": "a=1 为直线，a=2 为抛物线，a=3 为三次曲线，a=0.5 为平方根曲线，a<0 类似双曲线。" }
+    },
+    "formulas": [
+      { "label": "函数" },
+      { "label": "注意", "description": "负的底数在分数指数下没有实数值。" }
+    ]
+  },
+  "exponential": {
+    "name": "指数函数",
+    "description": "y = aˣ——快速增长（a>1）或衰减（0<a<1）。",
+    "explanation": "指数函数在 x 每增加一个单位时乘以底数 a。当 a>1 时，输出值急剧增大；当 0<a<1 时，输出值衰减并趋向水平渐近线 y = 0。所有曲线都经过 (0, 1)，因为 a⁰ = 1。",
+    "examples": [
+      "复利计算。",
+      "放射性衰变（0 < a < 1）。"
+    ],
+    "parameters": {
+      "a": { "label": "底数", "explanation": "a>1 时增长；0<a<1 时衰减。每条曲线都经过 (0, 1)。" }
+    },
+    "formulas": [
+      { "label": "函数", "description": "a > 0，a ≠ 1。" },
+      { "label": "渐近线" },
+      { "label": "锚点" }
+    ]
+  },
+  "logarithmic": {
+    "name": "对数函数",
+    "description": "y = logₐ(x)——指数函数的反函数。",
+    "explanation": "对数回答的问题是“a 的多少次方等于 x？”。它是 y = aˣ 关于直线 y = x 的镜像，因此其定义域为 x > 0，并在 x = 0 处有一条竖直渐近线。所有曲线都经过 (1, 0)。",
+    "examples": [
+      "pH 值标度。",
+      "分贝声级。",
+      "里氏地震等级。"
+    ],
+    "parameters": {
+      "a": { "label": "底数", "explanation": "a>1 时上升；0<a<1 时下降。每条曲线都经过 (1, 0)。" }
+    },
+    "formulas": [
+      { "label": "函数", "description": "x > 0，a > 0，a ≠ 1。" },
+      { "label": "渐近线" },
+      { "label": "反函数" }
+    ]
+  },
+  "sine": {
+    "name": "正弦函数",
+    "description": "y = A·sin(Bx + C) + D，具有振幅、周期和平移。",
+    "explanation": "A 在竖直方向拉伸波形（振幅）；B 在水平方向压缩波形，决定周期 T = 2π/|B|；C 使波形左右滑动（相位偏移为 −C/B）；D 使中线上升或下降。",
+    "examples": [
+      "声波。",
+      "交流电。",
+      "一年中潮汐与日照时长的变化。"
+    ],
+    "parameters": {
+      "A": { "label": "振幅", "explanation": "最大值与最小值之间高度差的一半。" },
+      "B": { "label": "频率", "explanation": "B 越大，波形越被压缩（周期越短）。" },
+      "C": { "label": "相位", "explanation": "波形的水平偏移。" },
+      "D": { "label": "竖直偏移", "explanation": "使中线上移或下移。" }
+    },
+    "formulas": [
+      { "label": "基本形式" },
+      { "label": "变换形式" },
+      { "label": "振幅" },
+      { "label": "周期" },
+      { "label": "相位偏移" }
+    ]
+  },
+  "cosine": {
+    "name": "余弦函数",
+    "description": "y = A·cos(Bx + C) + D——平移了四分之一周期的正弦波。",
+    "explanation": "余弦与正弦形状相同，但从最大值开始：cos(x) = sin(x + π/2)。各参数的含义完全相同——振幅 A、周期 2π/|B|、相位偏移以及竖直偏移 D。",
+    "examples": [
+      "旋转轮上一点的水平位置。",
+      "季节性温度变化周期。"
+    ],
+    "parameters": {
+      "A": { "label": "振幅", "explanation": "最大值与最小值之间高度差的一半。" },
+      "B": { "label": "频率", "explanation": "B 越大，波形越被压缩（周期越短）。" },
+      "C": { "label": "相位", "explanation": "波形的水平偏移。" },
+      "D": { "label": "竖直偏移", "explanation": "使中线上移或下移。" }
+    },
+    "formulas": [
+      { "label": "基本形式" },
+      { "label": "变换形式" },
+      { "label": "振幅" },
+      { "label": "周期" }
+    ]
+  },
+  "tangent": {
+    "name": "正切函数",
+    "description": "y = A·tan(Bx + C) + D，具有周期性的竖直渐近线。",
+    "explanation": "正切函数以 π 为周期重复，并在每条渐近线处（cos = 0 的位置）趋向 ±∞。图像被绘制为多条独立的分支——在渐近线两侧永不相连。B 决定渐近线出现的间隔。",
+    "examples": [
+      "已知角度下直线的斜率。",
+      "对接近极限时迅速发散的现象进行建模。"
+    ],
+    "parameters": {
+      "A": { "label": "竖直缩放", "explanation": "在竖直方向拉伸各分支。" },
+      "B": { "label": "频率", "explanation": "控制渐近线之间的间距（周期为 π/|B|）。" },
+      "C": { "label": "相位", "explanation": "水平偏移。" },
+      "D": { "label": "竖直偏移", "explanation": "使曲线上移或下移。" }
+    },
+    "formulas": [
+      { "label": "基本形式" },
+      { "label": "变换形式" },
+      { "label": "周期" },
+      { "label": "渐近线" }
+    ]
+  },
+  "piecewise": {
+    "name": "分段函数",
+    "description": "在不同区间上使用不同的规则，并在分段点处相接。",
+    "explanation": "分段函数在其定义域的每个区间上应用不同的公式。这里左侧分段（x < 0）使用 −sx，右侧分段（x ≥ 0）使用 sx。两段分别绘制，仅在分段点 x = 0 处相接。",
+    "examples": [
+      "税率分级。",
+      "按重量划分的运费等级。",
+      "用两条直线表示绝对值函数。"
+    ],
+    "parameters": {
+      "scale": { "label": "斜率缩放", "explanation": "同时缩放两条边，以便观察两段同步变化。" }
+    },
+    "formulas": [
+      { "label": "定义", "description": "两条在 x = 0 处相接的线性规则。" }
+    ]
+  },
+  "circle": {
+    "name": "圆",
+    "description": "所有与中心 (h, k) 距离为 r 的点构成的图形。",
+    "explanation": "圆是与其中心 (h, k) 距离为固定值 r（半径）的点的集合。改变 h 和 k 会使整个圆平移；改变 r 会使圆变大或变小。圆的周长和面积只取决于 r。",
+    "examples": [
+      "车轮和齿轮。",
+      "水面上的波纹。",
+      "圆形跑道。"
+    ],
+    "parameters": {
+      "h": { "label": "中心 x 坐标", "explanation": "中心的水平位置。" },
+      "k": { "label": "中心 y 坐标", "explanation": "中心的竖直位置。" },
+      "r": { "label": "半径", "explanation": "从中心到边缘的距离。" }
+    },
+    "formulas": [
+      { "label": "标准形式" },
+      { "label": "以原点为中心" },
+      { "label": "周长" },
+      { "label": "面积" }
+    ],
+    "properties": [
+      { "label": "周长" },
+      { "label": "面积" },
+      { "label": "直径" }
+    ]
+  },
+  "ellipse": {
+    "name": "椭圆",
+    "description": "具有半轴 a 和 b 的拉伸圆。",
+    "explanation": "椭圆是沿两个坐标轴方向以不同比例缩放的圆。a 和 b 分别是半长轴和半短轴（较大的一个为“长轴”）。当 a = b 时，椭圆变为圆。其面积为 π·a·b。",
+    "examples": [
+      "行星轨道。",
+      "回音廊。",
+      "椭圆齿轮。"
+    ],
+    "parameters": {
+      "a": { "label": "半轴 a", "explanation": "沿 x 轴方向宽度的一半。" },
+      "b": { "label": "半轴 b", "explanation": "沿 y 轴方向高度的一半。" }
+    },
+    "formulas": [
+      { "label": "标准形式" },
+      { "label": "面积" },
+      { "label": "焦点（a>b）" }
+    ],
+    "properties": [
+      { "label": "面积" },
+      { "label": "焦距" }
+    ]
+  },
+  "hyperbola": {
+    "name": "双曲线",
+    "description": "两条以直线为渐近线的相对分支。",
+    "explanation": "双曲线有两条互为镜像的分支，分别向左右展开，各自趋近渐近线 y = ±(b/a)x 但不与之相交。简单的反比例曲线 y = k/x 也是一种双曲线——只是经过旋转后坐标轴本身就是它的渐近线。",
+    "examples": [
+      "远程导航系统（LORAN）。",
+      "物体逃离引力的轨迹。",
+      "灯罩在墙上投下的阴影。"
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "决定顶点位置 (±a, 0) 以及渐近线的斜率。" },
+      "b": { "label": "b", "explanation": "与 a 一起决定渐近线的斜率 ±b/a。" }
+    },
+    "formulas": [
+      { "label": "标准形式" },
+      { "label": "渐近线" },
+      { "label": "顶点" }
+    ],
+    "properties": [
+      { "label": "渐近线斜率" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "抛物线（圆锥曲线）",
+    "description": "具有焦点和准线的圆锥曲线 y² = 2px。",
+    "explanation": "抛物线上每一点到一个定点（焦点）和一条定直线（准线）的距离相等。对于 y² = 2px，曲线向右开口，焦点位于 (p/2, 0)，准线是竖直直线 x = −p/2。p 越大，开口越宽。",
+    "examples": [
+      "卫星天线和车灯反射镜。",
+      "悬索桥的缆索。",
+      "抛体运动的轨迹。"
+    ],
+    "parameters": {
+      "p": { "label": "参数 p", "explanation": "与距离相关的参数；p>0 时向右开口。" }
+    },
+    "formulas": [
+      { "label": "标准形式" },
+      { "label": "焦点" },
+      { "label": "准线" }
+    ],
+    "properties": [
+      { "label": "焦点 x 坐标" }
+    ]
+  },
+  "cuboid": {
+    "name": "长方体",
+    "description": "一个具有长、宽和高的箱体。",
+    "explanation": "长方体有三对相同的矩形面。其体积是三条边长的乘积；其表面积是六个面面积之和。",
+    "examples": [
+      "砖块和箱子。",
+      "房间和建筑物。",
+      "水族箱。"
+    ],
+    "parameters": {
+      "l": { "label": "长", "explanation": "沿 x 轴方向的尺寸。" },
+      "w": { "label": "宽", "explanation": "沿 z 轴方向的尺寸。" },
+      "h": { "label": "高", "explanation": "沿 y 轴方向的尺寸。" }
+    },
+    "formulas": [
+      { "label": "表面积" },
+      { "label": "体积" },
+      { "label": "空间对角线" }
+    ],
+    "properties": [
+      { "label": "表面积" },
+      { "label": "体积" }
+    ]
+  },
+  "cube": {
+    "name": "正方体",
+    "description": "所有边长相等的长方体。",
+    "explanation": "正方体是最对称的长方体：所有 12 条边都相等，所有 6 个面都是全等的正方形。边长加倍会使体积变为原来的 8 倍。",
+    "examples": [
+      "骰子。",
+      "魔方。",
+      "方糖。"
+    ],
+    "parameters": {
+      "a": { "label": "边长", "explanation": "每条边的长度。" }
+    },
+    "formulas": [
+      { "label": "表面积" },
+      { "label": "体积" },
+      { "label": "空间对角线" }
+    ],
+    "properties": [
+      { "label": "表面积" },
+      { "label": "体积" }
+    ]
+  },
+  "cylinder": {
+    "name": "圆柱体",
+    "description": "由两个圆形底面和一个曲面连接而成。",
+    "explanation": "将圆柱体的侧面展开会得到一个宽为 2πr、高为 h 的矩形，这正是侧面积为 2πrh 的原因。加上两个圆形底面即可得到总表面积。",
+    "examples": [
+      "罐子和管道。",
+      "玻璃水杯。",
+      "压路机滚筒。"
+    ],
+    "parameters": {
+      "r": { "label": "半径", "explanation": "圆形底面的半径。" },
+      "h": { "label": "高", "explanation": "两个底面之间的距离。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "侧面积" },
+      { "label": "表面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "侧面积" },
+      { "label": "表面积" },
+      { "label": "体积" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "三棱柱",
+    "description": "一个三角形沿其长度方向平移扫描而成。",
+    "explanation": "棱柱沿其长度方向保持相同的横截面，因此其体积就是底面积乘以长度。这里的底面是一个面积为 ½·b·hₜ 的三角形。",
+    "examples": [
+      "三角形巧克力条。",
+      "屋顶桁架。",
+      "光学玻璃棱镜。"
+    ],
+    "parameters": {
+      "b": { "label": "三角形底边", "explanation": "三角形横截面的底边长度。" },
+      "ht": { "label": "三角形高", "explanation": "三角形横截面的高。" },
+      "H": { "label": "棱柱长度", "explanation": "三角形被扫描的距离。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "四棱柱",
+    "description": "一个矩形底面扫描成棱柱。",
+    "explanation": "四棱柱的底面是一个矩形（四边形）。与所有棱柱一样，其体积是底面积乘以高。对于矩形底面，这与长方体相同：B = lw。",
+    "examples": [
+      "梁和柱。",
+      "包装箱。",
+      "建筑立柱。"
+    ],
+    "parameters": {
+      "l": { "label": "底面长", "explanation": "矩形底面的长度。" },
+      "w": { "label": "底面宽", "explanation": "矩形底面的宽度。" },
+      "H": { "label": "棱柱高", "explanation": "棱柱的高。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "五棱柱",
+    "description": "一个正五边形扫描成棱柱。",
+    "explanation": "底面是一个正五边形，其面积使用 n = 5 的正多边形通用公式计算。乘以高即可得到棱柱的体积。",
+    "examples": [
+      "横截面为五边形的铅笔。",
+      "某些螺母和螺栓。",
+      "建筑立柱。"
+    ],
+    "parameters": {
+      "a": { "label": "边长", "explanation": "正五边形的边长。" },
+      "h": { "label": "棱柱高", "explanation": "棱柱的高。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "六棱柱",
+    "description": "一个正六边形扫描成棱柱。",
+    "explanation": "正六边形由六个等边三角形组成，因此底面积公式简洁明了：(3√3/2)·a²。六棱柱能够高效地填充空间，这也是蜜蜂筑造六边形蜂巢的原因。",
+    "examples": [
+      "铅笔。",
+      "蜂巢格。",
+      "螺母和螺栓。"
+    ],
+    "parameters": {
+      "a": { "label": "边长", "explanation": "正六边形的边长。" },
+      "h": { "label": "棱柱高", "explanation": "棱柱的高。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "三棱锥",
+    "description": "一个正三角形底面向上收缩至顶点。",
+    "explanation": "棱锥的体积始终是具有相同底面和高的棱柱体积的三分之一。这里的底面是一个面积为 (√3/4)·a² 的等边三角形。",
+    "examples": [
+      "四面体骰子（d4）。",
+      "分子结构（甲烷）。",
+      "金字塔形屋顶。"
+    ],
+    "parameters": {
+      "a": { "label": "底边", "explanation": "等边三角形底面的边长。" },
+      "h": { "label": "高", "explanation": "从底面到顶点的垂直高度。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "四棱锥",
+    "description": "一个矩形底面向上收缩至顶点。",
+    "explanation": "这是经典的“埃及”金字塔形状：一个矩形底面向上收缩为单一顶点。其体积是相应长方体体积（底面积 × 高）的三分之一。",
+    "examples": [
+      "吉萨大金字塔。",
+      "金字塔形屋顶。",
+      "帐篷形状。"
+    ],
+    "parameters": {
+      "l": { "label": "底面长", "explanation": "矩形底面的长度。" },
+      "w": { "label": "底面宽", "explanation": "矩形底面的宽度。" },
+      "h": { "label": "高", "explanation": "从底面到顶点的垂直高度。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "五棱锥",
+    "description": "一个正五边形底面向上收缩至顶点。",
+    "explanation": "这是建立在正五边形上的棱锥。底面积使用 n = 5 的正多边形公式计算；与所有棱锥一样，体积是底面积乘以高的三分之一。",
+    "examples": [
+      "装饰性尖顶。",
+      "晶体形态。",
+      "其他骰子形状。"
+    ],
+    "parameters": {
+      "a": { "label": "边长", "explanation": "正五边形底面的边长。" },
+      "h": { "label": "高", "explanation": "从底面到顶点的垂直高度。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "六棱锥",
+    "description": "一个正六边形底面向上收缩至顶点。",
+    "explanation": "这是建立在正六边形底面上的棱锥。与所有棱锥一样，V = ⅓·B·h，其中 B 是六边形的面积 (3√3/2)·a²。",
+    "examples": [
+      "铅笔尖。",
+      "尖顶和装饰顶饰。",
+      "晶体尖端。"
+    ],
+    "parameters": {
+      "a": { "label": "边长", "explanation": "正六边形底面的边长。" },
+      "h": { "label": "高", "explanation": "从底面到顶点的垂直高度。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "cone": {
+    "name": "圆锥体",
+    "description": "一个圆形底面向上收缩至一点。",
+    "explanation": "圆锥是底面为圆形的棱锥，因此其体积同样是相应圆柱体积的三分之一。决定曲面侧面积 πrl 的是斜高 l（而不是竖直高度）。",
+    "examples": [
+      "冰淇淋蛋卷筒。",
+      "交通锥。",
+      "漏斗。"
+    ],
+    "parameters": {
+      "r": { "label": "半径", "explanation": "圆形底面的半径。" },
+      "h": { "label": "高", "explanation": "从底面到顶点的垂直高度。" }
+    },
+    "formulas": [
+      { "label": "底面积" },
+      { "label": "斜高" },
+      { "label": "侧面积" },
+      { "label": "表面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "底面积" },
+      { "label": "斜高" },
+      { "label": "侧面积" },
+      { "label": "表面积" },
+      { "label": "体积" }
+    ]
+  },
+  "sphere": {
+    "name": "球体",
+    "description": "三维空间中所有与中心距离为 r 的点构成的图形。",
+    "explanation": "球体是圆在三维空间中的对应物。它的表面积恰好是其“投影”圆面积的四倍（4πr²），其体积随半径的立方增长。",
+    "examples": [
+      "球类和行星。",
+      "气泡。",
+      "滚珠轴承。"
+    ],
+    "parameters": {
+      "r": { "label": "半径", "explanation": "从中心到表面的距离。" }
+    },
+    "formulas": [
+      { "label": "表面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "表面积" },
+      { "label": "体积" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "圆台",
+    "description": "一个圆锥被平行于底面切去顶部后剩下的部分。",
+    "explanation": "圆台是圆锥的顶部被平行于底面切去后剩下的部分。其体积公式将两个半径与交叉项 Rr 结合在一起。斜高使用的是 R 与 r 的差，而不是它们的和。",
+    "examples": [
+      "水桶和灯罩。",
+      "水杯。",
+      "冷却塔（下部）。"
+    ],
+    "parameters": {
+      "R": { "label": "底部半径", "explanation": "较大（底部）圆的半径。" },
+      "r": { "label": "顶部半径", "explanation": "较小（顶部）圆的半径。" },
+      "h": { "label": "高", "explanation": "两个圆之间的竖直距离。" }
+    },
+    "formulas": [
+      { "label": "斜高" },
+      { "label": "侧面积" },
+      { "label": "表面积" },
+      { "label": "体积" }
+    ],
+    "properties": [
+      { "label": "斜高" },
+      { "label": "侧面积" },
+      { "label": "表面积" },
+      { "label": "体积" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "棱台",
+    "description": "一个正多边形棱锥被切去顶部后剩下的部分。",
+    "explanation": "将棱锥的顶部平行于底面切去，会留下一个具有两个相似多边形面的棱台。体积公式将两个底面积 B₁ 和 B₂ 以及它们的几何平均值 √(B₁B₂) 结合在一起求平均。",
+    "examples": [
+      "灯罩。",
+      "花盆。",
+      "阶梯状的建筑顶部。"
+    ],
+    "parameters": {
+      "n": { "label": "边数", "explanation": "正多边形底面的边数。" },
+      "aBottom": { "label": "底边边长", "explanation": "较大（底部）多边形的边长。" },
+      "aTop": { "label": "顶边边长", "explanation": "较小（顶部）多边形的边长。" },
+      "h": { "label": "高", "explanation": "两个底面之间的竖直距离。" }
+    },
+    "formulas": [
+      { "label": "体积" },
+      { "label": "底面" }
+    ],
+    "properties": [
+      { "label": "底部底面积" },
+      { "label": "顶部底面积" },
+      { "label": "体积" }
+    ]
+  },
+  "house": {
+    "name": "房屋",
+    "description": "一个带有三棱柱屋顶的长方体主体。",
+    "explanation": "求组合几何体的体积时，先将其拆分为基本几何体，分别计算后再相加。房屋是一个长方体（墙体）加上一个三棱柱（屋顶）。将两个体积相加即为总体积；两者相接的接触面是内部面，不属于外表面。",
+    "examples": [
+      "简单的房屋和棚屋形状。",
+      "谷仓。",
+      "鸟舍。"
+    ],
+    "parameters": {
+      "l": { "label": "长", "explanation": "房屋的宽度（也是屋顶的跨度）。" },
+      "w": { "label": "深", "explanation": "房屋的深度。" },
+      "h": { "label": "墙高", "explanation": "长方体墙体的高度。" },
+      "hr": { "label": "屋顶高", "explanation": "三角形屋顶的高度。" }
+    },
+    "formulas": [
+      { "label": "主体（长方体）" },
+      { "label": "屋顶（三棱柱）" },
+      { "label": "总计" }
+    ],
+    "properties": [
+      { "label": "主体体积" },
+      { "label": "屋顶体积" },
+      { "label": "总体积" }
+    ]
+  },
+  "pencil": {
+    "name": "铅笔",
+    "description": "一个顶部带有锥形笔尖的圆柱体主体。",
+    "explanation": "铅笔是一个圆柱体（笔身）加上一个与之共用相同半径的圆锥（削尖的笔尖）。总体积是圆柱体积加圆锥体积。由于两者共用同一个圆形接触面，因此外表面不会穿过该面。",
+    "examples": [
+      "铅笔和蜡笔。",
+      "火箭（箭身 + 锥形头部）。",
+      "某些瓶子。"
+    ],
+    "parameters": {
+      "r": { "label": "半径", "explanation": "铅笔的半径。" },
+      "h": { "label": "笔身长度", "explanation": "圆柱形笔身的长度。" },
+      "ht": { "label": "笔尖长度", "explanation": "削尖的锥形笔尖的长度。" }
+    },
+    "formulas": [
+      { "label": "笔身（圆柱体）" },
+      { "label": "笔尖（圆锥体）" },
+      { "label": "总计" }
+    ],
+    "properties": [
+      { "label": "笔身体积" },
+      { "label": "笔尖体积" },
+      { "label": "总体积" }
+    ]
+  },
+  "ice-cream": {
+    "name": "冰淇淋",
+    "description": "一个盛放球形冰淇淋球的蛋卷筒。",
+    "explanation": "冰淇淋是一个尖端朝下的圆锥，上面放着一个球体。将圆锥和球体的体积相加即为总体积。实际上球的一部分位于蛋卷筒口内部，因此严谨的计算应当减去这部分重叠——这是一个需要做减法的好例子。",
+    "examples": [
+      "冰淇淋蛋卷筒。",
+      "装饰性顶饰。",
+      "陀螺。"
+    ],
+    "parameters": {
+      "r": { "label": "蛋卷筒半径", "explanation": "蛋卷筒开口处的半径。" },
+      "h": { "label": "蛋卷筒高", "explanation": "蛋卷筒的长度（尖端朝下）。" },
+      "R": { "label": "冰淇淋球半径", "explanation": "球形冰淇淋球的半径。" }
+    },
+    "formulas": [
+      { "label": "蛋卷筒" },
+      { "label": "冰淇淋球（球体）" },
+      { "label": "总计" }
+    ],
+    "properties": [
+      { "label": "蛋卷筒体积" },
+      { "label": "冰淇淋球体积" },
+      { "label": "总体积" }
+    ]
+  },
+  "water-tower": {
+    "name": "水塔",
+    "description": "一个顶部带有半球形圆顶的圆柱体。",
+    "explanation": "水塔是一个圆柱体，顶部带有一个与之共用相同半径的半球（半个球体）。总体积是圆柱体积加半球体积。半球恰好是球体的一半，因此其体积为 ⅔πr³。",
+    "examples": [
+      "水塔和粮仓。",
+      "天文台圆顶。",
+      "储罐。"
+    ],
+    "parameters": {
+      "r": { "label": "半径", "explanation": "圆柱体和圆顶的半径。" },
+      "h": { "label": "主体高度", "explanation": "圆柱形主体的高度。" }
+    },
+    "formulas": [
+      { "label": "主体（圆柱体）" },
+      { "label": "圆顶（半球）" },
+      { "label": "总计" }
+    ],
+    "properties": [
+      { "label": "主体体积" },
+      { "label": "圆顶体积" },
+      { "label": "总体积" }
+    ]
+  },
+  "castle": {
+    "name": "城堡",
+    "description": "一个带有四座角塔和锥形塔顶的中央主楼。",
+    "explanation": "城堡由多个基本几何体组合而成：一个长方体主楼、四个圆柱形塔楼和四个锥形塔顶。策略一如既往——将其拆分为已知的部分，分别计算体积，然后全部相加。由于对称性，四座塔楼和四个塔顶都是相同的，因此可以乘以四。",
+    "examples": [
+      "玩具城堡。",
+      "国际象棋中的车（城堡）。",
+      "城堡和塔楼建筑。"
+    ],
+    "parameters": {
+      "s": { "label": "主楼尺寸", "explanation": "正方形中央主楼的边长。" },
+      "hk": { "label": "主楼高度", "explanation": "中央主楼的高度。" },
+      "r": { "label": "塔楼半径", "explanation": "每座角塔的半径。" },
+      "ht": { "label": "塔楼高度", "explanation": "每座角塔的高度。" }
+    },
+    "formulas": [
+      { "label": "主楼（长方体）" },
+      { "label": "塔楼（圆柱体）" },
+      { "label": "塔顶（圆锥体）" },
+      { "label": "总计" }
+    ],
+    "properties": [
+      { "label": "主楼体积" },
+      { "label": "全部塔楼" },
+      { "label": "全部塔顶" },
+      { "label": "总体积" }
+    ]
+  }
+}

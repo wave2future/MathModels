@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Interaktiver Mathe-Visualisierer"
+  },
+  "common": {
+    "toggleDarkMode": "Dunkelmodus umschalten",
+    "changeLanguage": "Sprache ändern",
+    "searchPlaceholder": "Modelle durchsuchen...",
+    "noResults": "Keine Modelle entsprechen \"{query}\".",
+    "resultsCount": "{count} Ergebnisse",
+    "favorites": "Favoriten",
+    "selectModel": "Modell auswählen",
+    "reset": "Zurücksetzen",
+    "addFavorite": "Zu Favoriten hinzufügen",
+    "removeFavorite": "Aus Favoriten entfernen",
+    "somethingWrongIn": "In {label} ist ein Fehler aufgetreten.",
+    "somethingWrong": "Ein Fehler ist aufgetreten.",
+    "tryAgain": "Erneut versuchen"
+  },
+  "errorLabels": {
+    "graph": "Graph",
+    "viewer3d": "3D-Ansicht",
+    "modelPage": "Modellseite"
+  },
+  "panels": {
+    "parameters": "Parameter",
+    "formulas": "Formeln",
+    "properties": "Berechnete Eigenschaften",
+    "explanation": "Erklärung",
+    "examples": "Beispiele aus dem Alltag"
+  },
+  "viewSettings": {
+    "grid": "Gitter",
+    "labels": "Beschriftungen",
+    "wireframe": "Drahtgitter",
+    "markers": "Markierungen"
+  },
+  "graphLabels": {
+    "center": "Mittelpunkt",
+    "vertex": "Scheitelpunkt",
+    "focus": "Brennpunkt",
+    "directrix": "Leitlinie",
+    "axis": "Achse",
+    "midline": "Mittellinie",
+    "asymptote": "Asymptote",
+    "xIntercept": "x-Achsenabschnitt"
+  },
+  "categories": {
+    "functions": {
+      "name": "Grundfunktionen",
+      "description": "Funktionsgraphen in der Koordinatenebene"
+    },
+    "plane-curves": {
+      "name": "Ebene Kurven",
+      "description": "Kegelschnitte und andere Kurven"
+    },
+    "solids": {
+      "name": "Raumgeometrie",
+      "description": "3D-Körper: Prismen, Pyramiden, Rundkörper"
+    },
+    "combined": {
+      "name": "Zusammengesetzte Körper",
+      "description": "Zusammengesetzte Formen aus einfachen Körpern"
+    }
+  }
+}

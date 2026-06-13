@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Pengvisual Matematik Interaktif"
+  },
+  "common": {
+    "toggleDarkMode": "Tukar mod gelap",
+    "changeLanguage": "Tukar bahasa",
+    "searchPlaceholder": "Cari model...",
+    "noResults": "Tiada model yang sepadan dengan \"{query}\".",
+    "resultsCount": "{count} hasil",
+    "favorites": "Kegemaran",
+    "selectModel": "Pilih satu model",
+    "reset": "Tetapkan semula",
+    "addFavorite": "Tambah ke kegemaran",
+    "removeFavorite": "Buang daripada kegemaran",
+    "somethingWrongIn": "Terdapat masalah dalam {label}.",
+    "somethingWrong": "Terdapat masalah.",
+    "tryAgain": "Cuba lagi"
+  },
+  "errorLabels": {
+    "graph": "graf",
+    "viewer3d": "pemapar 3D",
+    "modelPage": "halaman model"
+  },
+  "panels": {
+    "parameters": "Parameter",
+    "formulas": "Formula",
+    "properties": "Sifat Terkira",
+    "explanation": "Penjelasan",
+    "examples": "Contoh Kehidupan Sebenar"
+  },
+  "viewSettings": {
+    "grid": "Grid",
+    "labels": "Label",
+    "wireframe": "Rangka dawai",
+    "markers": "Penanda"
+  },
+  "graphLabels": {
+    "center": "pusat",
+    "vertex": "verteks",
+    "focus": "fokus",
+    "directrix": "garis arah",
+    "axis": "paksi",
+    "midline": "garis tengah",
+    "asymptote": "asimptot",
+    "xIntercept": "pintasan-x"
+  },
+  "categories": {
+    "functions": {
+      "name": "Fungsi Biasa",
+      "description": "Graf fungsi dalam satah koordinat"
+    },
+    "plane-curves": {
+      "name": "Lengkung Satah",
+      "description": "Keratan kon dan lengkung lain"
+    },
+    "solids": {
+      "name": "Geometri Pejal",
+      "description": "Pejal 3D: prisma, piramid, pejal bulat"
+    },
+    "combined": {
+      "name": "Pejal Gabungan",
+      "description": "Bentuk komposit yang dibina daripada pejal asas"
+    }
+  }
+}

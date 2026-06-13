@@ -181,7 +181,6 @@ export interface MathModel {
   id: string;
   category: string;
   name: string;
-  chineseName?: string;
   description: string;
   visualizationType: VisualizationType;
   /** Primary formula in LaTeX, shown in the header. */

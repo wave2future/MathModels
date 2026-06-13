@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "インタラクティブ数学ビジュアライザー"
+  },
+  "common": {
+    "toggleDarkMode": "ダークモードを切り替え",
+    "changeLanguage": "言語を変更",
+    "searchPlaceholder": "モデルを検索...",
+    "noResults": "「{query}」に一致するモデルはありません。",
+    "resultsCount": "{count} 件の結果",
+    "favorites": "お気に入り",
+    "selectModel": "モデルを選択",
+    "reset": "リセット",
+    "addFavorite": "お気に入りに追加",
+    "removeFavorite": "お気に入りから削除",
+    "somethingWrongIn": "{label}で問題が発生しました。",
+    "somethingWrong": "問題が発生しました。",
+    "tryAgain": "再試行"
+  },
+  "errorLabels": {
+    "graph": "グラフ",
+    "viewer3d": "3Dビューア",
+    "modelPage": "モデルページ"
+  },
+  "panels": {
+    "parameters": "パラメータ",
+    "formulas": "公式",
+    "properties": "計算されたプロパティ",
+    "explanation": "解説",
+    "examples": "実生活の例"
+  },
+  "viewSettings": {
+    "grid": "グリッド",
+    "labels": "ラベル",
+    "wireframe": "ワイヤーフレーム",
+    "markers": "マーカー"
+  },
+  "graphLabels": {
+    "center": "中心",
+    "vertex": "頂点",
+    "focus": "焦点",
+    "directrix": "準線",
+    "axis": "対称軸",
+    "midline": "中線",
+    "asymptote": "漸近線",
+    "xIntercept": "x切片"
+  },
+  "categories": {
+    "functions": {
+      "name": "基本関数",
+      "description": "座標平面上の関数グラフ"
+    },
+    "plane-curves": {
+      "name": "平面曲線",
+      "description": "円錐曲線とその他の曲線"
+    },
+    "solids": {
+      "name": "立体図形",
+      "description": "角柱、角錐、回転体などの3D立体"
+    },
+    "combined": {
+      "name": "複合立体",
+      "description": "基本立体を組み合わせた複合図形"
+    }
+  }
+}

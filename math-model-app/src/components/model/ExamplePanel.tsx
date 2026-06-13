@@ -1,15 +1,17 @@
 import type { MathModel } from "@/types/model";
+import { useT } from "@/i18n/LanguageContext";
 
 interface Props {
   model: MathModel;
 }
 
 export function ExamplePanel({ model }: Props) {
+  const { t } = useT();
   if (model.examples.length === 0) return null;
   return (
     <section>
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-        Real-life Examples
+        {t("panels.examples")}
       </h2>
       <ul className="space-y-1.5">
         {model.examples.map((ex, i) => (

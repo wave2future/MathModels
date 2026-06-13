@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "انٹرایکٹو ریاضی ویژولائزر"
+  },
+  "common": {
+    "toggleDarkMode": "ڈارک موڈ تبدیل کریں",
+    "changeLanguage": "زبان تبدیل کریں",
+    "searchPlaceholder": "ماڈلز تلاش کریں...",
+    "noResults": "\"{query}\" سے میل کھاتا کوئی ماڈل نہیں ملا۔",
+    "resultsCount": "{count} نتائج",
+    "favorites": "پسندیدہ",
+    "selectModel": "ایک ماڈل منتخب کریں",
+    "reset": "ری سیٹ",
+    "addFavorite": "پسندیدہ میں شامل کریں",
+    "removeFavorite": "پسندیدہ سے ہٹائیں",
+    "somethingWrongIn": "{label} میں کچھ گڑبڑ ہو گئی۔",
+    "somethingWrong": "کچھ گڑبڑ ہو گئی۔",
+    "tryAgain": "دوبارہ کوشش کریں"
+  },
+  "errorLabels": {
+    "graph": "گراف",
+    "viewer3d": "3D ویور",
+    "modelPage": "ماڈل صفحہ"
+  },
+  "panels": {
+    "parameters": "پیرامیٹرز",
+    "formulas": "فارمولے",
+    "properties": "حساب شدہ خصوصیات",
+    "explanation": "وضاحت",
+    "examples": "حقیقی زندگی کی مثالیں"
+  },
+  "viewSettings": {
+    "grid": "گرڈ",
+    "labels": "لیبلز",
+    "wireframe": "وائر فریم",
+    "markers": "نشانات"
+  },
+  "graphLabels": {
+    "center": "مرکز",
+    "vertex": "راس",
+    "focus": "کانون",
+    "directrix": "ڈائرکٹرکس",
+    "axis": "محور",
+    "midline": "وسطی خط",
+    "asymptote": "خطِ مقارب",
+    "xIntercept": "x-انٹرسیپٹ"
+  },
+  "categories": {
+    "functions": {
+      "name": "عمومی فنکشنز",
+      "description": "محوری مستوی میں فنکشنز کے گراف"
+    },
+    "plane-curves": {
+      "name": "مستوی منحنیات",
+      "description": "مخروطی قطعات اور دیگر منحنیات"
+    },
+    "solids": {
+      "name": "مجسم ہندسہ",
+      "description": "3D اشکال: پرزم، اہرام، اور گول مجسمے"
+    },
+    "combined": {
+      "name": "مرکب مجسمے",
+      "description": "بنیادی مجسموں سے بنی مرکب اشکال"
+    }
+  }
+}

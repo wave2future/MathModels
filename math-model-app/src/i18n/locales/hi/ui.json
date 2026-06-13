@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "इंटरैक्टिव मैथ विज़ुअलाइज़र"
+  },
+  "common": {
+    "toggleDarkMode": "डार्क मोड टॉगल करें",
+    "changeLanguage": "भाषा बदलें",
+    "searchPlaceholder": "मॉडल खोजें...",
+    "noResults": "\"{query}\" से कोई मॉडल मेल नहीं खाता।",
+    "resultsCount": "{count} परिणाम",
+    "favorites": "पसंदीदा",
+    "selectModel": "एक मॉडल चुनें",
+    "reset": "रीसेट करें",
+    "addFavorite": "पसंदीदा में जोड़ें",
+    "removeFavorite": "पसंदीदा से हटाएं",
+    "somethingWrongIn": "{label} में कुछ गड़बड़ हो गई।",
+    "somethingWrong": "कुछ गड़बड़ हो गई।",
+    "tryAgain": "पुनः प्रयास करें"
+  },
+  "errorLabels": {
+    "graph": "ग्राफ़",
+    "viewer3d": "3D व्यूअर",
+    "modelPage": "मॉडल पेज"
+  },
+  "panels": {
+    "parameters": "पैरामीटर",
+    "formulas": "सूत्र",
+    "properties": "परिकलित गुण",
+    "explanation": "व्याख्या",
+    "examples": "वास्तविक जीवन के उदाहरण"
+  },
+  "viewSettings": {
+    "grid": "ग्रिड",
+    "labels": "लेबल",
+    "wireframe": "वायरफ्रेम",
+    "markers": "मार्कर"
+  },
+  "graphLabels": {
+    "center": "केंद्र",
+    "vertex": "शीर्ष",
+    "focus": "नाभि",
+    "directrix": "नियता रेखा",
+    "axis": "अक्ष",
+    "midline": "मध्य रेखा",
+    "asymptote": "अनंतस्पर्शी",
+    "xIntercept": "x-अंतःखंड"
+  },
+  "categories": {
+    "functions": {
+      "name": "सामान्य फलन",
+      "description": "निर्देशांक तल में फलनों के ग्राफ़"
+    },
+    "plane-curves": {
+      "name": "समतल वक्र",
+      "description": "शंकु परिच्छेद और अन्य वक्र"
+    },
+    "solids": {
+      "name": "ठोस ज्यामिति",
+      "description": "3D ठोस: प्रिज्म, पिरामिड, वृत्ताकार ठोस"
+    },
+    "combined": {
+      "name": "संयुक्त ठोस",
+      "description": "मूल ठोसों से बनी संयोजित आकृतियाँ"
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import type { Asymptote } from "@/types/model";
 import type { Projection } from "./projection";
+import { useT } from "@/i18n/LanguageContext";
+import { translateGraphLabel } from "@/i18n/graphLabels";
 
 interface Props {
   asymptotes: Asymptote[];
@@ -10,6 +12,7 @@ interface Props {
 /** Draws dashed asymptote / axis-of-symmetry / directrix lines. */
 export function AsymptoteLayer({ asymptotes, proj, showLabels }: Props) {
   const { toPx, toPy, width, height, view } = proj;
+  const { strings } = useT();
 
   return (
     <g className="stroke-rose-400 dark:stroke-rose-400/80" strokeWidth={1.5} strokeDasharray="6 5">
@@ -47,7 +50,7 @@ export function AsymptoteLayer({ asymptotes, proj, showLabels }: Props) {
                 textAnchor={a.kind === "horizontal" ? "end" : "start"}
                 strokeWidth={0}
               >
-                {a.label}
+                {translateGraphLabel(a.label, strings)}
               </text>
             )}
           </g>

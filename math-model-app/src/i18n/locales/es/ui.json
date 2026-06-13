@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Visualizador interactivo de matemáticas"
+  },
+  "common": {
+    "toggleDarkMode": "Cambiar modo oscuro",
+    "changeLanguage": "Cambiar idioma",
+    "searchPlaceholder": "Buscar modelos...",
+    "noResults": "Ningún modelo coincide con \"{query}\".",
+    "resultsCount": "{count} resultados",
+    "favorites": "Favoritos",
+    "selectModel": "Selecciona un modelo",
+    "reset": "Reiniciar",
+    "addFavorite": "Añadir a favoritos",
+    "removeFavorite": "Quitar de favoritos",
+    "somethingWrongIn": "Algo salió mal en {label}.",
+    "somethingWrong": "Algo salió mal.",
+    "tryAgain": "Intentar de nuevo"
+  },
+  "errorLabels": {
+    "graph": "el gráfico",
+    "viewer3d": "el visor 3D",
+    "modelPage": "la página del modelo"
+  },
+  "panels": {
+    "parameters": "Parámetros",
+    "formulas": "Fórmulas",
+    "properties": "Propiedades calculadas",
+    "explanation": "Explicación",
+    "examples": "Ejemplos de la vida real"
+  },
+  "viewSettings": {
+    "grid": "Cuadrícula",
+    "labels": "Etiquetas",
+    "wireframe": "Malla de alambre",
+    "markers": "Marcadores"
+  },
+  "graphLabels": {
+    "center": "centro",
+    "vertex": "vértice",
+    "focus": "foco",
+    "directrix": "directriz",
+    "axis": "eje",
+    "midline": "línea media",
+    "asymptote": "asíntota",
+    "xIntercept": "intersección x"
+  },
+  "categories": {
+    "functions": {
+      "name": "Funciones comunes",
+      "description": "Gráficos de funciones en el plano cartesiano"
+    },
+    "plane-curves": {
+      "name": "Curvas planas",
+      "description": "Secciones cónicas y otras curvas"
+    },
+    "solids": {
+      "name": "Geometría de sólidos",
+      "description": "Sólidos 3D: prismas, pirámides, sólidos de revolución"
+    },
+    "combined": {
+      "name": "Sólidos combinados",
+      "description": "Formas compuestas construidas a partir de sólidos básicos"
+    }
+  }
+}

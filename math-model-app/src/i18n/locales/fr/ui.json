@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Visualiseur mathématique interactif"
+  },
+  "common": {
+    "toggleDarkMode": "Basculer le mode sombre",
+    "changeLanguage": "Changer de langue",
+    "searchPlaceholder": "Rechercher des modèles...",
+    "noResults": "Aucun modèle ne correspond à \"{query}\".",
+    "resultsCount": "{count} résultats",
+    "favorites": "Favoris",
+    "selectModel": "Sélectionner un modèle",
+    "reset": "Réinitialiser",
+    "addFavorite": "Ajouter aux favoris",
+    "removeFavorite": "Retirer des favoris",
+    "somethingWrongIn": "Une erreur s'est produite dans {label}.",
+    "somethingWrong": "Une erreur s'est produite.",
+    "tryAgain": "Réessayer"
+  },
+  "errorLabels": {
+    "graph": "le graphique",
+    "viewer3d": "la visionneuse 3D",
+    "modelPage": "la page du modèle"
+  },
+  "panels": {
+    "parameters": "Paramètres",
+    "formulas": "Formules",
+    "properties": "Propriétés calculées",
+    "explanation": "Explication",
+    "examples": "Exemples concrets"
+  },
+  "viewSettings": {
+    "grid": "Grille",
+    "labels": "Étiquettes",
+    "wireframe": "Fil de fer",
+    "markers": "Repères"
+  },
+  "graphLabels": {
+    "center": "centre",
+    "vertex": "sommet",
+    "focus": "foyer",
+    "directrix": "directrice",
+    "axis": "axe",
+    "midline": "ligne médiane",
+    "asymptote": "asymptote",
+    "xIntercept": "abscisse à l'origine"
+  },
+  "categories": {
+    "functions": {
+      "name": "Fonctions courantes",
+      "description": "Graphiques de fonctions dans le plan cartésien"
+    },
+    "plane-curves": {
+      "name": "Courbes planes",
+      "description": "Sections coniques et autres courbes"
+    },
+    "solids": {
+      "name": "Géométrie des solides",
+      "description": "Solides 3D : prismes, pyramides, solides de révolution"
+    },
+    "combined": {
+      "name": "Solides combinés",
+      "description": "Formes composites construites à partir de solides de base"
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
 import type { MathModel } from "@/types/model";
-import { categories, modelsByCategory, searchModels } from "@/models";
+import { categories } from "@/models";
+import { useLanguage, useT } from "@/i18n/LanguageContext";
+import { searchLocalizedModels, localizedModelsByCategory } from "@/i18n/search";
 
 interface Props {
   selectedId: string;
@@ -47,8 +49,10 @@ function ModelButton({
 export function Sidebar({ selectedId, onSelect, isFavorite, favorites }: Props) {
   const [query, setQuery] = useState("");
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
+  const { language } = useLanguage();
+  const { t } = useT();
 
-  const results = useMemo(() => searchModels(query), [query]);
+  const results = useMemo(() => searchLocalizedModels(query, language), [query, language]);
   const favoriteModels = useMemo(
     () => results.filter((m) => favorites.includes(m.id)),
     [results, favorites],
@@ -75,7 +79,7 @@ export function Sidebar({ selectedId, onSelect, isFavorite, favorites }: Props) 
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search models..."
+            placeholder={t("common.searchPlaceholder")}
             className="w-full rounded-lg border border-slate-300 bg-white py-2 pl-9 pr-3 text-sm text-slate-800 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100"
           />
         </div>
@@ -85,7 +89,7 @@ export function Sidebar({ selectedId, onSelect, isFavorite, favorites }: Props) 
         {searching ? (
           <div className="space-y-1">
             <p className="px-1 py-1 text-xs text-slate-400">
-              {results.length} result{results.length === 1 ? "" : "s"}
+              {t("common.resultsCount", { count: results.length })}
             </p>
             {results.map((m) => (
               <ModelButton
@@ -97,7 +101,7 @@ export function Sidebar({ selectedId, onSelect, isFavorite, favorites }: Props) 
               />
             ))}
             {results.length === 0 && (
-              <p className="px-1 py-4 text-sm text-slate-400">No models match "{query}".</p>
+              <p className="px-1 py-4 text-sm text-slate-400">{t("common.noResults", { query })}</p>
             )}
           </div>
         ) : (
@@ -105,7 +109,7 @@ export function Sidebar({ selectedId, onSelect, isFavorite, favorites }: Props) 
             {favoriteModels.length > 0 && (
               <div>
                 <p className="px-2 pb-1 text-xs font-semibold uppercase tracking-wide text-amber-500">
-                  ★ Favorites
+                  ★ {t("common.favorites")}
                 </p>
                 <div className="space-y-1">
                   {favoriteModels.map((m) => (
@@ -122,7 +126,7 @@ export function Sidebar({ selectedId, onSelect, isFavorite, favorites }: Props) 
             )}
 
             {categories.map((cat) => {
-              const models = modelsByCategory(cat.id);
+              const models = localizedModelsByCategory(cat.id, language);
               const isCollapsed = collapsed[cat.id];
               return (
                 <div key={cat.id}>
@@ -131,7 +135,7 @@ export function Sidebar({ selectedId, onSelect, isFavorite, favorites }: Props) 
                     onClick={() => toggleCategory(cat.id)}
                     className="flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-700/50"
                   >
-                    <span>{cat.name}</span>
+                    <span>{t(`categories.${cat.id}.name`)}</span>
                     <svg
                       width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
                       className={`transition-transform ${isCollapsed ? "-rotate-90" : ""}`}

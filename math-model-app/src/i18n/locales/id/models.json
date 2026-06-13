@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Fungsi Proporsional Langsung",
+    "description": "Garis lurus melalui titik asal yang kemiringannya ditentukan oleh k.",
+    "explanation": "Proporsi langsung berarti y berubah dengan kecepatan konstan terhadap x. Grafiknya selalu berupa garis melalui titik asal; hanya kemiringannya yang berubah. |k| yang lebih besar berarti garis yang lebih curam; tanda k membalik garis antara diagonal naik dan diagonal turun.",
+    "examples": [
+      "Jarak vs waktu pada kecepatan konstan (d = vt).",
+      "Total harga vs jumlah barang pada harga satuan tetap."
+    ],
+    "parameters": {
+      "k": { "label": "Kemiringan", "explanation": "Mengatur kecuraman dan arah. k>0 naik, k<0 turun." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "Melewati titik asal (0, 0)." },
+      { "label": "Kemiringan", "description": "Perubahan vertikal dibagi perubahan horizontal." }
+    ]
+  },
+  "linear": {
+    "name": "Fungsi Linear",
+    "description": "Garis lurus y = kx + b dengan kemiringan dan perpotongan yang dapat diubah.",
+    "explanation": "k mengatur kemiringan (kecuraman dan arah), sedangkan b menggeser seluruh garis ke atas atau bawah, menentukan di mana garis memotong sumbu y. Mengubah b menggeser garis secara vertikal tanpa mengubah kemiringannya.",
+    "examples": [
+      "Tarif taksi = tarif dasar + tarif × jarak.",
+      "Konversi suhu: °F = 1,8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Kemiringan", "explanation": "Kemiringan: seberapa cepat y berubah per satuan x." },
+      "b": { "label": "Perpotongan sumbu y", "explanation": "Titik di mana garis memotong sumbu y." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Perpotongan sumbu y" },
+      { "label": "Perpotongan sumbu x", "description": "Ketika k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Fungsi Kuadrat",
+    "description": "Parabola y = ax² + bx + c dengan titik puncak dan sumbu simetri.",
+    "explanation": "Tanda a menentukan apakah parabola terbuka ke atas (a>0) atau ke bawah (a<0); besarnya a mengatur seberapa sempit bentuknya. Titik puncak adalah titik balik dan sumbu simetri adalah garis vertikal yang melaluinya. c hanyalah ketinggian saat kurva memotong sumbu y.",
+    "examples": [
+      "Lintasan bola yang dilempar (gerak peluru).",
+      "Luas persegi panjang sebagai fungsi salah satu sisi dengan keliling tetap."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Arah bukaan & lebar. a>0 terbuka ke atas, a<0 terbuka ke bawah; |a| lebih besar berarti lebih sempit." },
+      "b": { "label": "b", "explanation": "Menggeser sumbu simetri ke kiri/kanan (bersama dengan a)." },
+      "c": { "label": "c", "explanation": "Perpotongan sumbu y (nilai saat x = 0)." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Sumbu simetri" },
+      { "label": "Titik puncak" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Fungsi Proporsional Terbalik",
+    "description": "Hiperbola y = k/x dengan sumbu-sumbu sebagai asimtot.",
+    "explanation": "Saat x membesar, hasil kali xy tetap sama dengan k, sehingga y menyusut mendekati 0 — kurva mendekati kedua sumbu (asimtotnya) tetapi tidak pernah menyentuhnya. Kedua cabang berada pada kuadran yang berlawanan tergantung tanda k.",
+    "examples": [
+      "Kecepatan vs waktu tempuh untuk jarak tetap.",
+      "Tekanan vs volume gas pada suhu konstan (hukum Boyle)."
+    ],
+    "parameters": {
+      "k": { "label": "Konstanta", "explanation": "k>0 menempatkan cabang di kuadran I & III; k<0 di kuadran II & IV." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "x ≠ 0." },
+      { "label": "Asimtot" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Fungsi Nilai Mutlak",
+    "description": "Grafik berbentuk V, y = a|x − h| + k.",
+    "explanation": "Nilai mutlak memaksa semua keluaran berada di atas titik puncak, menghasilkan bentuk V yang simetris. (h, k) adalah sudut dari V; a mengubah skala lengan dan, jika negatif, membalik V terbalik.",
+    "examples": [
+      "Jarak dari nilai target.",
+      "Besaran kesalahan tanpa memperhatikan tandanya."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Kecuraman dan arah V (a<0 membuatnya terbuka ke bawah)." },
+      "h": { "label": "h", "explanation": "Geseran horizontal titik puncak." },
+      "k": { "label": "k", "explanation": "Geseran vertikal titik puncak." }
+    },
+    "formulas": [
+      { "label": "Dasar" },
+      { "label": "Tertransformasi" },
+      { "label": "Titik puncak" }
+    ]
+  },
+  "power": {
+    "name": "Fungsi Pangkat",
+    "description": "y = xᵃ — bentuknya tergantung pada eksponen a.",
+    "explanation": "Fungsi pangkat memangkatkan x dengan eksponen tetap. Eksponen bilangan bulat terdefinisi untuk semua x, tetapi eksponen pecahan memerlukan x ≥ 0 agar tetap real, sehingga kurva hanya muncul di sisi kanan dalam kasus tersebut. Eksponen genap simetris terhadap sumbu y; eksponen ganjil simetris terhadap titik asal.",
+    "examples": [
+      "Luas ∝ sisi² (a = 2).",
+      "Volume ∝ sisi³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Eksponen", "explanation": "a=1 garis, a=2 parabola, a=3 kubik, a=0,5 akar kuadrat, a<0 mirip hiperbola." }
+    },
+    "formulas": [
+      { "label": "Fungsi" },
+      { "label": "Catatan", "description": "Basis negatif tidak memiliki nilai real untuk eksponen pecahan." }
+    ]
+  },
+  "exponential": {
+    "name": "Fungsi Eksponensial",
+    "description": "y = aˣ — pertumbuhan cepat (a>1) atau penurunan (0<a<1).",
+    "explanation": "Fungsi eksponensial mengalikan dengan basis a untuk setiap langkah pada x. Ketika a>1 keluarannya meledak ke atas; ketika 0<a<1 keluarannya menurun mendekati asimtot horizontal y = 0. Semuanya melewati (0, 1) karena a⁰ = 1.",
+    "examples": [
+      "Bunga majemuk.",
+      "Peluruhan radioaktif (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Basis", "explanation": "a>1 tumbuh; 0<a<1 menurun. Setiap kurva melewati (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "a > 0, a ≠ 1." },
+      { "label": "Asimtot" },
+      { "label": "Titik acuan" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Fungsi Logaritma",
+    "description": "y = logₐ(x) — kebalikan dari fungsi eksponensial.",
+    "explanation": "Logaritma menjawab pertanyaan 'a dipangkatkan berapa menghasilkan x?'. Ini adalah cermin dari y = aˣ terhadap garis y = x, sehingga domainnya adalah x > 0 dan memiliki asimtot vertikal di x = 0. Semua kurva melewati (1, 0).",
+    "examples": [
+      "Skala pH.",
+      "Tingkat suara dalam desibel.",
+      "Skala gempa Richter."
+    ],
+    "parameters": {
+      "a": { "label": "Basis", "explanation": "a>1 naik; 0<a<1 turun. Setiap kurva melewati (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Fungsi", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asimtot" },
+      { "label": "Kebalikan dari" }
+    ]
+  },
+  "sine": {
+    "name": "Fungsi Sinus",
+    "description": "y = A·sin(Bx + C) + D dengan amplitudo, periode, dan geseran.",
+    "explanation": "A merentangkan gelombang secara vertikal (amplitudo); B mengompresi gelombang secara horizontal, menentukan periode T = 2π/|B|; C menggeser gelombang ke kiri/kanan (geseran fase −C/B); D menaikkan atau menurunkan garis tengah.",
+    "examples": [
+      "Gelombang suara.",
+      "Arus listrik bolak-balik.",
+      "Pasang surut air laut dan lama siang hari sepanjang tahun."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitudo", "explanation": "Setengah dari tinggi antara nilai maksimum dan minimum." },
+      "B": { "label": "Frekuensi", "explanation": "B yang lebih besar memampatkan gelombang (periode lebih singkat)." },
+      "C": { "label": "Fase", "explanation": "Geseran horizontal gelombang." },
+      "D": { "label": "Geseran vertikal", "explanation": "Menggeser garis tengah ke atas atau bawah." }
+    },
+    "formulas": [
+      { "label": "Dasar" },
+      { "label": "Tertransformasi" },
+      { "label": "Amplitudo" },
+      { "label": "Periode" },
+      { "label": "Geseran fase" }
+    ]
+  },
+  "cosine": {
+    "name": "Fungsi Kosinus",
+    "description": "y = A·cos(Bx + C) + D — gelombang sinus yang digeser seperempat periode.",
+    "explanation": "Kosinus memiliki bentuk yang sama dengan sinus tetapi dimulai pada nilai maksimumnya: cos(x) = sin(x + π/2). Parameter-parameternya memiliki arti yang sama persis — amplitudo A, periode 2π/|B|, geseran fase, dan geseran vertikal D.",
+    "examples": [
+      "Posisi horizontal sebuah titik pada roda yang berputar.",
+      "Siklus suhu musiman."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitudo", "explanation": "Setengah dari tinggi antara nilai maksimum dan minimum." },
+      "B": { "label": "Frekuensi", "explanation": "B yang lebih besar memampatkan gelombang (periode lebih singkat)." },
+      "C": { "label": "Fase", "explanation": "Geseran horizontal gelombang." },
+      "D": { "label": "Geseran vertikal", "explanation": "Menggeser garis tengah ke atas atau bawah." }
+    },
+    "formulas": [
+      { "label": "Dasar" },
+      { "label": "Tertransformasi" },
+      { "label": "Amplitudo" },
+      { "label": "Periode" }
+    ]
+  },
+  "tangent": {
+    "name": "Fungsi Tangen",
+    "description": "y = A·tan(Bx + C) + D dengan asimtot vertikal yang berulang.",
+    "explanation": "Tangen berulang setiap π dan menuju ±∞ pada setiap asimtot, yaitu saat cos = 0. Grafiknya digambar sebagai cabang-cabang terpisah — tidak pernah tersambung melewati asimtot. B mengatur seberapa sering asimtot muncul.",
+    "examples": [
+      "Kemiringan sebuah garis pada sudut tertentu.",
+      "Memodelkan kenaikan tajam mendekati suatu limit."
+    ],
+    "parameters": {
+      "A": { "label": "Skala vertikal", "explanation": "Merentangkan cabang-cabang secara vertikal." },
+      "B": { "label": "Frekuensi", "explanation": "Mengatur jarak antar asimtot (periode π/|B|)." },
+      "C": { "label": "Fase", "explanation": "Geseran horizontal." },
+      "D": { "label": "Geseran vertikal", "explanation": "Menggeser kurva ke atas atau bawah." }
+    },
+    "formulas": [
+      { "label": "Dasar" },
+      { "label": "Tertransformasi" },
+      { "label": "Periode" },
+      { "label": "Asimtot" }
+    ]
+  },
+  "piecewise": {
+    "name": "Fungsi Sepotong-sepotong",
+    "description": "Aturan berbeda pada interval berbeda, bertemu di satu titik patah.",
+    "explanation": "Fungsi sepotong-sepotong menerapkan rumus yang berbeda pada setiap interval domainnya. Di sini, bagian kiri (x < 0) menggunakan −sx dan bagian kanan (x ≥ 0) menggunakan sx. Kedua bagian digambar secara terpisah dan hanya bertemu di titik patah x = 0.",
+    "examples": [
+      "Tarif pajak berjenjang.",
+      "Tingkatan biaya pengiriman berdasarkan berat.",
+      "Nilai mutlak sebagai dua garis."
+    ],
+    "parameters": {
+      "scale": { "label": "Skala kemiringan", "explanation": "Mengubah skala kedua lengan agar kamu dapat melihat kedua bagian berubah bersamaan." }
+    },
+    "formulas": [
+      { "label": "Definisi", "description": "Dua aturan linear yang bertemu di x = 0." }
+    ]
+  },
+  "circle": {
+    "name": "Lingkaran",
+    "description": "Semua titik berjarak r dari sebuah pusat (h, k).",
+    "explanation": "Lingkaran adalah himpunan titik yang berjarak tetap r (radius) dari pusatnya (h, k). Mengubah h dan k menggeser seluruh lingkaran; mengubah r memperbesar atau memperkecilnya. Keliling dan luasnya hanya bergantung pada r.",
+    "examples": [
+      "Roda dan gir.",
+      "Riak air.",
+      "Lintasan lari berbentuk lingkaran."
+    ],
+    "parameters": {
+      "h": { "label": "Pusat x", "explanation": "Posisi horizontal pusat." },
+      "k": { "label": "Pusat y", "explanation": "Posisi vertikal pusat." },
+      "r": { "label": "Radius", "explanation": "Jarak dari pusat ke tepi lingkaran." }
+    },
+    "formulas": [
+      { "label": "Bentuk standar" },
+      { "label": "Berpusat di titik asal" },
+      { "label": "Keliling" },
+      { "label": "Luas" }
+    ],
+    "properties": [
+      { "label": "Keliling" },
+      { "label": "Luas" },
+      { "label": "Diameter" }
+    ]
+  },
+  "ellipse": {
+    "name": "Elips",
+    "description": "Lingkaran yang direntangkan dengan sumbu semi a dan b.",
+    "explanation": "Elips adalah lingkaran yang diskalakan dengan jumlah berbeda pada kedua sumbunya. a dan b adalah sumbu semi-mayor dan semi-minor (mana pun yang lebih besar disebut 'mayor'). Ketika a = b, elips menjadi lingkaran. Luasnya adalah π·a·b.",
+    "examples": [
+      "Orbit planet.",
+      "Galeri berbisik (whispering gallery).",
+      "Gir elips."
+    ],
+    "parameters": {
+      "a": { "label": "Sumbu semi a", "explanation": "Setengah lebar sepanjang sumbu x." },
+      "b": { "label": "Sumbu semi b", "explanation": "Setengah tinggi sepanjang sumbu y." }
+    },
+    "formulas": [
+      { "label": "Bentuk standar" },
+      { "label": "Luas" },
+      { "label": "Fokus (a>b)" }
+    ],
+    "properties": [
+      { "label": "Luas" },
+      { "label": "Jarak fokus" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hiperbola",
+    "description": "Dua cabang berlawanan dengan asimtot berupa garis lurus.",
+    "explanation": "Hiperbola memiliki dua cabang cermin yang terbuka ke kiri dan ke kanan, masing-masing mendekati asimtot y = ±(b/a)x tanpa pernah menyentuhnya. Kurva proporsional terbalik sederhana y = k/x juga merupakan hiperbola — hanya saja diputar sehingga sumbu-sumbu itu sendiri menjadi asimtotnya.",
+    "examples": [
+      "Navigasi jarak jauh (LORAN).",
+      "Lintasan objek yang melepaskan diri dari gravitasi.",
+      "Bayangan kerucut lampu pada dinding."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Menentukan titik puncak di (±a, 0) dan kemiringan asimtot." },
+      "b": { "label": "b", "explanation": "Bersama dengan a menentukan kemiringan asimtot ±b/a." }
+    },
+    "formulas": [
+      { "label": "Bentuk standar" },
+      { "label": "Asimtot" },
+      { "label": "Titik puncak" }
+    ],
+    "properties": [
+      { "label": "Kemiringan asimtot" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabola (Penampang Kerucut)",
+    "description": "Penampang kerucut y² = 2px dengan fokus dan garis arah.",
+    "explanation": "Setiap titik pada parabola berjarak sama dari sebuah titik tetap (fokus) dan sebuah garis tetap (garis arah). Untuk y² = 2px, kurva terbuka ke kanan, fokus berada di (p/2, 0), dan garis arah adalah garis vertikal x = −p/2. p yang lebih besar membuat bukaan lebih lebar.",
+    "examples": [
+      "Antena parabola dan reflektor lampu depan.",
+      "Kabel jembatan gantung.",
+      "Lintasan peluru."
+    ],
+    "parameters": {
+      "p": { "label": "Parameter p", "explanation": "Parameter terkait jarak; p>0 terbuka ke kanan." }
+    },
+    "formulas": [
+      { "label": "Bentuk standar" },
+      { "label": "Fokus" },
+      { "label": "Garis arah" }
+    ],
+    "properties": [
+      { "label": "Fokus x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Kuboid (Prisma Persegi Panjang)",
+    "description": "Sebuah kotak dengan panjang, lebar, dan tinggi.",
+    "explanation": "Kuboid memiliki tiga pasang sisi persegi panjang yang identik. Volumenya merupakan hasil kali tiga panjang rusuk; luas permukaannya merupakan jumlah luas keenam sisinya.",
+    "examples": [
+      "Bata dan kotak.",
+      "Ruangan dan bangunan.",
+      "Akuarium."
+    ],
+    "parameters": {
+      "l": { "label": "Panjang", "explanation": "Ukuran sepanjang sumbu x." },
+      "w": { "label": "Lebar", "explanation": "Ukuran sepanjang sumbu z." },
+      "h": { "label": "Tinggi", "explanation": "Ukuran sepanjang sumbu y." }
+    },
+    "formulas": [
+      { "label": "Luas permukaan" },
+      { "label": "Volume" },
+      { "label": "Diagonal ruang" }
+    ],
+    "properties": [
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "cube": {
+    "name": "Kubus",
+    "description": "Kuboid dengan semua rusuk sama panjang.",
+    "explanation": "Kubus adalah kuboid yang paling simetris: semua 12 rusuknya sama panjang dan keenam sisinya berupa persegi yang kongruen. Menggandakan panjang rusuk akan mengalikan volumenya dengan 8.",
+    "examples": [
+      "Dadu.",
+      "Rubik's cube.",
+      "Kubus gula."
+    ],
+    "parameters": {
+      "a": { "label": "Rusuk", "explanation": "Panjang setiap rusuk." }
+    },
+    "formulas": [
+      { "label": "Luas permukaan" },
+      { "label": "Volume" },
+      { "label": "Diagonal ruang" }
+    ],
+    "properties": [
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "cylinder": {
+    "name": "Tabung",
+    "description": "Dua alas berbentuk lingkaran yang dihubungkan oleh permukaan lengkung.",
+    "explanation": "Membuka sisi lengkung tabung menghasilkan persegi panjang dengan lebar 2πr dan tinggi h, itulah sebabnya luas selimutnya adalah 2πrh. Menambahkan kedua ujung lingkaran memberikan luas permukaan totalnya.",
+    "examples": [
+      "Kaleng dan pipa.",
+      "Gelas minum.",
+      "Drum penggulung."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius alas lingkaran." },
+      "h": { "label": "Tinggi", "explanation": "Jarak antara kedua alas." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Luas selimut" },
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Luas selimut" },
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Prisma Segitiga",
+    "description": "Sebuah segitiga yang disapukan sepanjang panjangnya.",
+    "explanation": "Prisma memiliki penampang yang sama di sepanjang panjangnya, sehingga volumenya hanyalah luas alas dikali panjang. Di sini alasnya adalah segitiga dengan luas ½·b·hₜ.",
+    "examples": [
+      "Cokelat batang Toblerone.",
+      "Rangka atap.",
+      "Prisma kaca optik."
+    ],
+    "parameters": {
+      "b": { "label": "Alas segitiga", "explanation": "Panjang alas dari penampang segitiga." },
+      "ht": { "label": "Tinggi segitiga", "explanation": "Tinggi dari penampang segitiga." },
+      "H": { "label": "Panjang prisma", "explanation": "Seberapa jauh segitiga disapukan." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Prisma Segi Empat",
+    "description": "Alas persegi panjang yang disapukan menjadi prisma.",
+    "explanation": "Prisma segi empat memiliki alas berbentuk persegi panjang (segi empat). Seperti setiap prisma, volumenya adalah luas alas dikali tinggi. Dengan alas persegi panjang, ini sama dengan kuboid: B = lw.",
+    "examples": [
+      "Balok dan tiang.",
+      "Kotak kemasan.",
+      "Kolom bangunan."
+    ],
+    "parameters": {
+      "l": { "label": "Panjang alas", "explanation": "Panjang alas persegi panjang." },
+      "w": { "label": "Lebar alas", "explanation": "Lebar alas persegi panjang." },
+      "H": { "label": "Tinggi prisma", "explanation": "Tinggi prisma." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Prisma Segi Lima",
+    "description": "Segi lima beraturan yang disapukan menjadi prisma.",
+    "explanation": "Alasnya adalah segi lima beraturan, yang luasnya menggunakan rumus umum poligon beraturan dengan n = 5. Mengalikannya dengan tinggi menghasilkan volume prisma.",
+    "examples": [
+      "Pensil dengan penampang segi lima.",
+      "Beberapa mur dan baut.",
+      "Kolom arsitektural."
+    ],
+    "parameters": {
+      "a": { "label": "Panjang sisi", "explanation": "Panjang sisi dari segi lima beraturan." },
+      "h": { "label": "Tinggi prisma", "explanation": "Tinggi prisma." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Prisma Segi Enam",
+    "description": "Segi enam beraturan yang disapukan menjadi prisma.",
+    "explanation": "Segi enam beraturan adalah enam segitiga sama sisi, menghasilkan rumus luas alas yang rapi (3√3/2)·a². Prisma segi enam dapat menyusun ruang secara efisien, itulah sebabnya lebah membangun sel berbentuk segi enam.",
+    "examples": [
+      "Pensil.",
+      "Sel sarang lebah.",
+      "Mur dan baut."
+    ],
+    "parameters": {
+      "a": { "label": "Panjang sisi", "explanation": "Panjang sisi dari segi enam beraturan." },
+      "h": { "label": "Tinggi prisma", "explanation": "Tinggi prisma." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Piramida Segitiga",
+    "description": "Alas segitiga beraturan yang mengecil ke puncak.",
+    "explanation": "Volume piramida selalu sepertiga dari prisma dengan alas dan tinggi yang sama. Di sini alasnya adalah segitiga sama sisi dengan luas (√3/4)·a².",
+    "examples": [
+      "Dadu tetrahedral (d4).",
+      "Bentuk molekul (metana).",
+      "Atap piramida."
+    ],
+    "parameters": {
+      "a": { "label": "Sisi alas", "explanation": "Panjang sisi dari alas sama sisi." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi tegak lurus dari alas ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Piramida Segi Empat",
+    "description": "Alas persegi panjang yang mengecil ke puncak.",
+    "explanation": "Ini adalah bentuk piramida 'Mesir' klasik: alas persegi panjang yang naik ke satu puncak. Volumenya sepertiga dari kuboid yang sesuai (luas alas × tinggi).",
+    "examples": [
+      "Piramida Agung Giza.",
+      "Atap berbentuk piramida.",
+      "Bentuk tenda."
+    ],
+    "parameters": {
+      "l": { "label": "Panjang alas", "explanation": "Panjang alas persegi panjang." },
+      "w": { "label": "Lebar alas", "explanation": "Lebar alas persegi panjang." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi tegak lurus dari alas ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Piramida Segi Lima",
+    "description": "Alas segi lima beraturan yang mengecil ke puncak.",
+    "explanation": "Piramida dengan alas segi lima beraturan. Luas alas menggunakan rumus poligon beraturan dengan n = 5; volumenya sepertiga dari luas alas dikali tinggi, seperti semua piramida.",
+    "examples": [
+      "Menara dekoratif.",
+      "Bentuk kristal.",
+      "Variasi dadu permainan."
+    ],
+    "parameters": {
+      "a": { "label": "Panjang sisi", "explanation": "Panjang sisi dari alas segi lima beraturan." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi tegak lurus dari alas ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Piramida Segi Enam",
+    "description": "Alas segi enam beraturan yang mengecil ke puncak.",
+    "explanation": "Piramida dengan alas segi enam beraturan. Seperti biasa untuk piramida, V = ⅓·B·h, dengan B adalah luas segi enam (3√3/2)·a².",
+    "examples": [
+      "Ujung pensil.",
+      "Menara dan puncak hiasan.",
+      "Ujung kristal."
+    ],
+    "parameters": {
+      "a": { "label": "Panjang sisi", "explanation": "Panjang sisi dari alas segi enam beraturan." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi tegak lurus dari alas ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Volume" }
+    ]
+  },
+  "cone": {
+    "name": "Kerucut",
+    "description": "Alas berbentuk lingkaran yang mengecil ke satu titik.",
+    "explanation": "Kerucut adalah piramida dengan alas lingkaran, sehingga volumenya juga sepertiga dari tabung yang sesuai. Tinggi sisi miring l (bukan tinggi tegak) adalah yang menentukan luas selimut lengkung πrl.",
+    "examples": [
+      "Cone es krim.",
+      "Kerucut lalu lintas.",
+      "Corong."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius alas lingkaran." },
+      "h": { "label": "Tinggi", "explanation": "Tinggi tegak lurus dari alas ke puncak." }
+    },
+    "formulas": [
+      { "label": "Luas alas" },
+      { "label": "Tinggi sisi miring" },
+      { "label": "Luas selimut" },
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas alas" },
+      { "label": "Tinggi sisi miring" },
+      { "label": "Luas selimut" },
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "sphere": {
+    "name": "Bola",
+    "description": "Semua titik berjarak r dari sebuah pusat, dalam ruang 3D.",
+    "explanation": "Bola adalah analog 3D dari lingkaran. Luas permukaannya tepat empat kali luas 'bayangan' lingkarannya (4πr²), dan volumenya bertambah seiring pangkat tiga dari radiusnya.",
+    "examples": [
+      "Bola dan planet.",
+      "Gelembung.",
+      "Bantalan bola (ball bearing)."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Jarak dari pusat ke permukaan." }
+    },
+    "formulas": [
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Frustum Kerucut",
+    "description": "Kerucut yang ujungnya dipotong sejajar dengan alas.",
+    "explanation": "Frustum adalah bagian yang tersisa dari kerucut setelah bagian atasnya dipotong sejajar dengan alas. Volumenya menggabungkan kedua radius dengan suku lintas Rr. Tinggi sisi miring menggunakan selisih R − r, bukan R + r.",
+    "examples": [
+      "Ember dan kap lampu.",
+      "Gelas minum.",
+      "Menara pendingin (bagian bawah)."
+    ],
+    "parameters": {
+      "R": { "label": "Radius bawah", "explanation": "Radius lingkaran yang lebih besar (bawah)." },
+      "r": { "label": "Radius atas", "explanation": "Radius lingkaran yang lebih kecil (atas)." },
+      "h": { "label": "Tinggi", "explanation": "Jarak vertikal antara kedua lingkaran." }
+    },
+    "formulas": [
+      { "label": "Tinggi sisi miring" },
+      { "label": "Luas selimut" },
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Tinggi sisi miring" },
+      { "label": "Luas selimut" },
+      { "label": "Luas permukaan" },
+      { "label": "Volume" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Frustum Piramida",
+    "description": "Piramida poligonal beraturan yang bagian atasnya dipotong.",
+    "explanation": "Memotong bagian atas piramida sejajar dengan alasnya menghasilkan frustum dengan dua sisi poligonal yang sebangun. Rumus volume merata-ratakan kedua luas alas B₁ dan B₂ bersama dengan rata-rata geometriknya √(B₁B₂).",
+    "examples": [
+      "Kap lampu.",
+      "Pot tanaman.",
+      "Atap bangunan bertingkat."
+    ],
+    "parameters": {
+      "n": { "label": "Jumlah sisi", "explanation": "Jumlah sisi dari alas poligon beraturan." },
+      "aBottom": { "label": "Sisi bawah", "explanation": "Panjang sisi dari poligon yang lebih besar (bawah)." },
+      "aTop": { "label": "Sisi atas", "explanation": "Panjang sisi dari poligon yang lebih kecil (atas)." },
+      "h": { "label": "Tinggi", "explanation": "Jarak vertikal antara kedua alas." }
+    },
+    "formulas": [
+      { "label": "Volume" },
+      { "label": "Alas" }
+    ],
+    "properties": [
+      { "label": "Luas alas bawah" },
+      { "label": "Luas alas atas" },
+      { "label": "Volume" }
+    ]
+  },
+  "house": {
+    "name": "Rumah",
+    "description": "Bangunan berbentuk kuboid dengan atap prisma segitiga.",
+    "explanation": "Untuk mencari volume bangun gabungan, pecah menjadi bangun-bangun dasar, hitung masing-masing, lalu tambahkan. Rumah adalah kuboid (dinding) ditambah prisma segitiga (atap). Tambahkan kedua volume untuk mendapatkan total; sisi kontak tempat keduanya bertemu bersifat internal dan bukan bagian dari permukaan luar.",
+    "examples": [
+      "Bentuk rumah dan gudang sederhana.",
+      "Lumbung.",
+      "Rumah burung."
+    ],
+    "parameters": {
+      "l": { "label": "Panjang", "explanation": "Lebar rumah (dan bentangan atap)." },
+      "w": { "label": "Kedalaman", "explanation": "Kedalaman rumah." },
+      "h": { "label": "Tinggi dinding", "explanation": "Tinggi dinding kuboid." },
+      "hr": { "label": "Tinggi atap", "explanation": "Tinggi atap segitiga." }
+    },
+    "formulas": [
+      { "label": "Badan (kuboid)" },
+      { "label": "Atap (prisma segitiga)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume badan" },
+      { "label": "Volume atap" },
+      { "label": "Volume total" }
+    ]
+  },
+  "pencil": {
+    "name": "Pensil",
+    "description": "Badan tabung dengan ujung kerucut.",
+    "explanation": "Pensil adalah tabung (badan) dengan kerucut (ujung yang diraut) yang memiliki radius sama. Volume totalnya adalah tabung ditambah kerucut. Karena keduanya berbagi sisi kontak lingkaran yang sama, tidak ada permukaan luar yang melewatinya.",
+    "examples": [
+      "Pensil dan krayon.",
+      "Roket (badan + kerucut hidung).",
+      "Beberapa botol."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius pensil." },
+      "h": { "label": "Panjang badan", "explanation": "Panjang badan tabung." },
+      "ht": { "label": "Panjang ujung", "explanation": "Panjang ujung kerucut yang diraut." }
+    },
+    "formulas": [
+      { "label": "Badan (tabung)" },
+      { "label": "Ujung (kerucut)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume badan" },
+      { "label": "Volume ujung" },
+      { "label": "Volume total" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Es Krim",
+    "description": "Kerucut yang menahan satu bola es krim.",
+    "explanation": "Es krim adalah kerucut (ujung menghadap ke bawah) dengan bola yang bertumpu di atasnya. Tambahkan volume kerucut dan bola untuk mendapatkan total. Pada kenyataannya, sebagian bola berada di dalam mulut kerucut, sehingga jawaban yang teliti harus mengurangi bagian yang tumpang tindih tersebut — contoh yang baik untuk kapan harus mengurangi.",
+    "examples": [
+      "Cone es krim.",
+      "Hiasan puncak dekoratif.",
+      "Gasing."
+    ],
+    "parameters": {
+      "r": { "label": "Radius kerucut", "explanation": "Radius bagian atas kerucut yang terbuka." },
+      "h": { "label": "Tinggi kerucut", "explanation": "Panjang kerucut (ujung menghadap ke bawah)." },
+      "R": { "label": "Radius bola es krim", "explanation": "Radius bola es krim." }
+    },
+    "formulas": [
+      { "label": "Kerucut" },
+      { "label": "Bola es krim (bola)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume kerucut" },
+      { "label": "Volume bola es krim" },
+      { "label": "Volume total" }
+    ]
+  },
+  "water-tower": {
+    "name": "Menara Air",
+    "description": "Tabung yang ditutupi kubah berbentuk setengah bola.",
+    "explanation": "Menara air adalah tabung dengan setengah bola (belahan bola) di atasnya, dengan radius yang sama. Volume totalnya menambahkan tabung dan setengah bola. Setengah bola adalah tepat separuh dari bola, sehingga volumenya ⅔πr³.",
+    "examples": [
+      "Menara air dan silo.",
+      "Kubah observatorium.",
+      "Tangki penyimpanan."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius tabung dan kubah." },
+      "h": { "label": "Tinggi badan", "explanation": "Tinggi badan tabung." }
+    },
+    "formulas": [
+      { "label": "Badan (tabung)" },
+      { "label": "Kubah (setengah bola)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume badan" },
+      { "label": "Volume kubah" },
+      { "label": "Volume total" }
+    ]
+  },
+  "castle": {
+    "name": "Kastil",
+    "description": "Benteng pusat dengan empat menara sudut dan atap kerucut.",
+    "explanation": "Kastil menggabungkan beberapa bangun dasar: benteng kuboid, empat menara tabung, dan empat atap kerucut. Strateginya sama seperti biasa — pecah menjadi bagian-bagian yang diketahui, hitung setiap volume, lalu tambahkan semuanya. Karena simetri, keempat menara dan keempat atap identik, sehingga kita mengalikannya dengan empat.",
+    "examples": [
+      "Kastil mainan.",
+      "Benteng pada catur (rook).",
+      "Arsitektur benteng dan menara."
+    ],
+    "parameters": {
+      "s": { "label": "Ukuran benteng", "explanation": "Panjang sisi benteng pusat berbentuk persegi." },
+      "hk": { "label": "Tinggi benteng", "explanation": "Tinggi benteng pusat." },
+      "r": { "label": "Radius menara", "explanation": "Radius setiap menara sudut." },
+      "ht": { "label": "Tinggi menara", "explanation": "Tinggi setiap menara sudut." }
+    },
+    "formulas": [
+      { "label": "Benteng (kuboid)" },
+      { "label": "Menara (tabung)" },
+      { "label": "Atap (kerucut)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume benteng" },
+      { "label": "Semua menara" },
+      { "label": "Semua atap" },
+      { "label": "Volume total" }
+    ]
+  }
+}

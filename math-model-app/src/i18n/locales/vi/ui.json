@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Trình Trực Quan Hóa Toán Học Tương Tác"
+  },
+  "common": {
+    "toggleDarkMode": "Chuyển đổi chế độ tối",
+    "changeLanguage": "Đổi ngôn ngữ",
+    "searchPlaceholder": "Tìm kiếm mô hình...",
+    "noResults": "Không có mô hình nào khớp với \"{query}\".",
+    "resultsCount": "{count} kết quả",
+    "favorites": "Yêu thích",
+    "selectModel": "Chọn một mô hình",
+    "reset": "Đặt lại",
+    "addFavorite": "Thêm vào yêu thích",
+    "removeFavorite": "Bỏ khỏi yêu thích",
+    "somethingWrongIn": "Đã có lỗi xảy ra trong {label}.",
+    "somethingWrong": "Đã có lỗi xảy ra.",
+    "tryAgain": "Thử lại"
+  },
+  "errorLabels": {
+    "graph": "đồ thị",
+    "viewer3d": "trình xem 3D",
+    "modelPage": "trang mô hình"
+  },
+  "panels": {
+    "parameters": "Tham số",
+    "formulas": "Công thức",
+    "properties": "Đại lượng tính toán",
+    "explanation": "Giải thích",
+    "examples": "Ví dụ thực tế"
+  },
+  "viewSettings": {
+    "grid": "Lưới",
+    "labels": "Nhãn",
+    "wireframe": "Khung dây",
+    "markers": "Điểm đánh dấu"
+  },
+  "graphLabels": {
+    "center": "tâm",
+    "vertex": "đỉnh",
+    "focus": "tiêu điểm",
+    "directrix": "đường chuẩn",
+    "axis": "trục",
+    "midline": "đường trung bình",
+    "asymptote": "đường tiệm cận",
+    "xIntercept": "giao điểm Ox"
+  },
+  "categories": {
+    "functions": {
+      "name": "Hàm số thông dụng",
+      "description": "Đồ thị hàm số trong mặt phẳng tọa độ"
+    },
+    "plane-curves": {
+      "name": "Đường cong phẳng",
+      "description": "Đường conic và các đường cong khác"
+    },
+    "solids": {
+      "name": "Hình học không gian",
+      "description": "Hình khối 3D: hình lăng trụ, hình chóp, hình khối tròn xoay"
+    },
+    "combined": {
+      "name": "Hình khối tổ hợp",
+      "description": "Các hình khối phức hợp được tạo từ các hình khối cơ bản"
+    }
+  }
+}

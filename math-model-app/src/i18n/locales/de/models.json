@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Proportionale Funktion",
+    "description": "Eine Gerade durch den Ursprung, deren Steigung durch k bestimmt wird.",
+    "explanation": "Direkte Proportionalität bedeutet, dass y sich mit konstanter Rate zu x ändert. Der Graph ist immer eine Gerade durch den Ursprung; nur ihre Steigung ändert sich. Größeres |k| bedeutet eine steilere Gerade; das Vorzeichen von k wechselt zwischen der steigenden und der fallenden Diagonale.",
+    "examples": [
+      "Strecke vs. Zeit bei konstanter Geschwindigkeit (d = vt).",
+      "Gesamtpreis vs. Menge bei festem Stückpreis."
+    ],
+    "parameters": {
+      "k": { "label": "Steigung", "explanation": "Bestimmt Steilheit und Richtung. k>0 steigt, k<0 fällt." }
+    },
+    "formulas": [
+      { "label": "Funktion", "description": "Verläuft durch den Ursprung (0, 0)." },
+      { "label": "Steigung", "description": "Höhenunterschied geteilt durch horizontalen Abstand." }
+    ]
+  },
+  "linear": {
+    "name": "Lineare Funktion",
+    "description": "Eine Gerade y = kx + b mit veränderbarer Steigung und Achsenabschnitt.",
+    "explanation": "k bestimmt die Steigung (Steilheit und Richtung), während b die gesamte Gerade nach oben oder unten verschiebt und festlegt, wo sie die y-Achse schneidet. Eine Änderung von b verschiebt die Gerade vertikal, ohne ihre Neigung zu ändern.",
+    "examples": [
+      "Taxitarif = Grundgebühr + Preis pro Kilometer × Entfernung.",
+      "Temperaturumrechnung: °F = 1,8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Steigung", "explanation": "Die Steigung: wie schnell sich y pro Einheit x ändert." },
+      "b": { "label": "y-Achsenabschnitt", "explanation": "Wo die Gerade die y-Achse schneidet." }
+    },
+    "formulas": [
+      { "label": "Funktion" },
+      { "label": "y-Achsenabschnitt" },
+      { "label": "x-Achsenabschnitt", "description": "Wenn k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Quadratische Funktion",
+    "description": "Eine Parabel y = ax² + bx + c mit Scheitelpunkt und Symmetrieachse.",
+    "explanation": "Das Vorzeichen von a entscheidet, ob die Parabel nach oben (a>0) oder nach unten (a<0) geöffnet ist; der Betrag von a bestimmt, wie schmal sie ist. Der Scheitelpunkt ist der Wendepunkt, und die Symmetrieachse ist die senkrechte Gerade durch ihn. c ist einfach die Höhe, bei der die Kurve die y-Achse schneidet.",
+    "examples": [
+      "Flugbahn eines geworfenen Balls (Wurfbewegung).",
+      "Fläche eines Rechtecks als Funktion einer Seite bei festem Umfang."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Öffnungsrichtung & Breite. a>0 öffnet nach oben, a<0 nach unten; größeres |a| ist schmaler." },
+      "b": { "label": "b", "explanation": "Verschiebt die Symmetrieachse nach links/rechts (zusammen mit a)." },
+      "c": { "label": "c", "explanation": "Der y-Achsenabschnitt (Wert bei x = 0)." }
+    },
+    "formulas": [
+      { "label": "Funktion" },
+      { "label": "Symmetrieachse" },
+      { "label": "Scheitelpunkt" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Umgekehrt proportionale Funktion",
+    "description": "Eine Hyperbel y = k/x mit den Achsen als Asymptoten.",
+    "explanation": "Wenn x wächst, bleibt das Produkt xy gleich k, sodass y gegen 0 schrumpft — die Kurve schmiegt sich an beide Achsen (ihre Asymptoten) an, ohne sie zu berühren. Die beiden Äste liegen je nach Vorzeichen von k in gegenüberliegenden Quadranten.",
+    "examples": [
+      "Geschwindigkeit vs. Fahrzeit bei fester Strecke.",
+      "Druck vs. Volumen eines Gases bei konstanter Temperatur (Boyle-Mariotte-Gesetz)."
+    ],
+    "parameters": {
+      "k": { "label": "Konstante", "explanation": "k>0 legt die Äste in die Quadranten I & III; k<0 in II & IV." }
+    },
+    "formulas": [
+      { "label": "Funktion", "description": "x ≠ 0." },
+      { "label": "Asymptoten" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Betragsfunktion",
+    "description": "Ein V-förmiger Graph y = a|x − h| + k.",
+    "explanation": "Der Betrag zwingt alle Ausgabewerte über den Scheitelpunkt, wodurch ein symmetrisches V entsteht. (h, k) ist die Ecke des V; a skaliert die Schenkel und kehrt das V bei negativem Vorzeichen auf den Kopf.",
+    "examples": [
+      "Abstand von einem Zielwert.",
+      "Fehlerbetrag unabhängig vom Vorzeichen."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Steilheit und Richtung des V (a<0 öffnet es nach unten)." },
+      "h": { "label": "h", "explanation": "Horizontale Verschiebung des Scheitelpunkts." },
+      "k": { "label": "k", "explanation": "Vertikale Verschiebung des Scheitelpunkts." }
+    },
+    "formulas": [
+      { "label": "Grundform" },
+      { "label": "Transformiert" },
+      { "label": "Scheitelpunkt" }
+    ]
+  },
+  "power": {
+    "name": "Potenzfunktion",
+    "description": "y = xᵃ — ihre Form hängt vom Exponenten a ab.",
+    "explanation": "Eine Potenzfunktion erhebt x in eine feste Potenz a. Ganzzahlige Exponenten sind für alle x definiert, aber gebrochene Exponenten benötigen x ≥ 0, um reell zu bleiben, sodass die Kurve dort nur auf der rechten Seite erscheint. Gerade Exponenten sind symmetrisch zur y-Achse; ungerade Exponenten sind symmetrisch zum Ursprung.",
+    "examples": [
+      "Fläche ∝ Seite² (a = 2).",
+      "Volumen ∝ Seite³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Exponent", "explanation": "a=1 Gerade, a=2 Parabel, a=3 Kubik, a=0,5 Quadratwurzel, a<0 hyperbelähnlich." }
+    },
+    "formulas": [
+      { "label": "Funktion" },
+      { "label": "Hinweis", "description": "Negative Basen haben keinen reellen Wert für gebrochene Exponenten." }
+    ]
+  },
+  "exponential": {
+    "name": "Exponentialfunktion",
+    "description": "y = aˣ — schnelles Wachstum (a>1) oder Zerfall (0<a<1).",
+    "explanation": "Exponentialfunktionen multiplizieren mit der Basis a für jeden Schritt in x. Wenn a>1 ist, explodiert der Ausgabewert nach oben; wenn 0<a<1 ist, klingt er gegen die horizontale Asymptote y = 0 ab. Alle verlaufen durch (0, 1), da a⁰ = 1.",
+    "examples": [
+      "Zinseszins.",
+      "Radioaktiver Zerfall (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Basis", "explanation": "a>1 wächst; 0<a<1 fällt. Jede Kurve verläuft durch (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Funktion", "description": "a > 0, a ≠ 1." },
+      { "label": "Asymptote" },
+      { "label": "Ankerpunkt" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Logarithmusfunktion",
+    "description": "y = logₐ(x) — die Umkehrfunktion der Exponentialfunktion.",
+    "explanation": "Der Logarithmus beantwortet die Frage 'a hoch welcher Potenz ergibt x?'. Er ist das Spiegelbild von y = aˣ an der Geraden y = x, daher ist sein Definitionsbereich x > 0 und er hat eine senkrechte Asymptote bei x = 0. Alle Kurven verlaufen durch (1, 0).",
+    "examples": [
+      "pH-Skala.",
+      "Schalldruckpegel in Dezibel.",
+      "Richter-Skala für Erdbeben."
+    ],
+    "parameters": {
+      "a": { "label": "Basis", "explanation": "a>1 steigt; 0<a<1 fällt. Jede Kurve verläuft durch (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Funktion", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asymptote" },
+      { "label": "Umkehrung von" }
+    ]
+  },
+  "sine": {
+    "name": "Sinusfunktion",
+    "description": "y = A·sin(Bx + C) + D mit Amplitude, Periode und Verschiebungen.",
+    "explanation": "A streckt die Welle vertikal (Amplitude); B staucht sie horizontal und bestimmt die Periode T = 2π/|B|; C verschiebt sie nach links/rechts (Phasenverschiebung −C/B); D hebt oder senkt die Mittellinie.",
+    "examples": [
+      "Schallwellen.",
+      "Wechselstrom.",
+      "Gezeiten und Tageslichtstunden im Jahresverlauf."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitude", "explanation": "Die Hälfte des Abstands zwischen Maximum und Minimum." },
+      "B": { "label": "Frequenz", "explanation": "Größeres B staucht die Welle (kürzere Periode)." },
+      "C": { "label": "Phase", "explanation": "Horizontale Verschiebung der Welle." },
+      "D": { "label": "Vertikale Verschiebung", "explanation": "Verschiebt die Mittellinie nach oben oder unten." }
+    },
+    "formulas": [
+      { "label": "Grundform" },
+      { "label": "Transformiert" },
+      { "label": "Amplitude" },
+      { "label": "Periode" },
+      { "label": "Phasenverschiebung" }
+    ]
+  },
+  "cosine": {
+    "name": "Kosinusfunktion",
+    "description": "y = A·cos(Bx + C) + D — eine um eine Viertelperiode verschobene Sinuswelle.",
+    "explanation": "Der Kosinus hat dieselbe Form wie der Sinus, beginnt aber bei seinem Maximum: cos(x) = sin(x + π/2). Die Parameter bedeuten genau dasselbe — Amplitude A, Periode 2π/|B|, Phasenverschiebung und vertikale Verschiebung D.",
+    "examples": [
+      "Horizontale Position eines Punkts auf einem rotierenden Rad.",
+      "Saisonale Temperaturzyklen."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitude", "explanation": "Die Hälfte des Abstands zwischen Maximum und Minimum." },
+      "B": { "label": "Frequenz", "explanation": "Größeres B staucht die Welle (kürzere Periode)." },
+      "C": { "label": "Phase", "explanation": "Horizontale Verschiebung der Welle." },
+      "D": { "label": "Vertikale Verschiebung", "explanation": "Verschiebt die Mittellinie nach oben oder unten." }
+    },
+    "formulas": [
+      { "label": "Grundform" },
+      { "label": "Transformiert" },
+      { "label": "Amplitude" },
+      { "label": "Periode" }
+    ]
+  },
+  "tangent": {
+    "name": "Tangensfunktion",
+    "description": "y = A·tan(Bx + C) + D mit periodisch wiederkehrenden senkrechten Asymptoten.",
+    "explanation": "Der Tangens wiederholt sich alle π und schießt an jeder Asymptote, wo cos = 0 ist, gegen ±∞. Der Graph wird als getrennte Äste dargestellt — er ist nie über eine Asymptote hinweg verbunden. B bestimmt, wie oft die Asymptoten auftreten.",
+    "examples": [
+      "Steigung einer Geraden bei einem bestimmten Winkel.",
+      "Modellierung schneller Anstiege nahe einem Grenzwert."
+    ],
+    "parameters": {
+      "A": { "label": "Vertikale Skalierung", "explanation": "Streckt die Äste vertikal." },
+      "B": { "label": "Frequenz", "explanation": "Bestimmt den Abstand der Asymptoten (Periode π/|B|)." },
+      "C": { "label": "Phase", "explanation": "Horizontale Verschiebung." },
+      "D": { "label": "Vertikale Verschiebung", "explanation": "Verschiebt die Kurve nach oben oder unten." }
+    },
+    "formulas": [
+      { "label": "Grundform" },
+      { "label": "Transformiert" },
+      { "label": "Periode" },
+      { "label": "Asymptoten" }
+    ]
+  },
+  "piecewise": {
+    "name": "Stückweise definierte Funktion",
+    "description": "Unterschiedliche Vorschriften auf verschiedenen Intervallen, verbunden an einer Sprungstelle.",
+    "explanation": "Eine stückweise definierte Funktion verwendet auf jedem Intervall ihres Definitionsbereichs eine andere Formel. Hier verwendet das linke Teilstück (x < 0) −sx und das rechte Teilstück (x ≥ 0) sx. Die beiden Teile werden getrennt gezeichnet und treffen sich nur an der Sprungstelle x = 0.",
+    "examples": [
+      "Steuerklassen.",
+      "Versandkostenstufen nach Gewicht.",
+      "Betragsfunktion als zwei Geraden."
+    ],
+    "parameters": {
+      "scale": { "label": "Steigungsfaktor", "explanation": "Skaliert beide Äste, sodass sich die Teile gemeinsam verändern lassen." }
+    },
+    "formulas": [
+      { "label": "Definition", "description": "Zwei lineare Regeln, die sich bei x = 0 treffen." }
+    ]
+  },
+  "circle": {
+    "name": "Kreis",
+    "description": "Alle Punkte im Abstand r von einem Mittelpunkt (h, k).",
+    "explanation": "Ein Kreis ist die Menge aller Punkte mit festem Abstand r (dem Radius) von seinem Mittelpunkt (h, k). Das Verändern von h und k verschiebt den ganzen Kreis; das Ändern von r vergrößert oder verkleinert ihn. Sein Umfang und seine Fläche hängen nur von r ab.",
+    "examples": [
+      "Räder und Zahnräder.",
+      "Wellen auf dem Wasser.",
+      "Runde Laufbahnen."
+    ],
+    "parameters": {
+      "h": { "label": "Mittelpunkt x", "explanation": "Horizontale Position des Mittelpunkts." },
+      "k": { "label": "Mittelpunkt y", "explanation": "Vertikale Position des Mittelpunkts." },
+      "r": { "label": "Radius", "explanation": "Abstand vom Mittelpunkt zum Rand." }
+    },
+    "formulas": [
+      { "label": "Standardform" },
+      { "label": "Im Ursprung zentriert" },
+      { "label": "Umfang" },
+      { "label": "Fläche" }
+    ],
+    "properties": [
+      { "label": "Umfang" },
+      { "label": "Fläche" },
+      { "label": "Durchmesser" }
+    ]
+  },
+  "ellipse": {
+    "name": "Ellipse",
+    "description": "Ein gestreckter Kreis mit den Halbachsen a und b.",
+    "explanation": "Eine Ellipse ist ein Kreis, der entlang der beiden Achsen unterschiedlich skaliert wurde. a und b sind die große und kleine Halbachse (die größere von beiden ist die 'große'). Wenn a = b ist, wird die Ellipse zu einem Kreis. Ihre Fläche ist π·a·b.",
+    "examples": [
+      "Planetenbahnen.",
+      "Flüstergewölbe.",
+      "Elliptische Zahnräder."
+    ],
+    "parameters": {
+      "a": { "label": "Halbachse a", "explanation": "Die Hälfte der Breite entlang der x-Achse." },
+      "b": { "label": "Halbachse b", "explanation": "Die Hälfte der Höhe entlang der y-Achse." }
+    },
+    "formulas": [
+      { "label": "Standardform" },
+      { "label": "Fläche" },
+      { "label": "Brennpunkte (a>b)" }
+    ],
+    "properties": [
+      { "label": "Fläche" },
+      { "label": "Brennpunktabstand" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hyperbel",
+    "description": "Zwei gegenüberliegende Äste mit geraden Asymptoten.",
+    "explanation": "Eine Hyperbel besteht aus zwei spiegelbildlichen Ästen, die sich nach links und rechts öffnen und sich jeweils den Asymptoten y = ±(b/a)x annähern, ohne sie zu berühren. Die einfache umgekehrt proportionale Kurve y = k/x ist ebenfalls eine Hyperbel — nur so gedreht, dass die Achsen selbst ihre Asymptoten sind.",
+    "examples": [
+      "Funknavigation über große Entfernungen (LORAN).",
+      "Die Flugbahn eines Objekts, das der Schwerkraft entkommt.",
+      "Schatten eines Lampenkegels an der Wand."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Legt die Scheitelpunkte bei (±a, 0) und die Asymptotensteigung fest." },
+      "b": { "label": "b", "explanation": "Bestimmt zusammen mit a die Asymptotensteigung ±b/a." }
+    },
+    "formulas": [
+      { "label": "Standardform" },
+      { "label": "Asymptoten" },
+      { "label": "Scheitelpunkte" }
+    ],
+    "properties": [
+      { "label": "Asymptotensteigung" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabel (Kegelschnitt)",
+    "description": "Der Kegelschnitt y² = 2px mit Brennpunkt und Leitlinie.",
+    "explanation": "Jeder Punkt einer Parabel hat den gleichen Abstand zu einem festen Punkt (dem Brennpunkt) und einer festen Geraden (der Leitlinie). Für y² = 2px öffnet sich die Kurve nach rechts, der Brennpunkt liegt bei (p/2, 0), und die Leitlinie ist die senkrechte Gerade x = −p/2. Größeres p ergibt eine breitere Öffnung.",
+    "examples": [
+      "Satellitenschüsseln und Scheinwerferreflektoren.",
+      "Tragseile von Hängebrücken.",
+      "Flugbahnen von Projektilen."
+    ],
+    "parameters": {
+      "p": { "label": "Parameter p", "explanation": "Abstandsbezogener Parameter; p>0 öffnet nach rechts." }
+    },
+    "formulas": [
+      { "label": "Standardform" },
+      { "label": "Brennpunkt" },
+      { "label": "Leitlinie" }
+    ],
+    "properties": [
+      { "label": "Brennpunkt x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Quader",
+    "description": "Ein Kasten mit Länge, Breite und Höhe.",
+    "explanation": "Ein Quader hat drei Paare identischer rechteckiger Flächen. Sein Volumen ist das Produkt der drei Kantenlängen; seine Oberfläche ist die Summe der Flächen aller sechs Seiten.",
+    "examples": [
+      "Ziegel und Kisten.",
+      "Räume und Gebäude.",
+      "Aquarien."
+    ],
+    "parameters": {
+      "l": { "label": "Länge", "explanation": "Größe entlang der x-Achse." },
+      "w": { "label": "Breite", "explanation": "Größe entlang der z-Achse." },
+      "h": { "label": "Höhe", "explanation": "Größe entlang der y-Achse." }
+    },
+    "formulas": [
+      { "label": "Oberfläche" },
+      { "label": "Volumen" },
+      { "label": "Raumdiagonale" }
+    ],
+    "properties": [
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "cube": {
+    "name": "Würfel",
+    "description": "Ein Quader mit lauter gleichen Kanten.",
+    "explanation": "Ein Würfel ist der symmetrischste Quader: Alle 12 Kanten sind gleich lang, und alle 6 Flächen sind kongruente Quadrate. Eine Verdopplung der Kantenlänge verachtfacht das Volumen.",
+    "examples": [
+      "Würfel (Spielwürfel).",
+      "Zauberwürfel.",
+      "Zuckerwürfel."
+    ],
+    "parameters": {
+      "a": { "label": "Kante", "explanation": "Länge jeder Kante." }
+    },
+    "formulas": [
+      { "label": "Oberfläche" },
+      { "label": "Volumen" },
+      { "label": "Raumdiagonale" }
+    ],
+    "properties": [
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "cylinder": {
+    "name": "Zylinder",
+    "description": "Zwei kreisförmige Grundflächen, verbunden durch eine gekrümmte Fläche.",
+    "explanation": "Rollt man die gekrümmte Seitenfläche eines Zylinders ab, erhält man ein Rechteck mit der Breite 2πr und der Höhe h — daher ist die Mantelfläche 2πrh. Addiert man die beiden Kreisflächen, ergibt sich die gesamte Oberfläche.",
+    "examples": [
+      "Dosen und Rohre.",
+      "Trinkgläser.",
+      "Walzentrommeln."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius der kreisförmigen Grundfläche." },
+      "h": { "label": "Höhe", "explanation": "Abstand zwischen den beiden Grundflächen." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Mantelfläche" },
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Mantelfläche" },
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Dreiecksprisma",
+    "description": "Ein Dreieck, das entlang seiner Länge ausgezogen wird.",
+    "explanation": "Ein Prisma hat entlang seiner ganzen Länge denselben Querschnitt, daher ist sein Volumen einfach die Grundfläche mal die Länge. Hier ist die Grundfläche ein Dreieck mit der Fläche ½·b·hₜ.",
+    "examples": [
+      "Toblerone-Riegel.",
+      "Dachbinder.",
+      "Optische Glasprismen."
+    ],
+    "parameters": {
+      "b": { "label": "Dreiecksbasis", "explanation": "Basislänge des dreieckigen Querschnitts." },
+      "ht": { "label": "Dreieckshöhe", "explanation": "Höhe des dreieckigen Querschnitts." },
+      "H": { "label": "Prismenlänge", "explanation": "Wie weit das Dreieck ausgezogen wird." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Vierecksprisma",
+    "description": "Eine rechteckige Grundfläche, ausgezogen zu einem Prisma.",
+    "explanation": "Ein Vierecksprisma hat eine rechteckige (viereckige) Grundfläche. Wie bei jedem Prisma ist sein Volumen die Grundfläche mal die Höhe. Mit einer rechteckigen Grundfläche entspricht dies einem Quader: B = lw.",
+    "examples": [
+      "Balken und Pfosten.",
+      "Verpackungskartons.",
+      "Gebäudestützen."
+    ],
+    "parameters": {
+      "l": { "label": "Grundlänge", "explanation": "Länge der rechteckigen Grundfläche." },
+      "w": { "label": "Grundbreite", "explanation": "Breite der rechteckigen Grundfläche." },
+      "H": { "label": "Prismenhöhe", "explanation": "Höhe des Prismas." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Fünfeckprisma",
+    "description": "Ein regelmäßiges Fünfeck, ausgezogen zu einem Prisma.",
+    "explanation": "Die Grundfläche ist ein regelmäßiges Fünfeck, dessen Fläche mit der allgemeinen Formel für regelmäßige Vielecke mit n = 5 berechnet wird. Multipliziert mit der Höhe ergibt sich das Volumen des Prismas.",
+    "examples": [
+      "Bleistifte mit fünfeckigem Querschnitt.",
+      "Manche Muttern und Schrauben.",
+      "Architektonische Säulen."
+    ],
+    "parameters": {
+      "a": { "label": "Seitenlänge", "explanation": "Seitenlänge des regelmäßigen Fünfecks." },
+      "h": { "label": "Prismenhöhe", "explanation": "Höhe des Prismas." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Sechseckprisma",
+    "description": "Ein regelmäßiges Sechseck, ausgezogen zu einem Prisma.",
+    "explanation": "Ein regelmäßiges Sechseck besteht aus sechs gleichseitigen Dreiecken, was die übersichtliche Flächenformel (3√3/2)·a² ergibt. Sechseckprismen füllen den Raum effizient aus — deshalb bauen Bienen sechseckige Zellen.",
+    "examples": [
+      "Bleistifte.",
+      "Wabenzellen.",
+      "Muttern und Schrauben."
+    ],
+    "parameters": {
+      "a": { "label": "Seitenlänge", "explanation": "Seitenlänge des regelmäßigen Sechsecks." },
+      "h": { "label": "Prismenhöhe", "explanation": "Höhe des Prismas." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Dreieckspyramide",
+    "description": "Eine regelmäßige dreieckige Grundfläche, die sich zu einer Spitze verjüngt.",
+    "explanation": "Das Volumen einer Pyramide ist immer ein Drittel des Prismas mit derselben Grundfläche und Höhe. Hier ist die Grundfläche ein gleichseitiges Dreieck mit der Fläche (√3/4)·a².",
+    "examples": [
+      "Tetraederwürfel (W4).",
+      "Molekülformen (Methan).",
+      "Pyramidendächer."
+    ],
+    "parameters": {
+      "a": { "label": "Grundseite", "explanation": "Seitenlänge der gleichseitigen Grundfläche." },
+      "h": { "label": "Höhe", "explanation": "Senkrechte Höhe von der Grundfläche zur Spitze." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Viereckspyramide",
+    "description": "Eine rechteckige Grundfläche, die sich zu einer Spitze verjüngt.",
+    "explanation": "Dies ist die klassische 'ägyptische' Pyramidenform: eine rechteckige Grundfläche, die zu einer einzigen Spitze aufsteigt. Ihr Volumen ist ein Drittel des entsprechenden Quaders (Grundfläche × Höhe).",
+    "examples": [
+      "Die Große Pyramide von Gizeh.",
+      "Pyramidenförmige Dächer.",
+      "Zeltformen."
+    ],
+    "parameters": {
+      "l": { "label": "Grundlänge", "explanation": "Länge der rechteckigen Grundfläche." },
+      "w": { "label": "Grundbreite", "explanation": "Breite der rechteckigen Grundfläche." },
+      "h": { "label": "Höhe", "explanation": "Senkrechte Höhe von der Grundfläche zur Spitze." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Fünfeckpyramide",
+    "description": "Eine regelmäßige fünfeckige Grundfläche, die sich zu einer Spitze verjüngt.",
+    "explanation": "Eine Pyramide auf einem regelmäßigen Fünfeck. Die Grundfläche wird mit der Formel für regelmäßige Vielecke mit n = 5 berechnet; das Volumen ist wie bei jeder Pyramide ein Drittel von Grundfläche mal Höhe.",
+    "examples": [
+      "Dekorative Türme.",
+      "Kristallformen.",
+      "Varianten von Spielwürfeln."
+    ],
+    "parameters": {
+      "a": { "label": "Seitenlänge", "explanation": "Seitenlänge der regelmäßigen fünfeckigen Grundfläche." },
+      "h": { "label": "Höhe", "explanation": "Senkrechte Höhe von der Grundfläche zur Spitze." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Sechseckpyramide",
+    "description": "Eine regelmäßige sechseckige Grundfläche, die sich zu einer Spitze verjüngt.",
+    "explanation": "Eine Pyramide auf einer regelmäßigen sechseckigen Grundfläche. Wie immer bei Pyramiden gilt V = ⅓·B·h, wobei B die Sechsecksfläche (3√3/2)·a² ist.",
+    "examples": [
+      "Bleistiftspitzen.",
+      "Türme und Spitzaufsätze.",
+      "Kristallenden."
+    ],
+    "parameters": {
+      "a": { "label": "Seitenlänge", "explanation": "Seitenlänge der regelmäßigen sechseckigen Grundfläche." },
+      "h": { "label": "Höhe", "explanation": "Senkrechte Höhe von der Grundfläche zur Spitze." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "cone": {
+    "name": "Kegel",
+    "description": "Eine kreisförmige Grundfläche, die sich zu einer Spitze verjüngt.",
+    "explanation": "Ein Kegel ist eine Pyramide mit kreisförmiger Grundfläche, daher ist sein Volumen ebenfalls ein Drittel des entsprechenden Zylinders. Die Mantellinie l (nicht die senkrechte Höhe) bestimmt die gekrümmte Mantelfläche πrl.",
+    "examples": [
+      "Eistüten.",
+      "Verkehrskegel.",
+      "Trichter."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius der kreisförmigen Grundfläche." },
+      "h": { "label": "Höhe", "explanation": "Senkrechte Höhe von der Grundfläche zur Spitze." }
+    },
+    "formulas": [
+      { "label": "Grundfläche" },
+      { "label": "Mantellinie" },
+      { "label": "Mantelfläche" },
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Grundfläche" },
+      { "label": "Mantellinie" },
+      { "label": "Mantelfläche" },
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "sphere": {
+    "name": "Kugel",
+    "description": "Alle Punkte im Abstand r von einem Mittelpunkt, im 3D-Raum.",
+    "explanation": "Eine Kugel ist das 3D-Gegenstück zu einem Kreis. Ihre Oberfläche ist genau viermal so groß wie die Fläche ihres 'Schattenkreises' (4πr²), und ihr Volumen wächst mit der dritten Potenz des Radius.",
+    "examples": [
+      "Bälle und Planeten.",
+      "Seifenblasen.",
+      "Kugellager."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Abstand vom Mittelpunkt zur Oberfläche." }
+    },
+    "formulas": [
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Kegelstumpf",
+    "description": "Ein Kegel, dessen Spitze parallel zur Grundfläche abgeschnitten wurde.",
+    "explanation": "Ein Kegelstumpf ist das, was von einem Kegel übrig bleibt, wenn die Spitze parallel zur Grundfläche abgeschnitten wird. Sein Volumen verbindet die beiden Radien über den gemischten Term Rr. Die Mantellinie verwendet die Differenz R − r, nicht die Summe R + r.",
+    "examples": [
+      "Eimer und Lampenschirme.",
+      "Trinkbecher.",
+      "Kühltürme (unterer Teil)."
+    ],
+    "parameters": {
+      "R": { "label": "Unterer Radius", "explanation": "Radius des größeren (unteren) Kreises." },
+      "r": { "label": "Oberer Radius", "explanation": "Radius des kleineren (oberen) Kreises." },
+      "h": { "label": "Höhe", "explanation": "Senkrechter Abstand zwischen den beiden Kreisen." }
+    },
+    "formulas": [
+      { "label": "Mantellinie" },
+      { "label": "Mantelfläche" },
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ],
+    "properties": [
+      { "label": "Mantellinie" },
+      { "label": "Mantelfläche" },
+      { "label": "Oberfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Pyramidenstumpf",
+    "description": "Eine regelmäßige polygonale Pyramide mit abgeschnittener Spitze.",
+    "explanation": "Schneidet man die Spitze einer Pyramide parallel zur Grundfläche ab, entsteht ein Pyramidenstumpf mit zwei ähnlichen polygonalen Flächen. Die Volumenformel mittelt die beiden Grundflächen B₁ und B₂ zusammen mit ihrem geometrischen Mittel √(B₁B₂).",
+    "examples": [
+      "Lampenschirme.",
+      "Blumentöpfe.",
+      "Gestufte Gebäudespitzen."
+    ],
+    "parameters": {
+      "n": { "label": "Anzahl der Seiten", "explanation": "Anzahl der Seiten des regelmäßigen Vielecks der Grundfläche." },
+      "aBottom": { "label": "Untere Seite", "explanation": "Seitenlänge des größeren (unteren) Vielecks." },
+      "aTop": { "label": "Obere Seite", "explanation": "Seitenlänge des kleineren (oberen) Vielecks." },
+      "h": { "label": "Höhe", "explanation": "Senkrechter Abstand zwischen den beiden Grundflächen." }
+    },
+    "formulas": [
+      { "label": "Volumen" },
+      { "label": "Grundflächen" }
+    ],
+    "properties": [
+      { "label": "Untere Grundfläche" },
+      { "label": "Obere Grundfläche" },
+      { "label": "Volumen" }
+    ]
+  },
+  "house": {
+    "name": "Haus",
+    "description": "Ein Quaderkörper mit einem Dach in Form eines Dreiecksprismas.",
+    "explanation": "Um das Volumen eines zusammengesetzten Körpers zu finden, zerlegt man ihn in einfache Körper, berechnet jeden einzeln und addiert sie. Ein Haus ist ein Quader (die Wände) plus ein Dreiecksprisma (das Dach). Addiert man die beiden Volumen, erhält man die Gesamtsumme; die Kontaktfläche, an der sie sich treffen, liegt innen und ist nicht Teil der Außenfläche.",
+    "examples": [
+      "Einfache Haus- und Schuppenformen.",
+      "Scheunen.",
+      "Vogelhäuschen."
+    ],
+    "parameters": {
+      "l": { "label": "Länge", "explanation": "Breite des Hauses (und Spannweite des Dachs)." },
+      "w": { "label": "Tiefe", "explanation": "Tiefe des Hauses." },
+      "h": { "label": "Wandhöhe", "explanation": "Höhe der Quaderwände." },
+      "hr": { "label": "Dachhöhe", "explanation": "Höhe des Dreiecksdachs." }
+    },
+    "formulas": [
+      { "label": "Körper (Quader)" },
+      { "label": "Dach (Dreiecksprisma)" },
+      { "label": "Gesamt" }
+    ],
+    "properties": [
+      { "label": "Körpervolumen" },
+      { "label": "Dachvolumen" },
+      { "label": "Gesamtvolumen" }
+    ]
+  },
+  "pencil": {
+    "name": "Bleistift",
+    "description": "Ein zylindrischer Körper mit einer kegelförmigen Spitze.",
+    "explanation": "Ein Bleistift ist ein Zylinder (der Schaft) mit einem Kegel (der gespitzten Spitze), die denselben Radius teilen. Das Gesamtvolumen ist der Zylinder plus der Kegel. Da beide dieselbe kreisförmige Kontaktfläche teilen, verläuft keine Außenfläche durch sie.",
+    "examples": [
+      "Bleistifte und Wachsmalstifte.",
+      "Raketen (Körper + Spitzenkegel).",
+      "Manche Flaschen."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius des Bleistifts." },
+      "h": { "label": "Schaftlänge", "explanation": "Länge des zylindrischen Schafts." },
+      "ht": { "label": "Spitzenlänge", "explanation": "Länge der gespitzten Kegelspitze." }
+    },
+    "formulas": [
+      { "label": "Schaft (Zylinder)" },
+      { "label": "Spitze (Kegel)" },
+      { "label": "Gesamt" }
+    ],
+    "properties": [
+      { "label": "Schaftvolumen" },
+      { "label": "Spitzenvolumen" },
+      { "label": "Gesamtvolumen" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Eiswaffel",
+    "description": "Eine Waffel, die eine Kugel Eis trägt.",
+    "explanation": "Eine Eiswaffel ist ein Kegel (mit der Spitze nach unten) mit einer Kugel obenauf. Addiere die Volumen von Kegel und Kugel für das Gesamtvolumen. In Wirklichkeit liegt ein Teil der Kugel innerhalb der Kegelöffnung, sodass man bei einer genauen Berechnung diese Überlappung subtrahieren müsste — ein gutes Beispiel dafür, wann man subtrahiert.",
+    "examples": [
+      "Eistüten.",
+      "Dekorative Aufsätze.",
+      "Kreisel."
+    ],
+    "parameters": {
+      "r": { "label": "Kegelradius", "explanation": "Radius der offenen Spitze des Kegels." },
+      "h": { "label": "Kegelhöhe", "explanation": "Länge des Kegels (Spitze zeigt nach unten)." },
+      "R": { "label": "Kugelradius", "explanation": "Radius der Eiskugel." }
+    },
+    "formulas": [
+      { "label": "Kegel" },
+      { "label": "Kugel (Eiskugel)" },
+      { "label": "Gesamt" }
+    ],
+    "properties": [
+      { "label": "Kegelvolumen" },
+      { "label": "Kugelvolumen" },
+      { "label": "Gesamtvolumen" }
+    ]
+  },
+  "water-tower": {
+    "name": "Wasserturm",
+    "description": "Ein Zylinder mit einer halbkugelförmigen Kuppel.",
+    "explanation": "Ein Wasserturm ist ein Zylinder mit einer Halbkugel (der halben Kugel) obenauf, die denselben Radius teilen. Das Gesamtvolumen ist die Summe aus Zylinder und Halbkugel. Eine Halbkugel ist genau die Hälfte einer Kugel, daher ist ihr Volumen ⅔πr³.",
+    "examples": [
+      "Wassertürme und Silos.",
+      "Sternwartenkuppeln.",
+      "Lagertanks."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius des Zylinders und der Kuppel." },
+      "h": { "label": "Körperhöhe", "explanation": "Höhe des zylindrischen Körpers." }
+    },
+    "formulas": [
+      { "label": "Körper (Zylinder)" },
+      { "label": "Kuppel (Halbkugel)" },
+      { "label": "Gesamt" }
+    ],
+    "properties": [
+      { "label": "Körpervolumen" },
+      { "label": "Kuppelvolumen" },
+      { "label": "Gesamtvolumen" }
+    ]
+  },
+  "castle": {
+    "name": "Burg",
+    "description": "Ein zentraler Bergfried mit vier Ecktürmen und kegelförmigen Dächern.",
+    "explanation": "Eine Burg setzt sich aus mehreren einfachen Körpern zusammen: einem quaderförmigen Bergfried, vier zylindrischen Türmen und vier kegelförmigen Dächern. Die Strategie ist wie immer dieselbe — in bekannte Teile zerlegen, jedes Volumen berechnen und alles aufsummieren. Aus Symmetriegründen sind die vier Türme und vier Dächer jeweils identisch, daher multiplizieren wir mit vier.",
+    "examples": [
+      "Spielzeugburgen.",
+      "Schachtürme.",
+      "Festungs- und Turmarchitektur."
+    ],
+    "parameters": {
+      "s": { "label": "Bergfriedgröße", "explanation": "Seitenlänge des quadratischen zentralen Bergfrieds." },
+      "hk": { "label": "Bergfriedhöhe", "explanation": "Höhe des zentralen Bergfrieds." },
+      "r": { "label": "Turmradius", "explanation": "Radius jedes Eckturms." },
+      "ht": { "label": "Turmhöhe", "explanation": "Höhe jedes Eckturms." }
+    },
+    "formulas": [
+      { "label": "Bergfried (Quader)" },
+      { "label": "Turm (Zylinder)" },
+      { "label": "Dach (Kegel)" },
+      { "label": "Gesamt" }
+    ],
+    "properties": [
+      { "label": "Bergfriedvolumen" },
+      { "label": "Alle Türme" },
+      { "label": "Alle Dächer" },
+      { "label": "Gesamtvolumen" }
+    ]
+  }
+}

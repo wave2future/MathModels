@@ -11,6 +11,8 @@ import { AppLayout } from "@/components/layout/AppLayout";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileModelSelector } from "@/components/layout/MobileModelSelector";
 import { ResponsiveModelPage } from "@/components/layout/ResponsiveModelPage";
+import { LanguageProvider, useLanguage, useT } from "@/i18n/LanguageContext";
+import { localizeModel } from "@/i18n/localizeModel";
 
 const FIRST_MODEL = allModels[0].id;
 const LAST_SELECTED_KEY = "mathmodels.lastSelected";
@@ -56,10 +58,12 @@ function ModelPage({
   );
 }
 
-export default function App() {
+function AppInner() {
   const layout = useResponsiveLayout();
   const { theme, toggle: toggleTheme } = useTheme();
   const { isFavorite, toggle: toggleFavorite, favorites } = useFavorites();
+  const { language } = useLanguage();
+  const { t } = useT();
 
   const [selectedId, setSelectedId] = useState<string>(getInitialModelId);
 
@@ -81,7 +85,7 @@ export default function App() {
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
 
-  const model = getModelById(selectedId) ?? allModels[0];
+  const model = localizeModel(getModelById(selectedId) ?? allModels[0], language);
 
   return (
     <ViewSettingsProvider>
@@ -99,7 +103,10 @@ export default function App() {
         }
         topSelector={<MobileModelSelector selectedId={selectedId} onSelect={setSelectedId} />}
       >
-        <ErrorBoundary label="model page">
+        <ErrorBoundary
+          message={t("common.somethingWrongIn", { label: t("errorLabels.modelPage") })}
+          retryLabel={t("common.tryAgain")}
+        >
           {/* key forces a fresh parameter state when switching models. */}
           <ModelPage
             key={model.id}
@@ -111,5 +118,13 @@ export default function App() {
         </ErrorBoundary>
       </AppLayout>
     </ViewSettingsProvider>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <AppInner />
+    </LanguageProvider>
   );
 }

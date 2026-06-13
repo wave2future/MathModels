@@ -1,15 +1,17 @@
 import type { MathModel } from "@/types/model";
 import { Katex } from "@/components/common/Katex";
+import { useT } from "@/i18n/LanguageContext";
 
 interface Props {
   model: MathModel;
 }
 
 export function FormulaPanel({ model }: Props) {
+  const { t } = useT();
   return (
     <section>
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-        Formulas
+        {t("panels.formulas")}
       </h2>
       <div className="space-y-2.5">
         {model.formulas.map((f, i) => (

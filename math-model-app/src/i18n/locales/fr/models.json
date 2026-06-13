@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Fonction de proportionnalité directe",
+    "description": "Une droite passant par l'origine dont la pente est définie par k.",
+    "explanation": "La proportionnalité directe signifie que y varie à un taux constant par rapport à x. Le graphique est toujours une droite passant par l'origine ; seule sa pente change. Plus |k| est grand, plus la droite est inclinée ; le signe de k fait basculer la droite entre les diagonales montante et descendante.",
+    "examples": [
+      "Distance en fonction du temps à vitesse constante (d = vt).",
+      "Prix total en fonction de la quantité à prix unitaire fixe."
+    ],
+    "parameters": {
+      "k": { "label": "Pente", "explanation": "Contrôle l'inclinaison et la direction. k>0 monte, k<0 descend." }
+    },
+    "formulas": [
+      { "label": "Fonction", "description": "Passe par l'origine (0, 0)." },
+      { "label": "Pente", "description": "Variation verticale sur variation horizontale." }
+    ]
+  },
+  "linear": {
+    "name": "Fonction linéaire",
+    "description": "Une droite y = kx + b avec pente et ordonnée à l'origine ajustables.",
+    "explanation": "k contrôle la pente (inclinaison et direction) tandis que b déplace toute la droite vers le haut ou le bas, déterminant où elle croise l'axe des y. Changer b fait glisser la droite verticalement sans modifier son inclinaison.",
+    "examples": [
+      "Tarif de taxi = prix de base + tarif × distance.",
+      "Conversion de température : °F = 1,8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Pente", "explanation": "La pente : à quelle vitesse y varie par unité de x." },
+      "b": { "label": "Ordonnée à l'origine", "explanation": "Là où la droite croise l'axe des y." }
+    },
+    "formulas": [
+      { "label": "Fonction" },
+      { "label": "Ordonnée à l'origine" },
+      { "label": "Abscisse à l'origine", "description": "Lorsque k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Fonction quadratique",
+    "description": "Une parabole y = ax² + bx + c avec sommet et axe de symétrie.",
+    "explanation": "Le signe de a détermine si la parabole s'ouvre vers le haut (a>0) ou vers le bas (a<0) ; la valeur absolue de a contrôle son étroitesse. Le sommet est le point de retournement et l'axe de symétrie est la droite verticale qui le traverse. c est simplement la hauteur à laquelle la courbe croise l'axe des y.",
+    "examples": [
+      "Trajectoire d'une balle lancée (mouvement de projectile).",
+      "Aire d'un rectangle en fonction d'un côté à périmètre fixe."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Direction d'ouverture et largeur. a>0 s'ouvre vers le haut, a<0 vers le bas ; plus |a| est grand, plus c'est étroit." },
+      "b": { "label": "b", "explanation": "Décale l'axe de symétrie vers la gauche ou la droite (avec a)." },
+      "c": { "label": "c", "explanation": "L'ordonnée à l'origine (valeur en x = 0)." }
+    },
+    "formulas": [
+      { "label": "Fonction" },
+      { "label": "Axe de symétrie" },
+      { "label": "Sommet" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Fonction de proportionnalité inverse",
+    "description": "Une hyperbole y = k/x avec les axes comme asymptotes.",
+    "explanation": "Quand x augmente, le produit xy reste égal à k, donc y se rapproche de 0 — la courbe épouse les deux axes (ses asymptotes) mais ne les touche jamais. Les deux branches se trouvent dans des quadrants opposés selon le signe de k.",
+    "examples": [
+      "Vitesse en fonction du temps de trajet pour une distance fixe.",
+      "Pression en fonction du volume d'un gaz à température constante (loi de Boyle)."
+    ],
+    "parameters": {
+      "k": { "label": "Constante", "explanation": "k>0 place les branches dans les quadrants I et III ; k<0 dans II et IV." }
+    },
+    "formulas": [
+      { "label": "Fonction", "description": "x ≠ 0." },
+      { "label": "Asymptotes" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Fonction valeur absolue",
+    "description": "Un graphique en forme de V, y = a|x − h| + k.",
+    "explanation": "La valeur absolue force toutes les sorties au-dessus du sommet, produisant un V symétrique. (h, k) est le coin du V ; a met à l'échelle les branches et, s'il est négatif, retourne le V à l'envers.",
+    "examples": [
+      "Distance par rapport à une valeur cible.",
+      "Magnitude d'une erreur, indépendamment du signe."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Inclinaison et direction du V (a<0 l'ouvre vers le bas)." },
+      "h": { "label": "h", "explanation": "Décalage horizontal du sommet." },
+      "k": { "label": "k", "explanation": "Décalage vertical du sommet." }
+    },
+    "formulas": [
+      { "label": "Forme de base" },
+      { "label": "Forme transformée" },
+      { "label": "Sommet" }
+    ]
+  },
+  "power": {
+    "name": "Fonction puissance",
+    "description": "y = xᵃ — sa forme dépend de l'exposant a.",
+    "explanation": "Une fonction puissance élève x à un exposant fixe. Les exposants entiers sont définis pour tout x, mais les exposants fractionnaires nécessitent x ≥ 0 pour rester réels, donc la courbe n'apparaît alors que du côté droit. Les exposants pairs sont symétriques par rapport à l'axe des y ; les exposants impairs sont symétriques par rapport à l'origine.",
+    "examples": [
+      "Aire ∝ côté² (a = 2).",
+      "Volume ∝ côté³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Exposant", "explanation": "a=1 droite, a=2 parabole, a=3 cubique, a=0,5 racine carrée, a<0 ressemble à une hyperbole." }
+    },
+    "formulas": [
+      { "label": "Fonction" },
+      { "label": "Remarque", "description": "Les bases négatives n'ont pas de valeur réelle pour des exposants fractionnaires." }
+    ]
+  },
+  "exponential": {
+    "name": "Fonction exponentielle",
+    "description": "y = aˣ — croissance rapide (a>1) ou décroissance (0<a<1).",
+    "explanation": "Les fonctions exponentielles multiplient par la base a à chaque pas de x. Quand a>1, la sortie explose vers le haut ; quand 0<a<1, elle décroît vers l'asymptote horizontale y = 0. Toutes passent par (0, 1) car a⁰ = 1.",
+    "examples": [
+      "Intérêts composés.",
+      "Décroissance radioactive (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Base", "explanation": "a>1 croît ; 0<a<1 décroît. Chaque courbe passe par (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Fonction", "description": "a > 0, a ≠ 1." },
+      { "label": "Asymptote" },
+      { "label": "Point d'ancrage" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Fonction logarithmique",
+    "description": "y = logₐ(x) — l'inverse de la fonction exponentielle.",
+    "explanation": "Le logarithme répond à la question « a élevé à quelle puissance donne x ? ». C'est l'image miroir de y = aˣ par rapport à la droite y = x, donc son domaine est x > 0 et elle a une asymptote verticale en x = 0. Toutes les courbes passent par (1, 0).",
+    "examples": [
+      "Échelle de pH.",
+      "Niveaux sonores en décibels.",
+      "Échelle de magnitude de Richter pour les tremblements de terre."
+    ],
+    "parameters": {
+      "a": { "label": "Base", "explanation": "a>1 monte ; 0<a<1 descend. Chaque courbe passe par (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Fonction", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asymptote" },
+      { "label": "Inverse de" }
+    ]
+  },
+  "sine": {
+    "name": "Fonction sinus",
+    "description": "y = A·sin(Bx + C) + D avec amplitude, période et décalages.",
+    "explanation": "A étire l'onde verticalement (amplitude) ; B la compresse horizontalement, fixant la période T = 2π/|B| ; C la décale vers la gauche ou la droite (décalage de phase −C/B) ; D élève ou abaisse la ligne médiane.",
+    "examples": [
+      "Ondes sonores.",
+      "Courant alternatif.",
+      "Marées et durée du jour au cours d'une année."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitude", "explanation": "La moitié de la hauteur entre le maximum et le minimum." },
+      "B": { "label": "Fréquence", "explanation": "Un B plus grand compresse l'onde (période plus courte)." },
+      "C": { "label": "Phase", "explanation": "Décalage horizontal de l'onde." },
+      "D": { "label": "Décalage vertical", "explanation": "Déplace la ligne médiane vers le haut ou le bas." }
+    },
+    "formulas": [
+      { "label": "Forme de base" },
+      { "label": "Forme transformée" },
+      { "label": "Amplitude" },
+      { "label": "Période" },
+      { "label": "Décalage de phase" }
+    ]
+  },
+  "cosine": {
+    "name": "Fonction cosinus",
+    "description": "y = A·cos(Bx + C) + D — une onde sinusoïdale décalée d'un quart de période.",
+    "explanation": "Le cosinus a la même forme que le sinus mais commence à son maximum : cos(x) = sin(x + π/2). Les paramètres ont exactement la même signification — amplitude A, période 2π/|B|, décalage de phase et décalage vertical D.",
+    "examples": [
+      "Position horizontale d'un point sur une roue en rotation.",
+      "Cycles de température saisonniers."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitude", "explanation": "La moitié de la hauteur entre le maximum et le minimum." },
+      "B": { "label": "Fréquence", "explanation": "Un B plus grand compresse l'onde (période plus courte)." },
+      "C": { "label": "Phase", "explanation": "Décalage horizontal de l'onde." },
+      "D": { "label": "Décalage vertical", "explanation": "Déplace la ligne médiane vers le haut ou le bas." }
+    },
+    "formulas": [
+      { "label": "Forme de base" },
+      { "label": "Forme transformée" },
+      { "label": "Amplitude" },
+      { "label": "Période" }
+    ]
+  },
+  "tangent": {
+    "name": "Fonction tangente",
+    "description": "y = A·tan(Bx + C) + D avec des asymptotes verticales répétées.",
+    "explanation": "La tangente se répète tous les π et tend vers ±∞ à chaque asymptote, où cos = 0. Le graphique est dessiné en branches séparées — il n'est jamais relié à travers une asymptote. B détermine la fréquence des asymptotes.",
+    "examples": [
+      "Pente d'une droite pour un angle donné.",
+      "Modélisation d'explosions rapides près d'une limite."
+    ],
+    "parameters": {
+      "A": { "label": "Échelle verticale", "explanation": "Étire les branches verticalement." },
+      "B": { "label": "Fréquence", "explanation": "Contrôle l'espacement des asymptotes (période π/|B|)." },
+      "C": { "label": "Phase", "explanation": "Décalage horizontal." },
+      "D": { "label": "Décalage vertical", "explanation": "Déplace la courbe vers le haut ou le bas." }
+    },
+    "formulas": [
+      { "label": "Forme de base" },
+      { "label": "Forme transformée" },
+      { "label": "Période" },
+      { "label": "Asymptotes" }
+    ]
+  },
+  "piecewise": {
+    "name": "Fonction définie par morceaux",
+    "description": "Des règles différentes sur des intervalles différents, reliées en un point de rupture.",
+    "explanation": "Une fonction définie par morceaux applique une formule différente sur chaque intervalle de son domaine. Ici, le morceau gauche (x < 0) utilise −sx et le morceau droit (x ≥ 0) utilise sx. Les deux morceaux sont dessinés séparément et ne se rejoignent qu'au point de rupture x = 0.",
+    "examples": [
+      "Tranches d'imposition.",
+      "Paliers de frais d'expédition selon le poids.",
+      "Valeur absolue comme deux droites."
+    ],
+    "parameters": {
+      "scale": { "label": "Échelle de pente", "explanation": "Met à l'échelle les deux branches pour observer leur évolution ensemble." }
+    },
+    "formulas": [
+      { "label": "Définition", "description": "Deux règles linéaires se rejoignant en x = 0." }
+    ]
+  },
+  "circle": {
+    "name": "Cercle",
+    "description": "Tous les points à distance r d'un centre (h, k).",
+    "explanation": "Un cercle est l'ensemble des points à une distance fixe r (le rayon) de son centre (h, k). Déplacer h et k fait glisser tout le cercle ; changer r l'agrandit ou le rétrécit. Sa circonférence et son aire ne dépendent que de r.",
+    "examples": [
+      "Roues et engrenages.",
+      "Ondulations sur l'eau.",
+      "Pistes de course circulaires."
+    ],
+    "parameters": {
+      "h": { "label": "Centre x", "explanation": "Position horizontale du centre." },
+      "k": { "label": "Centre y", "explanation": "Position verticale du centre." },
+      "r": { "label": "Rayon", "explanation": "Distance du centre au bord." }
+    },
+    "formulas": [
+      { "label": "Forme standard" },
+      { "label": "Centré à l'origine" },
+      { "label": "Circonférence" },
+      { "label": "Aire" }
+    ],
+    "properties": [
+      { "label": "Circonférence" },
+      { "label": "Aire" },
+      { "label": "Diamètre" }
+    ]
+  },
+  "ellipse": {
+    "name": "Ellipse",
+    "description": "Un cercle étiré avec des demi-axes a et b.",
+    "explanation": "Une ellipse est un cercle mis à l'échelle différemment le long des deux axes. a et b sont les demi-axes majeur et mineur (le plus grand des deux est le « majeur »). Quand a = b, l'ellipse devient un cercle. Son aire est π·a·b.",
+    "examples": [
+      "Orbites planétaires.",
+      "Galeries à écho.",
+      "Engrenages elliptiques."
+    ],
+    "parameters": {
+      "a": { "label": "Demi-axe a", "explanation": "La moitié de la largeur le long de l'axe des x." },
+      "b": { "label": "Demi-axe b", "explanation": "La moitié de la hauteur le long de l'axe des y." }
+    },
+    "formulas": [
+      { "label": "Forme standard" },
+      { "label": "Aire" },
+      { "label": "Foyers (a>b)" }
+    ],
+    "properties": [
+      { "label": "Aire" },
+      { "label": "Distance focale" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hyperbole",
+    "description": "Deux branches opposées avec des asymptotes rectilignes.",
+    "explanation": "Une hyperbole a deux branches en image miroir qui s'ouvrent vers la gauche et la droite, chacune s'approchant des asymptotes y = ±(b/a)x sans les toucher. La simple courbe de proportionnalité inverse y = k/x est aussi une hyperbole — simplement tournée de sorte que les axes eux-mêmes soient ses asymptotes.",
+    "examples": [
+      "Navigation longue distance (LORAN).",
+      "Trajectoire d'un objet échappant à la gravité.",
+      "Ombre d'un cône de lampe sur un mur."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Fixe les sommets en (±a, 0) et la pente de l'asymptote." },
+      "b": { "label": "b", "explanation": "Avec a, fixe la pente de l'asymptote ±b/a." }
+    },
+    "formulas": [
+      { "label": "Forme standard" },
+      { "label": "Asymptotes" },
+      { "label": "Sommets" }
+    ],
+    "properties": [
+      { "label": "Pente de l'asymptote" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabole (conique)",
+    "description": "La conique y² = 2px avec un foyer et une directrice.",
+    "explanation": "Chaque point d'une parabole est équidistant d'un point fixe (le foyer) et d'une droite fixe (la directrice). Pour y² = 2px, la courbe s'ouvre vers la droite, le foyer se trouve en (p/2, 0), et la directrice est la droite verticale x = −p/2. Un p plus grand donne une ouverture plus large.",
+    "examples": [
+      "Antennes paraboliques et réflecteurs de phares.",
+      "Câbles de ponts suspendus.",
+      "Trajectoires de projectiles."
+    ],
+    "parameters": {
+      "p": { "label": "Paramètre p", "explanation": "Paramètre lié à la distance ; p>0 ouvre vers la droite." }
+    },
+    "formulas": [
+      { "label": "Forme standard" },
+      { "label": "Foyer" },
+      { "label": "Directrice" }
+    ],
+    "properties": [
+      { "label": "Foyer x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Pavé droit (parallélépipède rectangle)",
+    "description": "Une boîte avec une longueur, une largeur et une hauteur.",
+    "explanation": "Un pavé droit possède trois paires de faces rectangulaires identiques. Son volume multiplie les trois longueurs d'arêtes ; son aire totale additionne les aires des six faces.",
+    "examples": [
+      "Briques et boîtes.",
+      "Pièces et bâtiments.",
+      "Aquariums."
+    ],
+    "parameters": {
+      "l": { "label": "Longueur", "explanation": "Dimension le long de l'axe des x." },
+      "w": { "label": "Largeur", "explanation": "Dimension le long de l'axe des z." },
+      "h": { "label": "Hauteur", "explanation": "Dimension le long de l'axe des y." }
+    },
+    "formulas": [
+      { "label": "Aire totale" },
+      { "label": "Volume" },
+      { "label": "Diagonale spatiale" }
+    ],
+    "properties": [
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ]
+  },
+  "cube": {
+    "name": "Cube",
+    "description": "Un pavé droit dont toutes les arêtes sont égales.",
+    "explanation": "Un cube est le pavé droit le plus symétrique : ses 12 arêtes sont égales et ses 6 faces sont des carrés congruents. Doubler l'arête multiplie le volume par 8.",
+    "examples": [
+      "Dés.",
+      "Rubik's Cube.",
+      "Morceaux de sucre."
+    ],
+    "parameters": {
+      "a": { "label": "Arête", "explanation": "Longueur de chaque arête." }
+    },
+    "formulas": [
+      { "label": "Aire totale" },
+      { "label": "Volume" },
+      { "label": "Diagonale spatiale" }
+    ],
+    "properties": [
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ]
+  },
+  "cylinder": {
+    "name": "Cylindre",
+    "description": "Deux bases circulaires reliées par une surface courbe.",
+    "explanation": "Dérouler la surface latérale d'un cylindre donne un rectangle de largeur 2πr et de hauteur h, ce qui explique pourquoi l'aire latérale est 2πrh. En ajoutant les deux extrémités circulaires, on obtient l'aire totale.",
+    "examples": [
+      "Boîtes de conserve et tuyaux.",
+      "Verres à boire.",
+      "Tambours rotatifs."
+    ],
+    "parameters": {
+      "r": { "label": "Rayon", "explanation": "Rayon de la base circulaire." },
+      "h": { "label": "Hauteur", "explanation": "Distance entre les deux bases." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Aire latérale" },
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Aire latérale" },
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Prisme triangulaire",
+    "description": "Un triangle prolongé sur sa longueur.",
+    "explanation": "Un prisme conserve la même section transversale sur toute sa longueur, donc son volume est simplement l'aire de la base multipliée par la longueur. Ici, la base est un triangle d'aire ½·b·hₜ.",
+    "examples": [
+      "Barres de chocolat Toblerone.",
+      "Fermes de toiture.",
+      "Prismes en verre optique."
+    ],
+    "parameters": {
+      "b": { "label": "Base du triangle", "explanation": "Longueur de la base de la section triangulaire." },
+      "ht": { "label": "Hauteur du triangle", "explanation": "Hauteur de la section triangulaire." },
+      "H": { "label": "Longueur du prisme", "explanation": "Distance sur laquelle le triangle est prolongé." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Prisme quadrangulaire",
+    "description": "Une base rectangulaire prolongée en prisme.",
+    "explanation": "Un prisme quadrangulaire a une base rectangulaire (quadrilatère). Comme tout prisme, son volume est l'aire de la base multipliée par la hauteur. Avec une base rectangulaire, c'est identique à un pavé droit : B = lw.",
+    "examples": [
+      "Poutres et poteaux.",
+      "Boîtes d'emballage.",
+      "Colonnes de bâtiments."
+    ],
+    "parameters": {
+      "l": { "label": "Longueur de la base", "explanation": "Longueur de la base rectangulaire." },
+      "w": { "label": "Largeur de la base", "explanation": "Largeur de la base rectangulaire." },
+      "H": { "label": "Hauteur du prisme", "explanation": "Hauteur du prisme." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Prisme pentagonal",
+    "description": "Un pentagone régulier prolongé en prisme.",
+    "explanation": "La base est un pentagone régulier, dont l'aire utilise la formule générale des polygones réguliers avec n = 5. La multiplier par la hauteur donne le volume du prisme.",
+    "examples": [
+      "Crayons à section pentagonale.",
+      "Certains écrous et boulons.",
+      "Colonnes architecturales."
+    ],
+    "parameters": {
+      "a": { "label": "Longueur du côté", "explanation": "Longueur du côté du pentagone régulier." },
+      "h": { "label": "Hauteur du prisme", "explanation": "Hauteur du prisme." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Prisme hexagonal",
+    "description": "Un hexagone régulier prolongé en prisme.",
+    "explanation": "Un hexagone régulier est composé de six triangles équilatéraux, ce qui donne la formule d'aire de base bien nette (3√3/2)·a². Les prismes hexagonaux pavent l'espace efficacement, ce qui explique pourquoi les abeilles construisent des cellules hexagonales.",
+    "examples": [
+      "Crayons.",
+      "Cellules de nid d'abeilles.",
+      "Écrous et boulons."
+    ],
+    "parameters": {
+      "a": { "label": "Longueur du côté", "explanation": "Longueur du côté de l'hexagone régulier." },
+      "h": { "label": "Hauteur du prisme", "explanation": "Hauteur du prisme." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Pyramide triangulaire",
+    "description": "Une base triangulaire régulière se rétrécissant vers un sommet.",
+    "explanation": "Le volume d'une pyramide vaut toujours un tiers de celui du prisme ayant la même base et la même hauteur. Ici, la base est un triangle équilatéral d'aire (√3/4)·a².",
+    "examples": [
+      "Dés tétraédriques (d4).",
+      "Formes moléculaires (méthane).",
+      "Toits en forme de pyramide."
+    ],
+    "parameters": {
+      "a": { "label": "Côté de la base", "explanation": "Longueur du côté de la base équilatérale." },
+      "h": { "label": "Hauteur", "explanation": "Hauteur perpendiculaire de la base au sommet." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Pyramide quadrangulaire",
+    "description": "Une base rectangulaire se rétrécissant vers un sommet.",
+    "explanation": "C'est la forme classique de la pyramide « égyptienne » : une base rectangulaire s'élevant vers un seul sommet. Son volume est un tiers de celui du pavé droit correspondant (aire de la base × hauteur).",
+    "examples": [
+      "La grande pyramide de Gizeh.",
+      "Toits en forme de pyramide.",
+      "Formes de tentes."
+    ],
+    "parameters": {
+      "l": { "label": "Longueur de la base", "explanation": "Longueur de la base rectangulaire." },
+      "w": { "label": "Largeur de la base", "explanation": "Largeur de la base rectangulaire." },
+      "h": { "label": "Hauteur", "explanation": "Hauteur perpendiculaire de la base au sommet." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Pyramide pentagonale",
+    "description": "Une base pentagonale régulière se rétrécissant vers un sommet.",
+    "explanation": "Une pyramide sur une base pentagonale régulière. L'aire de la base utilise la formule des polygones réguliers avec n = 5 ; le volume est un tiers de l'aire de la base multipliée par la hauteur, comme pour toute pyramide.",
+    "examples": [
+      "Flèches décoratives.",
+      "Formes cristallines.",
+      "Variantes de dés de jeu."
+    ],
+    "parameters": {
+      "a": { "label": "Longueur du côté", "explanation": "Longueur du côté de la base pentagonale régulière." },
+      "h": { "label": "Hauteur", "explanation": "Hauteur perpendiculaire de la base au sommet." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Pyramide hexagonale",
+    "description": "Une base hexagonale régulière se rétrécissant vers un sommet.",
+    "explanation": "Une pyramide sur une base hexagonale régulière. Comme toujours pour les pyramides, V = ⅓·B·h, où B est l'aire de l'hexagone (3√3/2)·a².",
+    "examples": [
+      "Pointes de crayon.",
+      "Flèches et fleurons.",
+      "Terminaisons de cristaux."
+    ],
+    "parameters": {
+      "a": { "label": "Longueur du côté", "explanation": "Longueur du côté de la base hexagonale régulière." },
+      "h": { "label": "Hauteur", "explanation": "Hauteur perpendiculaire de la base au sommet." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Volume" }
+    ]
+  },
+  "cone": {
+    "name": "Cône",
+    "description": "Une base circulaire se rétrécissant vers un point.",
+    "explanation": "Un cône est une pyramide à base circulaire, donc son volume vaut aussi un tiers du cylindre correspondant. La hauteur latérale l (et non la hauteur verticale) déterminent l'aire latérale courbe πrl.",
+    "examples": [
+      "Cônes de glace.",
+      "Cônes de signalisation.",
+      "Entonnoirs."
+    ],
+    "parameters": {
+      "r": { "label": "Rayon", "explanation": "Rayon de la base circulaire." },
+      "h": { "label": "Hauteur", "explanation": "Hauteur perpendiculaire de la base au sommet." }
+    },
+    "formulas": [
+      { "label": "Aire de la base" },
+      { "label": "Hauteur latérale" },
+      { "label": "Aire latérale" },
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire de la base" },
+      { "label": "Hauteur latérale" },
+      { "label": "Aire latérale" },
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ]
+  },
+  "sphere": {
+    "name": "Sphère",
+    "description": "Tous les points à distance r d'un centre, en 3D.",
+    "explanation": "Une sphère est l'analogue 3D d'un cercle. Son aire est exactement quatre fois l'aire de son cercle « ombre » (4πr²), et son volume croît avec le cube du rayon.",
+    "examples": [
+      "Balles et planètes.",
+      "Bulles.",
+      "Roulements à billes."
+    ],
+    "parameters": {
+      "r": { "label": "Rayon", "explanation": "Distance du centre à la surface." }
+    },
+    "formulas": [
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Tronc de cône",
+    "description": "Un cône dont la pointe a été coupée parallèlement à la base.",
+    "explanation": "Un tronc de cône est ce qui reste d'un cône après avoir coupé le sommet parallèlement à la base. Son volume combine les deux rayons avec le terme croisé Rr. La hauteur latérale utilise la différence R − r, et non R + r.",
+    "examples": [
+      "Seaux et abat-jours.",
+      "Gobelets.",
+      "Tours de refroidissement (partie inférieure)."
+    ],
+    "parameters": {
+      "R": { "label": "Rayon inférieur", "explanation": "Rayon du cercle le plus grand (inférieur)." },
+      "r": { "label": "Rayon supérieur", "explanation": "Rayon du cercle le plus petit (supérieur)." },
+      "h": { "label": "Hauteur", "explanation": "Distance verticale entre les deux cercles." }
+    },
+    "formulas": [
+      { "label": "Hauteur latérale" },
+      { "label": "Aire latérale" },
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Hauteur latérale" },
+      { "label": "Aire latérale" },
+      { "label": "Aire totale" },
+      { "label": "Volume" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Tronc de pyramide",
+    "description": "Une pyramide à base polygonale régulière dont le sommet a été coupé.",
+    "explanation": "Couper le sommet d'une pyramide parallèlement à sa base laisse un tronc avec deux faces polygonales semblables. La formule du volume fait la moyenne des deux aires de base B₁ et B₂ avec leur moyenne géométrique √(B₁B₂).",
+    "examples": [
+      "Abat-jours.",
+      "Pots de fleurs.",
+      "Sommets de bâtiments en gradins."
+    ],
+    "parameters": {
+      "n": { "label": "Nombre de côtés", "explanation": "Nombre de côtés du polygone régulier de base." },
+      "aBottom": { "label": "Côté inférieur", "explanation": "Longueur du côté du polygone le plus grand (inférieur)." },
+      "aTop": { "label": "Côté supérieur", "explanation": "Longueur du côté du polygone le plus petit (supérieur)." },
+      "h": { "label": "Hauteur", "explanation": "Distance verticale entre les deux bases." }
+    },
+    "formulas": [
+      { "label": "Volume" },
+      { "label": "Bases" }
+    ],
+    "properties": [
+      { "label": "Aire de la base inférieure" },
+      { "label": "Aire de la base supérieure" },
+      { "label": "Volume" }
+    ]
+  },
+  "house": {
+    "name": "Maison",
+    "description": "Un corps en forme de pavé droit avec un toit en prisme triangulaire.",
+    "explanation": "Pour trouver le volume d'un solide combiné, divisez-le en solides de base, calculez chacun, puis additionnez. Une maison est un pavé droit (les murs) plus un prisme triangulaire (le toit). Additionnez les deux volumes pour obtenir le total ; la face de contact où ils se rejoignent est interne et ne fait pas partie de la surface extérieure.",
+    "examples": [
+      "Formes simples de maisons et de cabanes.",
+      "Granges.",
+      "Nichoirs."
+    ],
+    "parameters": {
+      "l": { "label": "Longueur", "explanation": "Largeur de la maison (et portée du toit)." },
+      "w": { "label": "Profondeur", "explanation": "Profondeur de la maison." },
+      "h": { "label": "Hauteur des murs", "explanation": "Hauteur des murs du pavé droit." },
+      "hr": { "label": "Hauteur du toit", "explanation": "Hauteur du toit triangulaire." }
+    },
+    "formulas": [
+      { "label": "Corps (pavé droit)" },
+      { "label": "Toit (prisme triangulaire)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume du corps" },
+      { "label": "Volume du toit" },
+      { "label": "Volume total" }
+    ]
+  },
+  "pencil": {
+    "name": "Crayon",
+    "description": "Un corps cylindrique surmonté d'une pointe conique.",
+    "explanation": "Un crayon est un cylindre (le corps) avec un cône (la pointe taillée) partageant le même rayon. Le volume total est le cylindre plus le cône. Comme les deux partagent la même face circulaire de contact, aucune surface extérieure ne la traverse.",
+    "examples": [
+      "Crayons et craies.",
+      "Fusées (corps + cône avant).",
+      "Certaines bouteilles."
+    ],
+    "parameters": {
+      "r": { "label": "Rayon", "explanation": "Rayon du crayon." },
+      "h": { "label": "Longueur du corps", "explanation": "Longueur du corps cylindrique." },
+      "ht": { "label": "Longueur de la pointe", "explanation": "Longueur de la pointe conique taillée." }
+    },
+    "formulas": [
+      { "label": "Corps (cylindre)" },
+      { "label": "Pointe (cône)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume du corps" },
+      { "label": "Volume de la pointe" },
+      { "label": "Volume total" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Glace",
+    "description": "Un cône contenant une boule sphérique.",
+    "explanation": "Une glace est un cône (pointe vers le bas) avec une sphère posée dessus. Additionnez les volumes du cône et de la sphère pour obtenir le total. En réalité, une partie de la boule se trouve à l'intérieur de l'ouverture du cône, donc une réponse rigoureuse devrait soustraire ce chevauchement — un bon exemple de quand soustraire.",
+    "examples": [
+      "Cônes de glace.",
+      "Fleurons décoratifs.",
+      "Toupies."
+    ],
+    "parameters": {
+      "r": { "label": "Rayon du cône", "explanation": "Rayon de l'ouverture supérieure du cône." },
+      "h": { "label": "Hauteur du cône", "explanation": "Longueur du cône (pointe vers le bas)." },
+      "R": { "label": "Rayon de la boule", "explanation": "Rayon de la boule sphérique." }
+    },
+    "formulas": [
+      { "label": "Cône" },
+      { "label": "Boule (sphère)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume du cône" },
+      { "label": "Volume de la boule" },
+      { "label": "Volume total" }
+    ]
+  },
+  "water-tower": {
+    "name": "Château d'eau",
+    "description": "Un cylindre coiffé d'un dôme hémisphérique.",
+    "explanation": "Un château d'eau est un cylindre avec une demi-sphère (hémisphère) au sommet, partageant le même rayon. Le volume total additionne le cylindre et l'hémisphère. Un hémisphère est exactement la moitié d'une sphère, donc son volume est ⅔πr³.",
+    "examples": [
+      "Châteaux d'eau et silos.",
+      "Dômes d'observatoires.",
+      "Réservoirs de stockage."
+    ],
+    "parameters": {
+      "r": { "label": "Rayon", "explanation": "Rayon du cylindre et du dôme." },
+      "h": { "label": "Hauteur du corps", "explanation": "Hauteur du corps cylindrique." }
+    },
+    "formulas": [
+      { "label": "Corps (cylindre)" },
+      { "label": "Dôme (hémisphère)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume du corps" },
+      { "label": "Volume du dôme" },
+      { "label": "Volume total" }
+    ]
+  },
+  "castle": {
+    "name": "Château",
+    "description": "Un donjon central avec quatre tours d'angle et des toits coniques.",
+    "explanation": "Un château combine plusieurs solides de base : un donjon en pavé droit, quatre tours cylindriques et quatre toits coniques. La stratégie est toujours la même — décomposer en éléments connus, calculer chaque volume, puis tout additionner. Par symétrie, les quatre tours et les quatre toits sont identiques, donc on multiplie par quatre.",
+    "examples": [
+      "Châteaux jouets.",
+      "Tours d'échecs.",
+      "Architecture de forteresses et de tours."
+    ],
+    "parameters": {
+      "s": { "label": "Taille du donjon", "explanation": "Longueur du côté du donjon central carré." },
+      "hk": { "label": "Hauteur du donjon", "explanation": "Hauteur du donjon central." },
+      "r": { "label": "Rayon des tours", "explanation": "Rayon de chaque tour d'angle." },
+      "ht": { "label": "Hauteur des tours", "explanation": "Hauteur de chaque tour d'angle." }
+    },
+    "formulas": [
+      { "label": "Donjon (pavé droit)" },
+      { "label": "Tour (cylindre)" },
+      { "label": "Toit (cône)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Volume du donjon" },
+      { "label": "Toutes les tours" },
+      { "label": "Tous les toits" },
+      { "label": "Volume total" }
+    ]
+  }
+}

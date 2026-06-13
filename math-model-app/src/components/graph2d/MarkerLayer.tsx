@@ -1,5 +1,7 @@
 import type { Marker2D } from "@/types/model";
 import type { Projection } from "./projection";
+import { useT } from "@/i18n/LanguageContext";
+import { translateGraphLabel } from "@/i18n/graphLabels";
 
 interface Props {
   markers: Marker2D[];
@@ -10,6 +12,7 @@ interface Props {
 /** Draws important points (intercepts, vertex, center, foci...) with labels. */
 export function MarkerLayer({ markers, proj, showLabels }: Props) {
   const { toPx, toPy, width, height } = proj;
+  const { strings } = useT();
 
   return (
     <g>
@@ -38,7 +41,7 @@ export function MarkerLayer({ markers, proj, showLabels }: Props) {
                 className="fill-slate-700 dark:fill-slate-200"
                 style={{ paintOrder: "stroke" }}
               >
-                {m.label}
+                {translateGraphLabel(m.label, strings)}
               </text>
             )}
           </g>

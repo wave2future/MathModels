@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Direct Proportional Function",
+    "description": "A straight line through the origin whose steepness is set by k.",
+    "explanation": "Direct proportion means y changes at a constant rate with x. The graph is always a line through the origin; only its slope changes. Larger |k| means a steeper line; the sign of k flips the line between the rising and falling diagonals.",
+    "examples": [
+      "Distance vs time at constant speed (d = vt).",
+      "Total price vs quantity at a fixed unit price."
+    ],
+    "parameters": {
+      "k": { "label": "Slope", "explanation": "Controls the steepness and direction. k>0 rises, k<0 falls." }
+    },
+    "formulas": [
+      { "label": "Function", "description": "Passes through the origin (0, 0)." },
+      { "label": "Slope", "description": "Rise over run." }
+    ]
+  },
+  "linear": {
+    "name": "Linear Function",
+    "description": "A straight line y = kx + b with adjustable slope and intercept.",
+    "explanation": "k controls the slope (steepness and direction) while b shifts the whole line up or down, setting where it crosses the y-axis. Changing b slides the line vertically without changing its tilt.",
+    "examples": [
+      "Taxi fare = base fare + rate × distance.",
+      "Temperature conversion: °F = 1.8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Slope", "explanation": "The slope: how fast y changes per unit x." },
+      "b": { "label": "y-intercept", "explanation": "Where the line crosses the y-axis." }
+    },
+    "formulas": [
+      { "label": "Function" },
+      { "label": "y-intercept" },
+      { "label": "x-intercept", "description": "When k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Quadratic Function",
+    "description": "A parabola y = ax² + bx + c with vertex and axis of symmetry.",
+    "explanation": "The sign of a decides whether the parabola opens upward (a>0) or downward (a<0); the magnitude of a controls how narrow it is. The vertex is the turning point and the axis of symmetry is the vertical line through it. c is simply the height where the curve crosses the y-axis.",
+    "examples": [
+      "Path of a thrown ball (projectile motion).",
+      "Area of a rectangle as a function of one side with fixed perimeter."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Opening direction & width. a>0 opens up, a<0 opens down; larger |a| is narrower." },
+      "b": { "label": "b", "explanation": "Shifts the axis of symmetry left/right (together with a)." },
+      "c": { "label": "c", "explanation": "The y-intercept (value at x = 0)." }
+    },
+    "formulas": [
+      { "label": "Function" },
+      { "label": "Axis of symmetry" },
+      { "label": "Vertex" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Inverse Proportional Function",
+    "description": "A hyperbola y = k/x with the axes as asymptotes.",
+    "explanation": "As x grows the product xy stays equal to k, so y shrinks toward 0 — the curve hugs both axes (its asymptotes) but never touches them. The two branches sit in opposite quadrants depending on the sign of k.",
+    "examples": [
+      "Speed vs travel time for a fixed distance.",
+      "Pressure vs volume of a gas at constant temperature (Boyle's law)."
+    ],
+    "parameters": {
+      "k": { "label": "Constant", "explanation": "k>0 puts the branches in quadrants I & III; k<0 in II & IV." }
+    },
+    "formulas": [
+      { "label": "Function", "description": "x ≠ 0." },
+      { "label": "Asymptotes" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Absolute Value Function",
+    "description": "A V-shaped graph y = a|x − h| + k.",
+    "explanation": "The absolute value forces all outputs above the vertex, producing a symmetric V. (h, k) is the corner of the V; a scales the arms and, if negative, flips the V upside-down.",
+    "examples": [
+      "Distance from a target value.",
+      "Error magnitude regardless of sign."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Steepness and direction of the V (a<0 makes it open downward)." },
+      "h": { "label": "h", "explanation": "Horizontal shift of the vertex." },
+      "k": { "label": "k", "explanation": "Vertical shift of the vertex." }
+    },
+    "formulas": [
+      { "label": "Basic" },
+      { "label": "Transformed" },
+      { "label": "Vertex" }
+    ]
+  },
+  "power": {
+    "name": "Power Function",
+    "description": "y = xᵃ — its shape depends on the exponent a.",
+    "explanation": "A power function raises x to a fixed exponent. Integer exponents are defined for all x, but fractional exponents need x ≥ 0 to stay real, so the curve only appears on the right side there. Even exponents are symmetric about the y-axis; odd exponents are symmetric about the origin.",
+    "examples": [
+      "Area ∝ side² (a = 2).",
+      "Volume ∝ side³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Exponent", "explanation": "a=1 line, a=2 parabola, a=3 cubic, a=0.5 square root, a<0 hyperbola-like." }
+    },
+    "formulas": [
+      { "label": "Function" },
+      { "label": "Note", "description": "Negative bases have no real value for fractional exponents." }
+    ]
+  },
+  "exponential": {
+    "name": "Exponential Function",
+    "description": "y = aˣ — rapid growth (a>1) or decay (0<a<1).",
+    "explanation": "Exponential functions multiply by the base a for each step in x. When a>1 the output explodes upward; when 0<a<1 it decays toward the horizontal asymptote y = 0. All of them pass through (0, 1) because a⁰ = 1.",
+    "examples": [
+      "Compound interest.",
+      "Radioactive decay (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Base", "explanation": "a>1 grows; 0<a<1 decays. Every curve passes through (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Function", "description": "a > 0, a ≠ 1." },
+      { "label": "Asymptote" },
+      { "label": "Anchor point" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Logarithmic Function",
+    "description": "y = logₐ(x) — the inverse of the exponential function.",
+    "explanation": "The logarithm answers 'a to what power gives x?'. It is the mirror image of y = aˣ across the line y = x, so its domain is x > 0 and it has a vertical asymptote at x = 0. All curves pass through (1, 0).",
+    "examples": [
+      "pH scale.",
+      "Decibel sound levels.",
+      "Richter earthquake scale."
+    ],
+    "parameters": {
+      "a": { "label": "Base", "explanation": "a>1 rises; 0<a<1 falls. Every curve passes through (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Function", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Asymptote" },
+      { "label": "Inverse of" }
+    ]
+  },
+  "sine": {
+    "name": "Sine Function",
+    "description": "y = A·sin(Bx + C) + D with amplitude, period and shifts.",
+    "explanation": "A stretches the wave vertically (amplitude); B compresses it horizontally, setting the period T = 2π/|B|; C slides it left/right (phase shift −C/B); D raises or lowers the midline.",
+    "examples": [
+      "Sound waves.",
+      "Alternating current.",
+      "Tides and daylight hours over a year."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitude", "explanation": "Half the height between max and min." },
+      "B": { "label": "Frequency", "explanation": "Larger B squeezes the wave (shorter period)." },
+      "C": { "label": "Phase", "explanation": "Horizontal shift of the wave." },
+      "D": { "label": "Vertical shift", "explanation": "Moves the midline up or down." }
+    },
+    "formulas": [
+      { "label": "Basic" },
+      { "label": "Transformed" },
+      { "label": "Amplitude" },
+      { "label": "Period" },
+      { "label": "Phase shift" }
+    ]
+  },
+  "cosine": {
+    "name": "Cosine Function",
+    "description": "y = A·cos(Bx + C) + D — a sine wave shifted by a quarter period.",
+    "explanation": "Cosine has the same shape as sine but starts at its maximum: cos(x) = sin(x + π/2). The parameters mean exactly the same things — amplitude A, period 2π/|B|, phase shift, and vertical shift D.",
+    "examples": [
+      "Horizontal position of a point on a rotating wheel.",
+      "Seasonal temperature cycles."
+    ],
+    "parameters": {
+      "A": { "label": "Amplitude", "explanation": "Half the height between max and min." },
+      "B": { "label": "Frequency", "explanation": "Larger B squeezes the wave (shorter period)." },
+      "C": { "label": "Phase", "explanation": "Horizontal shift of the wave." },
+      "D": { "label": "Vertical shift", "explanation": "Moves the midline up or down." }
+    },
+    "formulas": [
+      { "label": "Basic" },
+      { "label": "Transformed" },
+      { "label": "Amplitude" },
+      { "label": "Period" }
+    ]
+  },
+  "tangent": {
+    "name": "Tangent Function",
+    "description": "y = A·tan(Bx + C) + D with repeating vertical asymptotes.",
+    "explanation": "Tangent repeats every π and shoots off to ±∞ at each asymptote, where cos = 0. The graph is drawn as separate branches — it is never connected across an asymptote. B sets how often the asymptotes occur.",
+    "examples": [
+      "Slope of a line at a given angle.",
+      "Modeling rapid blow-ups near a limit."
+    ],
+    "parameters": {
+      "A": { "label": "Vertical scale", "explanation": "Stretches the branches vertically." },
+      "B": { "label": "Frequency", "explanation": "Controls the spacing of the asymptotes (period π/|B|)." },
+      "C": { "label": "Phase", "explanation": "Horizontal shift." },
+      "D": { "label": "Vertical shift", "explanation": "Moves the curve up or down." }
+    },
+    "formulas": [
+      { "label": "Basic" },
+      { "label": "Transformed" },
+      { "label": "Period" },
+      { "label": "Asymptotes" }
+    ]
+  },
+  "piecewise": {
+    "name": "Piecewise Function",
+    "description": "Different rules on different intervals, joined at a breakpoint.",
+    "explanation": "A piecewise function applies a different formula on each interval of its domain. Here the left piece (x < 0) uses −sx and the right piece (x ≥ 0) uses sx. The two pieces are drawn separately and only meet at the breakpoint x = 0.",
+    "examples": [
+      "Tax brackets.",
+      "Shipping cost tiers by weight.",
+      "Absolute value as two lines."
+    ],
+    "parameters": {
+      "scale": { "label": "Slope scale", "explanation": "Scales both arms so you can watch the pieces change together." }
+    },
+    "formulas": [
+      { "label": "Definition", "description": "Two linear rules meeting at x = 0." }
+    ]
+  },
+  "circle": {
+    "name": "Circle",
+    "description": "All points at distance r from a center (h, k).",
+    "explanation": "A circle is the set of points a fixed distance r (the radius) from its center (h, k). Moving h and k slides the whole circle; changing r grows or shrinks it. Its circumference and area depend only on r.",
+    "examples": [
+      "Wheels and gears.",
+      "Ripples on water.",
+      "Circular running tracks."
+    ],
+    "parameters": {
+      "h": { "label": "Center x", "explanation": "Horizontal position of the center." },
+      "k": { "label": "Center y", "explanation": "Vertical position of the center." },
+      "r": { "label": "Radius", "explanation": "Distance from the center to the edge." }
+    },
+    "formulas": [
+      { "label": "Standard form" },
+      { "label": "Centered at origin" },
+      { "label": "Circumference" },
+      { "label": "Area" }
+    ],
+    "properties": [
+      { "label": "Circumference" },
+      { "label": "Area" },
+      { "label": "Diameter" }
+    ]
+  },
+  "ellipse": {
+    "name": "Ellipse",
+    "description": "A stretched circle with semi-axes a and b.",
+    "explanation": "An ellipse is a circle scaled by different amounts along the two axes. a and b are the semi-major and semi-minor axes (whichever is larger is 'major'). When a = b the ellipse becomes a circle. Its area is π·a·b.",
+    "examples": [
+      "Planetary orbits.",
+      "Whispering galleries.",
+      "Elliptical gears."
+    ],
+    "parameters": {
+      "a": { "label": "Semi-axis a", "explanation": "Half the width along the x-axis." },
+      "b": { "label": "Semi-axis b", "explanation": "Half the height along the y-axis." }
+    },
+    "formulas": [
+      { "label": "Standard form" },
+      { "label": "Area" },
+      { "label": "Foci (a>b)" }
+    ],
+    "properties": [
+      { "label": "Area" },
+      { "label": "Focal distance" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hyperbola",
+    "description": "Two opposing branches with straight-line asymptotes.",
+    "explanation": "A hyperbola has two mirror-image branches that open left and right, each approaching the asymptotes y = ±(b/a)x without touching them. The simple inverse-proportional curve y = k/x is a hyperbola too — just rotated so the axes themselves are its asymptotes.",
+    "examples": [
+      "Long-range navigation (LORAN).",
+      "The path of an object escaping gravity.",
+      "Shadow of a lamp cone on a wall."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Sets the vertices at (±a, 0) and the asymptote slope." },
+      "b": { "label": "b", "explanation": "Together with a sets the asymptote slope ±b/a." }
+    },
+    "formulas": [
+      { "label": "Standard form" },
+      { "label": "Asymptotes" },
+      { "label": "Vertices" }
+    ],
+    "properties": [
+      { "label": "Asymptote slope" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabola (Conic)",
+    "description": "The conic y² = 2px with a focus and directrix.",
+    "explanation": "Every point on a parabola is equidistant from a fixed point (the focus) and a fixed line (the directrix). For y² = 2px the curve opens to the right, the focus sits at (p/2, 0), and the directrix is the vertical line x = −p/2. Larger p makes a wider opening.",
+    "examples": [
+      "Satellite dishes and headlight reflectors.",
+      "Suspension bridge cables.",
+      "Projectile paths."
+    ],
+    "parameters": {
+      "p": { "label": "Parameter p", "explanation": "Distance-related parameter; p>0 opens to the right." }
+    },
+    "formulas": [
+      { "label": "Standard form" },
+      { "label": "Focus" },
+      { "label": "Directrix" }
+    ],
+    "properties": [
+      { "label": "Focus x" }
+    ]
+  },
+  "cuboid": {
+    "name": "Cuboid (Rectangular Prism)",
+    "description": "A box with length, width and height.",
+    "explanation": "A cuboid has three pairs of identical rectangular faces. Its volume multiplies the three edge lengths; its surface area sums the areas of all six faces.",
+    "examples": [
+      "Bricks and boxes.",
+      "Rooms and buildings.",
+      "Aquariums."
+    ],
+    "parameters": {
+      "l": { "label": "Length", "explanation": "Size along the x-axis." },
+      "w": { "label": "Width", "explanation": "Size along the z-axis." },
+      "h": { "label": "Height", "explanation": "Size along the y-axis." }
+    },
+    "formulas": [
+      { "label": "Surface area" },
+      { "label": "Volume" },
+      { "label": "Space diagonal" }
+    ],
+    "properties": [
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ]
+  },
+  "cube": {
+    "name": "Cube",
+    "description": "A cuboid with all edges equal.",
+    "explanation": "A cube is the most symmetric cuboid: all 12 edges are equal and all 6 faces are congruent squares. Doubling the edge multiplies the volume by 8.",
+    "examples": [
+      "Dice.",
+      "Rubik's cube.",
+      "Sugar cubes."
+    ],
+    "parameters": {
+      "a": { "label": "Edge", "explanation": "Length of every edge." }
+    },
+    "formulas": [
+      { "label": "Surface area" },
+      { "label": "Volume" },
+      { "label": "Space diagonal" }
+    ],
+    "properties": [
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ]
+  },
+  "cylinder": {
+    "name": "Cylinder",
+    "description": "Two circular bases joined by a curved surface.",
+    "explanation": "Unrolling a cylinder's curved side gives a rectangle of width 2πr and height h, which is why the lateral area is 2πrh. Adding the two circular ends gives the total surface area.",
+    "examples": [
+      "Cans and pipes.",
+      "Drinking glasses.",
+      "Roller drums."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius of the circular base." },
+      "h": { "label": "Height", "explanation": "Distance between the two bases." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Lateral area" },
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Lateral area" },
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Triangular Prism",
+    "description": "A triangle swept along its length.",
+    "explanation": "A prism keeps the same cross-section all along its length, so its volume is simply the base area times the length. Here the base is a triangle of area ½·b·hₜ.",
+    "examples": [
+      "Toblerone bars.",
+      "Roof trusses.",
+      "Optical glass prisms."
+    ],
+    "parameters": {
+      "b": { "label": "Triangle base", "explanation": "Base length of the triangular cross-section." },
+      "ht": { "label": "Triangle height", "explanation": "Height of the triangular cross-section." },
+      "H": { "label": "Prism length", "explanation": "How far the triangle is swept." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Quadrangular Prism",
+    "description": "A rectangular base swept into a prism.",
+    "explanation": "A quadrangular prism has a rectangular (quadrilateral) base. Like every prism its volume is the base area times the height. With a rectangular base this is the same as a cuboid: B = lw.",
+    "examples": [
+      "Beams and posts.",
+      "Packaging boxes.",
+      "Building columns."
+    ],
+    "parameters": {
+      "l": { "label": "Base length", "explanation": "Length of the rectangular base." },
+      "w": { "label": "Base width", "explanation": "Width of the rectangular base." },
+      "H": { "label": "Prism height", "explanation": "Height of the prism." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Pentagonal Prism",
+    "description": "A regular pentagon swept into a prism.",
+    "explanation": "The base is a regular pentagon, whose area uses the general regular-polygon formula with n = 5. Multiplying by the height gives the prism's volume.",
+    "examples": [
+      "Pencils with a pentagonal cross-section.",
+      "Some nuts and bolts.",
+      "Architectural columns."
+    ],
+    "parameters": {
+      "a": { "label": "Side length", "explanation": "Side length of the regular pentagon." },
+      "h": { "label": "Prism height", "explanation": "Height of the prism." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Hexagonal Prism",
+    "description": "A regular hexagon swept into a prism.",
+    "explanation": "A regular hexagon is six equilateral triangles, giving the tidy base-area formula (3√3/2)·a². Hexagonal prisms tile space efficiently, which is why bees build hexagonal cells.",
+    "examples": [
+      "Pencils.",
+      "Honeycomb cells.",
+      "Nuts and bolts."
+    ],
+    "parameters": {
+      "a": { "label": "Side length", "explanation": "Side length of the regular hexagon." },
+      "h": { "label": "Prism height", "explanation": "Height of the prism." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Triangular Pyramid",
+    "description": "A regular triangular base tapering to an apex.",
+    "explanation": "A pyramid's volume is always one third of the prism with the same base and height. Here the base is an equilateral triangle of area (√3/4)·a².",
+    "examples": [
+      "Tetrahedral dice (d4).",
+      "Molecular shapes (methane).",
+      "Pyramid roofs."
+    ],
+    "parameters": {
+      "a": { "label": "Base side", "explanation": "Side length of the equilateral base." },
+      "h": { "label": "Height", "explanation": "Perpendicular height from base to apex." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Quadrangular Pyramid",
+    "description": "A rectangular base tapering to an apex.",
+    "explanation": "This is the classic 'Egyptian' pyramid shape: a rectangular base rising to a single apex. Its volume is one third of the matching cuboid (base area × height).",
+    "examples": [
+      "The Great Pyramid of Giza.",
+      "Pyramid-shaped roofs.",
+      "Tent shapes."
+    ],
+    "parameters": {
+      "l": { "label": "Base length", "explanation": "Length of the rectangular base." },
+      "w": { "label": "Base width", "explanation": "Width of the rectangular base." },
+      "h": { "label": "Height", "explanation": "Perpendicular height from base to apex." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Pentagonal Pyramid",
+    "description": "A regular pentagon base tapering to an apex.",
+    "explanation": "A pyramid on a regular pentagon. The base area uses the regular-polygon formula with n = 5; the volume is one third of base area times height, like every pyramid.",
+    "examples": [
+      "Decorative spires.",
+      "Crystal forms.",
+      "Game dice variants."
+    ],
+    "parameters": {
+      "a": { "label": "Side length", "explanation": "Side length of the regular pentagon base." },
+      "h": { "label": "Height", "explanation": "Perpendicular height from base to apex." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Hexagonal Pyramid",
+    "description": "A regular hexagon base tapering to an apex.",
+    "explanation": "A pyramid on a regular hexagonal base. As always for pyramids, V = ⅓·B·h, with B the hexagon area (3√3/2)·a².",
+    "examples": [
+      "Pencil tips.",
+      "Spires and finials.",
+      "Crystal terminations."
+    ],
+    "parameters": {
+      "a": { "label": "Side length", "explanation": "Side length of the regular hexagon base." },
+      "h": { "label": "Height", "explanation": "Perpendicular height from base to apex." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "cone": {
+    "name": "Cone",
+    "description": "A circular base tapering to a point.",
+    "explanation": "A cone is a pyramid with a circular base, so its volume is also one third of the matching cylinder. The slant height l (not the vertical height) is what determines the curved lateral surface area πrl.",
+    "examples": [
+      "Ice-cream cones.",
+      "Traffic cones.",
+      "Funnels."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius of the circular base." },
+      "h": { "label": "Height", "explanation": "Perpendicular height from base to apex." }
+    },
+    "formulas": [
+      { "label": "Base area" },
+      { "label": "Slant height" },
+      { "label": "Lateral area" },
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Base area" },
+      { "label": "Slant height" },
+      { "label": "Lateral area" },
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ]
+  },
+  "sphere": {
+    "name": "Sphere",
+    "description": "All points at distance r from a center, in 3D.",
+    "explanation": "A sphere is the 3D analogue of a circle. Its surface area is exactly four times the area of its 'shadow' circle (4πr²), and its volume grows with the cube of the radius.",
+    "examples": [
+      "Balls and planets.",
+      "Bubbles.",
+      "Ball bearings."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Distance from the center to the surface." }
+    },
+    "formulas": [
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Frustum of a Cone",
+    "description": "A cone with its tip sliced off parallel to the base.",
+    "explanation": "A frustum is what remains of a cone after the top is cut off parallel to the base. Its volume blends the two radii with the cross-term Rr. The slant height uses the difference R − r, not R + r.",
+    "examples": [
+      "Buckets and lampshades.",
+      "Drinking cups.",
+      "Cooling towers (lower part)."
+    ],
+    "parameters": {
+      "R": { "label": "Bottom radius", "explanation": "Radius of the larger (bottom) circle." },
+      "r": { "label": "Top radius", "explanation": "Radius of the smaller (top) circle." },
+      "h": { "label": "Height", "explanation": "Vertical distance between the two circles." }
+    },
+    "formulas": [
+      { "label": "Slant height" },
+      { "label": "Lateral area" },
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ],
+    "properties": [
+      { "label": "Slant height" },
+      { "label": "Lateral area" },
+      { "label": "Surface area" },
+      { "label": "Volume" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Frustum of a Pyramid",
+    "description": "A regular polygonal pyramid with its top sliced off.",
+    "explanation": "Slicing the top off a pyramid parallel to its base leaves a frustum with two similar polygonal faces. The volume formula averages the two base areas B₁ and B₂ together with their geometric mean √(B₁B₂).",
+    "examples": [
+      "Lampshades.",
+      "Plant pots.",
+      "Stepped building tops."
+    ],
+    "parameters": {
+      "n": { "label": "Number of sides", "explanation": "Number of sides of the regular polygon base." },
+      "aBottom": { "label": "Bottom side", "explanation": "Side length of the larger (bottom) polygon." },
+      "aTop": { "label": "Top side", "explanation": "Side length of the smaller (top) polygon." },
+      "h": { "label": "Height", "explanation": "Vertical distance between the two bases." }
+    },
+    "formulas": [
+      { "label": "Volume" },
+      { "label": "Bases" }
+    ],
+    "properties": [
+      { "label": "Bottom base area" },
+      { "label": "Top base area" },
+      { "label": "Volume" }
+    ]
+  },
+  "house": {
+    "name": "House",
+    "description": "A cuboid body with a triangular-prism roof.",
+    "explanation": "To find the volume of a combined solid, split it into basic solids, compute each, then add. A house is a cuboid (the walls) plus a triangular prism (the roof). Add the two volumes for the total; the contact face where they meet is internal and is not part of the outside surface.",
+    "examples": [
+      "Simple house and shed shapes.",
+      "Barns.",
+      "Birdhouses."
+    ],
+    "parameters": {
+      "l": { "label": "Length", "explanation": "Width of the house (and roof span)." },
+      "w": { "label": "Depth", "explanation": "Depth of the house." },
+      "h": { "label": "Wall height", "explanation": "Height of the cuboid walls." },
+      "hr": { "label": "Roof height", "explanation": "Height of the triangular roof." }
+    },
+    "formulas": [
+      { "label": "Body (cuboid)" },
+      { "label": "Roof (triangular prism)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Body volume" },
+      { "label": "Roof volume" },
+      { "label": "Total volume" }
+    ]
+  },
+  "pencil": {
+    "name": "Pencil",
+    "description": "A cylinder body topped by a cone tip.",
+    "explanation": "A pencil is a cylinder (the body) with a cone (the sharpened tip) sharing the same radius. The total volume is the cylinder plus the cone. Since both share the circular contact face, no outer surface passes through it.",
+    "examples": [
+      "Pencils and crayons.",
+      "Rockets (body + nose cone).",
+      "Some bottles."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius of the pencil." },
+      "h": { "label": "Body length", "explanation": "Length of the cylindrical body." },
+      "ht": { "label": "Tip length", "explanation": "Length of the sharpened cone tip." }
+    },
+    "formulas": [
+      { "label": "Body (cylinder)" },
+      { "label": "Tip (cone)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Body volume" },
+      { "label": "Tip volume" },
+      { "label": "Total volume" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Ice Cream",
+    "description": "A cone holding a spherical scoop.",
+    "explanation": "An ice cream is a cone (point down) with a sphere resting on top. Add the cone and sphere volumes for the total. In reality part of the scoop sits inside the cone's mouth, so a careful answer would subtract that overlap — a good example of when to subtract.",
+    "examples": [
+      "Ice-cream cones.",
+      "Decorative finials.",
+      "Spinning tops."
+    ],
+    "parameters": {
+      "r": { "label": "Cone radius", "explanation": "Radius of the cone's open top." },
+      "h": { "label": "Cone height", "explanation": "Length of the cone (tip points down)." },
+      "R": { "label": "Scoop radius", "explanation": "Radius of the spherical scoop." }
+    },
+    "formulas": [
+      { "label": "Cone" },
+      { "label": "Scoop (sphere)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Cone volume" },
+      { "label": "Scoop volume" },
+      { "label": "Total volume" }
+    ]
+  },
+  "water-tower": {
+    "name": "Water Tower",
+    "description": "A cylinder capped with a hemispherical dome.",
+    "explanation": "A water tower is a cylinder with a hemisphere (half a sphere) on top, sharing the same radius. The total volume adds the cylinder and the hemisphere. A hemisphere is exactly half a sphere, so its volume is ⅔πr³.",
+    "examples": [
+      "Water towers and silos.",
+      "Observatory domes.",
+      "Storage tanks."
+    ],
+    "parameters": {
+      "r": { "label": "Radius", "explanation": "Radius of the cylinder and the dome." },
+      "h": { "label": "Body height", "explanation": "Height of the cylindrical body." }
+    },
+    "formulas": [
+      { "label": "Body (cylinder)" },
+      { "label": "Dome (hemisphere)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Body volume" },
+      { "label": "Dome volume" },
+      { "label": "Total volume" }
+    ]
+  },
+  "castle": {
+    "name": "Castle",
+    "description": "A central keep with four corner towers and conical roofs.",
+    "explanation": "A castle combines several basic solids: a cuboid keep, four cylindrical towers, and four conical roofs. The strategy is the same as always — break it into known pieces, compute each volume, then add them all up. By symmetry the four towers and four roofs are identical, so we multiply by four.",
+    "examples": [
+      "Toy castles.",
+      "Chess rooks.",
+      "Fortress and tower architecture."
+    ],
+    "parameters": {
+      "s": { "label": "Keep size", "explanation": "Side length of the square central keep." },
+      "hk": { "label": "Keep height", "explanation": "Height of the central keep." },
+      "r": { "label": "Tower radius", "explanation": "Radius of each corner tower." },
+      "ht": { "label": "Tower height", "explanation": "Height of each corner tower." }
+    },
+    "formulas": [
+      { "label": "Keep (cuboid)" },
+      { "label": "Tower (cylinder)" },
+      { "label": "Roof (cone)" },
+      { "label": "Total" }
+    ],
+    "properties": [
+      { "label": "Keep volume" },
+      { "label": "All towers" },
+      { "label": "All roofs" },
+      { "label": "Total volume" }
+    ]
+  }
+}

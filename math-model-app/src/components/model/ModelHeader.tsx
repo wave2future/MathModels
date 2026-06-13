@@ -1,5 +1,6 @@
 import type { MathModel } from "@/types/model";
 import { Katex } from "@/components/common/Katex";
+import { useT } from "@/i18n/LanguageContext";
 
 interface Props {
   model: MathModel;
@@ -8,6 +9,7 @@ interface Props {
 }
 
 export function ModelHeader({ model, isFavorite, onToggleFavorite }: Props) {
+  const { t } = useT();
   return (
     <header className="flex items-start justify-between gap-3">
       <div className="min-w-0">
@@ -15,9 +17,6 @@ export function ModelHeader({ model, isFavorite, onToggleFavorite }: Props) {
           <h1 className="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
             {model.name}
           </h1>
-          {model.chineseName && (
-            <span className="text-base text-slate-400 dark:text-slate-500">{model.chineseName}</span>
-          )}
         </div>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{model.description}</p>
         <div className="mt-2 inline-block rounded-lg bg-blue-50 px-3 py-1.5 text-blue-700 dark:bg-blue-950/50 dark:text-blue-300">
@@ -27,7 +26,7 @@ export function ModelHeader({ model, isFavorite, onToggleFavorite }: Props) {
       <button
         type="button"
         onClick={onToggleFavorite}
-        aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+        aria-label={isFavorite ? t("common.removeFavorite") : t("common.addFavorite")}
         className="flex-shrink-0 rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-amber-500 dark:hover:bg-slate-700"
       >
         <svg

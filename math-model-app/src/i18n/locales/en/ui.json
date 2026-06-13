@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Interactive Math Visualizer"
+  },
+  "common": {
+    "toggleDarkMode": "Toggle dark mode",
+    "changeLanguage": "Change language",
+    "searchPlaceholder": "Search models...",
+    "noResults": "No models match \"{query}\".",
+    "resultsCount": "{count} results",
+    "favorites": "Favorites",
+    "selectModel": "Select a model",
+    "reset": "Reset",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "somethingWrongIn": "Something went wrong in the {label}.",
+    "somethingWrong": "Something went wrong.",
+    "tryAgain": "Try again"
+  },
+  "errorLabels": {
+    "graph": "graph",
+    "viewer3d": "3D viewer",
+    "modelPage": "model page"
+  },
+  "panels": {
+    "parameters": "Parameters",
+    "formulas": "Formulas",
+    "properties": "Calculated Properties",
+    "explanation": "Explanation",
+    "examples": "Real-life Examples"
+  },
+  "viewSettings": {
+    "grid": "Grid",
+    "labels": "Labels",
+    "wireframe": "Wireframe",
+    "markers": "Markers"
+  },
+  "graphLabels": {
+    "center": "center",
+    "vertex": "vertex",
+    "focus": "focus",
+    "directrix": "directrix",
+    "axis": "axis",
+    "midline": "midline",
+    "asymptote": "asymptote",
+    "xIntercept": "x-int"
+  },
+  "categories": {
+    "functions": {
+      "name": "Common Functions",
+      "description": "Function graphs in the coordinate plane"
+    },
+    "plane-curves": {
+      "name": "Plane Curves",
+      "description": "Conic sections and other curves"
+    },
+    "solids": {
+      "name": "Solid Geometry",
+      "description": "3D solids: prisms, pyramids, round solids"
+    },
+    "combined": {
+      "name": "Combined Solids",
+      "description": "Composite shapes built from basic solids"
+    }
+  }
+}

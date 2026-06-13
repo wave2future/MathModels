@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "أداة تصور رياضي تفاعلية"
+  },
+  "common": {
+    "toggleDarkMode": "تبديل الوضع الليلي",
+    "changeLanguage": "تغيير اللغة",
+    "searchPlaceholder": "البحث في النماذج...",
+    "noResults": "لا توجد نماذج مطابقة لـ \"{query}\".",
+    "resultsCount": "{count} نتيجة",
+    "favorites": "المفضلة",
+    "selectModel": "اختر نموذجًا",
+    "reset": "إعادة ضبط",
+    "addFavorite": "إضافة إلى المفضلة",
+    "removeFavorite": "إزالة من المفضلة",
+    "somethingWrongIn": "حدث خطأ ما في {label}.",
+    "somethingWrong": "حدث خطأ ما.",
+    "tryAgain": "حاول مرة أخرى"
+  },
+  "errorLabels": {
+    "graph": "الرسم البياني",
+    "viewer3d": "العارض ثلاثي الأبعاد",
+    "modelPage": "صفحة النموذج"
+  },
+  "panels": {
+    "parameters": "المعطيات",
+    "formulas": "الصيغ",
+    "properties": "الخصائص المحسوبة",
+    "explanation": "الشرح",
+    "examples": "أمثلة من الحياة الواقعية"
+  },
+  "viewSettings": {
+    "grid": "الشبكة",
+    "labels": "التسميات",
+    "wireframe": "الإطار السلكي",
+    "markers": "العلامات"
+  },
+  "graphLabels": {
+    "center": "المركز",
+    "vertex": "الرأس",
+    "focus": "البؤرة",
+    "directrix": "الدليل",
+    "axis": "المحور",
+    "midline": "خط الوسط",
+    "asymptote": "الخط المقارب",
+    "xIntercept": "تقاطع x"
+  },
+  "categories": {
+    "functions": {
+      "name": "الدوال الشائعة",
+      "description": "رسوم بيانية للدوال في المستوى الإحداثي"
+    },
+    "plane-curves": {
+      "name": "المنحنيات المستوية",
+      "description": "القطوع المخروطية ومنحنيات أخرى"
+    },
+    "solids": {
+      "name": "الهندسة المجسمة",
+      "description": "أشكال ثلاثية الأبعاد: متوازيات سطوح، أهرامات، أجسام دائرية"
+    },
+    "combined": {
+      "name": "الأشكال المجسمة المركبة",
+      "description": "أشكال مركبة مبنية من أشكال أساسية"
+    }
+  }
+}

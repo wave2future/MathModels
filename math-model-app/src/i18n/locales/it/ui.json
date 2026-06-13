@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "Visualizzatore Matematico Interattivo"
+  },
+  "common": {
+    "toggleDarkMode": "Attiva/disattiva modalità scura",
+    "changeLanguage": "Cambia lingua",
+    "searchPlaceholder": "Cerca modelli...",
+    "noResults": "Nessun modello corrisponde a \"{query}\".",
+    "resultsCount": "{count} risultati",
+    "favorites": "Preferiti",
+    "selectModel": "Seleziona un modello",
+    "reset": "Reimposta",
+    "addFavorite": "Aggiungi ai preferiti",
+    "removeFavorite": "Rimuovi dai preferiti",
+    "somethingWrongIn": "Qualcosa è andato storto in {label}.",
+    "somethingWrong": "Qualcosa è andato storto.",
+    "tryAgain": "Riprova"
+  },
+  "errorLabels": {
+    "graph": "grafico",
+    "viewer3d": "visualizzatore 3D",
+    "modelPage": "pagina del modello"
+  },
+  "panels": {
+    "parameters": "Parametri",
+    "formulas": "Formule",
+    "properties": "Proprietà calcolate",
+    "explanation": "Spiegazione",
+    "examples": "Esempi reali"
+  },
+  "viewSettings": {
+    "grid": "Griglia",
+    "labels": "Etichette",
+    "wireframe": "Wireframe",
+    "markers": "Indicatori"
+  },
+  "graphLabels": {
+    "center": "centro",
+    "vertex": "vertice",
+    "focus": "fuoco",
+    "directrix": "direttrice",
+    "axis": "asse",
+    "midline": "linea mediana",
+    "asymptote": "asintoto",
+    "xIntercept": "int. x"
+  },
+  "categories": {
+    "functions": {
+      "name": "Funzioni Comuni",
+      "description": "Grafici di funzioni nel piano cartesiano"
+    },
+    "plane-curves": {
+      "name": "Curve Piane",
+      "description": "Sezioni coniche e altre curve"
+    },
+    "solids": {
+      "name": "Geometria Solida",
+      "description": "Solidi 3D: prismi, piramidi, solidi di rotazione"
+    },
+    "combined": {
+      "name": "Solidi Combinati",
+      "description": "Forme composte costruite da solidi di base"
+    }
+  }
+}

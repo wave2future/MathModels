@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import type { LayoutMode } from "@/hooks/useResponsiveLayout";
 import type { Theme } from "@/hooks/useTheme";
+import { useT } from "@/i18n/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface Props {
   layout: LayoutMode;
@@ -12,11 +14,12 @@ interface Props {
 }
 
 function ThemeToggle({ theme, onToggle }: { theme: Theme; onToggle: () => void }) {
+  const { t } = useT();
   return (
     <button
       type="button"
       onClick={onToggle}
-      aria-label="Toggle dark mode"
+      aria-label={t("common.toggleDarkMode")}
       className="rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700"
     >
       {theme === "dark" ? (
@@ -34,12 +37,13 @@ function ThemeToggle({ theme, onToggle }: { theme: Theme; onToggle: () => void }
 }
 
 function Brand() {
+  const { t } = useT();
   return (
     <div className="flex items-center gap-2">
       <img src="./favicon.svg" alt="" width={26} height={26} className="rounded-md" />
       <div className="leading-tight">
         <span className="block text-sm font-bold text-slate-900 dark:text-white">MathModels</span>
-        <span className="hidden text-[10px] text-slate-400 sm:block">Interactive Math Visualizer</span>
+        <span className="hidden text-[10px] text-slate-400 sm:block">{t("app.tagline")}</span>
       </div>
     </div>
   );
@@ -54,7 +58,10 @@ export function AppLayout({ layout, theme, onToggleTheme, sidebar, topSelector, 
         style={{ paddingTop: "calc(0.5rem + var(--app-safe-top))" }}
       >
         <Brand />
-        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+        <div className="flex items-center gap-1">
+          <LanguageSwitcher />
+          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+        </div>
       </header>
 
       {layout === "desktop" ? (

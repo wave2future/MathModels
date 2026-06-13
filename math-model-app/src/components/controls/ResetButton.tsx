@@ -1,9 +1,12 @@
+import { useT } from "@/i18n/LanguageContext";
+
 interface Props {
   onClick: () => void;
   disabled?: boolean;
 }
 
 export function ResetButton({ onClick, disabled }: Props) {
+  const { t } = useT();
   return (
     <button
       type="button"
@@ -15,7 +18,7 @@ export function ResetButton({ onClick, disabled }: Props) {
         <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
         <path d="M3 3v5h5" />
       </svg>
-      Reset
+      {t("common.reset")}
     </button>
   );
 }

@@ -10,6 +10,7 @@ import { PropertiesPanel } from "@/components/model/PropertiesPanel";
 import { ExplanationPanel } from "@/components/model/ExplanationPanel";
 import { ExamplePanel } from "@/components/model/ExamplePanel";
 import { ViewSettingsBar } from "@/components/model/ViewSettingsBar";
+import { useT } from "@/i18n/LanguageContext";
 
 interface Props {
   model: MathModel;
@@ -24,17 +25,18 @@ interface Props {
 
 type MobileTab = "parameters" | "formulas" | "explanation" | "examples";
 
-const MOBILE_TABS: { id: MobileTab; label: string }[] = [
-  { id: "parameters", label: "Parameters" },
-  { id: "formulas", label: "Formulas" },
-  { id: "explanation", label: "Explanation" },
-  { id: "examples", label: "Examples" },
-];
-
 export function ResponsiveModelPage(props: Props) {
   const { model, values, onChange, onReset, isDefault, layout, isFavorite, onToggleFavorite } = props;
   const { settings } = useViewSettings();
+  const { t } = useT();
   const [tab, setTab] = useState<MobileTab>("parameters");
+
+  const MOBILE_TABS: { id: MobileTab; label: string }[] = [
+    { id: "parameters", label: t("panels.parameters") },
+    { id: "formulas", label: t("panels.formulas") },
+    { id: "explanation", label: t("panels.explanation") },
+    { id: "examples", label: t("panels.examples") },
+  ];
 
   /* ---------------- Desktop: split viewer + info column ---------------- */
   if (layout === "desktop") {

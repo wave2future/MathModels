@@ -1,0 +1,794 @@
+{
+  "direct-proportional": {
+    "name": "Hàm số tỉ lệ thuận",
+    "description": "Một đường thẳng đi qua gốc tọa độ với độ dốc được xác định bởi k.",
+    "explanation": "Tỉ lệ thuận có nghĩa là y thay đổi với tốc độ không đổi theo x. Đồ thị luôn là một đường thẳng đi qua gốc tọa độ; chỉ có độ dốc của nó thay đổi. |k| lớn hơn nghĩa là đường thẳng dốc hơn; dấu của k quyết định đường thẳng đi lên hay đi xuống.",
+    "examples": [
+      "Quãng đường theo thời gian với vận tốc không đổi (d = vt).",
+      "Tổng giá tiền theo số lượng với đơn giá cố định."
+    ],
+    "parameters": {
+      "k": { "label": "Độ dốc", "explanation": "Quyết định độ dốc và chiều của đường thẳng. k>0 đi lên, k<0 đi xuống." }
+    },
+    "formulas": [
+      { "label": "Hàm số", "description": "Đi qua gốc tọa độ (0, 0)." },
+      { "label": "Độ dốc", "description": "Tỉ số giữa độ tăng theo trục đứng và độ tăng theo trục ngang." }
+    ]
+  },
+  "linear": {
+    "name": "Hàm số bậc nhất",
+    "description": "Một đường thẳng y = kx + b với độ dốc và tung độ gốc có thể điều chỉnh.",
+    "explanation": "k quyết định độ dốc (mức độ dốc và chiều) còn b dịch toàn bộ đường thẳng lên hoặc xuống, xác định vị trí đường thẳng cắt trục y. Thay đổi b làm trượt đường thẳng theo chiều dọc mà không làm thay đổi độ nghiêng của nó.",
+    "examples": [
+      "Giá cước taxi = giá mở cửa + đơn giá × quãng đường.",
+      "Đổi đơn vị nhiệt độ: °F = 1.8·°C + 32."
+    ],
+    "parameters": {
+      "k": { "label": "Độ dốc", "explanation": "Độ dốc: y thay đổi nhanh bao nhiêu khi x tăng một đơn vị." },
+      "b": { "label": "Tung độ gốc", "explanation": "Điểm đường thẳng cắt trục y." }
+    },
+    "formulas": [
+      { "label": "Hàm số" },
+      { "label": "Tung độ gốc" },
+      { "label": "Hoành độ gốc", "description": "Khi k ≠ 0." }
+    ]
+  },
+  "quadratic": {
+    "name": "Hàm số bậc hai",
+    "description": "Một parabol y = ax² + bx + c với đỉnh và trục đối xứng.",
+    "explanation": "Dấu của a quyết định parabol hướng lên (a>0) hay hướng xuống (a<0); độ lớn của a quyết định độ \"hẹp\" của parabol. Đỉnh là điểm uốn của đồ thị và trục đối xứng là đường thẳng đứng đi qua đỉnh đó. c chính là độ cao tại điểm đường cong cắt trục y.",
+    "examples": [
+      "Đường đi của một quả bóng được ném (chuyển động ném xiên).",
+      "Diện tích hình chữ nhật theo một cạnh khi chu vi cố định."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Hướng và độ hẹp của parabol. a>0 hướng lên, a<0 hướng xuống; |a| lớn hơn thì parabol hẹp hơn." },
+      "b": { "label": "b", "explanation": "Dịch trục đối xứng sang trái/phải (cùng với a)." },
+      "c": { "label": "c", "explanation": "Tung độ gốc (giá trị tại x = 0)." }
+    },
+    "formulas": [
+      { "label": "Hàm số" },
+      { "label": "Trục đối xứng" },
+      { "label": "Đỉnh" }
+    ]
+  },
+  "inverse-proportional": {
+    "name": "Hàm số tỉ lệ nghịch",
+    "description": "Một hyperbol y = k/x với hai trục tọa độ là các đường tiệm cận.",
+    "explanation": "Khi x tăng, tích xy luôn bằng k, nên y co lại về 0 — đường cong tiến sát hai trục tọa độ (là các đường tiệm cận của nó) nhưng không bao giờ chạm vào. Hai nhánh nằm ở hai góc phần tư đối diện tùy theo dấu của k.",
+    "examples": [
+      "Vận tốc theo thời gian di chuyển với quãng đường cố định.",
+      "Áp suất theo thể tích của khí ở nhiệt độ không đổi (định luật Boyle)."
+    ],
+    "parameters": {
+      "k": { "label": "Hằng số", "explanation": "k>0 đặt hai nhánh ở góc phần tư I và III; k<0 ở góc phần tư II và IV." }
+    },
+    "formulas": [
+      { "label": "Hàm số", "description": "x ≠ 0." },
+      { "label": "Đường tiệm cận" }
+    ]
+  },
+  "absolute-value": {
+    "name": "Hàm số giá trị tuyệt đối",
+    "description": "Một đồ thị hình chữ V là y = a|x − h| + k.",
+    "explanation": "Giá trị tuyệt đối buộc tất cả giá trị đầu ra nằm trên đỉnh, tạo ra một hình V đối xứng. (h, k) là góc của hình V; a co giãn hai nhánh và, nếu âm, lật ngược hình V xuống dưới.",
+    "examples": [
+      "Khoảng cách so với một giá trị mục tiêu.",
+      "Độ lớn của sai số bất kể dấu."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Độ dốc và hướng của hình V (a<0 làm nó mở xuống dưới)." },
+      "h": { "label": "h", "explanation": "Độ dịch ngang của đỉnh." },
+      "k": { "label": "k", "explanation": "Độ dịch dọc của đỉnh." }
+    },
+    "formulas": [
+      { "label": "Dạng cơ bản" },
+      { "label": "Dạng biến đổi" },
+      { "label": "Đỉnh" }
+    ]
+  },
+  "power": {
+    "name": "Hàm số lũy thừa",
+    "description": "y = xᵃ — hình dạng của đồ thị phụ thuộc vào số mũ a.",
+    "explanation": "Hàm số lũy thừa nâng x lên một số mũ cố định. Số mũ nguyên được xác định với mọi x, nhưng số mũ phân số cần x ≥ 0 để giá trị là số thực, do đó đường cong chỉ xuất hiện ở phía bên phải trong trường hợp đó. Số mũ chẵn đối xứng qua trục y; số mũ lẻ đối xứng qua gốc tọa độ.",
+    "examples": [
+      "Diện tích tỉ lệ với cạnh² (a = 2).",
+      "Thể tích tỉ lệ với cạnh³ (a = 3)."
+    ],
+    "parameters": {
+      "a": { "label": "Số mũ", "explanation": "a=1 đường thẳng, a=2 parabol, a=3 hàm bậc ba, a=0.5 căn bậc hai, a<0 dạng giống hyperbol." }
+    },
+    "formulas": [
+      { "label": "Hàm số" },
+      { "label": "Lưu ý", "description": "Cơ số âm không có giá trị thực với số mũ phân số." }
+    ]
+  },
+  "exponential": {
+    "name": "Hàm số mũ",
+    "description": "y = aˣ — tăng nhanh (a>1) hoặc giảm dần (0<a<1).",
+    "explanation": "Hàm số mũ nhân với cơ số a sau mỗi bước tăng của x. Khi a>1, giá trị đầu ra tăng vọt; khi 0<a<1, nó giảm dần về đường tiệm cận ngang y = 0. Mọi đồ thị đều đi qua điểm (0, 1) vì a⁰ = 1.",
+    "examples": [
+      "Lãi suất kép.",
+      "Phân rã chất phóng xạ (0 < a < 1)."
+    ],
+    "parameters": {
+      "a": { "label": "Cơ số", "explanation": "a>1 tăng dần; 0<a<1 giảm dần. Mọi đường cong đều đi qua (0, 1)." }
+    },
+    "formulas": [
+      { "label": "Hàm số", "description": "a > 0, a ≠ 1." },
+      { "label": "Đường tiệm cận" },
+      { "label": "Điểm cố định" }
+    ]
+  },
+  "logarithmic": {
+    "name": "Hàm số lôgarit",
+    "description": "y = logₐ(x) — hàm ngược của hàm số mũ.",
+    "explanation": "Lôgarit trả lời câu hỏi 'a lũy thừa bao nhiêu thì bằng x?'. Đó là ảnh đối xứng của y = aˣ qua đường thẳng y = x, nên tập xác định của nó là x > 0 và có đường tiệm cận đứng tại x = 0. Mọi đường cong đều đi qua điểm (1, 0).",
+    "examples": [
+      "Thang đo pH.",
+      "Mức cường độ âm theo decibel.",
+      "Thang độ Richter đo động đất."
+    ],
+    "parameters": {
+      "a": { "label": "Cơ số", "explanation": "a>1 tăng dần; 0<a<1 giảm dần. Mọi đường cong đều đi qua (1, 0)." }
+    },
+    "formulas": [
+      { "label": "Hàm số", "description": "x > 0, a > 0, a ≠ 1." },
+      { "label": "Đường tiệm cận" },
+      { "label": "Hàm ngược của" }
+    ]
+  },
+  "sine": {
+    "name": "Hàm số sin",
+    "description": "y = A·sin(Bx + C) + D với biên độ, chu kỳ và các độ dịch.",
+    "explanation": "A co giãn sóng theo chiều dọc (biên độ); B nén sóng theo chiều ngang, xác định chu kỳ T = 2π/|B|; C trượt sóng sang trái/phải (độ dịch pha −C/B); D nâng hoặc hạ đường trung bình.",
+    "examples": [
+      "Sóng âm.",
+      "Dòng điện xoay chiều.",
+      "Thủy triều và số giờ chiếu sáng trong năm."
+    ],
+    "parameters": {
+      "A": { "label": "Biên độ", "explanation": "Một nửa khoảng cách giữa giá trị lớn nhất và nhỏ nhất." },
+      "B": { "label": "Tần số", "explanation": "B lớn hơn làm sóng bị nén lại (chu kỳ ngắn hơn)." },
+      "C": { "label": "Pha", "explanation": "Độ dịch ngang của sóng." },
+      "D": { "label": "Độ dịch dọc", "explanation": "Di chuyển đường trung bình lên hoặc xuống." }
+    },
+    "formulas": [
+      { "label": "Dạng cơ bản" },
+      { "label": "Dạng biến đổi" },
+      { "label": "Biên độ" },
+      { "label": "Chu kỳ" },
+      { "label": "Độ dịch pha" }
+    ]
+  },
+  "cosine": {
+    "name": "Hàm số cosin",
+    "description": "y = A·cos(Bx + C) + D — một sóng sin được dịch đi một phần tư chu kỳ.",
+    "explanation": "Cosin có hình dạng giống sin nhưng bắt đầu tại giá trị lớn nhất: cos(x) = sin(x + π/2). Các tham số có ý nghĩa hoàn toàn giống nhau — biên độ A, chu kỳ 2π/|B|, độ dịch pha và độ dịch dọc D.",
+    "examples": [
+      "Vị trí theo phương ngang của một điểm trên bánh xe đang quay.",
+      "Chu kỳ thay đổi nhiệt độ theo mùa."
+    ],
+    "parameters": {
+      "A": { "label": "Biên độ", "explanation": "Một nửa khoảng cách giữa giá trị lớn nhất và nhỏ nhất." },
+      "B": { "label": "Tần số", "explanation": "B lớn hơn làm sóng bị nén lại (chu kỳ ngắn hơn)." },
+      "C": { "label": "Pha", "explanation": "Độ dịch ngang của sóng." },
+      "D": { "label": "Độ dịch dọc", "explanation": "Di chuyển đường trung bình lên hoặc xuống." }
+    },
+    "formulas": [
+      { "label": "Dạng cơ bản" },
+      { "label": "Dạng biến đổi" },
+      { "label": "Biên độ" },
+      { "label": "Chu kỳ" }
+    ]
+  },
+  "tangent": {
+    "name": "Hàm số tang",
+    "description": "y = A·tan(Bx + C) + D với các đường tiệm cận đứng lặp lại.",
+    "explanation": "Tang lặp lại sau mỗi π và tiến tới ±∞ tại mỗi đường tiệm cận, nơi cos = 0. Đồ thị được vẽ thành các nhánh riêng biệt — nó không bao giờ liên tục qua một đường tiệm cận. B xác định khoảng cách giữa các đường tiệm cận.",
+    "examples": [
+      "Độ dốc của một đường thẳng tại một góc cho trước.",
+      "Mô hình hóa sự tăng vọt nhanh gần một giới hạn."
+    ],
+    "parameters": {
+      "A": { "label": "Tỉ lệ dọc", "explanation": "Co giãn các nhánh theo chiều dọc." },
+      "B": { "label": "Tần số", "explanation": "Điều khiển khoảng cách giữa các đường tiệm cận (chu kỳ π/|B|)." },
+      "C": { "label": "Pha", "explanation": "Độ dịch ngang." },
+      "D": { "label": "Độ dịch dọc", "explanation": "Di chuyển đường cong lên hoặc xuống." }
+    },
+    "formulas": [
+      { "label": "Dạng cơ bản" },
+      { "label": "Dạng biến đổi" },
+      { "label": "Chu kỳ" },
+      { "label": "Đường tiệm cận" }
+    ]
+  },
+  "piecewise": {
+    "name": "Hàm số từng khúc",
+    "description": "Các quy tắc khác nhau trên các khoảng khác nhau, nối tại một điểm gãy.",
+    "explanation": "Một hàm số từng khúc áp dụng các công thức khác nhau trên mỗi khoảng của tập xác định. Ở đây nhánh bên trái (x < 0) dùng −sx và nhánh bên phải (x ≥ 0) dùng sx. Hai nhánh được vẽ riêng biệt và chỉ gặp nhau tại điểm gãy x = 0.",
+    "examples": [
+      "Các bậc thuế thu nhập.",
+      "Các mức phí vận chuyển theo khối lượng.",
+      "Giá trị tuyệt đối dưới dạng hai đường thẳng."
+    ],
+    "parameters": {
+      "scale": { "label": "Hệ số độ dốc", "explanation": "Co giãn cả hai nhánh để bạn có thể theo dõi sự thay đổi đồng thời." }
+    },
+    "formulas": [
+      { "label": "Định nghĩa", "description": "Hai quy tắc tuyến tính gặp nhau tại x = 0." }
+    ]
+  },
+  "circle": {
+    "name": "Đường tròn",
+    "description": "Tập hợp các điểm cách tâm (h, k) một khoảng r.",
+    "explanation": "Đường tròn là tập hợp các điểm cách tâm (h, k) một khoảng cố định r (bán kính). Thay đổi h và k làm trượt toàn bộ đường tròn; thay đổi r làm nó phình to hoặc co nhỏ. Chu vi và diện tích của nó chỉ phụ thuộc vào r.",
+    "examples": [
+      "Bánh xe và bánh răng.",
+      "Sóng lan trên mặt nước.",
+      "Đường chạy hình tròn."
+    ],
+    "parameters": {
+      "h": { "label": "Tâm x", "explanation": "Vị trí ngang của tâm." },
+      "k": { "label": "Tâm y", "explanation": "Vị trí dọc của tâm." },
+      "r": { "label": "Bán kính", "explanation": "Khoảng cách từ tâm đến đường biên." }
+    },
+    "formulas": [
+      { "label": "Dạng chuẩn" },
+      { "label": "Tâm tại gốc tọa độ" },
+      { "label": "Chu vi" },
+      { "label": "Diện tích" }
+    ],
+    "properties": [
+      { "label": "Chu vi" },
+      { "label": "Diện tích" },
+      { "label": "Đường kính" }
+    ]
+  },
+  "ellipse": {
+    "name": "Hình elip",
+    "description": "Một đường tròn bị kéo giãn với các bán trục a và b.",
+    "explanation": "Một hình elip là một đường tròn được co giãn với các tỉ lệ khác nhau theo hai trục. a và b là bán trục lớn và bán trục nhỏ (bán trục nào lớn hơn được gọi là 'trục lớn'). Khi a = b, hình elip trở thành đường tròn. Diện tích của nó là π·a·b.",
+    "examples": [
+      "Quỹ đạo các hành tinh.",
+      "Phòng vọng âm (whispering gallery).",
+      "Bánh răng hình elip."
+    ],
+    "parameters": {
+      "a": { "label": "Bán trục a", "explanation": "Một nửa chiều rộng theo trục x." },
+      "b": { "label": "Bán trục b", "explanation": "Một nửa chiều cao theo trục y." }
+    },
+    "formulas": [
+      { "label": "Dạng chuẩn" },
+      { "label": "Diện tích" },
+      { "label": "Tiêu điểm (a>b)" }
+    ],
+    "properties": [
+      { "label": "Diện tích" },
+      { "label": "Tiêu cự" }
+    ]
+  },
+  "hyperbola": {
+    "name": "Hình hyperbol",
+    "description": "Hai nhánh đối xứng với các đường tiệm cận thẳng.",
+    "explanation": "Một hyperbol có hai nhánh đối xứng gương mở sang trái và phải, mỗi nhánh tiến gần đến các đường tiệm cận y = ±(b/a)x mà không chạm vào. Đường cong tỉ lệ nghịch đơn giản y = k/x cũng là một hyperbol — chỉ là được xoay đi sao cho các trục tọa độ chính là đường tiệm cận của nó.",
+    "examples": [
+      "Hệ thống định vị tầm xa (LORAN).",
+      "Đường đi của một vật thể thoát khỏi lực hấp dẫn.",
+      "Bóng của hình nón đèn trên tường."
+    ],
+    "parameters": {
+      "a": { "label": "a", "explanation": "Xác định các đỉnh tại (±a, 0) và độ dốc đường tiệm cận." },
+      "b": { "label": "b", "explanation": "Cùng với a xác định độ dốc đường tiệm cận ±b/a." }
+    },
+    "formulas": [
+      { "label": "Dạng chuẩn" },
+      { "label": "Đường tiệm cận" },
+      { "label": "Các đỉnh" }
+    ],
+    "properties": [
+      { "label": "Độ dốc đường tiệm cận" }
+    ]
+  },
+  "parabola-conic": {
+    "name": "Parabol (đường conic)",
+    "description": "Đường conic y² = 2px với tiêu điểm và đường chuẩn.",
+    "explanation": "Mọi điểm trên một parabol cách đều một điểm cố định (tiêu điểm) và một đường thẳng cố định (đường chuẩn). Với y² = 2px, đường cong mở sang phải, tiêu điểm nằm tại (p/2, 0), và đường chuẩn là đường thẳng đứng x = −p/2. p lớn hơn làm độ mở rộng hơn.",
+    "examples": [
+      "Chảo vệ tinh và gương phản xạ đèn pha.",
+      "Cáp treo cầu treo dây võng.",
+      "Đường đi của vật bị ném."
+    ],
+    "parameters": {
+      "p": { "label": "Tham số p", "explanation": "Tham số liên quan đến khoảng cách; p>0 mở sang phải." }
+    },
+    "formulas": [
+      { "label": "Dạng chuẩn" },
+      { "label": "Tiêu điểm" },
+      { "label": "Đường chuẩn" }
+    ],
+    "properties": [
+      { "label": "Hoành độ tiêu điểm" }
+    ]
+  },
+  "cuboid": {
+    "name": "Hình hộp chữ nhật",
+    "description": "Một hình hộp với chiều dài, chiều rộng và chiều cao.",
+    "explanation": "Một hình hộp chữ nhật có ba cặp mặt hình chữ nhật giống nhau. Thể tích của nó là tích của ba cạnh; diện tích toàn phần là tổng diện tích của cả sáu mặt.",
+    "examples": [
+      "Gạch và hộp.",
+      "Phòng và nhà.",
+      "Bể cá."
+    ],
+    "parameters": {
+      "l": { "label": "Chiều dài", "explanation": "Kích thước theo trục x." },
+      "w": { "label": "Chiều rộng", "explanation": "Kích thước theo trục z." },
+      "h": { "label": "Chiều cao", "explanation": "Kích thước theo trục y." }
+    },
+    "formulas": [
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" },
+      { "label": "Đường chéo không gian" }
+    ],
+    "properties": [
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "cube": {
+    "name": "Hình lập phương",
+    "description": "Một hình hộp chữ nhật với tất cả các cạnh bằng nhau.",
+    "explanation": "Hình lập phương là hình hộp chữ nhật đối xứng nhất: cả 12 cạnh đều bằng nhau và cả 6 mặt là các hình vuông bằng nhau. Tăng gấp đôi cạnh sẽ làm thể tích tăng gấp 8 lần.",
+    "examples": [
+      "Xúc xắc.",
+      "Khối Rubik.",
+      "Viên đường khối."
+    ],
+    "parameters": {
+      "a": { "label": "Cạnh", "explanation": "Độ dài của mỗi cạnh." }
+    },
+    "formulas": [
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" },
+      { "label": "Đường chéo không gian" }
+    ],
+    "properties": [
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "cylinder": {
+    "name": "Hình trụ",
+    "description": "Hai đáy hình tròn nối với nhau bởi một mặt cong.",
+    "explanation": "Trải mặt cong của hình trụ ra ta được một hình chữ nhật có chiều rộng 2πr và chiều cao h, đó là lý do diện tích xung quanh là 2πrh. Cộng thêm hai mặt đáy hình tròn ta được diện tích toàn phần.",
+    "examples": [
+      "Lon và ống nước.",
+      "Cốc uống nước.",
+      "Trống lăn."
+    ],
+    "parameters": {
+      "r": { "label": "Bán kính", "explanation": "Bán kính của đáy hình tròn." },
+      "h": { "label": "Chiều cao", "explanation": "Khoảng cách giữa hai đáy." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Diện tích xung quanh" },
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Diện tích xung quanh" },
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "triangular-prism": {
+    "name": "Hình lăng trụ tam giác",
+    "description": "Một hình tam giác được kéo dài theo chiều dài.",
+    "explanation": "Một hình lăng trụ giữ nguyên mặt cắt ngang dọc theo toàn bộ chiều dài, vì vậy thể tích của nó đơn giản là diện tích đáy nhân với chiều dài. Ở đây đáy là một hình tam giác có diện tích ½·b·hₜ.",
+    "examples": [
+      "Thanh sô-cô-la Toblerone.",
+      "Khung kèo mái nhà.",
+      "Lăng kính quang học."
+    ],
+    "parameters": {
+      "b": { "label": "Đáy tam giác", "explanation": "Độ dài cạnh đáy của mặt cắt tam giác." },
+      "ht": { "label": "Chiều cao tam giác", "explanation": "Chiều cao của mặt cắt tam giác." },
+      "H": { "label": "Chiều dài lăng trụ", "explanation": "Khoảng cách hình tam giác được kéo dài." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "quadrangular-prism": {
+    "name": "Hình lăng trụ tứ giác",
+    "description": "Một đáy hình chữ nhật được kéo dài thành hình lăng trụ.",
+    "explanation": "Một hình lăng trụ tứ giác có đáy là hình chữ nhật (tứ giác). Như mọi hình lăng trụ khác, thể tích của nó là diện tích đáy nhân với chiều cao. Với đáy hình chữ nhật, điều này giống với hình hộp chữ nhật: B = lw.",
+    "examples": [
+      "Dầm và cột.",
+      "Hộp đóng gói.",
+      "Cột công trình xây dựng."
+    ],
+    "parameters": {
+      "l": { "label": "Chiều dài đáy", "explanation": "Chiều dài của đáy hình chữ nhật." },
+      "w": { "label": "Chiều rộng đáy", "explanation": "Chiều rộng của đáy hình chữ nhật." },
+      "H": { "label": "Chiều cao lăng trụ", "explanation": "Chiều cao của hình lăng trụ." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "pentagonal-prism": {
+    "name": "Hình lăng trụ ngũ giác",
+    "description": "Một hình ngũ giác đều được kéo dài thành hình lăng trụ.",
+    "explanation": "Đáy là một hình ngũ giác đều, có diện tích được tính theo công thức tổng quát của đa giác đều với n = 5. Nhân với chiều cao ta được thể tích của hình lăng trụ.",
+    "examples": [
+      "Bút chì có mặt cắt ngũ giác.",
+      "Một số loại đai ốc và bu lông.",
+      "Cột kiến trúc."
+    ],
+    "parameters": {
+      "a": { "label": "Độ dài cạnh", "explanation": "Độ dài cạnh của hình ngũ giác đều." },
+      "h": { "label": "Chiều cao lăng trụ", "explanation": "Chiều cao của hình lăng trụ." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "hexagonal-prism": {
+    "name": "Hình lăng trụ lục giác",
+    "description": "Một hình lục giác đều được kéo dài thành hình lăng trụ.",
+    "explanation": "Một hình lục giác đều gồm sáu tam giác đều, cho công thức diện tích đáy gọn gàng (3√3/2)·a². Các hình lăng trụ lục giác lát kín không gian một cách hiệu quả, đó là lý do tại sao loài ong xây các tổ hình lục giác.",
+    "examples": [
+      "Bút chì.",
+      "Tổ ong.",
+      "Đai ốc và bu lông."
+    ],
+    "parameters": {
+      "a": { "label": "Độ dài cạnh", "explanation": "Độ dài cạnh của hình lục giác đều." },
+      "h": { "label": "Chiều cao lăng trụ", "explanation": "Chiều cao của hình lăng trụ." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "triangular-pyramid": {
+    "name": "Hình chóp tam giác",
+    "description": "Một đáy tam giác đều thu nhỏ dần về một đỉnh.",
+    "explanation": "Thể tích của một hình chóp luôn bằng một phần ba thể tích của hình lăng trụ có cùng đáy và chiều cao. Ở đây đáy là một hình tam giác đều có diện tích (√3/4)·a².",
+    "examples": [
+      "Xúc xắc tứ diện (d4).",
+      "Hình dạng phân tử (methane).",
+      "Mái nhà hình chóp."
+    ],
+    "parameters": {
+      "a": { "label": "Cạnh đáy", "explanation": "Độ dài cạnh của đáy tam giác đều." },
+      "h": { "label": "Chiều cao", "explanation": "Chiều cao vuông góc từ đáy đến đỉnh." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "quadrangular-pyramid": {
+    "name": "Hình chóp tứ giác",
+    "description": "Một đáy hình chữ nhật thu nhỏ dần về một đỉnh.",
+    "explanation": "Đây là hình dạng kim tự tháp 'Ai Cập' cổ điển: một đáy hình chữ nhật vươn lên thành một đỉnh duy nhất. Thể tích của nó bằng một phần ba thể tích của hình hộp chữ nhật tương ứng (diện tích đáy × chiều cao).",
+    "examples": [
+      "Đại kim tự tháp Giza.",
+      "Mái nhà hình kim tự tháp.",
+      "Hình dạng lều."
+    ],
+    "parameters": {
+      "l": { "label": "Chiều dài đáy", "explanation": "Chiều dài của đáy hình chữ nhật." },
+      "w": { "label": "Chiều rộng đáy", "explanation": "Chiều rộng của đáy hình chữ nhật." },
+      "h": { "label": "Chiều cao", "explanation": "Chiều cao vuông góc từ đáy đến đỉnh." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "pentagonal-pyramid": {
+    "name": "Hình chóp ngũ giác",
+    "description": "Một đáy ngũ giác đều thu nhỏ dần về một đỉnh.",
+    "explanation": "Một hình chóp có đáy là ngũ giác đều. Diện tích đáy được tính theo công thức đa giác đều với n = 5; thể tích bằng một phần ba diện tích đáy nhân với chiều cao, như mọi hình chóp khác.",
+    "examples": [
+      "Đỉnh tháp trang trí.",
+      "Hình dạng tinh thể.",
+      "Các biến thể xúc xắc."
+    ],
+    "parameters": {
+      "a": { "label": "Độ dài cạnh", "explanation": "Độ dài cạnh của đáy ngũ giác đều." },
+      "h": { "label": "Chiều cao", "explanation": "Chiều cao vuông góc từ đáy đến đỉnh." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "hexagonal-pyramid": {
+    "name": "Hình chóp lục giác",
+    "description": "Một đáy lục giác đều thu nhỏ dần về một đỉnh.",
+    "explanation": "Một hình chóp có đáy là lục giác đều. Như mọi hình chóp, V = ⅓·B·h, với B là diện tích lục giác (3√3/2)·a².",
+    "examples": [
+      "Đầu bút chì.",
+      "Đỉnh tháp và chóp trang trí.",
+      "Đầu mút tinh thể."
+    ],
+    "parameters": {
+      "a": { "label": "Độ dài cạnh", "explanation": "Độ dài cạnh của đáy lục giác đều." },
+      "h": { "label": "Chiều cao", "explanation": "Chiều cao vuông góc từ đáy đến đỉnh." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "cone": {
+    "name": "Hình nón",
+    "description": "Một đáy hình tròn thu nhỏ dần về một điểm.",
+    "explanation": "Hình nón là một hình chóp có đáy hình tròn, vì vậy thể tích của nó cũng bằng một phần ba thể tích của hình trụ tương ứng. Đường sinh l (không phải chiều cao) là yếu tố quyết định diện tích mặt xung quanh cong πrl.",
+    "examples": [
+      "Vỏ ốc kem.",
+      "Cọc tiêu giao thông.",
+      "Phễu."
+    ],
+    "parameters": {
+      "r": { "label": "Bán kính", "explanation": "Bán kính của đáy hình tròn." },
+      "h": { "label": "Chiều cao", "explanation": "Chiều cao vuông góc từ đáy đến đỉnh." }
+    },
+    "formulas": [
+      { "label": "Diện tích đáy" },
+      { "label": "Đường sinh" },
+      { "label": "Diện tích xung quanh" },
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy" },
+      { "label": "Đường sinh" },
+      { "label": "Diện tích xung quanh" },
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "sphere": {
+    "name": "Hình cầu",
+    "description": "Tập hợp các điểm cách tâm một khoảng r, trong không gian 3D.",
+    "explanation": "Hình cầu là phiên bản 3D của đường tròn. Diện tích mặt cầu của nó đúng bằng bốn lần diện tích 'hình chiếu' tròn của nó (4πr²), và thể tích của nó tăng theo lập phương của bán kính.",
+    "examples": [
+      "Quả bóng và các hành tinh.",
+      "Bong bóng.",
+      "Vòng bi (ổ lăn)."
+    ],
+    "parameters": {
+      "r": { "label": "Bán kính", "explanation": "Khoảng cách từ tâm đến mặt cầu." }
+    },
+    "formulas": [
+      { "label": "Diện tích mặt cầu" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Diện tích mặt cầu" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "cone-frustum": {
+    "name": "Hình nón cụt",
+    "description": "Một hình nón bị cắt bỏ phần đỉnh song song với đáy.",
+    "explanation": "Hình nón cụt là phần còn lại của một hình nón sau khi phần đỉnh bị cắt song song với đáy. Thể tích của nó kết hợp hai bán kính với số hạng chéo Rr. Đường sinh sử dụng hiệu R − r, không phải tổng R + r.",
+    "examples": [
+      "Xô và chao đèn.",
+      "Cốc uống nước.",
+      "Tháp giải nhiệt (phần dưới)."
+    ],
+    "parameters": {
+      "R": { "label": "Bán kính đáy lớn", "explanation": "Bán kính của hình tròn lớn hơn (ở đáy)." },
+      "r": { "label": "Bán kính đáy nhỏ", "explanation": "Bán kính của hình tròn nhỏ hơn (ở đỉnh)." },
+      "h": { "label": "Chiều cao", "explanation": "Khoảng cách theo chiều đứng giữa hai hình tròn." }
+    },
+    "formulas": [
+      { "label": "Đường sinh" },
+      { "label": "Diện tích xung quanh" },
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" }
+    ],
+    "properties": [
+      { "label": "Đường sinh" },
+      { "label": "Diện tích xung quanh" },
+      { "label": "Diện tích toàn phần" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "pyramid-frustum": {
+    "name": "Hình chóp cụt",
+    "description": "Một hình chóp đa giác đều bị cắt bỏ phần đỉnh.",
+    "explanation": "Cắt bỏ phần đỉnh của một hình chóp song song với đáy sẽ tạo ra một hình chóp cụt có hai mặt đa giác đồng dạng. Công thức thể tích lấy trung bình hai diện tích đáy B₁ và B₂ cùng với trung bình hình học √(B₁B₂) của chúng.",
+    "examples": [
+      "Chao đèn.",
+      "Chậu cây.",
+      "Phần đỉnh các tòa nhà có dạng giật cấp."
+    ],
+    "parameters": {
+      "n": { "label": "Số cạnh", "explanation": "Số cạnh của đáy đa giác đều." },
+      "aBottom": { "label": "Cạnh đáy dưới", "explanation": "Độ dài cạnh của đa giác lớn hơn (ở đáy)." },
+      "aTop": { "label": "Cạnh đáy trên", "explanation": "Độ dài cạnh của đa giác nhỏ hơn (ở đỉnh)." },
+      "h": { "label": "Chiều cao", "explanation": "Khoảng cách theo chiều đứng giữa hai đáy." }
+    },
+    "formulas": [
+      { "label": "Thể tích" },
+      { "label": "Các đáy" }
+    ],
+    "properties": [
+      { "label": "Diện tích đáy dưới" },
+      { "label": "Diện tích đáy trên" },
+      { "label": "Thể tích" }
+    ]
+  },
+  "house": {
+    "name": "Ngôi nhà",
+    "description": "Một khối hộp với mái nhà hình lăng trụ tam giác.",
+    "explanation": "Để tìm thể tích của một hình khối tổ hợp, hãy chia nó thành các hình khối cơ bản, tính từng phần, sau đó cộng lại. Một ngôi nhà là một hình hộp chữ nhật (các tường) cộng với một hình lăng trụ tam giác (mái nhà). Cộng hai thể tích để được tổng thể tích; mặt tiếp xúc nơi chúng gặp nhau là mặt bên trong và không thuộc bề mặt ngoài.",
+    "examples": [
+      "Hình dạng nhà và nhà kho đơn giản.",
+      "Chuồng trại.",
+      "Nhà chim."
+    ],
+    "parameters": {
+      "l": { "label": "Chiều dài", "explanation": "Chiều rộng của ngôi nhà (và độ rộng của mái)." },
+      "w": { "label": "Chiều sâu", "explanation": "Chiều sâu của ngôi nhà." },
+      "h": { "label": "Chiều cao tường", "explanation": "Chiều cao của các tường hình hộp chữ nhật." },
+      "hr": { "label": "Chiều cao mái", "explanation": "Chiều cao của mái hình tam giác." }
+    },
+    "formulas": [
+      { "label": "Thân nhà (hình hộp chữ nhật)" },
+      { "label": "Mái nhà (hình lăng trụ tam giác)" },
+      { "label": "Tổng" }
+    ],
+    "properties": [
+      { "label": "Thể tích thân nhà" },
+      { "label": "Thể tích mái nhà" },
+      { "label": "Tổng thể tích" }
+    ]
+  },
+  "pencil": {
+    "name": "Bút chì",
+    "description": "Một thân hình trụ với đầu nhọn hình nón.",
+    "explanation": "Một cây bút chì là một hình trụ (thân bút) với một hình nón (đầu nhọn) có cùng bán kính. Tổng thể tích bằng hình trụ cộng với hình nón. Vì cả hai chia sẻ chung mặt tiếp xúc hình tròn, không có mặt ngoài nào đi qua mặt đó.",
+    "examples": [
+      "Bút chì và bút sáp màu.",
+      "Tên lửa (thân + mũi hình nón).",
+      "Một số loại chai."
+    ],
+    "parameters": {
+      "r": { "label": "Bán kính", "explanation": "Bán kính của bút chì." },
+      "h": { "label": "Chiều dài thân", "explanation": "Chiều dài của phần thân hình trụ." },
+      "ht": { "label": "Chiều dài đầu nhọn", "explanation": "Chiều dài của đầu nhọn hình nón." }
+    },
+    "formulas": [
+      { "label": "Thân (hình trụ)" },
+      { "label": "Đầu nhọn (hình nón)" },
+      { "label": "Tổng" }
+    ],
+    "properties": [
+      { "label": "Thể tích thân" },
+      { "label": "Thể tích đầu nhọn" },
+      { "label": "Tổng thể tích" }
+    ]
+  },
+  "ice-cream": {
+    "name": "Kem ốc quế",
+    "description": "Một hình nón chứa một viên kem hình cầu.",
+    "explanation": "Một cây kem ốc quế là một hình nón (đỉnh hướng xuống) với một hình cầu đặt trên trên cùng. Cộng thể tích hình nón và hình cầu để được tổng thể tích. Trong thực tế, một phần viên kem nằm bên trong miệng nón, vì vậy một đáp án chính xác sẽ cần trừ đi phần chồng lấp đó — một ví dụ điển hình về khi nào cần phép trừ.",
+    "examples": [
+      "Kem ốc quế.",
+      "Đồ trang trí hình chóp nhỏ.",
+      "Con quay."
+    ],
+    "parameters": {
+      "r": { "label": "Bán kính ốc quế", "explanation": "Bán kính miệng mở của hình nón." },
+      "h": { "label": "Chiều cao ốc quế", "explanation": "Chiều dài của hình nón (đỉnh hướng xuống)." },
+      "R": { "label": "Bán kính viên kem", "explanation": "Bán kính của viên kem hình cầu." }
+    },
+    "formulas": [
+      { "label": "Ốc quế (hình nón)" },
+      { "label": "Viên kem (hình cầu)" },
+      { "label": "Tổng" }
+    ],
+    "properties": [
+      { "label": "Thể tích ốc quế" },
+      { "label": "Thể tích viên kem" },
+      { "label": "Tổng thể tích" }
+    ]
+  },
+  "water-tower": {
+    "name": "Tháp nước",
+    "description": "Một hình trụ có mái vòm bán cầu.",
+    "explanation": "Một tháp nước là một hình trụ với một bán cầu (nửa hình cầu) trên trên cùng, có cùng bán kính. Tổng thể tích bằng hình trụ cộng với bán cầu. Một bán cầu chính xác là một nửa hình cầu, nên thể tích của nó là ⅔πr³.",
+    "examples": [
+      "Tháp nước và silo.",
+      "Mái vòm quan sát thiên văn.",
+      "Bể chứa."
+    ],
+    "parameters": {
+      "r": { "label": "Bán kính", "explanation": "Bán kính của hình trụ và mái vòm." },
+      "h": { "label": "Chiều cao thân", "explanation": "Chiều cao của phần thân hình trụ." }
+    },
+    "formulas": [
+      { "label": "Thân (hình trụ)" },
+      { "label": "Mái vòm (bán cầu)" },
+      { "label": "Tổng" }
+    ],
+    "properties": [
+      { "label": "Thể tích thân" },
+      { "label": "Thể tích mái vòm" },
+      { "label": "Tổng thể tích" }
+    ]
+  },
+  "castle": {
+    "name": "Lâu đài",
+    "description": "Một tòa thành trung tâm với bốn tháp góc và mái hình nón.",
+    "explanation": "Một lâu đài kết hợp nhiều hình khối cơ bản: một tòa thành hình hộp chữ nhật, bốn tháp hình trụ, và bốn mái hình nón. Chiến lược vẫn như thường lệ — chia nhỏ thành các phần đã biết, tính thể tích từng phần, rồi cộng tất cả lại. Theo tính đối xứng, bốn tháp và bốn mái là giống nhau, vì vậy ta nhân với bốn.",
+    "examples": [
+      "Lâu đài đồ chơi.",
+      "Quân xe cờ vua.",
+      "Kiến trúc pháo đài và tháp."
+    ],
+    "parameters": {
+      "s": { "label": "Kích thước tòa thành", "explanation": "Độ dài cạnh của tòa thành hình vuông trung tâm." },
+      "hk": { "label": "Chiều cao tòa thành", "explanation": "Chiều cao của tòa thành trung tâm." },
+      "r": { "label": "Bán kính tháp", "explanation": "Bán kính của mỗi tháp góc." },
+      "ht": { "label": "Chiều cao tháp", "explanation": "Chiều cao của mỗi tháp góc." }
+    },
+    "formulas": [
+      { "label": "Tòa thành (hình hộp chữ nhật)" },
+      { "label": "Tháp (hình trụ)" },
+      { "label": "Mái (hình nón)" },
+      { "label": "Tổng" }
+    ],
+    "properties": [
+      { "label": "Thể tích tòa thành" },
+      { "label": "Tất cả các tháp" },
+      { "label": "Tất cả các mái" },
+      { "label": "Tổng thể tích" }
+    ]
+  }
+}

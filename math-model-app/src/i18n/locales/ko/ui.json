@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "인터랙티브 수학 시각화 도구"
+  },
+  "common": {
+    "toggleDarkMode": "다크 모드 전환",
+    "changeLanguage": "언어 변경",
+    "searchPlaceholder": "모델 검색...",
+    "noResults": "\"{query}\"와 일치하는 모델이 없습니다.",
+    "resultsCount": "{count}개의 결과",
+    "favorites": "즐겨찾기",
+    "selectModel": "모델 선택",
+    "reset": "초기화",
+    "addFavorite": "즐겨찾기에 추가",
+    "removeFavorite": "즐겨찾기에서 제거",
+    "somethingWrongIn": "{label}에서 문제가 발생했습니다.",
+    "somethingWrong": "문제가 발생했습니다.",
+    "tryAgain": "다시 시도"
+  },
+  "errorLabels": {
+    "graph": "그래프",
+    "viewer3d": "3D 뷰어",
+    "modelPage": "모델 페이지"
+  },
+  "panels": {
+    "parameters": "매개변수",
+    "formulas": "공식",
+    "properties": "계산된 속성",
+    "explanation": "설명",
+    "examples": "실생활 예시"
+  },
+  "viewSettings": {
+    "grid": "격자",
+    "labels": "라벨",
+    "wireframe": "와이어프레임",
+    "markers": "마커"
+  },
+  "graphLabels": {
+    "center": "중심",
+    "vertex": "꼭짓점",
+    "focus": "초점",
+    "directrix": "준선",
+    "axis": "대칭축",
+    "midline": "중간선",
+    "asymptote": "점근선",
+    "xIntercept": "x절편"
+  },
+  "categories": {
+    "functions": {
+      "name": "기본 함수",
+      "description": "좌표평면 위의 함수 그래프"
+    },
+    "plane-curves": {
+      "name": "평면 곡선",
+      "description": "이차곡선과 그 외 곡선들"
+    },
+    "solids": {
+      "name": "입체 도형",
+      "description": "각기둥, 각뿔, 회전체 등 3D 입체"
+    },
+    "combined": {
+      "name": "복합 입체",
+      "description": "기본 입체를 조합한 복합 도형"
+    }
+  }
+}

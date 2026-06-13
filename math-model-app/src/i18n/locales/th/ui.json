@@ -1,0 +1,66 @@
+{
+  "app": {
+    "tagline": "โปรแกรมแสดงภาพคณิตศาสตร์แบบโต้ตอบ"
+  },
+  "common": {
+    "toggleDarkMode": "สลับโหมดมืด",
+    "changeLanguage": "เปลี่ยนภาษา",
+    "searchPlaceholder": "ค้นหาโมเดล...",
+    "noResults": "ไม่พบโมเดลที่ตรงกับ \"{query}\"",
+    "resultsCount": "{count} ผลลัพธ์",
+    "favorites": "รายการที่ชอบ",
+    "selectModel": "เลือกโมเดล",
+    "reset": "รีเซ็ต",
+    "addFavorite": "เพิ่มในรายการที่ชอบ",
+    "removeFavorite": "นำออกจากรายการที่ชอบ",
+    "somethingWrongIn": "เกิดข้อผิดพลาดใน{label}",
+    "somethingWrong": "เกิดข้อผิดพลาดบางอย่าง",
+    "tryAgain": "ลองอีกครั้ง"
+  },
+  "errorLabels": {
+    "graph": "กราฟ",
+    "viewer3d": "ตัวแสดงภาพ 3 มิติ",
+    "modelPage": "หน้าโมเดล"
+  },
+  "panels": {
+    "parameters": "พารามิเตอร์",
+    "formulas": "สูตร",
+    "properties": "ค่าที่คำนวณได้",
+    "explanation": "คำอธิบาย",
+    "examples": "ตัวอย่างในชีวิตจริง"
+  },
+  "viewSettings": {
+    "grid": "ตาราง",
+    "labels": "ป้ายชื่อ",
+    "wireframe": "โครงลวด",
+    "markers": "จุดเครื่องหมาย"
+  },
+  "graphLabels": {
+    "center": "จุดศูนย์กลาง",
+    "vertex": "จุดยอด",
+    "focus": "โฟกัส",
+    "directrix": "เส้นไดเรกตริกซ์",
+    "axis": "แกน",
+    "midline": "เส้นกึ่งกลาง",
+    "asymptote": "เส้นกำกับ",
+    "xIntercept": "จุดตัดแกน x"
+  },
+  "categories": {
+    "functions": {
+      "name": "ฟังก์ชันพื้นฐาน",
+      "description": "กราฟของฟังก์ชันบนระบบพิกัด"
+    },
+    "plane-curves": {
+      "name": "เส้นโค้งบนระนาบ",
+      "description": "ภาคตัดกรวยและเส้นโค้งอื่น ๆ"
+    },
+    "solids": {
+      "name": "เรขาคณิตทรงตัน",
+      "description": "ทรงตัน 3 มิติ: ปริซึม พีระมิด และทรงกลมต่าง ๆ"
+    },
+    "combined": {
+      "name": "ทรงตันผสม",
+      "description": "รูปทรงประกอบที่สร้างจากทรงตันพื้นฐาน"
+    }
+  }
+}
