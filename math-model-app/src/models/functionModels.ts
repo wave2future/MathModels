@@ -1,8 +1,20 @@
-import type { MathModel } from "@/types/model";
+import type { MathModel, ParamValues, ViewBox2D } from "@/types/model";
 import { defineModel } from "@/utils/formatFormula";
 import { functionCurves, safePow, parabolaVertexX } from "@/math/formulas";
 
 const STD_VIEW = { xMin: -10, xMax: 10, yMin: -10, yMax: 10 };
+
+/** x-positions of tan(Bx+C)'s vertical asymptotes that fall within `view`. */
+function tangentAsymptoteXs(p: ParamValues, view: ViewBox2D): number[] {
+  const out: number[] = [];
+  const nLow = Math.floor((view.xMin * p.B - Math.PI / 2 + p.C) / Math.PI) - 1;
+  const nHigh = Math.ceil((view.xMax * p.B - Math.PI / 2 + p.C) / Math.PI) + 1;
+  for (let n = nLow; n <= nHigh; n++) {
+    const x = (Math.PI / 2 + n * Math.PI - p.C) / p.B;
+    if (x >= view.xMin && x <= view.xMax) out.push(x);
+  }
+  return out;
+}
 
 export const functionModels: MathModel[] = [
   /* 1. Direct proportional function ------------------------------------ */
@@ -29,7 +41,7 @@ export const functionModels: MathModel[] = [
     ],
     plot2d: {
       defaultView: STD_VIEW,
-      curves: (p) => functionCurves((x) => p.k * x, STD_VIEW.xMin, STD_VIEW.xMax, { idPrefix: "line" }),
+      curves: (p, view) => functionCurves((x) => p.k * x, view.xMin, view.xMax, { idPrefix: "line" }),
       markers: () => [{ x: 0, y: 0, label: "O", kind: "point" }],
     },
   }),
@@ -61,7 +73,7 @@ export const functionModels: MathModel[] = [
     ],
     plot2d: {
       defaultView: STD_VIEW,
-      curves: (p) => functionCurves((x) => p.k * x + p.b, STD_VIEW.xMin, STD_VIEW.xMax, { idPrefix: "line" }),
+      curves: (p, view) => functionCurves((x) => p.k * x + p.b, view.xMin, view.xMax, { idPrefix: "line" }),
       markers: (p) => {
         const m = [{ x: 0, y: p.b, label: `(0, ${round(p.b)})`, kind: "point" as const }];
         if (p.k !== 0) m.push({ x: -p.b / p.k, y: 0, label: "x-int", kind: "point" });
@@ -99,8 +111,8 @@ export const functionModels: MathModel[] = [
     ],
     plot2d: {
       defaultView: STD_VIEW,
-      curves: (p) =>
-        functionCurves((x) => p.a * x * x + p.b * x + p.c, STD_VIEW.xMin, STD_VIEW.xMax, {
+      curves: (p, view) =>
+        functionCurves((x) => p.a * x * x + p.b * x + p.c, view.xMin, view.xMax, {
           idPrefix: "parab",
           steps: 400,
         }),
@@ -139,12 +151,16 @@ export const functionModels: MathModel[] = [
     ],
     plot2d: {
       defaultView: STD_VIEW,
-      // maxJump prevents drawing a line across the x=0 asymptote between branches.
-      curves: (p) =>
-        functionCurves((x) => (x === 0 ? null : p.k / x), STD_VIEW.xMin, STD_VIEW.xMax, {
+      // maxJump prevents drawing a line across the x=0 asymptote between branches;
+      // it scales with the view so zooming out doesn't fragment the curve.
+      // refineTargetY extends each branch toward x=0 until it reaches the
+      // visible top/bottom edge, even when the sampling grid is coarse there.
+      curves: (p, view) =>
+        functionCurves((x) => (x === 0 ? null : p.k / x), view.xMin, view.xMax, {
           idPrefix: "hyp",
           steps: 800,
-          maxJump: 40,
+          maxJump: 40 * ((view.yMax - view.yMin) / (STD_VIEW.yMax - STD_VIEW.yMin)),
+          refineTargetY: Math.max(Math.abs(view.yMin), Math.abs(view.yMax)) * 1.2,
         }),
       asymptotes: () => [
         { kind: "vertical", x: 0, label: "x = 0" },
@@ -179,8 +195,8 @@ export const functionModels: MathModel[] = [
     examples: ["Distance from a target value.", "Error magnitude regardless of sign."],
     plot2d: {
       defaultView: STD_VIEW,
-      curves: (p) =>
-        functionCurves((x) => p.a * Math.abs(x - p.h) + p.k, STD_VIEW.xMin, STD_VIEW.xMax, {
+      curves: (p, view) =>
+        functionCurves((x) => p.a * Math.abs(x - p.h) + p.k, view.xMin, view.xMax, {
           idPrefix: "abs",
         }),
       markers: (p) => [{ x: p.h, y: p.k, label: "vertex", kind: "point" }],
@@ -208,8 +224,13 @@ export const functionModels: MathModel[] = [
     examples: ["Area ∝ side² (a = 2).", "Volume ∝ side³ (a = 3)."],
     plot2d: {
       defaultView: { xMin: -6, xMax: 6, yMin: -6, yMax: 6 },
-      curves: (p) =>
-        functionCurves((x) => safePow(x, p.a), -6, 6, { idPrefix: "pow", steps: 600, maxJump: 30 }),
+      curves: (p, view) =>
+        functionCurves((x) => safePow(x, p.a), view.xMin, view.xMax, {
+          idPrefix: "pow",
+          steps: 600,
+          maxJump: 30 * ((view.yMax - view.yMin) / 12),
+          refineTargetY: Math.max(Math.abs(view.yMin), Math.abs(view.yMax)) * 1.2,
+        }),
     },
   }),
 
@@ -235,8 +256,12 @@ export const functionModels: MathModel[] = [
     examples: ["Compound interest.", "Radioactive decay (0 < a < 1)."],
     plot2d: {
       defaultView: { xMin: -6, xMax: 6, yMin: -1, yMax: 10 },
-      curves: (p) =>
-        functionCurves((x) => safePow(p.a, x), -6, 6, { idPrefix: "exp", steps: 600, maxJump: 30 }),
+      curves: (p, view) =>
+        functionCurves((x) => safePow(p.a, x), view.xMin, view.xMax, {
+          idPrefix: "exp",
+          steps: 600,
+          maxJump: 30 * ((view.yMax - view.yMin) / 11),
+        }),
       asymptotes: () => [{ kind: "horizontal", y: 0, label: "y = 0" }],
       markers: () => [{ x: 0, y: 1, label: "(0, 1)", kind: "point" }],
     },
@@ -264,13 +289,19 @@ export const functionModels: MathModel[] = [
     examples: ["pH scale.", "Decibel sound levels.", "Richter earthquake scale."],
     plot2d: {
       defaultView: { xMin: -1, xMax: 10, yMin: -5, yMax: 5 },
-      curves: (p) =>
-        functionCurves(
+      // When the x=0 asymptote is in view, start sampling close enough to 0
+      // that the curve reaches view.yMin/yMax instead of stopping partway down.
+      curves: (p, view) => {
+        const targetY = Math.max(Math.abs(view.yMin), Math.abs(view.yMax)) * 1.2;
+        const xLow =
+          view.xMin > 0 ? view.xMin : p.a > 1 ? Math.pow(p.a, -targetY) : Math.pow(p.a, targetY);
+        return functionCurves(
           (x) => (x > 0 && p.a > 0 && p.a !== 1 ? Math.log(x) / Math.log(p.a) : null),
-          0.0001,
-          10,
+          xLow,
+          Math.max(view.xMax, 0.001),
           { idPrefix: "log", steps: 600 },
-        ),
+        );
+      },
       asymptotes: () => [{ kind: "vertical", x: 0, label: "x = 0" }],
       markers: () => [{ x: 1, y: 0, label: "(1, 0)", kind: "point" }],
     },
@@ -306,8 +337,8 @@ export const functionModels: MathModel[] = [
     examples: ["Sound waves.", "Alternating current.", "Tides and daylight hours over a year."],
     plot2d: {
       defaultView: { xMin: -6.5, xMax: 6.5, yMin: -6, yMax: 6 },
-      curves: (p) =>
-        functionCurves((x) => p.A * Math.sin(p.B * x + p.C) + p.D, -6.5, 6.5, {
+      curves: (p, view) =>
+        functionCurves((x) => p.A * Math.sin(p.B * x + p.C) + p.D, view.xMin, view.xMax, {
           idPrefix: "sin",
           steps: 800,
         }),
@@ -344,8 +375,8 @@ export const functionModels: MathModel[] = [
     examples: ["Horizontal position of a point on a rotating wheel.", "Seasonal temperature cycles."],
     plot2d: {
       defaultView: { xMin: -6.5, xMax: 6.5, yMin: -6, yMax: 6 },
-      curves: (p) =>
-        functionCurves((x) => p.A * Math.cos(p.B * x + p.C) + p.D, -6.5, 6.5, {
+      curves: (p, view) =>
+        functionCurves((x) => p.A * Math.cos(p.B * x + p.C) + p.D, view.xMin, view.xMax, {
           idPrefix: "cos",
           steps: 800,
         }),
@@ -382,22 +413,20 @@ export const functionModels: MathModel[] = [
     examples: ["Slope of a line at a given angle.", "Modeling rapid blow-ups near a limit."],
     plot2d: {
       defaultView: { xMin: -6.5, xMax: 6.5, yMin: -8, yMax: 8 },
-      // maxJump splits the polyline at each asymptote so branches stay separate.
-      curves: (p) =>
-        functionCurves((x) => p.A * Math.tan(p.B * x + p.C) + p.D, -6.5, 6.5, {
+      // maxJump splits the polyline at each asymptote so branches stay separate;
+      // it scales with the view so zooming out doesn't fragment the curve.
+      // refineTargetY + asymptoteXs extend each branch to the visible yMin/yMax
+      // edge by bisecting toward its true (analytic) asymptote x-position.
+      curves: (p, view) =>
+        functionCurves((x) => p.A * Math.tan(p.B * x + p.C) + p.D, view.xMin, view.xMax, {
           idPrefix: "tan",
           steps: 1600,
-          maxJump: 20,
+          maxJump: 20 * ((view.yMax - view.yMin) / 16),
+          refineTargetY: Math.max(Math.abs(view.yMin), Math.abs(view.yMax)) * 1.2,
+          asymptoteXs: tangentAsymptoteXs(p, view),
         }),
-      asymptotes: (p) => {
-        const out: { kind: "vertical"; x: number }[] = [];
-        // Solve B x + C = pi/2 + n pi  =>  x = (pi/2 + n pi - C) / B within view.
-        for (let n = -8; n <= 8; n++) {
-          const x = (Math.PI / 2 + n * Math.PI - p.C) / p.B;
-          if (x >= -6.5 && x <= 6.5) out.push({ kind: "vertical", x });
-        }
-        return out;
-      },
+      asymptotes: (p, view) =>
+        tangentAsymptoteXs(p, view).map((x) => ({ kind: "vertical" as const, x })),
     },
   }),
 
@@ -425,9 +454,9 @@ export const functionModels: MathModel[] = [
     examples: ["Tax brackets.", "Shipping cost tiers by weight.", "Absolute value as two lines."],
     plot2d: {
       defaultView: STD_VIEW,
-      curves: (p) => [
-        ...functionCurves((x) => (x < 0 ? -p.scale * x : null), STD_VIEW.xMin, 0, { idPrefix: "left" }),
-        ...functionCurves((x) => (x >= 0 ? p.scale * x : null), 0, STD_VIEW.xMax, { idPrefix: "right" }),
+      curves: (p, view) => [
+        ...functionCurves((x) => (x < 0 ? -p.scale * x : null), view.xMin, 0, { idPrefix: "left" }),
+        ...functionCurves((x) => (x >= 0 ? p.scale * x : null), 0, view.xMax, { idPrefix: "right" }),
       ],
       markers: () => [{ x: 0, y: 0, label: "x = 0", kind: "point" }],
     },

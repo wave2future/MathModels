@@ -95,9 +95,9 @@ export interface ViewBox2D {
 }
 
 export interface Plot2DConfig {
-  /** Build the curve(s) to draw for the given parameter values. */
-  curves: (p: ParamValues) => Curve2D[];
-  asymptotes?: (p: ParamValues) => Asymptote[];
+  /** Build the curve(s) to draw for the given parameter values and visible range. */
+  curves: (p: ParamValues, view: ViewBox2D) => Curve2D[];
+  asymptotes?: (p: ParamValues, view: ViewBox2D) => Asymptote[];
   markers?: (p: ParamValues) => Marker2D[];
   defaultView?: ViewBox2D;
 }

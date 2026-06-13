@@ -124,7 +124,7 @@ export const planeCurveModels: MathModel[] = [
     ],
     plot2d: {
       defaultView: { xMin: -8, xMax: 8, yMin: -8, yMax: 8 },
-      curves: (p) => hyperbolaBranches(p.a, p.b),
+      curves: (p, view) => hyperbolaBranches(p.a, p.b, view),
       asymptotes: (p) => [
         { kind: "oblique", slope: p.b / p.a, intercept: 0, label: "asymptote" },
         { kind: "oblique", slope: -p.b / p.a, intercept: 0, label: "asymptote" },
@@ -166,7 +166,7 @@ export const planeCurveModels: MathModel[] = [
     ],
     plot2d: {
       defaultView: { xMin: -6, xMax: 10, yMin: -8, yMax: 8 },
-      curves: (p) => [{ id: "parabola", points: parabolaHorizontalPoints(p.p) }],
+      curves: (p, view) => [{ id: "parabola", points: parabolaHorizontalPoints(p.p, view) }],
       asymptotes: (p) => [{ kind: "vertical", x: -p.p / 2, label: "directrix" }],
       markers: (p) => [
         { x: p.p / 2, y: 0, label: "focus", kind: "point" },

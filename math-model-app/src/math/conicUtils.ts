@@ -1,4 +1,4 @@
-import type { Curve2D, Point2D } from "@/types/model";
+import type { Curve2D, Point2D, ViewBox2D } from "@/types/model";
 
 const TAU = Math.PI * 2;
 
@@ -31,8 +31,12 @@ export function ellipsePoints(
 /**
  * The two branches of a hyperbola x²/a² - y²/b² = 1, generated with the
  * cosh/sinh parametrization so points spread smoothly along each branch.
+ * `tMax` is sized to the visible view so the branches always reach its edges.
  */
-export function hyperbolaBranches(a: number, b: number, tMax = 2.6, steps = 200): Curve2D[] {
+export function hyperbolaBranches(a: number, b: number, view: ViewBox2D, steps = 200): Curve2D[] {
+  const xExtent = Math.max(Math.abs(view.xMin), Math.abs(view.xMax));
+  const yExtent = Math.max(Math.abs(view.yMin), Math.abs(view.yMax));
+  const tMax = Math.max(Math.acosh(Math.max(xExtent / a, 1)), Math.asinh(yExtent / b)) + 0.3;
   const right: Point2D[] = [];
   const left: Point2D[] = [];
   for (let i = 0; i <= steps; i++) {
@@ -48,8 +52,14 @@ export function hyperbolaBranches(a: number, b: number, tMax = 2.6, steps = 200)
   ];
 }
 
-/** Parabola y² = 2px (opens right for p>0) as a single smooth curve. */
-export function parabolaHorizontalPoints(p: number, yMax = 6, steps = 200): Point2D[] {
+/**
+ * Parabola y² = 2px (opens right for p>0) as a single smooth curve.
+ * `yMax` is sized to the visible view so the curve always reaches its edges.
+ */
+export function parabolaHorizontalPoints(p: number, view: ViewBox2D, steps = 200): Point2D[] {
+  const yExtent = Math.max(Math.abs(view.yMin), Math.abs(view.yMax));
+  const xReach = Math.sqrt(2 * Math.abs(p) * Math.max(view.xMax, 0));
+  const yMax = Math.max(yExtent, xReach) + 0.5;
   const pts: Point2D[] = [];
   for (let i = 0; i <= steps; i++) {
     const y = -yMax + (i / steps) * (2 * yMax);
