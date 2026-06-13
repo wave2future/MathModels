@@ -6,7 +6,7 @@ Users should NOT need to manually input formulas.
 
 All mathematical models should be predefined, categorized, selectable, and visually displayed. The app should help students intuitively understand function graphs, plane curves, solid geometry, and combined solids through interactive visualizations, formulas, parameter sliders, and concise explanations.
 
-Add multi-language support: English(Default), Chinese, Japanese, Korean, French, German, Portuguese, Italian, Thai, Vietnamese, Arabic, Spanish, Hindi, Russian, Bengali, Urdu, Indonesian, Malay, German,  Tamil, Javanese, Persian, Punjabi, Turkish, Swahili. (The languages in the dropdown selection are each displayed in their own native language, so that native speakers can understand.)
+Add multilingual support: English(Default), Chinese, Japanese, Korean, French, German, Portuguese, Italian, Thai, Vietnamese, Arabic, Spanish, Hindi, Russian, Bengali, Urdu, Indonesian, Malay, German,  Tamil, Javanese, Persian, Punjabi, Turkish, Swahili. (The languages in the dropdown selection are each displayed in their own native language, so that native speakers can understand.)
     
 The project must support:
 1. Web version
