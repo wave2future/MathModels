@@ -16,6 +16,13 @@ interface Props {
 const MIN_ZOOM = 0.2;
 const MAX_ZOOM = 8;
 
+/** Distance in pixels between the first two touch points. */
+function touchDistance(touches: TouchList): number {
+  const dx = touches[0].clientX - touches[1].clientX;
+  const dy = touches[0].clientY - touches[1].clientY;
+  return Math.hypot(dx, dy);
+}
+
 /** Responsive SVG plotter for 2D function and plane-curve models. */
 export function TwoDGraphViewer({ model, values }: Props) {
   const { ref, width, height } = useElementSize<HTMLDivElement>();
@@ -25,18 +32,51 @@ export function TwoDGraphViewer({ model, values }: Props) {
 
   const baseView = cfg?.defaultView ?? { xMin: -10, xMax: 10, yMin: -10, yMax: 10 };
 
-  // Mouse wheel zooms the view in/out around its center. A native listener is
-  // required because React's onWheel can't preventDefault the page scroll.
+  // Mouse wheel and two-finger pinch both zoom the view in/out around its
+  // center. Native listeners are required so we can preventDefault the page
+  // scroll/pinch-zoom gesture.
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
       const factor = Math.exp(-e.deltaY * 0.001);
       setZoom((z) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z * factor)));
     };
+
+    let pinchDistance: number | null = null;
+    const onTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        pinchDistance = touchDistance(e.touches);
+      }
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length === 2 && pinchDistance !== null) {
+        e.preventDefault();
+        const distance = touchDistance(e.touches);
+        const factor = distance / pinchDistance;
+        setZoom((z) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z * factor)));
+        pinchDistance = distance;
+      }
+    };
+    const onTouchEnd = (e: TouchEvent) => {
+      if (e.touches.length < 2) pinchDistance = null;
+    };
+
     el.addEventListener("wheel", onWheel, { passive: false });
-    return () => el.removeEventListener("wheel", onWheel);
+    el.addEventListener("touchstart", onTouchStart, { passive: false });
+    el.addEventListener("touchmove", onTouchMove, { passive: false });
+    el.addEventListener("touchend", onTouchEnd);
+    el.addEventListener("touchcancel", onTouchEnd);
+    return () => {
+      el.removeEventListener("wheel", onWheel);
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
+      el.removeEventListener("touchend", onTouchEnd);
+      el.removeEventListener("touchcancel", onTouchEnd);
+    };
   }, [ref]);
 
   const view = useMemo(() => {
