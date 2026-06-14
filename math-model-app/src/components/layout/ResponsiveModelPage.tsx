@@ -73,7 +73,7 @@ export function ResponsiveModelPage(props: Props) {
 
   /* ---------------- Mobile: viewer on top, tabbed info below ----------- */
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex flex-col">
       <div className="px-3 pt-2">
         <ModelHeader model={model} isFavorite={isFavorite} onToggleFavorite={onToggleFavorite} />
       </div>
@@ -104,7 +104,7 @@ export function ResponsiveModelPage(props: Props) {
         ))}
       </div>
 
-      <div className="scroll-thin flex-1 space-y-5 overflow-y-auto p-4">
+      <div className="space-y-5 p-4">
         {tab === "parameters" && (
           <>
             <ParameterPanel

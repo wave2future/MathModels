@@ -77,7 +77,7 @@ export function AppLayout({ layout, theme, onToggleTheme, sidebar, topSelector, 
             {topSelector}
           </div>
           <main
-            className="min-h-0 flex-1 overflow-hidden"
+            className="scroll-thin min-h-0 flex-1 overflow-y-auto"
             style={{ paddingBottom: "var(--app-safe-bottom)" }}
           >
             {children}
