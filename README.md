@@ -225,3 +225,21 @@ Tauri v2 · Capacitor 7.
 ## 📄 License
 
 MIT — use it freely for teaching and learning.
+
+---
+
+## Desktop Screenshots
+
+![screenshots](./screenshots/desktop/QuadraticFunction.png)
+![screenshots](./screenshots/desktop/Exponential.png)
+![screenshots](./screenshots/desktop/Hyperbola.png)
+![screenshots](./screenshots/desktop/InverseProportional.png)
+![screenshots](./screenshots/desktop/LogFunction.png)
+![screenshots](./screenshots/desktop/Sine.png)
+![screenshots](./screenshots/desktop/Cylinder.png)
+![screenshots](./screenshots/desktop/PentagonalPrism.png)
+![screenshots](./screenshots/desktop/Sphere.png)
+![screenshots](./screenshots/desktop/IceCream.png)
+
+## Mobile Screenshots
+
