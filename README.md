@@ -1,3 +1,4 @@
+
 # MathModels — Interactive Math Model Visualizer
 
 A polished, cross-platform educational app for **middle- and high-school students**
@@ -11,6 +12,9 @@ Built from **one shared React + TypeScript codebase** that ships to **Web, Deskt
 (Tauri), and Mobile (Capacitor)**, with **PWA** install + offline support.
 
 ---
+
+## Preview on Github Pages
+[Math Models](https://wave2future.github.io/MathModels)
 
 ## ✨ Features
 
